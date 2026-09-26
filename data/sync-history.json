@@ -1,0 +1,307 @@
+[
+  {
+    "started_at": "2026-09-25T17:00:55.684Z",
+    "completed_at": "2026-09-25T17:00:57.926Z",
+    "duration_ms": 2364,
+    "status": "success",
+    "total_added": 55,
+    "total_updated": 41,
+    "total_removed": 55,
+    "categories": {
+      "featured": {
+        "category": "featured",
+        "mode": "rebuild",
+        "added": 5,
+        "updated": 0,
+        "removed": 5,
+        "total_active": 5
+      },
+      "top10": {
+        "category": "top10",
+        "mode": "rebuild",
+        "added": 10,
+        "updated": 0,
+        "removed": 10,
+        "total_active": 10
+      },
+      "now_playing": {
+        "category": "now_playing",
+        "mode": "rebuild",
+        "added": 20,
+        "updated": 0,
+        "removed": 20,
+        "total_active": 20
+      },
+      "trending_tv": {
+        "category": "trending_tv",
+        "mode": "rebuild",
+        "added": 20,
+        "updated": 0,
+        "removed": 20,
+        "total_active": 20
+      },
+      "upcoming": {
+        "category": "upcoming",
+        "mode": "upsert_with_soft_delete",
+        "added": 0,
+        "updated": 1,
+        "removed": 0,
+        "total_active": 1
+      },
+      "top_rated": {
+        "category": "top_rated",
+        "mode": "upsert_with_soft_delete",
+        "added": 0,
+        "updated": 40,
+        "removed": 0,
+        "total_active": 40
+      }
+    },
+    "error_messages": [],
+    "log_file": "content-sync-2026-09-25.log"
+  },
+  {
+    "started_at": "2026-09-25T16:11:48.286Z",
+    "completed_at": "2026-09-25T16:11:49.990Z",
+    "duration_ms": 1746,
+    "status": "success",
+    "total_added": 55,
+    "total_updated": 41,
+    "total_removed": 55,
+    "categories": {
+      "featured": {
+        "category": "featured",
+        "mode": "rebuild",
+        "added": 5,
+        "updated": 0,
+        "removed": 5,
+        "total_active": 5
+      },
+      "top10": {
+        "category": "top10",
+        "mode": "rebuild",
+        "added": 10,
+        "updated": 0,
+        "removed": 10,
+        "total_active": 10
+      },
+      "now_playing": {
+        "category": "now_playing",
+        "mode": "rebuild",
+        "added": 20,
+        "updated": 0,
+        "removed": 20,
+        "total_active": 20
+      },
+      "trending_tv": {
+        "category": "trending_tv",
+        "mode": "rebuild",
+        "added": 20,
+        "updated": 0,
+        "removed": 20,
+        "total_active": 20
+      },
+      "upcoming": {
+        "category": "upcoming",
+        "mode": "upsert_with_soft_delete",
+        "added": 0,
+        "updated": 1,
+        "removed": 0,
+        "total_active": 1
+      },
+      "top_rated": {
+        "category": "top_rated",
+        "mode": "upsert_with_soft_delete",
+        "added": 0,
+        "updated": 40,
+        "removed": 0,
+        "total_active": 40
+      }
+    },
+    "error_messages": [],
+    "log_file": "content-sync-2026-09-25.log"
+  },
+  {
+    "started_at": "2026-09-25T10:57:59.657Z",
+    "completed_at": "2026-09-25T10:58:00.881Z",
+    "duration_ms": 1258,
+    "status": "success",
+    "total_added": 55,
+    "total_updated": 41,
+    "total_removed": 55,
+    "categories": {
+      "featured": {
+        "category": "featured",
+        "mode": "rebuild",
+        "added": 5,
+        "updated": 0,
+        "removed": 5,
+        "total_active": 5
+      },
+      "top10": {
+        "category": "top10",
+        "mode": "rebuild",
+        "added": 10,
+        "updated": 0,
+        "removed": 10,
+        "total_active": 10
+      },
+      "now_playing": {
+        "category": "now_playing",
+        "mode": "rebuild",
+        "added": 20,
+        "updated": 0,
+        "removed": 20,
+        "total_active": 20
+      },
+      "trending_tv": {
+        "category": "trending_tv",
+        "mode": "rebuild",
+        "added": 20,
+        "updated": 0,
+        "removed": 20,
+        "total_active": 20
+      },
+      "upcoming": {
+        "category": "upcoming",
+        "mode": "upsert_with_soft_delete",
+        "added": 0,
+        "updated": 1,
+        "removed": 0,
+        "total_active": 1
+      },
+      "top_rated": {
+        "category": "top_rated",
+        "mode": "upsert_with_soft_delete",
+        "added": 0,
+        "updated": 40,
+        "removed": 0,
+        "total_active": 40
+      }
+    },
+    "error_messages": [],
+    "log_file": "content-sync-2026-09-25.log"
+  },
+  {
+    "started_at": "2026-09-25T10:46:58.730Z",
+    "completed_at": "2026-09-25T10:47:01.634Z",
+    "duration_ms": 2999,
+    "status": "success",
+    "total_added": 55,
+    "total_updated": 41,
+    "total_removed": 55,
+    "categories": {
+      "featured": {
+        "category": "featured",
+        "mode": "rebuild",
+        "added": 5,
+        "updated": 0,
+        "removed": 5,
+        "total_active": 5
+      },
+      "top10": {
+        "category": "top10",
+        "mode": "rebuild",
+        "added": 10,
+        "updated": 0,
+        "removed": 10,
+        "total_active": 10
+      },
+      "now_playing": {
+        "category": "now_playing",
+        "mode": "rebuild",
+        "added": 20,
+        "updated": 0,
+        "removed": 20,
+        "total_active": 20
+      },
+      "trending_tv": {
+        "category": "trending_tv",
+        "mode": "rebuild",
+        "added": 20,
+        "updated": 0,
+        "removed": 20,
+        "total_active": 20
+      },
+      "upcoming": {
+        "category": "upcoming",
+        "mode": "upsert_with_soft_delete",
+        "added": 0,
+        "updated": 1,
+        "removed": 0,
+        "total_active": 1
+      },
+      "top_rated": {
+        "category": "top_rated",
+        "mode": "upsert_with_soft_delete",
+        "added": 0,
+        "updated": 40,
+        "removed": 0,
+        "total_active": 40
+      }
+    },
+    "error_messages": [],
+    "log_file": "content-sync-2026-09-25.log"
+  },
+  {
+    "started_at": "2026-09-25T10:45:04.031Z",
+    "completed_at": "2026-09-25T10:45:05.697Z",
+    "duration_ms": 1678,
+    "status": "success",
+    "total_added": 96,
+    "total_updated": 0,
+    "total_removed": 0,
+    "categories": {
+      "featured": {
+        "category": "featured",
+        "mode": "rebuild",
+        "added": 5,
+        "updated": 0,
+        "removed": 0,
+        "total_active": 5
+      },
+      "top10": {
+        "category": "top10",
+        "mode": "rebuild",
+        "added": 10,
+        "updated": 0,
+        "removed": 0,
+        "total_active": 10
+      },
+      "now_playing": {
+        "category": "now_playing",
+        "mode": "rebuild",
+        "added": 20,
+        "updated": 0,
+        "removed": 0,
+        "total_active": 20
+      },
+      "trending_tv": {
+        "category": "trending_tv",
+        "mode": "rebuild",
+        "added": 20,
+        "updated": 0,
+        "removed": 0,
+        "total_active": 20
+      },
+      "upcoming": {
+        "category": "upcoming",
+        "mode": "upsert_with_soft_delete",
+        "added": 1,
+        "updated": 0,
+        "removed": 0,
+        "total_active": 1
+      },
+      "top_rated": {
+        "category": "top_rated",
+        "mode": "upsert_with_soft_delete",
+        "added": 40,
+        "updated": 0,
+        "removed": 0,
+        "total_active": 40
+      }
+    },
+    "error_messages": [],
+    "log_file": "content-sync-2026-09-25.log"
+  }
+]

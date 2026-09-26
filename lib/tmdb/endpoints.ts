@@ -1,0 +1,17 @@
+export const TMDB_ENDPOINTS = {
+  trendingMovies: "/trending/movie/day",
+  trendingTV: "/trending/tv/day",
+  popularMovies: "/movie/popular",
+  popularTV: "/tv/popular",
+  topRatedMovies: "/movie/top_rated",
+  topRatedTV: "/tv/top_rated",
+  upcomingMovies: "/movie/upcoming",
+  genresMovieList: "/genre/movie/list",
+  genresTVList: "/genre/tv/list",
+  movieDetails: (id: string | number) => `/movie/${id}?append_to_response=credits,videos,watch/providers,similar,recommendations`,
+  tvDetails: (id: string | number) => `/tv/${id}?append_to_response=credits,videos,watch/providers,similar,recommendations`,
+  searchMulti: (query: string, page = 1) => `/search/multi?query=${encodeURIComponent(query)}&page=${page}&include_adult=false`,
+  discoverMovieByGenre: (genreId: string | number, page = 1) => `/discover/movie?with_genres=${genreId}&page=${page}&sort_by=popularity.desc`,
+  discoverTVByGenre: (genreId: string | number, page = 1) => `/discover/tv?with_genres=${genreId}&page=${page}&sort_by=popularity.desc`,
+  discoverByLanguage: (languageCode: string, page = 1) => `/discover/movie?with_original_language=${languageCode}&page=${page}&sort_by=popularity.desc`,
+};

@@ -1,0 +1,97 @@
+function renderHomeSections() {
+  showSection('home');
+  if (currentFeed === 'home') return;
+  currentFeed = 'home';
+
+  navMovie.classList.remove('active-nav');
+  navAnime.classList.remove('active-nav');
+  navMy.classList.remove('active-nav');
+  navTv.classList.remove('active-nav');
+	navHome.classList.add('active-nav');
+    const path = "/home";
+    // Only push if it's not already the same path
+    if (location.pathname.toLowerCase() !== path.toLowerCase()) {
+      history.pushState({}, "", path);
+    }
+	
+    
+
+  // ── Random top-10 trending (all/week) spotlight ──
+  (async () => {
+    const PROXY      = TMDB_PRIMARY_BASE;
+    const IMAGE_BASE = 'https://image.tmdb.org/t/p/original';
+    try {
+      const res  = await tmdbFetch('/trending/all/week');
+      const data = await res.json();
+      const top10 = (data.results || []).slice(0, 10).filter(item =>
+        item.backdrop_path && item.overview
+      );
+      if (!top10.length) return;
+
+      const item     = top10[Math.floor(Math.random() * top10.length)];
+      const id       = item.id;
+      const mediaType = item.media_type === 'movie' ? 'movie' : 'tv';
+      const title    = item.title || item.name || '';
+      const overview = item.overview || '';
+      const backdrop = IMAGE_BASE + item.backdrop_path;
+
+      const fetchPromises = [
+        tmdbFetch(`/${mediaType}/${id}/images?include_image_language=en,null`),
+        tmdbFetch(`/${mediaType}/${id}`)
+      ];
+
+      const [imgRes, detailRes] = await Promise.all(fetchPromises);
+      const imgData    = await imgRes.json();
+      const detailData = await detailRes.json();
+      const logos   = (imgData.logos || []).filter(l => l.file_path);
+      const englishLogo = logos.find(l => l.iso_639_1 === 'en') || logos[0];
+      const logoSrc = englishLogo ? IMAGE_BASE + englishLogo.file_path : '';
+
+      const dateStr    = mediaType === 'movie' ? item.release_date : item.first_air_date;
+      const numSeasons = detailData.number_of_seasons;
+      const tags = {
+        genres: (item.genre_ids || []).slice(0, 4).map(g => TMDB_GENRE_MAP[g]).filter(Boolean),
+        year: (dateStr || '').slice(0, 4),
+        runtime: mediaType === 'tv'
+          ? (numSeasons ? `${numSeasons} Season${numSeasons > 1 ? 's' : ''}` : '')
+          : (detailData.runtime ? `${detailData.runtime} min` : ''),
+        rating: await getSpotlightContentRating(id, 'movie')
+      };
+      updateSpotlight(id, mediaType, backdrop, logoSrc, overview, title, tags);
+    } catch (err) {
+      console.warn('Home spotlight auto-update failed:', err);
+      // Keep Wednesday as silent fallback
+      updateSpotlight(
+        119051, 'tv',
+        'https://image.tmdb.org/t/p/w1280/iHSwvRVsRyxpX7FE7GbviaDvgGZ.jpg',
+        'https://image.tmdb.org/t/p/original/2ErLAiKF2aMJfhqcRAL2qteyvvl.png',
+        'Smart, sarcastic and a little dead inside, Wednesday Addams investigates twisted mysteries while making new friends — and foes — at Nevermore Academy.',
+        'Wednesday',
+        { genre: 'Comedy', year: '2022', seasons: '2 Seasons', rating: 'NR' }
+      );
+    }
+  })();
+
+    renderSectionsByCountry();
+    window.scrollTo(0, 0);
+    const subheader = document.querySelector(".sub-header")
+    subheader.style.display = 'none';
+}
+    // Function to fetch visitor's country using ipapi.co (free tier available, no API key needed)
+async function getVisitorCountry() {
+  try {
+    const response = await fetch('https://ipapi.co/json/');
+    const data = await response.json();
+    return data.country_name || 'Unknown'; // Fallback to 'Unknown' if detection fails
+  } catch (error) {
+    console.error('Error fetching country:', error);
+    return 'Unknown'; // Fallback on error (e.g., network issues)
+  }
+}
+
+// Mapping of country to prioritized section order
+// Add more countries as needed; each value is an array of {url, title} objects in desired render order
+const countrySectionOrder = {
+  'India': [
+	{url: bollywoodUrl, title: 'Bollywood Movies' },
+	{ url: southUrl, title: 'Sout

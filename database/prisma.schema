@@ -1,0 +1,88 @@
+// Prisma Schema definition for ProMovies Unified Catalog Sync
+datasource db {
+  provider = "postgresql" // or "mysql" / "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum CatalogCategory {
+  featured
+  top10
+  upcoming
+  now_playing
+  top_rated
+  trending_tv
+}
+
+model CatalogItem {
+  id           Int             @id @default(autoincrement())
+  tmdbId       Int             @map("tmdb_id")
+  mediaType    String          @map("media_type") // "movie" | "tv"
+  title        String
+  overview     String?         @db.Text
+  posterPath   String?         @map("poster_path")
+  backdropPath String?         @map("backdrop_path")
+  logoPath     String?         @map("logo_path")
+  releaseDate  String?         @map("release_date")
+  voteAverage  Float           @default(0.0) @map("vote_average")
+  genreIds     Json            @default("[]") @map("genre_ids")
+  category     CatalogCategory
+  rank         Int?
+  isActive     Boolean         @default(true) @map("is_active")
+  createdAt    DateTime        @default(now()) @map("created_at")
+  updatedAt    DateTime        @updatedAt @map("updated_at")
+
+  @@unique([tmdbId, category], name: "tmdbId_category")
+  @@index([category, isActive])
+  @@index([category, rank])
+  @@index([tmdbId])
+  @@map("catalog_items")
+}
+
+model SyncLog {
+  id              Int      @id @default(autoincrement())
+  startedAt       DateTime @default(now()) @map("started_at")
+  completedAt     DateTime? @map("completed_at")
+  durationMs      Int      @map("duration_ms")
+  status          String   // "success" | "failed" | "partial"
+  totalAdded      Int      @default(0) @map("total_added")
+  totalUpdated    Int      @default(0) @map("total_updated")
+  totalRemoved    Int      @default(0) @map("total_removed")
+  categorySummary Json     @default("{}") @map("category_summary")
+  errorMessage    String?  @db.Text @map("error_message")
+  createdAt       DateTime @default(now()) @map("created_at")
+
+  @@index([startedAt(sort: Desc)])
+  @@map("sync_logs")
+}
+
+model Movie {
+  id               Int       @id @default(autoincrement())
+  tmdbId           Int       @unique @map("tmdb_id")
+  title            String
+  originalTitle    String?   @map("original_title")
+  overview         String?   @db.Text
+  posterPath       String    @map("poster_path")
+  backdropPath     String?   @map("backdrop_path")
+  releaseDate      DateTime? @map("release_date")
+  genres           Json      @default("[]")
+  genreIds         Json      @default("[]") @map("genre_ids")
+  voteAverage      Float     @default(0.0) @map("vote_average")
+  voteCount        Int       @default(0) @map("vote_count")
+  runtime          Int       @default(0)
+  originalLanguage String    @default("en") @map("original_language")
+  castMembers      Json      @default("[]") @map("cast_members")
+  trailerUrl       String?   @map("trailer_url")
+  trailerKey       String?   @map("trailer_key")
+  slug             String    @unique
+  status           String    @default("Released")
+  createdAt        DateTime  @default(now()) @map("created_at")
+  updatedAt        DateTime  @updatedAt @map("updated_at")
+
+  @@index([tmdbId])
+  @@index([slug])
+  @@map("movies")
+}

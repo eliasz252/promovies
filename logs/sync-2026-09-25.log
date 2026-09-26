@@ -1,0 +1,76 @@
+[2026-09-25T16:07:46.569Z] ======================================================
+[2026-09-25T16:07:46.572Z] START: Daily Movie Sync initiated at 2026-09-25T16:07:46.571Z
+[2026-09-25T16:07:46.574Z] Step 1: Fetching now_playing, upcoming, and daily trending discovery feeds...
+[2026-09-25T16:07:48.045Z] Discovered 59 candidate movie IDs.
+[2026-09-25T16:07:48.282Z] UPDATED: "Resident Evil" (TMDB 1423191)
+[2026-09-25T16:07:48.571Z] UPDATED: "The End of Oak Street" (TMDB 1101383)
+[2026-09-25T16:07:48.813Z] UPDATED: "Coyote vs. Acme" (TMDB 1204680)
+[2026-09-25T16:07:49.102Z] UPDATED: "The Odyssey" (TMDB 1368337)
+[2026-09-25T16:07:49.594Z] UPDATED: "The Love Hypothesis" (TMDB 1032863)
+[2026-09-25T16:07:49.853Z] UPDATED: "Colony" (TMDB 1375646)
+[2026-09-25T16:07:50.208Z] UPDATED: "Mutiny" (TMDB 1288445)
+[2026-09-25T16:07:50.772Z] UPDATED: "Moana" (TMDB 1108427)
+[2026-09-25T16:07:51.051Z] UPDATED: "One Last Shot" (TMDB 1607127)
+[2026-09-25T16:07:51.304Z] UPDATED: "Drawn Together" (TMDB 1440098)
+[2026-09-25T16:07:51.552Z] UPDATED: "The Fix" (TMDB 1228834)
+[2026-09-25T16:07:51.815Z] UPDATED: "Obsession" (TMDB 1339713)
+[2026-09-25T16:07:52.335Z] UPDATED: "Teenage Sex and Death at Camp Miasma" (TMDB 1240889)
+[2026-09-25T16:07:52.588Z] UPDATED: "After Impact" (TMDB 1751701)
+[2026-09-25T16:07:52.885Z] UPDATED: "The Runner" (TMDB 1386315)
+[2026-09-25T16:07:53.158Z] UPDATED: "Ice Cream Man" (TMDB 1477712)
+[2026-09-25T16:07:53.394Z] UPDATED: "Heart of the Beast" (TMDB 1263337)
+[2026-09-25T16:07:53.780Z] UPDATED: "You+Me - Against the World" (TMDB 1641629)
+[2026-09-25T16:07:54.137Z] UPDATED: "Avengers: Endgame" (TMDB 299534)
+[2026-09-25T16:07:54.424Z] UPDATED: "Backrooms" (TMDB 1083381)
+[2026-09-25T16:07:54.684Z] UPDATED: "Minions & Monsters" (TMDB 1315772)
+[2026-09-25T16:07:54.922Z] UPDATED: "The Last Sunrise" (TMDB 1516698)
+[2026-09-25T16:07:55.164Z] UPDATED: "PAW Patrol: The Dino Movie" (TMDB 1185806)
+[2026-09-25T16:07:55.424Z] UPDATED: "Mayday" (TMDB 1137844)
+[2026-09-25T16:07:55.729Z] ERROR processing TMDB ID 1621552: EPERM: operation not permitted, rename 'C:\Users\elias\Documents\website\promovies\data\synced-movies.1790352475720.tmp' -> 'C:\Users\elias\Documents\website\promovies\data\synced-movies.json'
+[2026-09-25T16:07:56.560Z] UPDATED: "Deep Water" (TMDB 1127384)
+[2026-09-25T16:07:56.820Z] UPDATED: "The Shadow's Edge" (TMDB 1419406)
+[2026-09-25T16:07:57.359Z] UPDATED: "Modha Rathri" (TMDB 1685882)
+[2026-09-25T16:07:57.647Z] UPDATED: "The Shawshank Redemption" (TMDB 278)
+[2026-09-25T16:07:58.048Z] UPDATED: "Fall 2: Deadpoint" (TMDB 1101412)
+[2026-09-25T16:07:58.523Z] UPDATED: "Scary Movie" (TMDB 1273221)
+[2026-09-25T16:07:59.210Z] UPDATED: "Forgotten Island" (TMDB 1465063)
+[2026-09-25T16:07:59.472Z] UPDATED: "Disclosure Day" (TMDB 1275779)
+[2026-09-25T16:07:59.705Z] UPDATED: "The Furious" (TMDB 1280738)
+[2026-09-25T16:07:59.932Z] UPDATED: "Lucky Strike" (TMDB 1594914)
+[2026-09-25T16:08:00.390Z] UPDATED: "I Want Your Sex" (TMDB 1288059)
+[2026-09-25T16:08:00.659Z] UPDATED: "Digger" (TMDB 1248832)
+[2026-09-25T16:08:00.948Z] UPDATED: "Sacrifice" (TMDB 1284186)
+[2026-09-25T16:08:01.207Z] UPDATED: "In the Grey" (TMDB 1122573)
+[2026-09-25T16:08:01.439Z] ADDED: "UNABOMBER" (TMDB 1492640, Year: 2026-09-25)
+[2026-09-25T16:08:01.699Z] UPDATED: "Toy Story 5" (TMDB 1084244)
+[2026-09-25T16:08:01.934Z] UPDATED: "Primetime" (TMDB 1375441)
+[2026-09-25T16:08:02.207Z] UPDATED: "Idiots" (TMDB 445466)
+[2026-09-25T16:08:02.444Z] ADDED: "The Death of Robin Hood" (TMDB 1284465, Year: 2026-06-18)
+[2026-09-25T16:08:02.672Z] UPDATED: "Legend of the White Dragon" (TMDB 843352)
+[2026-09-25T16:08:03.144Z] ADDED: "Verity" (TMDB 1283515, Year: 2026-09-30)
+[2026-09-25T16:08:03.377Z] ADDED: "Don't Be Shy!" (TMDB 1529372, Year: 2026-09-25)
+[2026-09-25T16:08:03.614Z] ADDED: "Clayface" (TMDB 1400940, Year: 2026-10-21)
+[2026-09-25T16:08:03.895Z] UPDATED: "Spider-Man: Brand New Day" (TMDB 969681)
+[2026-09-25T16:08:03.897Z] FINISH: Sync completed in 17.3s.
+[2026-09-25T16:08:03.898Z] SUMMARY: Added=5, Updated=43, Unchanged=10, Skipped=0, Errors=1
+[2026-09-25T16:08:03.899Z] ======================================================
+
+[2026-09-25T16:10:40.584Z] ======================================================
+[2026-09-25T16:10:40.588Z] START: Daily Movie Sync initiated at 2026-09-25T16:10:40.585Z
+[2026-09-25T16:10:40.597Z] Step 1: Fetching now_playing, upcoming, and daily trending discovery feeds...
+[2026-09-25T16:10:41.720Z] Discovered 59 candidate movie IDs.
+[2026-09-25T16:10:50.787Z] UPDATED: "Facing El Chapo" (TMDB 1621552)
+[2026-09-25T16:10:50.789Z] FINISH: Sync completed in 10.2s.
+[2026-09-25T16:10:50.790Z] SUMMARY: Added=0, Updated=1, Unchanged=58, Skipped=0, Errors=0
+[2026-09-25T16:10:50.790Z] ======================================================
+
+[2026-09-25T17:00:15.850Z] ======================================================
+[2026-09-25T17:00:15.862Z] START: Daily Movie Sync initiated at 2026-09-25T17:00:15.861Z
+[2026-09-25T17:00:15.866Z] Step 1: Fetching now_playing, upcoming, and daily trending discovery feeds...
+[2026-09-25T17:00:17.746Z] Discovered 59 candidate movie IDs.
+[2026-09-25T17:00:27.220Z] UPDATED: "Avengers: Endgame" (TMDB 299534)
+[2026-09-25T17:00:27.222Z] UPDATED: "UNABOMBER" (TMDB 1492640)
+[2026-09-25T17:00:27.224Z] FINISH: Sync completed in 11.4s.
+[2026-09-25T17:00:27.228Z] SUMMARY: Added=0, Updated=2, Unchanged=57, Skipped=0, Errors=0
+[2026-09-25T17:00:27.230Z] ======================================================
+

@@ -1,0 +1,19 @@
+{
+  "avgFps": 4.5,
+  "low1PercentFps": 1.8,
+  "totalFrames": 277,
+  "droppedFrames": 260,
+  "droppedFramePercentage": 93.9,
+  "severeJankFrames": 251,
+  "freezes": 251,
+  "avgFrameTime": 220.4,
+  "p95FrameTime": 416.7,
+  "p99FrameTime": 549.9,
+  "maxFrameTime": 583.3,
+  "longTasksCount": 18,
+  "totalLongTaskDuration": 3350,
+  "domNodesCount": 3172,
+  "imagesCount": 113,
+  "backdropFilterElements": 12,
+  "shadowElements": 344
+}

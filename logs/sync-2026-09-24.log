@@ -1,0 +1,84 @@
+[2026-09-24T11:18:45.351Z] ======================================================
+[2026-09-24T11:18:45.353Z] START: Daily Movie Sync initiated at 2026-09-24T11:18:45.353Z
+[2026-09-24T11:18:45.355Z] Step 1: Fetching now_playing, upcoming, and daily trending discovery feeds...
+[2026-09-24T11:18:46.927Z] Discovered 59 candidate movie IDs.
+[2026-09-24T11:18:47.256Z] ADDED: "Resident Evil" (TMDB 1423191, Year: 2026-09-16)
+[2026-09-24T11:18:47.578Z] ADDED: "The End of Oak Street" (TMDB 1101383, Year: 2026-08-12)
+[2026-09-24T11:18:47.900Z] ADDED: "Coyote vs. Acme" (TMDB 1204680, Year: 2026-08-20)
+[2026-09-24T11:18:48.251Z] ADDED: "The Odyssey" (TMDB 1368337, Year: 2026-07-15)
+[2026-09-24T11:18:48.536Z] ADDED: "Colony" (TMDB 1375646, Year: 2026-05-21)
+[2026-09-24T11:18:48.832Z] ADDED: "Mutiny" (TMDB 1288445, Year: 2026-08-19)
+[2026-09-24T11:18:49.093Z] ADDED: "The Love Hypothesis" (TMDB 1032863, Year: 2026-09-23)
+[2026-09-24T11:18:49.387Z] ADDED: "Zip Wire" (TMDB 1482547, Year: 2026-08-31)
+[2026-09-24T11:18:49.671Z] ADDED: "Moana" (TMDB 1108427, Year: 2026-07-08)
+[2026-09-24T11:18:50.033Z] ADDED: "Drawn Together" (TMDB 1440098, Year: 2026-09-09)
+[2026-09-24T11:18:50.314Z] ADDED: "One Last Shot" (TMDB 1607127, Year: 2026-09-22)
+[2026-09-24T11:18:50.625Z] ADDED: "The Fix" (TMDB 1228834, Year: 2026-09-10)
+[2026-09-24T11:18:50.969Z] ADDED: "Pinocchio: Unstrung" (TMDB 1232569, Year: 2026-07-22)
+[2026-09-24T11:18:51.278Z] ADDED: "Teenage Sex and Death at Camp Miasma" (TMDB 1240889, Year: 2026-08-06)
+[2026-09-24T11:18:51.550Z] ADDED: "The Runner" (TMDB 1386315, Year: 2026-09-03)
+[2026-09-24T11:18:51.879Z] ADDED: "Obsession" (TMDB 1339713, Year: 2026-05-13)
+[2026-09-24T11:18:52.264Z] ADDED: "Minions & Monsters" (TMDB 1315772, Year: 2026-06-24)
+[2026-09-24T11:18:52.576Z] ADDED: "After Impact" (TMDB 1751701, Year: 2026-09-15)
+[2026-09-24T11:18:52.883Z] ADDED: "Ice Cream Man" (TMDB 1477712, Year: 2026-08-03)
+[2026-09-24T11:18:53.202Z] ADDED: "The Last Sunrise" (TMDB 1516698, Year: 2026-08-26)
+[2026-09-24T11:18:53.500Z] ADDED: "Facing El Chapo" (TMDB 1621552, Year: 2026-08-21)
+[2026-09-24T11:18:53.912Z] ADDED: "Avengers: Endgame" (TMDB 299534, Year: 2019-04-24)
+[2026-09-24T11:18:54.192Z] ADDED: "You+Me - Against the World" (TMDB 1641629, Year: 2026-09-18)
+[2026-09-24T11:18:54.471Z] ADDED: "Mayday" (TMDB 1137844, Year: 2026-09-03)
+[2026-09-24T11:18:54.762Z] ADDED: "Backrooms" (TMDB 1083381, Year: 2026-05-27)
+[2026-09-24T11:18:55.061Z] ADDED: "PAW Patrol: The Dino Movie" (TMDB 1185806, Year: 2026-07-23)
+[2026-09-24T11:18:55.359Z] ADDED: "Heart of the Beast" (TMDB 1263337, Year: 2026-09-19)
+[2026-09-24T11:18:55.678Z] ADDED: "Ghost in the Cell" (TMDB 1393326, Year: 2026-04-16)
+[2026-09-24T11:18:55.986Z] ADDED: "Rosebush Pruning" (TMDB 1130948, Year: 2026-04-23)
+[2026-09-24T11:18:56.283Z] ADDED: "Deep Water" (TMDB 1127384, Year: 2026-04-30)
+[2026-09-24T11:18:56.548Z] ADDED: "Clash of the Thundermans" (TMDB 1506560, Year: 2026-09-03)
+[2026-09-24T11:18:56.824Z] ADDED: "The Shadow's Edge" (TMDB 1419406, Year: 2025-08-16)
+[2026-09-24T11:18:57.181Z] ADDED: "The Shawshank Redemption" (TMDB 278, Year: 1994-09-23)
+[2026-09-24T11:18:57.489Z] ADDED: "Hot Spot" (TMDB 813418, Year: 2026-08-21)
+[2026-09-24T11:18:57.773Z] ADDED: "Modha Rathri" (TMDB 1685882, Year: 2026-08-21)
+[2026-09-24T11:18:58.104Z] ADDED: "Fall 2: Deadpoint" (TMDB 1101412, Year: 2026-09-01)
+[2026-09-24T11:18:58.668Z] ADDED: "Above & Below" (TMDB 1514682, Year: 2026-07-29)
+[2026-09-24T11:18:58.947Z] ADDED: "The Whisper Man" (TMDB 860508, Year: 2026-08-27)
+[2026-09-24T11:18:59.235Z] ADDED: "Scary Movie" (TMDB 1273221, Year: 2026-06-03)
+[2026-09-24T11:18:59.616Z] ADDED: "Hope" (TMDB 1058424, Year: 2026-07-15)
+[2026-09-24T11:18:59.987Z] ADDED: "Disclosure Day" (TMDB 1275779, Year: 2026-06-10)
+[2026-09-24T11:19:00.249Z] ADDED: "Runner" (TMDB 1377237, Year: 2026-09-07)
+[2026-09-24T11:19:00.600Z] ADDED: "The Furious" (TMDB 1280738, Year: 2026-06-10)
+[2026-09-24T11:19:00.926Z] ADDED: "Lucky Strike" (TMDB 1594914, Year: 2026-06-26)
+[2026-09-24T11:19:01.232Z] ADDED: "I Want Your Sex" (TMDB 1288059, Year: 2026-07-29)
+[2026-09-24T11:19:01.526Z] ADDED: "Forgotten Island" (TMDB 1465063, Year: 2026-09-10)
+[2026-09-24T11:19:01.841Z] ADDED: "Sacrifice" (TMDB 1284186, Year: 2026-04-09)
+[2026-09-24T11:19:02.099Z] ADDED: "In the Grey" (TMDB 1122573, Year: 2026-05-13)
+[2026-09-24T11:19:02.422Z] ADDED: "The Hunger Games: Mockingjay - Part 1" (TMDB 131631, Year: 2014-11-19)
+[2026-09-24T11:19:02.709Z] ADDED: "Toy Story 5" (TMDB 1084244, Year: 2026-06-17)
+[2026-09-24T11:19:03.090Z] ADDED: "Idiots" (TMDB 445466, Year: 2026-08-20)
+[2026-09-24T11:19:03.382Z] ADDED: "Digger" (TMDB 1248832, Year: 2026-09-30)
+[2026-09-24T11:19:03.662Z] ADDED: "Legend of the White Dragon" (TMDB 843352, Year: 2026-08-28)
+[2026-09-24T11:19:04.403Z] ADDED: "Spider-Man: Brand New Day" (TMDB 969681, Year: 2026-07-29)
+[2026-09-24T11:19:04.710Z] ADDED: "Super Troopers 3" (TMDB 675871, Year: 2026-08-06)
+[2026-09-24T11:19:05.010Z] ADDED: "Avengers: Doomsday" (TMDB 1003596, Year: 2026-12-16)
+[2026-09-24T11:19:05.278Z] ADDED: "Ray Gunn" (TMDB 940009, Year: 2026-11-04)
+[2026-09-24T11:19:05.574Z] ADDED: "Primetime" (TMDB 1375441, Year: 2026-09-23)
+[2026-09-24T11:19:05.855Z] ADDED: "Spa Weekend" (TMDB 1341138, Year: 2026-08-20)
+[2026-09-24T11:19:05.856Z] FINISH: Sync completed in 20.5s.
+[2026-09-24T11:19:05.857Z] SUMMARY: Added=59, Updated=0, Unchanged=0, Skipped=0, Errors=0
+[2026-09-24T11:19:05.857Z] ======================================================
+
+[2026-09-24T11:19:29.531Z] ======================================================
+[2026-09-24T11:19:29.533Z] START: Daily Movie Sync initiated at 2026-09-24T11:19:29.532Z
+[2026-09-24T11:19:29.534Z] Step 1: Fetching now_playing, upcoming, and daily trending discovery feeds...
+[2026-09-24T11:19:30.993Z] Discovered 59 candidate movie IDs.
+[2026-09-24T11:19:42.593Z] FINISH: Sync completed in 13.1s.
+[2026-09-24T11:19:42.594Z] SUMMARY: Added=0, Updated=0, Unchanged=59, Skipped=0, Errors=0
+[2026-09-24T11:19:42.595Z] ======================================================
+
+[2026-09-24T11:35:49.099Z] ======================================================
+[2026-09-24T11:35:49.207Z] START: Daily Movie Sync initiated at 2026-09-24T11:35:49.156Z
+[2026-09-24T11:35:49.209Z] Step 1: Fetching now_playing, upcoming, and daily trending discovery feeds...
+[2026-09-24T11:35:50.699Z] Discovered 59 candidate movie IDs.
+[2026-09-24T11:35:56.049Z] UPDATED: "Backrooms" (TMDB 1083381)
+[2026-09-24T11:36:02.967Z] FINISH: Sync completed in 13.9s.
+[2026-09-24T11:36:02.969Z] SUMMARY: Added=0, Updated=1, Unchanged=58, Skipped=0, Errors=0
+[2026-09-24T11:36:02.970Z] ======================================================
+
