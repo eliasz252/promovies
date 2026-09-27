@@ -9,6 +9,7 @@ import { MediaItem } from "@/types/tmdb";
 import { useProfileStore } from "@/store/useProfileStore";
 import { MOCK_MEDIA_ITEMS, getKidsContent } from "@/lib/tmdb/mockData";
 import { useCatalog } from "@/hooks/useCatalog";
+import { AdNativeBanner, AdBanner320x50, AdBanner300x250 } from "@/components/ads/AdUnit";
 
 export default function HomePage() {
   const { activeProfile } = useProfileStore();
@@ -107,6 +108,9 @@ export default function HomePage() {
           {/* Today's Top 10 Leaderboard */}
           <Top10Carousel items={top10Items} onOpenModal={handleOpenModal} />
 
+          {/* ── Ad: 320×50 Leaderboard (after Top 10 — peak engagement) ── */}
+          <AdBanner320x50 />
+
           {/* New & Upcoming Movies Carousel */}
           <MediaCarousel
             title="New & Upcoming Movies (2025 - 2026)"
@@ -123,6 +127,9 @@ export default function HomePage() {
             onOpenModal={handleOpenModal}
           />
 
+          {/* ── Ad: 300×250 Rectangle (mid-page, highest RPM format) ── */}
+          <AdBanner300x250 />
+
           {/* Popular TV Shows Carousel */}
           <MediaCarousel
             title="Binge-Worthy TV Shows"
@@ -130,6 +137,9 @@ export default function HomePage() {
             viewAllHref="/shows"
             onOpenModal={handleOpenModal}
           />
+
+          {/* ── Ad: Native Banner (between TV & Anime — high scroll depth) ── */}
+          <AdNativeBanner />
 
           {/* Anime Discovery Row */}
           <MediaCarousel

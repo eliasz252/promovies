@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import AppMainWrapper from "@/components/layout/AppMainWrapper";
 import MobileNav from "@/components/layout/MobileNav";
 import Footer from "@/components/layout/Footer";
+import { AdSocialBar1, AdSocialBar2 } from "@/components/ads/AdUnit";
 
 export const viewport: Viewport = {
   themeColor: "#0b0b0f",
@@ -43,6 +44,9 @@ export default function RootLayout({
         {modal}
         <Footer />
         <MobileNav />
+        {/* Adsterra Social Bar Ads — sticky, site-wide */}
+        <AdSocialBar1 />
+        <AdSocialBar2 />
       </body>
     </html>
   );
