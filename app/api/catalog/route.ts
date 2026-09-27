@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getCatalogByCategory, getAllCatalogItems } from "@/lib/sync/catalogStore";
+import { getCatalogByCategory, getAllCatalogItems, getLastSyncTime } from "@/lib/sync/catalogStore";
 import { CatalogCategory } from "@/lib/sync/catalogTypes";
+import { runCatalogSync } from "@/lib/sync/catalogSyncEngine";
 
 export const dynamic = "force-dynamic";
+
+let isSyncRunning = false;
 
 const VALID_CATEGORIES: CatalogCategory[] = [
   "featured",
@@ -19,6 +22,34 @@ export async function GET(request: NextRequest) {
   const limitParam = searchParams.get("limit");
   const limit = limitParam ? parseInt(limitParam, 10) : undefined;
   const activeOnly = searchParams.get("includeInactive") !== "true";
+  const forceRefresh = searchParams.get("refresh") === "true";
+
+  // Check data freshness: if stale (>4 hours) or empty, trigger sync
+  const lastSync = getLastSyncTime();
+  const now = Date.now();
+  const isStale = !lastSync || now - lastSync > 4 * 60 * 60 * 1000;
+
+  let all = getAllCatalogItems().filter((item) => (activeOnly ? item.is_active : true));
+
+  if ((all.length === 0 || forceRefresh) && !isSyncRunning) {
+    isSyncRunning = true;
+    try {
+      await runCatalogSync({ dryRun: false });
+      all = getAllCatalogItems().filter((item) => (activeOnly ? item.is_active : true));
+    } catch (err) {
+      console.warn("[Catalog API] Sync failed during request:", err);
+    } finally {
+      isSyncRunning = false;
+    }
+  } else if (isStale && !isSyncRunning) {
+    // Stale-while-revalidate: return current data immediately, trigger sync in background
+    isSyncRunning = true;
+    runCatalogSync({ dryRun: false })
+      .catch((err) => console.warn("[Catalog API] Background sync failed:", err))
+      .finally(() => {
+        isSyncRunning = false;
+      });
+  }
 
   if (categoryParam) {
     if (!VALID_CATEGORIES.includes(categoryParam)) {
@@ -39,7 +70,6 @@ export async function GET(request: NextRequest) {
   }
 
   // If no category specified, return grouped map of all active categories
-  const all = getAllCatalogItems().filter((item) => (activeOnly ? item.is_active : true));
   const grouped: Record<CatalogCategory, typeof all> = {
     featured: [],
     top10: [],

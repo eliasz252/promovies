@@ -8,16 +8,15 @@
     "backdrop_path": "/u3EtxdmZeiliW98c5Oegk5LIGZa.jpg",
     "logo_path": null,
     "release_date": "2026-09-30",
-    "vote_average": 8.6,
+    "vote_average": 7.8,
     "genre_ids": [
-      18,
       35
     ],
     "category": "upcoming",
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 276161,
@@ -38,7 +37,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 1560520,
@@ -60,7 +59,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 299167,
@@ -80,7 +79,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 980431,
@@ -102,7 +101,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 278573,
@@ -122,7 +121,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 1396,
@@ -142,7 +141,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 273240,
@@ -161,7 +160,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 245026,
@@ -182,7 +181,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 322430,
@@ -202,7 +201,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 214999,
@@ -222,7 +221,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 1007757,
@@ -244,7 +243,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 259837,
@@ -255,7 +254,7 @@
     "backdrop_path": "/810mXC0xkxXVtoKIPGGVgO9PuLh.jpg",
     "logo_path": null,
     "release_date": "2026-05-15",
-    "vote_average": 8.9,
+    "vote_average": 8.8,
     "genre_ids": [
       10759,
       35,
@@ -266,7 +265,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 1632181,
@@ -286,7 +285,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 284445,
@@ -307,7 +306,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 219246,
@@ -326,7 +325,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 209867,
@@ -348,7 +347,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 85077,
@@ -369,7 +368,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 1311031,
@@ -390,7 +389,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 64010,
@@ -409,7 +408,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 1621552,
@@ -430,7 +429,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 246,
@@ -451,7 +450,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 259666,
@@ -471,7 +470,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 37854,
@@ -492,7 +491,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 94605,
@@ -513,7 +512,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 301507,
@@ -530,9 +529,9 @@
     ],
     "category": "top_rated",
     "rank": null,
-    "is_active": true,
+    "is_active": false,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 278,
@@ -552,7 +551,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 250307,
@@ -571,7 +570,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 238,
@@ -591,7 +590,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 936075,
@@ -611,7 +610,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 687163,
@@ -631,7 +630,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 240,
@@ -651,7 +650,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 389,
@@ -670,7 +669,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 1232449,
@@ -690,7 +689,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 424,
@@ -711,7 +710,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 1218925,
@@ -733,7 +732,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 155,
@@ -754,7 +753,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 129,
@@ -775,7 +774,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 497,
@@ -796,7 +795,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 122,
@@ -817,7 +816,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 19404,
@@ -838,7 +837,7 @@
     "rank": null,
     "is_active": true,
     "created_at": "2026-09-25T10:45:05.687Z",
-    "updated_at": "2026-09-25T17:00:57.915Z"
+    "updated_at": "2026-09-27T10:25:58.126Z"
   },
   {
     "tmdb_id": 108978,
@@ -857,8 +856,8 @@
     "category": "featured",
     "rank": 1,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.913Z",
-    "updated_at": "2026-09-25T17:00:57.913Z"
+    "created_at": "2026-09-27T10:25:58.124Z",
+    "updated_at": "2026-09-27T10:25:58.124Z"
   },
   {
     "tmdb_id": 969681,
@@ -878,8 +877,48 @@
     "category": "featured",
     "rank": 2,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.913Z",
-    "updated_at": "2026-09-25T17:00:57.913Z"
+    "created_at": "2026-09-27T10:25:58.124Z",
+    "updated_at": "2026-09-27T10:25:58.124Z"
+  },
+  {
+    "tmdb_id": 113962,
+    "media_type": "tv",
+    "title": "Lioness",
+    "overview": "Cruz Manuelos, a rough-around-the-edges but passionate young Marine, is recruited to join the CIA's Lioness Engagement Team to help bring down a terrorist organization from within. Joe, the station chief of the Lioness program, is tasked with training, managing and leading her female undercover operatives.",
+    "poster_path": "/rzpHPSEgPTpRs8EHbygwsOw7jC0.jpg",
+    "backdrop_path": "/mU7l9UaEItxHbg2YBNs0sHjoFVY.jpg",
+    "logo_path": "/xCXmYvX8UwggLh0h3I1A1fbHBxI.png",
+    "release_date": "2023-07-23",
+    "vote_average": 8.2,
+    "genre_ids": [
+      18,
+      10768
+    ],
+    "category": "featured",
+    "rank": 3,
+    "is_active": true,
+    "created_at": "2026-09-27T10:25:58.124Z",
+    "updated_at": "2026-09-27T10:25:58.124Z"
+  },
+  {
+    "tmdb_id": 456,
+    "media_type": "tv",
+    "title": "The Simpsons",
+    "overview": "Set in Springfield, the average American town, the show focuses on the antics and everyday adventures of the Simpson family; Homer, Marge, Bart, Lisa and Maggie, as well as a virtual cast of thousands. Since the beginning, the series has been a pop culture icon, attracting hundreds of celebrities to guest star. The show has also made name for itself in its fearless satirical take on politics, media and American life in general.",
+    "poster_path": "/uWpG7GqfKGQqX4YMAo3nv5OrglV.jpg",
+    "backdrop_path": "/jIArNHIekrCSVgdMbKPAXpPY03Y.jpg",
+    "logo_path": "/heDwFJx51IiBSJtjA1JYcWOXy7M.png",
+    "release_date": "1989-12-17",
+    "vote_average": 8,
+    "genre_ids": [
+      16,
+      35
+    ],
+    "category": "featured",
+    "rank": 4,
+    "is_active": true,
+    "created_at": "2026-09-27T10:25:58.124Z",
+    "updated_at": "2026-09-27T10:25:58.124Z"
   },
   {
     "tmdb_id": 1423191,
@@ -897,52 +936,10 @@
       12
     ],
     "category": "featured",
-    "rank": 3,
-    "is_active": true,
-    "created_at": "2026-09-25T17:00:57.913Z",
-    "updated_at": "2026-09-25T17:00:57.913Z"
-  },
-  {
-    "tmdb_id": 1101383,
-    "media_type": "movie",
-    "title": "The End of Oak Street",
-    "overview": "After a mysterious cosmic event rips Oak Street from suburbia and transports their neighborhood to someplace unknown, the Platt family soon discovers that their very survival depends on them sticking together as they navigate their now unrecognizable surroundings.",
-    "poster_path": "/fYXqpgPmHMphSF2W30GbTeJVIa5.jpg",
-    "backdrop_path": "/b9q9VmbXDvJmTziRqkwdEmFdwhr.jpg",
-    "logo_path": "/8VDfGY16827yyWH0R8itxLtfgK1.png",
-    "release_date": "2026-08-12",
-    "vote_average": 7,
-    "genre_ids": [
-      878,
-      9648,
-      53
-    ],
-    "category": "featured",
-    "rank": 4,
-    "is_active": true,
-    "created_at": "2026-09-25T17:00:57.913Z",
-    "updated_at": "2026-09-25T17:00:57.913Z"
-  },
-  {
-    "tmdb_id": 1204680,
-    "media_type": "movie",
-    "title": "Coyote vs. Acme",
-    "overview": "After Acme products fail him one too many times in his dogged pursuit of the Roadrunner, Wile E. Coyote decides to hire a billboard lawyer to sue the Acme Corporation.",
-    "poster_path": "/kYDCl2y0VPvhT5eYWbMRInPoB03.jpg",
-    "backdrop_path": "/viZqGq9TNvQ5uXSD4ahg2RpRONT.jpg",
-    "logo_path": "/3m1raTve2RWZ0jfnUwHSnRtjVK3.png",
-    "release_date": "2026-08-20",
-    "vote_average": 7.5,
-    "genre_ids": [
-      35,
-      12,
-      10751
-    ],
-    "category": "featured",
     "rank": 5,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.913Z",
-    "updated_at": "2026-09-25T17:00:57.913Z"
+    "created_at": "2026-09-27T10:25:58.124Z",
+    "updated_at": "2026-09-27T10:25:58.124Z"
   },
   {
     "tmdb_id": 108978,
@@ -961,8 +958,8 @@
     "category": "top10",
     "rank": 1,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 969681,
@@ -982,8 +979,48 @@
     "category": "top10",
     "rank": 2,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
+  },
+  {
+    "tmdb_id": 113962,
+    "media_type": "tv",
+    "title": "Lioness",
+    "overview": "Cruz Manuelos, a rough-around-the-edges but passionate young Marine, is recruited to join the CIA's Lioness Engagement Team to help bring down a terrorist organization from within. Joe, the station chief of the Lioness program, is tasked with training, managing and leading her female undercover operatives.",
+    "poster_path": "/rzpHPSEgPTpRs8EHbygwsOw7jC0.jpg",
+    "backdrop_path": "/mU7l9UaEItxHbg2YBNs0sHjoFVY.jpg",
+    "logo_path": null,
+    "release_date": "2023-07-23",
+    "vote_average": 8.2,
+    "genre_ids": [
+      18,
+      10768
+    ],
+    "category": "top10",
+    "rank": 3,
+    "is_active": true,
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
+  },
+  {
+    "tmdb_id": 456,
+    "media_type": "tv",
+    "title": "The Simpsons",
+    "overview": "Set in Springfield, the average American town, the show focuses on the antics and everyday adventures of the Simpson family; Homer, Marge, Bart, Lisa and Maggie, as well as a virtual cast of thousands. Since the beginning, the series has been a pop culture icon, attracting hundreds of celebrities to guest star. The show has also made name for itself in its fearless satirical take on politics, media and American life in general.",
+    "poster_path": "/uWpG7GqfKGQqX4YMAo3nv5OrglV.jpg",
+    "backdrop_path": "/jIArNHIekrCSVgdMbKPAXpPY03Y.jpg",
+    "logo_path": null,
+    "release_date": "1989-12-17",
+    "vote_average": 8,
+    "genre_ids": [
+      16,
+      35
+    ],
+    "category": "top10",
+    "rank": 4,
+    "is_active": true,
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 1423191,
@@ -1001,10 +1038,31 @@
       12
     ],
     "category": "top10",
-    "rank": 3,
+    "rank": 5,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
+  },
+  {
+    "tmdb_id": 1101383,
+    "media_type": "movie",
+    "title": "The End of Oak Street",
+    "overview": "After a mysterious cosmic event rips Oak Street from suburbia and transports their neighborhood to someplace unknown, the Platt family soon discovers that their very survival depends on them sticking together as they navigate their now unrecognizable surroundings.",
+    "poster_path": "/fYXqpgPmHMphSF2W30GbTeJVIa5.jpg",
+    "backdrop_path": "/b9q9VmbXDvJmTziRqkwdEmFdwhr.jpg",
+    "logo_path": null,
+    "release_date": "2026-08-12",
+    "vote_average": 7,
+    "genre_ids": [
+      878,
+      9648,
+      53
+    ],
+    "category": "top10",
+    "rank": 6,
+    "is_active": true,
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 1368337,
@@ -1022,17 +1080,17 @@
       14
     ],
     "category": "top10",
-    "rank": 4,
+    "rank": 7,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 1032863,
     "media_type": "movie",
     "title": "The Love Hypothesis",
     "overview": "Olive Smith, a biology PhD candidate, and Dr. Adam Carlsen, a hotshot professor and well-known tyrant, enter into a fake relationship, seeing each of their carefully calculated theories on love get thrown into chaos.",
-    "poster_path": "/g9rXb8I143ikhEjHK1BZdZ2tQzt.jpg",
+    "poster_path": "/vfZxVHextAGC70zrNhS8lsROqP1.jpg",
     "backdrop_path": "/o7Oy9Gbx1CCyaweL8xUhtMW4Puq.jpg",
     "logo_path": null,
     "release_date": "2026-09-23",
@@ -1042,10 +1100,10 @@
       35
     ],
     "category": "top10",
-    "rank": 5,
+    "rank": 8,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 247718,
@@ -1062,31 +1120,10 @@
       18
     ],
     "category": "top10",
-    "rank": 6,
+    "rank": 9,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
-  },
-  {
-    "tmdb_id": 95350,
-    "media_type": "tv",
-    "title": "Lanterns",
-    "overview": "Two intergalactic cops, new recruit John Stewart and Lantern legend Hal Jordan, are drawn into a dark, Earth-based mystery as they investigate a murder in the American heartland.",
-    "poster_path": "/gpC7h43xPMEV3goYMQShfJbTtLq.jpg",
-    "backdrop_path": "/wJjnJbVUwPz0GADAgpFt9nWtzUu.jpg",
-    "logo_path": null,
-    "release_date": "2026-08-16",
-    "vote_average": 8.3,
-    "genre_ids": [
-      18,
-      9648,
-      10765
-    ],
-    "category": "top10",
-    "rank": 7,
-    "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 1413,
@@ -1104,52 +1141,10 @@
       10765
     ],
     "category": "top10",
-    "rank": 8,
-    "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
-  },
-  {
-    "tmdb_id": 1084244,
-    "media_type": "movie",
-    "title": "Toy Story 5",
-    "overview": "When Bonnie receives a Lilypad tablet as a gift and becomes obsessed, Buzz, Woody, Jessie and the rest of the gang's jobs become exponentially harder when they have to go head to head with the all-new threat to playtime.",
-    "poster_path": "/sfQtVlIHljToOwYjhe21KPGzZWK.jpg",
-    "backdrop_path": "/qjTqY5coNiz6sVtPng40IzltsoN.jpg",
-    "logo_path": null,
-    "release_date": "2026-06-17",
-    "vote_average": 8.3,
-    "genre_ids": [
-      16,
-      10751,
-      35,
-      12
-    ],
-    "category": "top10",
-    "rank": 9,
-    "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
-  },
-  {
-    "tmdb_id": 299939,
-    "media_type": "tv",
-    "title": "Monster: The Lizzie Borden Story",
-    "overview": "Trapped in a cruel Victorian-era household, Lizzie Borden kills her parents in a gory ax murder that shocks the nation.",
-    "poster_path": "/57XScX1aYtKi1LvHYFQLPUxVhTG.jpg",
-    "backdrop_path": "/gaew60NXUxok3Vmls7gkAT7lYW0.jpg",
-    "logo_path": null,
-    "release_date": "2026-09-17",
-    "vote_average": 6.9,
-    "genre_ids": [
-      18,
-      80
-    ],
-    "category": "top10",
     "rank": 10,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 1423191,
@@ -1169,8 +1164,8 @@
     "category": "now_playing",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 1101383,
@@ -1190,8 +1185,8 @@
     "category": "now_playing",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 1204680,
@@ -1202,7 +1197,7 @@
     "backdrop_path": "/viZqGq9TNvQ5uXSD4ahg2RpRONT.jpg",
     "logo_path": null,
     "release_date": "2026-08-20",
-    "vote_average": 7.5,
+    "vote_average": 7.6,
     "genre_ids": [
       35,
       12,
@@ -1211,8 +1206,8 @@
     "category": "now_playing",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 1368337,
@@ -1220,7 +1215,7 @@
     "title": "The Odyssey",
     "overview": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
     "poster_path": "/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
-    "backdrop_path": "/iuylzRSllrGn7YB322kwKoOVMcq.jpg",
+    "backdrop_path": "/RMXG8myu1aGlNUsRjtxzmpdMK0.jpg",
     "logo_path": null,
     "release_date": "2026-07-15",
     "vote_average": 8,
@@ -1232,8 +1227,8 @@
     "category": "now_playing",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 1032863,
@@ -1244,7 +1239,7 @@
     "backdrop_path": "/o7Oy9Gbx1CCyaweL8xUhtMW4Puq.jpg",
     "logo_path": null,
     "release_date": "2026-09-23",
-    "vote_average": 8.3,
+    "vote_average": 8.2,
     "genre_ids": [
       10749,
       35
@@ -1252,8 +1247,8 @@
     "category": "now_playing",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 1375646,
@@ -1273,8 +1268,8 @@
     "category": "now_playing",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 1288445,
@@ -1285,7 +1280,7 @@
     "backdrop_path": "/e2QAGrEmbpmZpMymDRkDisJkvg9.jpg",
     "logo_path": null,
     "release_date": "2026-08-19",
-    "vote_average": 6.7,
+    "vote_average": 7.1,
     "genre_ids": [
       28,
       53
@@ -1293,8 +1288,49 @@
     "category": "now_playing",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
+  },
+  {
+    "tmdb_id": 1751701,
+    "media_type": "movie",
+    "title": "After Impact",
+    "overview": "After losing his father, Ethan Nichols inherits one of the largest greenhouses in the country, just as the world faces a devastating threat from an approaching asteroid. As society begins to unravel, Ethan grapples with personal betrayal, overwhelming loneliness, and the growing fear that survival may come at the cost of his humanity. Seeking refuge in his family’s bunker, Ethan endures the harsh aftermath of the impact, wrestling with physical injury and emotional despair. When a faint voice crackles over his radio, Ethan discovers he's not as alone as he believed.",
+    "poster_path": "/yzDuAQCY2n6zzOlBkn6JzhLhY3k.jpg",
+    "backdrop_path": "/k22XyPbce7zvzzf5OnT4uaY8ZD1.jpg",
+    "logo_path": null,
+    "release_date": "2026-09-15",
+    "vote_average": 5.7,
+    "genre_ids": [
+      878,
+      18,
+      53
+    ],
+    "category": "now_playing",
+    "rank": null,
+    "is_active": true,
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
+  },
+  {
+    "tmdb_id": 1228834,
+    "media_type": "movie",
+    "title": "The Fix",
+    "overview": "Disillusioned by the end of the war in Afghanistan, a group of disgraced, war-torn ex-CIA operatives set out to Tehran to take down a life-changing score.",
+    "poster_path": "/yopXjun3ICFfJci2ukcEzceZjUs.jpg",
+    "backdrop_path": "/dJTWIecL2vxsCRl5G0lRhPsfrhc.jpg",
+    "logo_path": null,
+    "release_date": "2026-09-10",
+    "vote_average": 7,
+    "genre_ids": [
+      28,
+      53
+    ],
+    "category": "now_playing",
+    "rank": null,
+    "is_active": true,
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 1482547,
@@ -1305,7 +1341,7 @@
     "backdrop_path": "/sbkkAtymJaH5UzExiK974uPzCY4.jpg",
     "logo_path": null,
     "release_date": "2026-08-31",
-    "vote_average": 7.6,
+    "vote_average": 7.3,
     "genre_ids": [
       28,
       53
@@ -1313,8 +1349,8 @@
     "category": "now_playing",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 1108427,
@@ -1335,8 +1371,8 @@
     "category": "now_playing",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 1607127,
@@ -1347,7 +1383,7 @@
     "backdrop_path": "/8giIQcHpxgsPVP6c7aQtHl3txuh.jpg",
     "logo_path": null,
     "release_date": "2026-09-22",
-    "vote_average": 7.7,
+    "vote_average": 7.5,
     "genre_ids": [
       28,
       53
@@ -1355,48 +1391,8 @@
     "category": "now_playing",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
-  },
-  {
-    "tmdb_id": 1440098,
-    "media_type": "movie",
-    "title": "Drawn Together",
-    "overview": "Marfil, daughter of a powerful Spanish businessman, sees her life in New York turned upside down when she is kidnapped and released without explanation. Her father hires Sebastian Moore as bodyguard and, forced to spend every minute together, an inevitable attraction ignites in a world where nothing is as it seems.",
-    "poster_path": "/6rpvddXbaQPOi0fB2HKWbZ3uUSg.jpg",
-    "backdrop_path": "/i65y7cMae36K0giN0GRaMjAHUru.jpg",
-    "logo_path": null,
-    "release_date": "2026-09-09",
-    "vote_average": 6.7,
-    "genre_ids": [
-      10749,
-      53
-    ],
-    "category": "now_playing",
-    "rank": null,
-    "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
-  },
-  {
-    "tmdb_id": 1228834,
-    "media_type": "movie",
-    "title": "The Fix",
-    "overview": "Disillusioned by the end of the war in Afghanistan, a group of disgraced, war-torn ex-CIA operatives set out to Tehran to take down a life-changing score.",
-    "poster_path": "/yopXjun3ICFfJci2ukcEzceZjUs.jpg",
-    "backdrop_path": "/dJTWIecL2vxsCRl5G0lRhPsfrhc.jpg",
-    "logo_path": null,
-    "release_date": "2026-09-10",
-    "vote_average": 7.2,
-    "genre_ids": [
-      28,
-      53
-    ],
-    "category": "now_playing",
-    "rank": null,
-    "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 1339713,
@@ -1404,7 +1400,7 @@
     "title": "Obsession",
     "overview": "After breaking the mysterious \"One Wish Willow\" to win his crush's heart, a hopeless romantic finds himself getting exactly what he asked for but soon discovers that some desires come at a dark, sinister price.",
     "poster_path": "/bRwnj8WEKBCvmfeUNOukJPwB43K.jpg",
-    "backdrop_path": "/rZfmzpixLKLR3Hg2u0WgC7XLFl8.jpg",
+    "backdrop_path": "/uoTZOIXnkcTgJe1emITpsQq7sPu.jpg",
     "logo_path": null,
     "release_date": "2026-05-13",
     "vote_average": 8.2,
@@ -1415,8 +1411,28 @@
     "category": "now_playing",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
+  },
+  {
+    "tmdb_id": 1440098,
+    "media_type": "movie",
+    "title": "Drawn Together",
+    "overview": "Marfil, daughter of a powerful Spanish businessman, sees her life in New York turned upside down when she is kidnapped and released without explanation. Her father hires Sebastian Moore as bodyguard and, forced to spend every minute together, an inevitable attraction ignites in a world where nothing is as it seems.",
+    "poster_path": "/6rpvddXbaQPOi0fB2HKWbZ3uUSg.jpg",
+    "backdrop_path": "/i65y7cMae36K0giN0GRaMjAHUru.jpg",
+    "logo_path": null,
+    "release_date": "2026-09-09",
+    "vote_average": 6.6,
+    "genre_ids": [
+      10749,
+      53
+    ],
+    "category": "now_playing",
+    "rank": null,
+    "is_active": true,
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 1232569,
@@ -1436,8 +1452,28 @@
     "category": "now_playing",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
+  },
+  {
+    "tmdb_id": 1263337,
+    "media_type": "movie",
+    "title": "Heart of the Beast",
+    "overview": "After a harrowing plane crash, Special Forces officer James Belmont and his combat dog, Odin, find themselves stranded deep in the Alaskan wilderness. Together, they are forced into a brutal fight for survival against the elements.",
+    "poster_path": "/1ApfSA8JTqeha3GTFEY8syV4auq.jpg",
+    "backdrop_path": "/bicMU6xVD5deVyKP2azpyx7xkmH.jpg",
+    "logo_path": null,
+    "release_date": "2026-09-19",
+    "vote_average": 7.6,
+    "genre_ids": [
+      12,
+      53
+    ],
+    "category": "now_playing",
+    "rank": null,
+    "is_active": true,
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 1240889,
@@ -1457,49 +1493,52 @@
     "category": "now_playing",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
-    "tmdb_id": 1751701,
+    "tmdb_id": 299534,
     "media_type": "movie",
-    "title": "After Impact",
-    "overview": "After losing his father, Ethan Nichols inherits one of the largest greenhouses in the country, just as the world faces a devastating threat from an approaching asteroid. As society begins to unravel, Ethan grapples with personal betrayal, overwhelming loneliness, and the growing fear that survival may come at the cost of his humanity. Seeking refuge in his family’s bunker, Ethan endures the harsh aftermath of the impact, wrestling with physical injury and emotional despair. When a faint voice crackles over his radio, Ethan discovers he's not as alone as he believed.",
-    "poster_path": "/yzDuAQCY2n6zzOlBkn6JzhLhY3k.jpg",
-    "backdrop_path": "/k22XyPbce7zvzzf5OnT4uaY8ZD1.jpg",
+    "title": "Avengers: Endgame",
+    "overview": "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store.",
+    "poster_path": "/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg",
+    "backdrop_path": "/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
     "logo_path": null,
-    "release_date": "2026-09-15",
-    "vote_average": 5.2,
+    "release_date": "2019-04-24",
+    "vote_average": 8.2,
     "genre_ids": [
+      12,
       878,
-      18,
-      53
-    ],
-    "category": "now_playing",
-    "rank": null,
-    "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
-  },
-  {
-    "tmdb_id": 1386315,
-    "media_type": "movie",
-    "title": "The Runner",
-    "overview": "Maia Marten, a brilliant London lawyer, has her life shattered by a single call on her morning run: her son has been taken. To get him back, she must keep running, obey every ruthless command, and trust no one-each second a test of how far a mother will go to save her child.",
-    "poster_path": "/uxCaBoYXsDC4A0SqTm3SISj0OwK.jpg",
-    "backdrop_path": "/jzBWExXacS33rMQ2zLBrqIVweyG.jpg",
-    "logo_path": null,
-    "release_date": "2026-09-03",
-    "vote_average": 6.8,
-    "genre_ids": [
-      53,
       28
     ],
     "category": "now_playing",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
+  },
+  {
+    "tmdb_id": 1315772,
+    "media_type": "movie",
+    "title": "Minions & Monsters",
+    "overview": "This is the rambunctious, ridiculous and totally true story of how the Minions conquered Hollywood, became movie stars, lost everything, unleashed monsters onto the world and then banded together to try and save the planet from the mayhem they had just created.",
+    "poster_path": "/4LwvU9SZc8QQzW1X1FAPhNbXnEU.jpg",
+    "backdrop_path": "/kkcwhgSFd81QDlXo8ytrpHPQjhy.jpg",
+    "logo_path": null,
+    "release_date": "2026-06-24",
+    "vote_average": 7.6,
+    "genre_ids": [
+      12,
+      16,
+      35,
+      10751,
+      14
+    ],
+    "category": "now_playing",
+    "rank": null,
+    "is_active": true,
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 1477712,
@@ -1510,57 +1549,17 @@
     "backdrop_path": "/hjF1rzTDR7YvnJUcH2SfP48w492.jpg",
     "logo_path": null,
     "release_date": "2026-08-03",
-    "vote_average": 4.6,
+    "vote_average": 4.7,
     "genre_ids": [
-      27,
       35,
+      27,
       53
     ],
     "category": "now_playing",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
-  },
-  {
-    "tmdb_id": 1263337,
-    "media_type": "movie",
-    "title": "Heart of the Beast",
-    "overview": "After a harrowing plane crash, Special Forces officer James Belmont and his combat dog, Odin, find themselves stranded deep in the Alaskan wilderness. Together, they are forced into a brutal fight for survival against the elements.",
-    "poster_path": "/1ApfSA8JTqeha3GTFEY8syV4auq.jpg",
-    "backdrop_path": "/bicMU6xVD5deVyKP2azpyx7xkmH.jpg",
-    "logo_path": null,
-    "release_date": "2026-09-19",
-    "vote_average": 8,
-    "genre_ids": [
-      12,
-      53
-    ],
-    "category": "now_playing",
-    "rank": null,
-    "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
-  },
-  {
-    "tmdb_id": 1641629,
-    "media_type": "movie",
-    "title": "You+Me - Against the World",
-    "overview": "Alma Lancaster, 18, appears to lead a perfect life within a wealthy family who believes she is studying law. In secret, she pursues her true dream: filmmaking. On campus, she meets Vadim Arcadi, 20, a magnetic and solitary rebel with a troubled past. Forced to collaborate on a student film, they clash, grow closer and fall in love — despite themselves. But someone is watching them, determined to tear them apart and expose secrets that could destroy both Alma and Vadim.",
-    "poster_path": "/bAbBNVplg7h79sm94OyHeKk8Phz.jpg",
-    "backdrop_path": "/nkEhDomjmPHJSA4Tx8pxv0NlKEy.jpg",
-    "logo_path": null,
-    "release_date": "2026-09-18",
-    "vote_average": 5.7,
-    "genre_ids": [
-      10749,
-      18
-    ],
-    "category": "now_playing",
-    "rank": null,
-    "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 275102,
@@ -1571,15 +1570,15 @@
     "backdrop_path": "/uc1p1PEbEMpdIHqnU9TESNC6Jhp.jpg",
     "logo_path": null,
     "release_date": "2026-09-18",
-    "vote_average": 7.2,
+    "vote_average": 7.1,
     "genre_ids": [
       18
     ],
     "category": "trending_tv",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 91759,
@@ -1599,47 +1598,8 @@
     "category": "trending_tv",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
-  },
-  {
-    "tmdb_id": 2261,
-    "media_type": "tv",
-    "title": "The Tonight Show Starring Johnny Carson",
-    "overview": "The Tonight Show Starring Johnny Carson is a talk show hosted by Johnny Carson under The Tonight Show franchise from 1962 to 1992. It originally aired during late-night. For its first ten years, Carson's Tonight Show was based in New York City with occasional trips to Burbank, California; in May 1972, the show moved permanently to Burbank, California. In 2002, The Tonight Show Starring Johnny Carson was ranked #12 on TV Guide's 50 Greatest TV Shows of All Time.",
-    "poster_path": "/uSvET5YUvHNDIeoCpErrbSmasFb.jpg",
-    "backdrop_path": "/qFfWFwfaEHzDLWLuttWiYq7Poy2.jpg",
-    "logo_path": null,
-    "release_date": "1962-10-01",
-    "vote_average": 7.5,
-    "genre_ids": [
-      10767
-    ],
-    "category": "trending_tv",
-    "rank": null,
-    "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
-  },
-  {
-    "tmdb_id": 108978,
-    "media_type": "tv",
-    "title": "Reacher",
-    "overview": "Jack Reacher, a veteran military police investigator, has just recently entered civilian life. Reacher is a drifter, carrying no phone and the barest of essentials as he travels the country and explores the nation he once served.",
-    "poster_path": "/f1VCQIG2iCyOookdgOzwtUpwWC0.jpg",
-    "backdrop_path": "/pF0qkRsrHkdYadPWY9AMeFZfcwk.jpg",
-    "logo_path": null,
-    "release_date": "2022-02-03",
-    "vote_average": 8.1,
-    "genre_ids": [
-      10759,
-      80
-    ],
-    "category": "trending_tv",
-    "rank": null,
-    "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 22980,
@@ -1658,8 +1618,47 @@
     "category": "trending_tv",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
+  },
+  {
+    "tmdb_id": 108978,
+    "media_type": "tv",
+    "title": "Reacher",
+    "overview": "Jack Reacher, a veteran military police investigator, has just recently entered civilian life. Reacher is a drifter, carrying no phone and the barest of essentials as he travels the country and explores the nation he once served.",
+    "poster_path": "/f1VCQIG2iCyOookdgOzwtUpwWC0.jpg",
+    "backdrop_path": "/pF0qkRsrHkdYadPWY9AMeFZfcwk.jpg",
+    "logo_path": null,
+    "release_date": "2022-02-03",
+    "vote_average": 8.1,
+    "genre_ids": [
+      10759,
+      80
+    ],
+    "category": "trending_tv",
+    "rank": null,
+    "is_active": true,
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
+  },
+  {
+    "tmdb_id": 2261,
+    "media_type": "tv",
+    "title": "The Tonight Show Starring Johnny Carson",
+    "overview": "The Tonight Show Starring Johnny Carson is a talk show hosted by Johnny Carson under The Tonight Show franchise from 1962 to 1992. It originally aired during late-night. For its first ten years, Carson's Tonight Show was based in New York City with occasional trips to Burbank, California; in May 1972, the show moved permanently to Burbank, California. In 2002, The Tonight Show Starring Johnny Carson was ranked #12 on TV Guide's 50 Greatest TV Shows of All Time.",
+    "poster_path": "/uSvET5YUvHNDIeoCpErrbSmasFb.jpg",
+    "backdrop_path": "/qFfWFwfaEHzDLWLuttWiYq7Poy2.jpg",
+    "logo_path": null,
+    "release_date": "1962-10-01",
+    "vote_average": 7.5,
+    "genre_ids": [
+      10767
+    ],
+    "category": "trending_tv",
+    "rank": null,
+    "is_active": true,
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 63770,
@@ -1678,8 +1677,8 @@
     "category": "trending_tv",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 549,
@@ -1698,8 +1697,8 @@
     "category": "trending_tv",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 59941,
@@ -1718,8 +1717,8 @@
     "category": "trending_tv",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 2734,
@@ -1739,8 +1738,8 @@
     "category": "trending_tv",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 113962,
@@ -1759,27 +1758,8 @@
     "category": "trending_tv",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
-  },
-  {
-    "tmdb_id": 94722,
-    "media_type": "tv",
-    "title": "Tagesschau",
-    "overview": "German daily news program, the oldest still existing program on German television.",
-    "poster_path": "/7dFZJ2ZJJdcmkp05B9NWlqTJ5tq.jpg",
-    "backdrop_path": "/jWXrQstj7p3Wl5MfYWY6IHqRpDb.jpg",
-    "logo_path": null,
-    "release_date": "1952-12-26",
-    "vote_average": 6.8,
-    "genre_ids": [
-      10763
-    ],
-    "category": "trending_tv",
-    "rank": null,
-    "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 5920,
@@ -1799,28 +1779,27 @@
     "category": "trending_tv",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
-    "tmdb_id": 61818,
+    "tmdb_id": 94722,
     "media_type": "tv",
-    "title": "Late Night with Seth Meyers",
-    "overview": "Seth Meyers, who is \"Saturday Night Live's\" longest serving anchor on the show's wildly popular \"Weekend Update,\" takes over as host of NBC's \"Late Night\" — home to A-list celebrity guests, memorable comedy and the best in musical talent. As the Emmy Award-winning head writer for \"SNL,\" Meyers has established a reputation for sharp wit and perfectly timed comedy, and has gained fame for his spot-on jokes and satire. Meyers takes his departure from \"SNL\" to his new post at \"Late Night,\" as Jimmy Fallon moves to \"The Tonight Show\".",
-    "poster_path": "/qKFP9Se7LJtBaxrMS41iu63dtK3.jpg",
-    "backdrop_path": "/dfX2UaHVE5c7kLBFbgmEZJuy4Ev.jpg",
+    "title": "Tagesschau",
+    "overview": "German daily news program, the oldest still existing program on German television.",
+    "poster_path": "/7dFZJ2ZJJdcmkp05B9NWlqTJ5tq.jpg",
+    "backdrop_path": "/jWXrQstj7p3Wl5MfYWY6IHqRpDb.jpg",
     "logo_path": null,
-    "release_date": "2014-02-25",
-    "vote_average": 5.1,
+    "release_date": "1952-12-26",
+    "vote_average": 6.8,
     "genre_ids": [
-      10767,
-      35
+      10763
     ],
     "category": "trending_tv",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 456,
@@ -1839,8 +1818,47 @@
     "category": "trending_tv",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
+  },
+  {
+    "tmdb_id": 61818,
+    "media_type": "tv",
+    "title": "Late Night with Seth Meyers",
+    "overview": "Seth Meyers, who is \"Saturday Night Live's\" longest serving anchor on the show's wildly popular \"Weekend Update,\" takes over as host of NBC's \"Late Night\" — home to A-list celebrity guests, memorable comedy and the best in musical talent. As the Emmy Award-winning head writer for \"SNL,\" Meyers has established a reputation for sharp wit and perfectly timed comedy, and has gained fame for his spot-on jokes and satire. Meyers takes his departure from \"SNL\" to his new post at \"Late Night,\" as Jimmy Fallon moves to \"The Tonight Show\".",
+    "poster_path": "/qKFP9Se7LJtBaxrMS41iu63dtK3.jpg",
+    "backdrop_path": "/dfX2UaHVE5c7kLBFbgmEZJuy4Ev.jpg",
+    "logo_path": null,
+    "release_date": "2014-02-25",
+    "vote_average": 5.1,
+    "genre_ids": [
+      10767,
+      35
+    ],
+    "category": "trending_tv",
+    "rank": null,
+    "is_active": true,
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
+  },
+  {
+    "tmdb_id": 1416,
+    "media_type": "tv",
+    "title": "Grey's Anatomy",
+    "overview": "Follows the personal and professional lives of a group of doctors at Seattle's Grey Sloan Memorial Hospital.",
+    "poster_path": "/hjJkrLXhWvGHpLeLBDFznpBTY1S.jpg",
+    "backdrop_path": "/jP0Rhj9OTPDAwQlHQwOLFDdeE8t.jpg",
+    "logo_path": null,
+    "release_date": "2005-03-27",
+    "vote_average": 8.2,
+    "genre_ids": [
+      18
+    ],
+    "category": "trending_tv",
+    "rank": null,
+    "is_active": true,
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 4614,
@@ -1860,46 +1878,8 @@
     "category": "trending_tv",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
-  },
-  {
-    "tmdb_id": 1416,
-    "media_type": "tv",
-    "title": "Grey's Anatomy",
-    "overview": "Follows the personal and professional lives of a group of doctors at Seattle's Grey Sloan Memorial Hospital.",
-    "poster_path": "/hjJkrLXhWvGHpLeLBDFznpBTY1S.jpg",
-    "backdrop_path": "/jP0Rhj9OTPDAwQlHQwOLFDdeE8t.jpg",
-    "logo_path": null,
-    "release_date": "2005-03-27",
-    "vote_average": 8.2,
-    "genre_ids": [
-      18
-    ],
-    "category": "trending_tv",
-    "rank": null,
-    "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
-  },
-  {
-    "tmdb_id": 62223,
-    "media_type": "tv",
-    "title": "The Late Late Show with James Corden",
-    "overview": "Once Craig Ferguson retires, James Corden will be taking over The Late Late Show. The show is a late night talk show that interviews celebrities and has its own bits. And of course, it's all hosted by James Corden.",
-    "poster_path": "/qPmVoG8G9tc1nN8ZwGV2zYcknit.jpg",
-    "backdrop_path": "/amtOltTVcK9vQtL1iQS6p3LBi05.jpg",
-    "logo_path": null,
-    "release_date": "2015-03-23",
-    "vote_average": 5.1,
-    "genre_ids": [
-      10767
-    ],
-    "category": "trending_tv",
-    "rank": null,
-    "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 1434,
@@ -1918,28 +1898,48 @@
     "category": "trending_tv",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
-    "tmdb_id": 1433,
+    "tmdb_id": 2224,
     "media_type": "tv",
-    "title": "American Dad!",
-    "overview": "The series focuses on an eccentric motley crew that is the Smith family and their three housemates: Father, husband, and breadwinner Stan Smith; his better half housewife, Francine Smith; their college-aged daughter, Hayley Smith; and their high-school-aged son, Steve Smith. Outside of the Smith family, there are three additional main characters, including Hayley's boyfriend turned husband, Jeff Fischer; the family's man-in-a-goldfish-body pet, Klaus; and most notably the family's zany alien, Roger, who is \"full of masquerades, brazenness, and shocking antics.\"",
-    "poster_path": "/eb9sH2am9IUSQ8GhXTNAVoujk8W.jpg",
-    "backdrop_path": "/iixxhk3ycXmFqBn616pAsC3lu53.jpg",
+    "title": "The Daily Show",
+    "overview": "The World's Fakest News Team tackle the biggest stories in news, politics and pop culture.",
+    "poster_path": "/ixcfyK7it6FjRM36Te4OdblAq4X.jpg",
+    "backdrop_path": "/qLMfcvdCcCGD2BNLH8b6ZCBuO7D.jpg",
     "logo_path": null,
-    "release_date": "2005-02-06",
-    "vote_average": 7,
+    "release_date": "1996-07-22",
+    "vote_average": 6.4,
     "genre_ids": [
-      16,
+      10763,
       35
     ],
     "category": "trending_tv",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
+  },
+  {
+    "tmdb_id": 498,
+    "media_type": "tv",
+    "title": "Late Show with David Letterman",
+    "overview": "David Letterman uses mature humor to appeal to his audience in this weeknight series, which gets its music from a house band led by Paul Shaffer. Among the show's most-famous segments are the Top Ten List and Stupid Pet Tricks, the latter of which subsequently led to an additional recurring segment called Stupid Human Tricks.",
+    "poster_path": "/fTBC5EpsgKmli9VQcJMtqQ08Qj4.jpg",
+    "backdrop_path": "/7jEnft2CLNbILWAiBRIBrXNN7Qh.jpg",
+    "logo_path": null,
+    "release_date": "1993-08-30",
+    "vote_average": 6.5,
+    "genre_ids": [
+      10767,
+      35
+    ],
+    "category": "trending_tv",
+    "rank": null,
+    "is_active": true,
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
   },
   {
     "tmdb_id": 82873,
@@ -1957,7 +1957,26 @@
     "category": "trending_tv",
     "rank": null,
     "is_active": true,
-    "created_at": "2026-09-25T17:00:57.914Z",
-    "updated_at": "2026-09-25T17:00:57.914Z"
+    "created_at": "2026-09-27T10:25:58.125Z",
+    "updated_at": "2026-09-27T10:25:58.125Z"
+  },
+  {
+    "tmdb_id": 87108,
+    "media_type": "tv",
+    "title": "Chernobyl",
+    "overview": "The true story of one of the worst man-made catastrophes in history: the catastrophic nuclear accident at Chernobyl. A tale of the brave men and women who sacrificed to save Europe from unimaginable disaster.",
+    "poster_path": "/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg",
+    "backdrop_path": "/900tHlUYUkp7Ol04XFSoAaEIXcT.jpg",
+    "logo_path": null,
+    "release_date": "2019-05-06",
+    "vote_average": 8.7,
+    "genre_ids": [
+      18
+    ],
+    "category": "top_rated",
+    "rank": null,
+    "is_active": true,
+    "created_at": "2026-09-27T10:25:58.126Z",
+    "updated_at": "2026-09-27T10:25:58.126Z"
   }
 ]

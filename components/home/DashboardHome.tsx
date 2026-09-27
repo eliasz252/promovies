@@ -8,7 +8,13 @@ import { MediaItem } from "@/types/tmdb";
 import { getTMDBImageUrl } from "@/lib/tmdb/client";
 import { useProfileStore } from "@/store/useProfileStore";
 import { useWatchlistStore } from "@/store/useWatchlistStore";
-import { recordMovieStarted } from "@/lib/utils/continueWatching";
+import {
+  recordMovieStarted,
+  getContinueWatchingList,
+  formatMinutesLeft,
+  ContinueWatchingRecord,
+  CONTINUE_WATCHING_MEDIA_MAP,
+} from "@/lib/utils/continueWatching";
 import {
   Home as HomeIcon,
   Heart,
@@ -172,33 +178,7 @@ const NEW_TRAILERS = [
   },
 ];
 
-// Left sidebar: Continue Watching items (Current 2024 hits)
-const CONTINUE_ITEMS = [
-  {
-    id: 500,
-    title: "The Penguin Season 1",
-    subtitle: "Episode 4 • 45m left",
-    poster: "/74xTEgt7R36Fpooo50r9T25onhq.jpg",
-    progress: 75,
-    mediaType: "tv" as const,
-  },
-  {
-    id: 533535,
-    title: "Deadpool & Wolverine",
-    subtitle: "42m left",
-    poster: "/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg",
-    progress: 65,
-    mediaType: "movie" as const,
-  },
-  {
-    id: 10859,
-    title: "The Wild Robot",
-    subtitle: "28m left",
-    poster: "/wTnV3PCVW5O92JMrFvvrRcV39RU.jpg",
-    progress: 70,
-    mediaType: "movie" as const,
-  },
-];
+// (CONTINUE_ITEMS removed — sidebar now uses real localStorage watch history)
 
 interface FeaturedCard {
   id: number;
@@ -529,9 +509,18 @@ export default function DashboardHome({ onOpenModal, allMedia, children }: Dashb
   const [searchQuery, setSearchQuery] = useState("");
   const [notificationOpen, setNotificationOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [sidebarContinueItems, setSidebarContinueItems] = useState<ContinueWatchingRecord[]>([]);
 
   useEffect(() => {
     setIsMounted(true);
+    const refresh = () => setSidebarContinueItems(getContinueWatchingList().slice(0, 4));
+    refresh();
+    window.addEventListener("continueWatchingUpdated", refresh);
+    window.addEventListener("focus", refresh);
+    return () => {
+      window.removeEventListener("continueWatchingUpdated", refresh);
+      window.removeEventListener("focus", refresh);
+    };
   }, []);
 
   const currentHero = HERO_ITEMS[heroIndex] || HERO_ITEMS[0];
@@ -708,7 +697,7 @@ export default function DashboardHome({ onOpenModal, allMedia, children }: Dashb
                   />
                 </div>
                 <span className="text-xs font-bold text-white font-mono tracking-wider">
-                  {activeProfile.name || "VIKRAM.UIX"}
+                  {activeProfile.name || "My Profile"}
                 </span>
                 <ChevronDown className="w-3.5 h-3.5 text-slate-400" />
               </Link>
@@ -785,67 +774,94 @@ export default function DashboardHome({ onOpenModal, allMedia, children }: Dashb
                 </div>
               </div>
 
-              {/* Card 2: Continue Watching */}
-              <div className="p-4 sm:p-5 rounded-3xl bg-white/[0.04] border border-white/10 flex flex-col gap-4 shadow-xl">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-xs sm:text-sm font-bold text-white tracking-wide">
-                    Continue Watching
-                  </h3>
-                  <span className="text-[11px] font-mono text-slate-400">
-                    {CONTINUE_ITEMS.length} in progress
-                  </span>
-                </div>
+              {/* Card 2: Continue Watching (real user history from localStorage) */}
+              {sidebarContinueItems.length > 0 && (
+                <div className="p-4 sm:p-5 rounded-3xl bg-white/[0.04] border border-white/10 flex flex-col gap-4 shadow-xl">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-xs sm:text-sm font-bold text-white tracking-wide">
+                      Continue Watching
+                    </h3>
+                    <span className="text-[11px] font-mono text-slate-400">
+                      {sidebarContinueItems.length} in progress
+                    </span>
+                  </div>
 
-                <div className="flex flex-col gap-3">
-                  {CONTINUE_ITEMS.map((item) => (
-                    <div
-                      key={item.id}
-                      onClick={() => {
-                        const match: MediaItem = allMedia.find((m) => m.id === item.id) || ({
+                  <div className="flex flex-col gap-3">
+                    {sidebarContinueItems.map((item) => {
+                      const mediaObj = CONTINUE_WATCHING_MEDIA_MAP[item.id] ||
+                        allMedia.find((m) => m.id === item.id) || {
                           id: item.id,
                           title: item.title,
                           name: item.title,
-                          poster_path: item.poster,
-                          backdrop_path: item.poster,
-                          overview: item.title,
-                          media_type: item.mediaType,
-                          genre_ids: [18],
-                          vote_average: 8.5,
-                          vote_count: 1500,
-                          popularity: 600.0,
-                        } as MediaItem);
-                        onOpenModal(match);
-                      }}
-                      className="group flex items-center justify-between gap-3 p-2 rounded-2xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/5 hover:border-white/15 transition-all cursor-pointer"
-                    >
-                      <div className="flex items-center gap-3 min-w-0">
-                        <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-black/60 shrink-0">
-                          <Image
-                            src={getTMDBImageUrl(item.poster, "w300")}
-                            alt={item.title}
-                            fill
-                            unoptimized
-                            className="object-cover group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                        <div className="flex flex-col min-w-0">
-                          <h4 className="text-xs font-semibold text-white truncate group-hover:text-amber-300 transition-colors">
-                            {item.title}
-                          </h4>
-                          <span className="text-[10px] text-slate-400 truncate font-mono">
-                            {item.subtitle}
-                          </span>
-                        </div>
-                      </div>
+                          poster_path: item.poster_path,
+                          backdrop_path: item.backdrop_path,
+                          overview: "",
+                          media_type: item.type,
+                          genre_ids: [],
+                          vote_average: 8.0,
+                          vote_count: 100,
+                          popularity: 500,
+                        } as MediaItem;
+                      const progressPercent = item.duration > 0
+                        ? Math.min(100, Math.round((item.currentTime / item.duration) * 100))
+                        : item.percent || 50;
+                      const remainingText = formatMinutesLeft(item.currentTime, item.duration);
+                      const posterSrc = item.poster_path || item.backdrop_path || (mediaObj as MediaItem).poster_path;
 
-                      {/* Play Button */}
-                      <div className="w-8 h-8 rounded-full bg-white/15 group-hover:bg-white text-white group-hover:text-black backdrop-blur-md flex items-center justify-center shrink-0 shadow-md transition-all">
-                        <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
-                      </div>
-                    </div>
-                  ))}
+                      return (
+                        <div
+                          key={`${item.id}-${item.season || 0}-${item.episode || 0}`}
+                          onClick={() => {
+                            onOpenModal({
+                              ...(mediaObj as MediaItem),
+                              autoPlayStreaming: true,
+                              initialSeason: item.season,
+                              initialEpisode: item.episode,
+                              initialStartTime: item.currentTime,
+                            } as any);
+                          }}
+                          className="group flex items-center justify-between gap-3 p-2 rounded-2xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/5 hover:border-white/15 transition-all cursor-pointer"
+                        >
+                          <div className="flex items-center gap-3 min-w-0">
+                            <div className="relative w-12 h-12 rounded-xl overflow-hidden bg-black/60 shrink-0">
+                              <Image
+                                src={getTMDBImageUrl(posterSrc, "w300")}
+                                alt={item.title}
+                                fill
+                                unoptimized
+                                className="object-cover group-hover:scale-105 transition-transform duration-300"
+                              />
+                              {/* Mini progress bar */}
+                              <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-black/40">
+                                <div
+                                  className="h-full bg-gradient-to-r from-violet-500 to-pink-500"
+                                  style={{ width: `${progressPercent}%` }}
+                                />
+                              </div>
+                            </div>
+                            <div className="flex flex-col min-w-0">
+                              <h4 className="text-xs font-semibold text-white truncate group-hover:text-amber-300 transition-colors">
+                                {item.title}
+                                {item.type === "tv" && item.season && item.episode
+                                  ? <span className="text-[10px] text-slate-400 font-normal ml-1">S{item.season}:E{item.episode}</span>
+                                  : null}
+                              </h4>
+                              <span className="text-[10px] text-slate-400 truncate font-mono">
+                                {remainingText} • {progressPercent}%
+                              </span>
+                            </div>
+                          </div>
+
+                          {/* Play Button */}
+                          <div className="w-8 h-8 rounded-full bg-white/15 group-hover:bg-white text-white group-hover:text-black backdrop-blur-md flex items-center justify-center shrink-0 shadow-md transition-all">
+                            <Play className="w-3.5 h-3.5 fill-current ml-0.5" />
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
 
             {/* Right Column: Hero Banner + 4 Featured Cards */}

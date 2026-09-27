@@ -1,0 +1,33 @@
+[2026-09-27T10:25:55.576Z] ===========================================================
+[2026-09-27T10:25:55.581Z] START: Automated Daily Catalog Sync initiated at 2026-09-27T10:25:55.580Z
+[2026-09-27T10:25:55.601Z] Step 1: Fetching discovery feeds with concurrency limit 3...
+[2026-09-27T10:25:57.001Z]   ✓ Fetched now_playing: 20 items.
+[2026-09-27T10:25:57.153Z]   ✓ Fetched trending_tv: 20 items.
+[2026-09-27T10:25:57.294Z]   ✓ Fetched top_rated_movies: 20 items.
+[2026-09-27T10:25:57.379Z]   ✓ Fetched trending_movies: 20 items.
+[2026-09-27T10:25:57.386Z]   ✓ Fetched upcoming: 20 items.
+[2026-09-27T10:25:57.423Z]   ✓ Fetched top_rated_tv: 20 items.
+[2026-09-27T10:25:57.488Z]   ✓ Fetched popular_tv: 20 items.
+[2026-09-27T10:25:57.489Z] Step 2A: Processing Top 10 Today...
+[2026-09-27T10:25:57.491Z] Step 2B: Processing Featured Pool & fetching stylized title logos...
+[2026-09-27T10:25:57.762Z]   Featured #1 "Reacher" (TMDB 108978) -> logo: /2YkCVT6opPxKh2ogEqxVrCiFgsr.png
+[2026-09-27T10:25:57.780Z]   Featured #2 "Spider-Man: Brand New Day" (TMDB 969681) -> logo: /vbZcDHC5IFylYuRnp3eyOs5rTV1.png
+[2026-09-27T10:25:57.788Z]   Featured #3 "Lioness" (TMDB 113962) -> logo: /xCXmYvX8UwggLh0h3I1A1fbHBxI.png
+[2026-09-27T10:25:58.078Z]   Featured #5 "Resident Evil" (TMDB 1423191) -> logo: /9ulobOWQViT7UQt2iYzb5tEVgm9.png
+[2026-09-27T10:25:58.111Z]   Featured #4 "The Simpsons" (TMDB 456) -> logo: /heDwFJx51IiBSJtjA1JYcWOXy7M.png
+[2026-09-27T10:25:58.113Z] Step 2C: Processing Now Playing...
+[2026-09-27T10:25:58.115Z] Step 2D: Processing Trending TV Shows...
+[2026-09-27T10:25:58.117Z] Step 2E: Processing Upcoming Movies (filtered to next 30 days)...
+[2026-09-27T10:25:58.121Z] Step 2F: Processing Top Rated Movies & Series...
+[2026-09-27T10:25:58.123Z] Step 3: Committing transactional database changes...
+[2026-09-27T10:25:58.134Z] ✓ Transaction committed successfully to database.
+[2026-09-27T10:25:58.136Z] FINISH: Sync finished with status "success" in 2.56s.
+[2026-09-27T10:25:58.137Z] SUMMARY: Added=56, Updated=40, Removed=56
+[2026-09-27T10:25:58.138Z]   - featured: Mode=rebuild, Added=5, Updated=0, Removed=5, Active=5
+[2026-09-27T10:25:58.139Z]   - top10: Mode=rebuild, Added=10, Updated=0, Removed=10, Active=10
+[2026-09-27T10:25:58.140Z]   - now_playing: Mode=rebuild, Added=20, Updated=0, Removed=20, Active=20
+[2026-09-27T10:25:58.141Z]   - trending_tv: Mode=rebuild, Added=20, Updated=0, Removed=20, Active=20
+[2026-09-27T10:25:58.142Z]   - upcoming: Mode=upsert_with_soft_delete, Added=0, Updated=1, Removed=0, Active=1
+[2026-09-27T10:25:58.143Z]   - top_rated: Mode=upsert_with_soft_delete, Added=1, Updated=39, Removed=1, Active=40
+[2026-09-27T10:25:58.144Z] ===========================================================
+

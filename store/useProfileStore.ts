@@ -5,22 +5,8 @@ import { Profile } from "@/types/tmdb";
 export const DEFAULT_PROFILES: Profile[] = [
   {
     id: "p1",
-    name: "VIKRAM.UIX",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
-    isKids: false,
-    language: "en",
-  },
-  {
-    id: "p2",
-    name: "CinemaFan",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
-    isKids: false,
-    language: "en",
-  },
-  {
-    id: "p3",
-    name: "Streamer",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80",
+    name: "My Profile",
+    avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80",
     isKids: false,
     language: "en",
   },
@@ -102,8 +88,19 @@ export const useProfileStore = create<ProfileState>()(
       },
     }),
     {
-      name: "promovies-profile-storage",
+      name: "promovies-profile-storage-v2",
       storage: createJSONStorage(() => localStorage),
+      onRehydrateStorage: () => (state) => {
+        if (typeof window !== "undefined") {
+          try {
+            localStorage.removeItem("promovies-profile-storage");
+          } catch {}
+        }
+        if (state && (state.activeProfile?.name === "VIKRAM.UIX" || !state.activeProfile?.id)) {
+          state.profiles = DEFAULT_PROFILES;
+          state.activeProfile = DEFAULT_PROFILES[0];
+        }
+      },
     }
   )
 );

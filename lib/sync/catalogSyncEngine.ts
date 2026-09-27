@@ -58,7 +58,7 @@ function filterNext30Days(items: TMDBRawItem[]): TMDBRawItem[] {
   const now = new Date();
   const todayStr = now.toISOString().split("T")[0];
 
-  const future = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000);
+  const future = new Date(now.getTime() + 60 * 24 * 60 * 60 * 1000);
   const maxDateStr = future.toISOString().split("T")[0];
 
   const matched = items.filter((item) => {
@@ -67,14 +67,12 @@ function filterNext30Days(items: TMDBRawItem[]): TMDBRawItem[] {
     return d >= todayStr && d <= maxDateStr;
   });
 
-  // If strict 30-day filter yielded fewer than 5 items due to TMDB region shifts,
-  // include upcoming releases starting from today onwards
-  if (matched.length < 5) {
+  if (matched.length < 10) {
     const futureOnly = items.filter((item) => {
       const d = item.release_date || item.first_air_date;
       return d && d >= todayStr;
     });
-    return futureOnly.length > 0 ? futureOnly : items.slice(0, 15);
+    return futureOnly.length >= 8 ? futureOnly : items.slice(0, 20);
   }
 
   return matched;
@@ -231,13 +229,76 @@ export async function runCatalogSync(
     );
 
     const feedTasks = [
-      { name: "trending_movies", fetcher: () => tmdbClient.getTrendingMoviesDay() },
-      { name: "trending_tv", fetcher: () => tmdbClient.getTrendingTvDay() },
-      { name: "now_playing", fetcher: () => tmdbClient.getNowPlayingMovies(1) },
-      { name: "upcoming", fetcher: () => tmdbClient.getUpcomingMovies(1) },
-      { name: "top_rated_movies", fetcher: () => tmdbClient.getTopRatedMovies(1) },
-      { name: "top_rated_tv", fetcher: () => tmdbClient.getTopRatedTv(1) },
-      { name: "popular_tv", fetcher: () => tmdbClient.getPopularTv(1) },
+      {
+        name: "trending_movies",
+        fetcher: async () => {
+          const [p1, p2] = await Promise.all([
+            tmdbClient.getTrendingMoviesDay(1).catch(() => []),
+            tmdbClient.getTrendingMoviesDay(2).catch(() => []),
+          ]);
+          return [...p1, ...p2];
+        },
+      },
+      {
+        name: "trending_tv",
+        fetcher: async () => {
+          const [p1, p2] = await Promise.all([
+            tmdbClient.getTrendingTvDay(1).catch(() => []),
+            tmdbClient.getTrendingTvDay(2).catch(() => []),
+          ]);
+          return [...p1, ...p2];
+        },
+      },
+      {
+        name: "now_playing",
+        fetcher: async () => {
+          const [p1, p2] = await Promise.all([
+            tmdbClient.getNowPlayingMovies(1).catch(() => []),
+            tmdbClient.getNowPlayingMovies(2).catch(() => []),
+          ]);
+          return [...p1, ...p2];
+        },
+      },
+      {
+        name: "upcoming",
+        fetcher: async () => {
+          const [p1, p2] = await Promise.all([
+            tmdbClient.getUpcomingMovies(1).catch(() => []),
+            tmdbClient.getUpcomingMovies(2).catch(() => []),
+          ]);
+          return [...p1, ...p2];
+        },
+      },
+      {
+        name: "top_rated_movies",
+        fetcher: async () => {
+          const [p1, p2] = await Promise.all([
+            tmdbClient.getTopRatedMovies(1).catch(() => []),
+            tmdbClient.getTopRatedMovies(2).catch(() => []),
+          ]);
+          return [...p1, ...p2];
+        },
+      },
+      {
+        name: "top_rated_tv",
+        fetcher: async () => {
+          const [p1, p2] = await Promise.all([
+            tmdbClient.getTopRatedTv(1).catch(() => []),
+            tmdbClient.getTopRatedTv(2).catch(() => []),
+          ]);
+          return [...p1, ...p2];
+        },
+      },
+      {
+        name: "popular_tv",
+        fetcher: async () => {
+          const [p1, p2] = await Promise.all([
+            tmdbClient.getPopularTv(1).catch(() => []),
+            tmdbClient.getPopularTv(2).catch(() => []),
+          ]);
+          return [...p1, ...p2];
+        },
+      },
     ];
 
     const feedResults = await mapWithConcurrencyLimit(

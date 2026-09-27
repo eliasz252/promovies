@@ -15,127 +15,44 @@ export interface ContinueWatchingRecord {
 export const STORAGE_KEY = "continueWatching";
 export const CLEARED_KEY = "continueWatchingCleared";
 export const VERSION_KEY = "continueWatchingVersion";
-export const CURRENT_CW_VERSION = "v3";
+export const CURRENT_CW_VERSION = "v4-clean";
 
-// Default seed records for initial demonstration and rich horizontal carousel scrolling
-export const DEFAULT_SEED_RECORDS: ContinueWatchingRecord[] = [
-  {
-    id: 108978, // Reacher
-    type: "tv",
-    season: 2,
-    episode: 4,
-    currentTime: 1680, // ~28m
-    duration: 3240, // 54m
-    percent: 52,
-    updatedAt: new Date().toISOString(),
-    title: "Reacher",
-    poster_path: "/f1VCQIG2iCyOookdgOzwtUpwWC0.jpg",
-    backdrop_path: "/pF0qkRsrHkdYadPWY9AMeFZfcwk.jpg",
-  },
-  {
-    id: 969681, // Spider-Man: Brand New Day
-    type: "movie",
-    currentTime: 4455, // 74m 15s
-    duration: 8100, // 135m
-    percent: 55,
-    updatedAt: new Date(Date.now() - 3600000 * 2).toISOString(),
-    title: "Spider-Man: Brand New Day",
-    poster_path: "/bjiS5ipwxb9JFy3XRRN4OAilSeX.jpg",
-    backdrop_path: "/qeQJx07rK2xm8SD2sJxFKhE7gs0.jpg",
-  },
-  {
-    id: 94605, // Arcane
-    type: "tv",
-    season: 1,
-    episode: 3,
-    currentTime: 1754, // ~29m 14s
-    duration: 2580, // 43m
-    percent: 68,
-    updatedAt: new Date(Date.now() - 3600000 * 5).toISOString(),
-    title: "Arcane",
-    poster_path: "/fqldf2t8ztc9aiwn3k6mlX3tvRT.jpg",
-    backdrop_path: "/5cvnxEHT3e39DvT6ARw4GNCFrB0.jpg",
-  },
-  {
-    id: 113962, // Lioness
-    type: "tv",
-    season: 2,
-    episode: 1,
-    currentTime: 1320, // 22m
-    duration: 3300, // 55m
-    percent: 40,
-    updatedAt: new Date(Date.now() - 3600000 * 12).toISOString(),
-    title: "Lioness",
-    poster_path: "/rzpHPSEgPTpRs8EHbygwsOw7jC0.jpg",
-    backdrop_path: "/mU7l9UaEItxHbg2YBNs0sHjoFVY.jpg",
-  },
-  {
-    id: 402431, // Wicked
-    type: "movie",
-    currentTime: 4020, // 67m
-    duration: 9600, // 160m
-    percent: 42,
-    updatedAt: new Date(Date.now() - 3600000 * 18).toISOString(),
-    title: "Wicked",
-    poster_path: "/xDGbZ0JJ3mYaGKy4Nzd9Kph6M9L.jpg",
-    backdrop_path: "/w22GVYotTIVC1dUd58mRhwPqiS.jpg",
-  },
-  {
-    id: 100088, // The Last of Us
-    type: "tv",
-    season: 1,
-    episode: 4,
-    currentTime: 2805, // 46m 45s
-    duration: 3300, // 55m
-    percent: 85,
-    updatedAt: new Date(Date.now() - 3600000 * 24).toISOString(),
-    title: "The Last of Us",
-    poster_path: "/uKvVjHNqB5VmOrdxqAt2V7JMrRI.jpg",
-    backdrop_path: "/uDgy6hyPd82kOHh6I95FLtLnj6p.jpg",
-  },
-  {
-    id: 1423191, // Resident Evil
-    type: "movie",
-    currentTime: 4104, // 68m 24s
-    duration: 6840, // 114m
-    percent: 60,
-    updatedAt: new Date(Date.now() - 3600000 * 36).toISOString(),
-    title: "Resident Evil",
-    poster_path: "/qku2uWSoJ9amQV5MWo1Eek29iji.jpg",
-    backdrop_path: "/3icyRAqgakNcQn6aDVz9libFmBA.jpg",
-  },
-  {
-    id: 1184918, // The Wild Robot
-    type: "movie",
-    currentTime: 4590, // 76m 30s
-    duration: 6120, // 102m
-    percent: 75,
-    updatedAt: new Date(Date.now() - 3600000 * 48).toISOString(),
-    title: "The Wild Robot",
-    poster_path: "/wTnV3PCVW5O92JMrFvvrRcV39RU.jpg",
-    backdrop_path: "/1pmXyN3sKeYoUhu5VBZiDU4BX21.jpg",
-  },
-];
+// Clean state: no pre-seeded records (user starts fresh)
+export const DEFAULT_SEED_RECORDS: ContinueWatchingRecord[] = [];
+
+/**
+ * Clear all continue watching history completely
+ */
+export function clearAllContinueWatching(): void {
+  if (typeof window === "undefined") return;
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify([]));
+    localStorage.setItem(CLEARED_KEY, "true");
+    localStorage.setItem(VERSION_KEY, CURRENT_CW_VERSION);
+    window.dispatchEvent(new Event("continueWatchingUpdated"));
+  } catch {}
+}
 
 /**
  * Read the continue watching list from localStorage.
  * Only returns items between ~2% and ~95% watched.
  */
 export function getContinueWatchingList(): ContinueWatchingRecord[] {
-  if (typeof window === "undefined") return DEFAULT_SEED_RECORDS;
+  if (typeof window === "undefined") return [];
 
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    const hasBeenCleared = localStorage.getItem(CLEARED_KEY) === "true";
     const version = localStorage.getItem(VERSION_KEY);
 
-    // Initial visit or cleared state check
-    if (!raw) {
-      if (hasBeenCleared) return [];
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(DEFAULT_SEED_RECORDS));
+    // Auto-migrate from older version with fake seeded items to v4 clean state
+    if (version !== CURRENT_CW_VERSION) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify([]));
       localStorage.setItem(VERSION_KEY, CURRENT_CW_VERSION);
-      return DEFAULT_SEED_RECORDS;
+      localStorage.setItem(CLEARED_KEY, "true");
+      return [];
     }
+
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return [];
 
     let parsed: ContinueWatchingRecord[] = [];
     try {
@@ -143,16 +60,6 @@ export function getContinueWatchingList(): ContinueWatchingRecord[] {
       if (Array.isArray(json)) parsed = json;
     } catch {
       parsed = [];
-    }
-
-    // Auto-migrate from older version with fewer items to v3 expanded list
-    if (version !== CURRENT_CW_VERSION) {
-      const existingIds = new Set(parsed.map((p) => p.id));
-      const additions = DEFAULT_SEED_RECORDS.filter((seed) => !existingIds.has(seed.id));
-      const merged = [...parsed, ...additions];
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(merged));
-      localStorage.setItem(VERSION_KEY, CURRENT_CW_VERSION);
-      parsed = merged;
     }
 
     // Filter valid items: must have positive duration and valid currentTime
@@ -166,20 +73,13 @@ export function getContinueWatchingList(): ContinueWatchingRecord[] {
       return pct < 95;
     });
 
-    // If all valid items were finished/empty and not explicitly cleared by user, re-seed
-    if (valid.length === 0 && !hasBeenCleared) {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(DEFAULT_SEED_RECORDS));
-      localStorage.setItem(VERSION_KEY, CURRENT_CW_VERSION);
-      return DEFAULT_SEED_RECORDS;
-    }
-
     // Sort most recently watched first
     valid.sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime());
 
     return valid;
   } catch (err) {
     console.warn("Failed to read continueWatching from localStorage:", err);
-    return DEFAULT_SEED_RECORDS;
+    return [];
   }
 }
 

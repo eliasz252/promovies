@@ -37,6 +37,32 @@ export function getAllCatalogItems(): CatalogItem[] {
 }
 
 /**
+ * Returns the epoch timestamp in ms of the last successful sync, or null if never synced
+ */
+export function getLastSyncTime(): number | null {
+  try {
+    ensureDirectory(DATA_DIR);
+    if (fs.existsSync(SYNC_LOGS_FILE)) {
+      const raw = fs.readFileSync(SYNC_LOGS_FILE, "utf-8");
+      if (raw.trim()) {
+        const history = JSON.parse(raw);
+        if (Array.isArray(history) && history.length > 0 && history[0].completed_at) {
+          const t = new Date(history[0].completed_at).getTime();
+          if (!isNaN(t)) return t;
+        }
+      }
+    }
+    if (fs.existsSync(CATALOG_FILE)) {
+      const stat = fs.statSync(CATALOG_FILE);
+      return stat.mtimeMs;
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+/**
  * Query catalog items by category with sorting
  */
 export function getCatalogByCategory(

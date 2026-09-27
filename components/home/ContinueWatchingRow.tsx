@@ -12,9 +12,9 @@ import { MOCK_MEDIA_ITEMS } from "@/lib/tmdb/mockData";
 import {
   getContinueWatchingList,
   removeContinueWatchingItem,
+  clearAllContinueWatching,
   formatMinutesLeft,
   ContinueWatchingRecord,
-  DEFAULT_SEED_RECORDS,
   CONTINUE_WATCHING_MEDIA_MAP,
 } from "@/lib/utils/continueWatching";
 
@@ -26,9 +26,9 @@ export default function ContinueWatchingRow({ onOpenModal }: ContinueWatchingRow
   const { activeProfile } = useProfileStore();
   const { removeFromContinueWatching } = useWatchlistStore();
 
-  // Initialize with DEFAULT_SEED_RECORDS to prevent any SSR mismatch or jarring empty/null flash
-  const [items, setItems] = useState<ContinueWatchingRecord[]>(DEFAULT_SEED_RECORDS);
-  const [isLoaded, setIsLoaded] = useState<boolean>(true);
+  // Clean initial state: starts empty, populates from user watch history
+  const [items, setItems] = useState<ContinueWatchingRecord[]>([]);
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -151,8 +151,20 @@ export default function ContinueWatchingRow({ onOpenModal }: ContinueWatchingRow
           </span>
         </div>
 
-        {/* Quick Header Navigation Controls */}
+        {/* Quick Header Navigation & Clear Controls */}
         <div className="flex items-center gap-2">
+          <button
+            onClick={() => {
+              if (window.confirm("Are you sure you want to clear your entire watch history?")) {
+                clearAllContinueWatching();
+                setItems([]);
+              }
+            }}
+            className="text-[11px] font-medium text-slate-400 hover:text-rose-400 px-2 py-1 rounded-lg hover:bg-rose-500/10 transition-colors cursor-pointer mr-1"
+            title="Clear all watch history"
+          >
+            Clear History
+          </button>
           <button
             onClick={() => handleScroll("left")}
             className="p-2 rounded-full border border-white/10 bg-white/5 hover:bg-violet-600 text-white hover:border-violet-400 transition-all cursor-pointer shadow-md active:scale-95"
