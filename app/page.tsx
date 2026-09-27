@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from "react";
 import HeroBanner from "@/components/home/HeroBanner";
-import ContinueWatchingRow from "@/components/home/ContinueWatchingRow";
 import Top10Carousel from "@/components/home/Top10Carousel";
 import MediaCarousel from "@/components/home/MediaCarousel";
 import MediaPreviewModal from "@/components/media/MediaPreviewModal";
@@ -105,9 +104,6 @@ export default function HomePage() {
 
         {/* Main Content Rows */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col gap-10 -mt-16 sm:-mt-24 relative z-20">
-          {/* Continue Watching in Progress */}
-          <ContinueWatchingRow onOpenModal={handleOpenModal} />
-
           {/* Today's Top 10 Leaderboard */}
           <Top10Carousel items={top10Items} onOpenModal={handleOpenModal} />
 
