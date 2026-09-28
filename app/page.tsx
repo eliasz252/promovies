@@ -24,25 +24,41 @@ export default function HomePage() {
     return activeProfile.isKids ? getKidsContent(MOCK_MEDIA_ITEMS) : MOCK_MEDIA_ITEMS;
   }, [activeProfile.isKids]);
 
-  // Curated hero featured items: prefer live synced featured, with local fallback
+  // Curated hero featured items: prefer live synced featured (new movies only), with local fallback
   const featuredItems = useMemo(() => {
     if (catalogData?.featured && catalogData.featured.length > 0) {
-      return activeProfile.isKids ? getKidsContent(catalogData.featured) : catalogData.featured;
+      const movies = catalogData.featured.filter(
+        (m) => (m.media_type === "movie" || !m.name) && m.backdrop_path
+      );
+      if (movies.length > 0) {
+        return activeProfile.isKids ? getKidsContent(movies) : movies;
+      }
     }
-    return [...items]
-      .filter((m) => m.backdrop_path)
-      .sort((a, b) => (b.popularity || 0) - (a.popularity || 0))
+    const movieFallback = [...items]
+      .filter((m) => (m.media_type === "movie" || !m.name) && m.backdrop_path)
+      .sort((a, b) => {
+        const dateA = a.release_date || "";
+        const dateB = b.release_date || "";
+        if (dateB !== dateA) return dateB.localeCompare(dateA);
+        return (b.popularity || 0) - (a.popularity || 0);
+      })
       .slice(0, 6);
+    return activeProfile.isKids ? getKidsContent(movieFallback) : movieFallback;
   }, [catalogData, items, activeProfile.isKids]);
 
-  // Top 10 Leaderboard: prefer live synced Top 10 Today
+  // Top 10 Leaderboard: prefer live synced Top 10 Today (new movies only)
   const top10Items = useMemo(() => {
     if (catalogData?.top10 && catalogData.top10.length > 0) {
-      return activeProfile.isKids ? getKidsContent(catalogData.top10) : catalogData.top10;
+      const movies = catalogData.top10.filter((m) => m.media_type === "movie" || !m.name);
+      if (movies.length > 0) {
+        return activeProfile.isKids ? getKidsContent(movies) : movies;
+      }
     }
-    return [...items]
+    const movieFallback = [...items]
+      .filter((m) => m.media_type === "movie" || !m.name)
       .sort((a, b) => (b.popularity || 0) - (a.popularity || 0))
       .slice(0, 10);
+    return activeProfile.isKids ? getKidsContent(movieFallback) : movieFallback;
   }, [catalogData, items, activeProfile.isKids]);
 
   // Now Playing & Upcoming: prefer live synced now_playing
@@ -99,7 +115,7 @@ export default function HomePage() {
       >
         {/* Cinematic Hero Experience */}
         <HeroBanner
-          featuredItems={featuredItems.length > 0 ? featuredItems : items.slice(0, 5)}
+          featuredItems={featuredItems.length > 0 ? featuredItems : items.filter((m) => m.media_type === "movie").slice(0, 5)}
           onOpenModal={handleOpenModal}
         />
 

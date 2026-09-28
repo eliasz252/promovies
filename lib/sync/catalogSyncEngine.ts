@@ -331,12 +331,16 @@ export async function runCatalogSync(
     // -------------------------------------------------------------------------
 
     // --- CATEGORY A: Top 10 Today ---
-    // Combine /trending/movie/day + /trending/tv/day, ranked 1–10
-    writeStructuredLog(logFileName, "Step 2A: Processing Top 10 Today...");
-    const top10Combined = [...(feeds.trending_movies || []), ...(feeds.trending_tv || [])];
+    // Pure New Movies from trending_movies + now_playing, ranked 1–10
+    writeStructuredLog(logFileName, "Step 2A: Processing Top 10 Today (New Movies)...");
+    const top10Combined = [
+      ...(feeds.trending_movies || []),
+      ...(feeds.now_playing || []),
+    ];
     const top10Map = new Map<number, TMDBRawItem>();
     for (const item of top10Combined) {
-      if (item.id && !top10Map.has(item.id)) {
+      const isMovie = item.media_type === "movie" || (!item.media_type && item.title);
+      if (item.id && isMovie && item.poster_path && !top10Map.has(item.id)) {
         top10Map.set(item.id, item);
       }
     }
@@ -350,20 +354,20 @@ export async function runCatalogSync(
       );
 
     // --- CATEGORY B: Featured Pool ---
-    // Top 5 titles by popularity from combined trending + now_playing
-    // Each with featured_rank 1–5 and logo_path fetched. Rank 1 = hero, 2-5 = thumbnails
+    // Top 5 NEW MOVIES by popularity from combined trending movies + now_playing
+    // Each with featured_rank 1–5 and stylized title logo_path fetched.
     writeStructuredLog(
       logFileName,
-      "Step 2B: Processing Featured Pool & fetching stylized title logos..."
+      "Step 2B: Processing Featured Pool (New Movies) & fetching stylized title logos..."
     );
     const featuredPool = [
       ...(feeds.trending_movies || []),
-      ...(feeds.trending_tv || []),
       ...(feeds.now_playing || []),
     ];
     const featuredMap = new Map<number, TMDBRawItem>();
     for (const item of featuredPool) {
-      if (item.id && !featuredMap.has(item.id)) {
+      const isMovie = item.media_type === "movie" || (!item.media_type && item.title);
+      if (item.id && isMovie && item.backdrop_path && !featuredMap.has(item.id)) {
         featuredMap.set(item.id, item);
       }
     }
@@ -375,9 +379,7 @@ export async function runCatalogSync(
     const featuredWithLogos = await mapWithConcurrencyLimit(
       featuredCandidates,
       async (raw, idx) => {
-        const mediaType: MediaType =
-          raw.media_type === "tv" || (!raw.title && raw.name) ? "tv" : "movie";
-        const logoPath = await tmdbClient.getTitleLogo(raw.id, mediaType);
+        const logoPath = await tmdbClient.getTitleLogo(raw.id, "movie");
         writeStructuredLog(
           logFileName,
           `  Featured #${idx + 1} "${raw.title || raw.name}" (TMDB ${raw.id}) -> logo: ${logoPath || "none"}`

@@ -33,22 +33,8 @@ export interface FeaturedMovie {
   rawMedia?: MediaItem;
 }
 
-// Default curated featured movies aligned with live TMDB sync headliners
+// Default curated featured movies aligned with live TMDB sync headliners (All New 2026 Movies)
 const DEFAULT_FEATURED_SLIDES: FeaturedMovie[] = [
-  {
-    id: 108978,
-    title: "Reacher",
-    description:
-      "Jack Reacher, a veteran military police investigator, has just recently entered civilian life. Reacher is a drifter, carrying no phone and the barest of essentials as he travels the country and explores the nation he once served.",
-    rating: "8.1",
-    year: "2022",
-    quality: "4K UHD",
-    ageRating: "TV-MA",
-    backdrop: "https://image.tmdb.org/t/p/original/pF0qkRsrHkdYadPWY9AMeFZfcwk.jpg",
-    thumbnail: "https://image.tmdb.org/t/p/w300/pF0qkRsrHkdYadPWY9AMeFZfcwk.jpg",
-    logo_path: "/2YkCVT6opPxKh2ogEqxVrCiFgsr.png",
-    mediaType: "tv",
-  },
   {
     id: 969681,
     title: "Spider-Man: Brand New Day",
@@ -64,20 +50,6 @@ const DEFAULT_FEATURED_SLIDES: FeaturedMovie[] = [
     mediaType: "movie",
   },
   {
-    id: 113962,
-    title: "Lioness",
-    description:
-      "Cruz Manuelos, a rough-around-the-edges but passionate young Marine, is recruited to join the CIA's Lioness Engagement Team to help bring down a terrorist organization from within.",
-    rating: "8.2",
-    year: "2023",
-    quality: "4K UHD",
-    ageRating: "TV-MA",
-    backdrop: "https://image.tmdb.org/t/p/original/mU7l9UaEItxHbg2YBNs0sHjoFVY.jpg",
-    thumbnail: "https://image.tmdb.org/t/p/w300/mU7l9UaEItxHbg2YBNs0sHjoFVY.jpg",
-    logo_path: "/xCXmYvX8UwggLh0h3I1A1fbHBxI.png",
-    mediaType: "tv",
-  },
-  {
     id: 1423191,
     title: "Resident Evil",
     description:
@@ -85,7 +57,7 @@ const DEFAULT_FEATURED_SLIDES: FeaturedMovie[] = [
     rating: "7.3",
     year: "2026",
     quality: "4K UHD",
-    ageRating: "PG-13",
+    ageRating: "R",
     backdrop: "https://image.tmdb.org/t/p/original/3icyRAqgakNcQn6aDVz9libFmBA.jpg",
     thumbnail: "https://image.tmdb.org/t/p/w300/3icyRAqgakNcQn6aDVz9libFmBA.jpg",
     logo_path: "/9ulobOWQViT7UQt2iYzb5tEVgm9.png",
@@ -102,7 +74,35 @@ const DEFAULT_FEATURED_SLIDES: FeaturedMovie[] = [
     ageRating: "PG-13",
     backdrop: "https://image.tmdb.org/t/p/original/b9q9VmbXDvJmTziRqkwdEmFdwhr.jpg",
     thumbnail: "https://image.tmdb.org/t/p/w300/b9q9VmbXDvJmTziRqkwdEmFdwhr.jpg",
-    logo_path: "/ctnUQ8UdBLfJE6EkpzzmHLSbTMG.png",
+    logo_path: "/8VDfGY16827yyWH0R8itxLtfgK1.png",
+    mediaType: "movie",
+  },
+  {
+    id: 1368337,
+    title: "The Odyssey",
+    description:
+      "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War, facing mythical beasts and the wrath of gods.",
+    rating: "8.0",
+    year: "2026",
+    quality: "4K UHD",
+    ageRating: "PG-13",
+    backdrop: "https://image.tmdb.org/t/p/original/bulFtfy3oBQtCnAMSi7g6DSSds3.jpg",
+    thumbnail: "https://image.tmdb.org/t/p/w300/bulFtfy3oBQtCnAMSi7g6DSSds3.jpg",
+    logo_path: "/kX6ZX4GL7km04332caiOVapR2lb.png",
+    mediaType: "movie",
+  },
+  {
+    id: 1204680,
+    title: "Coyote vs. Acme",
+    description:
+      "After Acme products fail him one too many times in his dogged pursuit of the Roadrunner, Wile E. Coyote decides to hire a billboard lawyer to sue the Acme Corporation.",
+    rating: "7.6",
+    year: "2026",
+    quality: "4K UHD",
+    ageRating: "PG",
+    backdrop: "https://image.tmdb.org/t/p/original/viZqGq9TNvQ5uXSD4ahg2RpRONT.jpg",
+    thumbnail: "https://image.tmdb.org/t/p/w300/viZqGq9TNvQ5uXSD4ahg2RpRONT.jpg",
+    logo_path: "/3m1raTve2RWZ0jfnUwHSnRtjVK3.png",
     mediaType: "movie",
   },
 ];
