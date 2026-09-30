@@ -1,0 +1,33 @@
+[2026-09-30T11:03:50.508Z] ===========================================================
+[2026-09-30T11:03:50.511Z] START: Automated Daily Catalog Sync initiated at 2026-09-30T11:03:50.510Z
+[2026-09-30T11:03:50.837Z] Step 1: Fetching discovery feeds with concurrency limit 3...
+[2026-09-30T11:03:51.670Z]   ✓ Fetched now_playing: 60 items.
+[2026-09-30T11:03:51.701Z]   ✓ Fetched trending_movies: 60 items.
+[2026-09-30T11:03:51.706Z]   ✓ Fetched trending_tv: 40 items.
+[2026-09-30T11:03:51.886Z]   ✓ Fetched upcoming: 60 items.
+[2026-09-30T11:03:51.915Z]   ✓ Fetched top_rated_movies: 40 items.
+[2026-09-30T11:03:52.909Z]   ✓ Fetched top_rated_tv: 40 items.
+[2026-09-30T11:03:52.913Z]   ✓ Fetched popular_tv: 40 items.
+[2026-09-30T11:03:52.914Z] Step 2A: Processing Top 10 Today (New Movies)...
+[2026-09-30T11:03:52.918Z] Step 2B: Processing Featured Pool (New Movies) & fetching stylized title logos...
+[2026-09-30T11:03:53.128Z]   Featured #3 "The Love Hypothesis" (TMDB 1032863) -> logo: /z40xIF1yUFjT3sdtRg8BlyWJ53n.png
+[2026-09-30T11:03:53.142Z]   Featured #2 "The Odyssey" (TMDB 1368337) -> logo: /kX6ZX4GL7km04332caiOVapR2lb.png
+[2026-09-30T11:03:53.147Z]   Featured #1 "Spider-Man: Brand New Day" (TMDB 969681) -> logo: /vbZcDHC5IFylYuRnp3eyOs5rTV1.png
+[2026-09-30T11:03:53.348Z]   Featured #5 "Resident Evil" (TMDB 1423191) -> logo: /9ulobOWQViT7UQt2iYzb5tEVgm9.png
+[2026-09-30T11:03:53.351Z]   Featured #4 "Coyote vs. Acme" (TMDB 1204680) -> logo: /3m1raTve2RWZ0jfnUwHSnRtjVK3.png
+[2026-09-30T11:03:53.353Z] Step 2C: Processing Now Playing...
+[2026-09-30T11:03:53.354Z] Step 2D: Processing Trending TV Shows...
+[2026-09-30T11:03:53.355Z] Step 2E: Processing Upcoming Movies (filtered to next 30 days)...
+[2026-09-30T11:03:53.357Z] Step 2F: Processing Top Rated Movies & Series...
+[2026-09-30T11:03:53.359Z] Step 3: Committing transactional database changes...
+[2026-09-30T11:03:53.371Z] ✓ Transaction committed successfully to database.
+[2026-09-30T11:03:53.372Z] FINISH: Sync finished with status "success" in 2.87s.
+[2026-09-30T11:03:53.373Z] SUMMARY: Added=118, Updated=97, Removed=98
+[2026-09-30T11:03:53.374Z]   - featured: Mode=rebuild, Added=5, Updated=0, Removed=5, Active=5
+[2026-09-30T11:03:53.374Z]   - top10: Mode=rebuild, Added=10, Updated=0, Removed=10, Active=10
+[2026-09-30T11:03:53.376Z]   - now_playing: Mode=rebuild, Added=60, Updated=0, Removed=40, Active=60
+[2026-09-30T11:03:53.377Z]   - trending_tv: Mode=rebuild, Added=40, Updated=0, Removed=40, Active=40
+[2026-09-30T11:03:53.378Z]   - upcoming: Mode=upsert_with_soft_delete, Added=3, Updated=17, Removed=3, Active=20
+[2026-09-30T11:03:53.379Z]   - top_rated: Mode=upsert_with_soft_delete, Added=0, Updated=80, Removed=0, Active=80
+[2026-09-30T11:03:53.380Z] ===========================================================
+

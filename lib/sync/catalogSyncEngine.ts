@@ -232,11 +232,12 @@ export async function runCatalogSync(
       {
         name: "trending_movies",
         fetcher: async () => {
-          const [p1, p2] = await Promise.all([
+          const [p1, p2, p3] = await Promise.all([
             tmdbClient.getTrendingMoviesDay(1).catch(() => []),
             tmdbClient.getTrendingMoviesDay(2).catch(() => []),
+            tmdbClient.getTrendingMoviesDay(3).catch(() => []),
           ]);
-          return [...p1, ...p2];
+          return [...p1, ...p2, ...p3];
         },
       },
       {
@@ -252,21 +253,23 @@ export async function runCatalogSync(
       {
         name: "now_playing",
         fetcher: async () => {
-          const [p1, p2] = await Promise.all([
+          const [p1, p2, p3] = await Promise.all([
             tmdbClient.getNowPlayingMovies(1).catch(() => []),
             tmdbClient.getNowPlayingMovies(2).catch(() => []),
+            tmdbClient.getNowPlayingMovies(3).catch(() => []),
           ]);
-          return [...p1, ...p2];
+          return [...p1, ...p2, ...p3];
         },
       },
       {
         name: "upcoming",
         fetcher: async () => {
-          const [p1, p2] = await Promise.all([
+          const [p1, p2, p3] = await Promise.all([
             tmdbClient.getUpcomingMovies(1).catch(() => []),
             tmdbClient.getUpcomingMovies(2).catch(() => []),
+            tmdbClient.getUpcomingMovies(3).catch(() => []),
           ]);
-          return [...p1, ...p2];
+          return [...p1, ...p2, ...p3];
         },
       },
       {
@@ -331,7 +334,7 @@ export async function runCatalogSync(
     // -------------------------------------------------------------------------
 
     // --- CATEGORY A: Top 10 Today ---
-    // Pure New Movies from trending_movies + now_playing, ranked 1–10
+    // Pure New Movies from TMDB's daily trending feed (trending/movie/day), ranked 1–10
     writeStructuredLog(logFileName, "Step 2A: Processing Top 10 Today (New Movies)...");
     const top10Combined = [
       ...(feeds.trending_movies || []),
@@ -340,13 +343,12 @@ export async function runCatalogSync(
     const top10Map = new Map<number, TMDBRawItem>();
     for (const item of top10Combined) {
       const isMovie = item.media_type === "movie" || (!item.media_type && item.title);
-      if (item.id && isMovie && item.poster_path && !top10Map.has(item.id)) {
+      if (item.id && isMovie && item.poster_path && item.backdrop_path && !top10Map.has(item.id)) {
         top10Map.set(item.id, item);
       }
     }
-    const top10Candidates = Array.from(top10Map.values())
-      .sort((a, b) => (b.popularity || 0) - (a.popularity || 0))
-      .slice(0, 10);
+    // TMDB's trending_movies array is pre-ordered by today's daily trending velocity 1..N
+    const top10Candidates = Array.from(top10Map.values()).slice(0, 10);
 
     const top10Items: Omit<CatalogItem, "created_at" | "updated_at">[] =
       top10Candidates.map((raw, idx) =>
@@ -354,15 +356,14 @@ export async function runCatalogSync(
       );
 
     // --- CATEGORY B: Featured Pool ---
-    // Top 5 NEW MOVIES by popularity from combined trending movies + now_playing
-    // Each with featured_rank 1–5 and stylized title logo_path fetched.
+    // Top 5 NEW MOVIES for the hero banner: must have high-res backdrop, release date >= 2025/2026, and stylized title logo
     writeStructuredLog(
       logFileName,
       "Step 2B: Processing Featured Pool (New Movies) & fetching stylized title logos..."
     );
     const featuredPool = [
-      ...(feeds.trending_movies || []),
       ...(feeds.now_playing || []),
+      ...(feeds.trending_movies || []),
     ];
     const featuredMap = new Map<number, TMDBRawItem>();
     for (const item of featuredPool) {
@@ -372,7 +373,12 @@ export async function runCatalogSync(
       }
     }
     const featuredCandidates = Array.from(featuredMap.values())
-      .sort((a, b) => (b.popularity || 0) - (a.popularity || 0))
+      .sort((a, b) => {
+        // Blend popularity and rating (quality badge) to select the most impressive premier titles
+        const scoreA = (a.popularity || 0) + (a.vote_average || 0) * 150;
+        const scoreB = (b.popularity || 0) + (b.vote_average || 0) * 150;
+        return scoreB - scoreA;
+      })
       .slice(0, 5);
 
     // Fetch stylized PNG logos concurrently for the top 5 featured items

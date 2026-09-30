@@ -3,6 +3,7 @@ import path from "path";
 import { CastMember, SyncedMovie, SyncStats } from "./types";
 import { upsertMovie, upsertMoviesBatch, getAllSyncedMovies } from "./store";
 import { sendAllSyncNotifications, MovieNotificationItem } from "./notifications";
+import { mapWithConcurrencyLimit } from "./tmdbClient";
 
 // Configuration
 const TMDB_BASE_URL = process.env.TMDB_API_BASE_URL || "https://api.themoviedb.org/3";
@@ -192,8 +193,13 @@ export async function runMovieSync(options: { downloadImages?: boolean } = {}): 
     const endpoints = [
       `${TMDB_BASE_URL}/movie/now_playing?api_key=${TMDB_API_KEY}&language=en-US&page=1`,
       `${TMDB_BASE_URL}/movie/now_playing?api_key=${TMDB_API_KEY}&language=en-US&page=2`,
+      `${TMDB_BASE_URL}/movie/now_playing?api_key=${TMDB_API_KEY}&language=en-US&page=3`,
       `${TMDB_BASE_URL}/movie/upcoming?api_key=${TMDB_API_KEY}&language=en-US&page=1`,
-      `${TMDB_BASE_URL}/trending/movie/day?api_key=${TMDB_API_KEY}&language=en-US`,
+      `${TMDB_BASE_URL}/movie/upcoming?api_key=${TMDB_API_KEY}&language=en-US&page=2`,
+      `${TMDB_BASE_URL}/trending/movie/day?api_key=${TMDB_API_KEY}&language=en-US&page=1`,
+      `${TMDB_BASE_URL}/trending/movie/day?api_key=${TMDB_API_KEY}&language=en-US&page=2`,
+      `${TMDB_BASE_URL}/movie/popular?api_key=${TMDB_API_KEY}&language=en-US&page=1`,
+      `${TMDB_BASE_URL}/movie/popular?api_key=${TMDB_API_KEY}&language=en-US&page=2`,
     ];
 
     const movieMap = new Map<number, any>();
@@ -219,79 +225,90 @@ export async function runMovieSync(options: { downloadImages?: boolean } = {}): 
 
     const candidatesToUpsert: Omit<SyncedMovie, "created_at" | "updated_at">[] = [];
 
-    // 2. Process each movie ID with full details (credits, trailers, runtime)
-    for (const tmdbId of candidateIds) {
-      try {
-        const detailUrl = `${TMDB_BASE_URL}/movie/${tmdbId}?api_key=${TMDB_API_KEY}&language=en-US&append_to_response=credits,videos`;
-        const full = await fetchWithRetry(detailUrl);
+    // 2. Process each movie ID with full details concurrently (credits, trailers, runtime)
+    console.log(`Processing ${candidateIds.length} candidate movies with concurrency 4...`);
+    let completedCount = 0;
+    await mapWithConcurrencyLimit(
+      candidateIds,
+      async (tmdbId) => {
+        try {
+          const detailUrl = `${TMDB_BASE_URL}/movie/${tmdbId}?api_key=${TMDB_API_KEY}&language=en-US&append_to_response=credits,videos`;
+          const full = await fetchWithRetry(detailUrl);
 
-        // Safety Filter: Skip movies with missing title or poster
-        if (!full.title || !full.poster_path) {
-          stats.skipped++;
-          writeLog(logFileName, `SKIPPED: TMDB ID ${tmdbId} - missing title or poster path.`);
-          continue;
-        }
+          // Safety Filter: Skip movies with missing title or poster
+          if (!full.title || !full.poster_path) {
+            stats.skipped++;
+            writeLog(logFileName, `SKIPPED: TMDB ID ${tmdbId} - missing title or poster path.`);
+            return;
+          }
 
-        // Extract Genres
-        const genres = Array.isArray(full.genres) ? full.genres.map((g: any) => g.name) : [];
-        const genreIds = Array.isArray(full.genres) ? full.genres.map((g: any) => g.id) : [];
+          // Extract Genres
+          const genres = Array.isArray(full.genres) ? full.genres.map((g: any) => g.name) : [];
+          const genreIds = Array.isArray(full.genres) ? full.genres.map((g: any) => g.id) : [];
 
-        // Extract Cast (Top 6 billed)
-        const cast: CastMember[] = Array.isArray(full.credits?.cast)
-          ? full.credits.cast.slice(0, 6).map((c: any) => ({
-              id: c.id,
-              name: c.name,
-              character: c.character || "Cast",
-              profile_path: c.profile_path || null,
-            }))
-          : [];
+          // Extract Cast (Top 6 billed)
+          const cast: CastMember[] = Array.isArray(full.credits?.cast)
+            ? full.credits.cast.slice(0, 6).map((c: any) => ({
+                id: c.id,
+                name: c.name,
+                character: c.character || "Cast",
+                profile_path: c.profile_path || null,
+              }))
+            : [];
 
-        // Extract Trailer URL & Key
-        const trailerObj =
-          full.videos?.results?.find((v: any) => v.type === "Trailer" && v.site === "YouTube") ||
-          full.videos?.results?.find((v: any) => v.site === "YouTube");
-        const trailerKey = trailerObj?.key || null;
-        const trailerUrl = trailerKey ? `https://www.youtube.com/watch?v=${trailerKey}` : null;
+          // Extract Trailer URL & Key
+          const trailerObj =
+            full.videos?.results?.find((v: any) => v.type === "Trailer" && v.site === "YouTube") ||
+            full.videos?.results?.find((v: any) => v.site === "YouTube");
+          const trailerKey = trailerObj?.key || null;
+          const trailerUrl = trailerKey ? `https://www.youtube.com/watch?v=${trailerKey}` : null;
 
-        // Generate SEO Slug
-        const slug = generateSlug(full.title, full.release_date);
+          // Generate SEO Slug
+          const slug = generateSlug(full.title, full.release_date);
 
-        // Poster handling (Local download if requested, else TMDB image path)
-        let finalPosterPath = full.poster_path;
-        if (options.downloadImages) {
-          const localDownloaded = await downloadPosterLocally(full.poster_path, tmdbId);
-          if (localDownloaded) {
-            finalPosterPath = localDownloaded;
+          // Poster handling (Local download if requested, else TMDB image path)
+          let finalPosterPath = full.poster_path;
+          if (options.downloadImages) {
+            const localDownloaded = await downloadPosterLocally(full.poster_path, tmdbId);
+            if (localDownloaded) {
+              finalPosterPath = localDownloaded;
+            }
+          }
+
+          candidatesToUpsert.push({
+            id: full.id,
+            tmdb_id: full.id,
+            title: full.title,
+            original_title: full.original_title || full.title,
+            overview: full.overview || "",
+            poster_path: finalPosterPath,
+            backdrop_path: full.backdrop_path || null,
+            release_date: full.release_date || "",
+            genres,
+            genre_ids: genreIds,
+            vote_average: full.vote_average ? Number(full.vote_average.toFixed(1)) : 0,
+            vote_count: full.vote_count || 0,
+            runtime: full.runtime || 0,
+            original_language: full.original_language || "en",
+            cast,
+            trailer_url: trailerUrl,
+            trailer_key: trailerKey,
+            slug,
+            status: full.status || "Released",
+          });
+        } catch (err: any) {
+          stats.errors++;
+          stats.error_messages.push(`TMDB ${tmdbId}: ${err.message}`);
+          writeLog(logFileName, `ERROR processing TMDB ID ${tmdbId}: ${err.message}`);
+        } finally {
+          completedCount++;
+          if (completedCount % 20 === 0 || completedCount === candidateIds.length) {
+            console.log(`   [Sync] Processed ${completedCount}/${candidateIds.length} movies...`);
           }
         }
-
-        candidatesToUpsert.push({
-          id: full.id,
-          tmdb_id: full.id,
-          title: full.title,
-          original_title: full.original_title || full.title,
-          overview: full.overview || "",
-          poster_path: finalPosterPath,
-          backdrop_path: full.backdrop_path || null,
-          release_date: full.release_date || "",
-          genres,
-          genre_ids: genreIds,
-          vote_average: full.vote_average ? Number(full.vote_average.toFixed(1)) : 0,
-          vote_count: full.vote_count || 0,
-          runtime: full.runtime || 0,
-          original_language: full.original_language || "en",
-          cast,
-          trailer_url: trailerUrl,
-          trailer_key: trailerKey,
-          slug,
-          status: full.status || "Released",
-        });
-      } catch (err: any) {
-        stats.errors++;
-        stats.error_messages.push(`TMDB ${tmdbId}: ${err.message}`);
-        writeLog(logFileName, `ERROR processing TMDB ID ${tmdbId}: ${err.message}`);
-      }
-    }
+      },
+      4
+    );
 
     // 3. Atomically upsert all discovered movies into database/store in a single transaction
     const batchResult = upsertMoviesBatch(candidatesToUpsert);

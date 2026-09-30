@@ -50,34 +50,6 @@ const DEFAULT_FEATURED_SLIDES: FeaturedMovie[] = [
     mediaType: "movie",
   },
   {
-    id: 1423191,
-    title: "Resident Evil",
-    description:
-      "Medical courier Bryan unwittingly finds himself fighting for survival as one fateful, horrifying night collapses around him in chaos.",
-    rating: "7.3",
-    year: "2026",
-    quality: "4K UHD",
-    ageRating: "R",
-    backdrop: "https://image.tmdb.org/t/p/original/3icyRAqgakNcQn6aDVz9libFmBA.jpg",
-    thumbnail: "https://image.tmdb.org/t/p/w300/3icyRAqgakNcQn6aDVz9libFmBA.jpg",
-    logo_path: "/9ulobOWQViT7UQt2iYzb5tEVgm9.png",
-    mediaType: "movie",
-  },
-  {
-    id: 1101383,
-    title: "The End of Oak Street",
-    description:
-      "After a mysterious cosmic event rips Oak Street from suburbia and transports their neighborhood to someplace unknown, the Platt family soon discovers that their very survival depends on them sticking together.",
-    rating: "7.0",
-    year: "2026",
-    quality: "4K UHD",
-    ageRating: "PG-13",
-    backdrop: "https://image.tmdb.org/t/p/original/b9q9VmbXDvJmTziRqkwdEmFdwhr.jpg",
-    thumbnail: "https://image.tmdb.org/t/p/w300/b9q9VmbXDvJmTziRqkwdEmFdwhr.jpg",
-    logo_path: "/8VDfGY16827yyWH0R8itxLtfgK1.png",
-    mediaType: "movie",
-  },
-  {
     id: 1368337,
     title: "The Odyssey",
     description:
@@ -92,6 +64,20 @@ const DEFAULT_FEATURED_SLIDES: FeaturedMovie[] = [
     mediaType: "movie",
   },
   {
+    id: 1032863,
+    title: "The Love Hypothesis",
+    description:
+      "Olive Smith, a biology PhD candidate, and Dr. Adam Carlsen, a hotshot professor and well-known tyrant, enter into a fake relationship, seeing each of their carefully calculated theories on love get thrown into chaos.",
+    rating: "8.1",
+    year: "2026",
+    quality: "4K UHD",
+    ageRating: "PG-13",
+    backdrop: "https://image.tmdb.org/t/p/original/o7Oy9Gbx1CCyaweL8xUhtMW4Puq.jpg",
+    thumbnail: "https://image.tmdb.org/t/p/w300/o7Oy9Gbx1CCyaweL8xUhtMW4Puq.jpg",
+    logo_path: "/z40xIF1yUFjT3sdtRg8BlyWJ53n.png",
+    mediaType: "movie",
+  },
+  {
     id: 1204680,
     title: "Coyote vs. Acme",
     description:
@@ -103,6 +89,20 @@ const DEFAULT_FEATURED_SLIDES: FeaturedMovie[] = [
     backdrop: "https://image.tmdb.org/t/p/original/viZqGq9TNvQ5uXSD4ahg2RpRONT.jpg",
     thumbnail: "https://image.tmdb.org/t/p/w300/viZqGq9TNvQ5uXSD4ahg2RpRONT.jpg",
     logo_path: "/3m1raTve2RWZ0jfnUwHSnRtjVK3.png",
+    mediaType: "movie",
+  },
+  {
+    id: 1423191,
+    title: "Resident Evil",
+    description:
+      "Medical courier Bryan unwittingly finds himself fighting for survival as one fateful, horrifying night collapses around him in chaos.",
+    rating: "7.3",
+    year: "2026",
+    quality: "4K UHD",
+    ageRating: "R",
+    backdrop: "https://image.tmdb.org/t/p/original/3icyRAqgakNcQn6aDVz9libFmBA.jpg",
+    thumbnail: "https://image.tmdb.org/t/p/w300/3icyRAqgakNcQn6aDVz9libFmBA.jpg",
+    logo_path: "/9ulobOWQViT7UQt2iYzb5tEVgm9.png",
     mediaType: "movie",
   },
 ];
