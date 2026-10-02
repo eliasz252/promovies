@@ -1,0 +1,66 @@
+[2026-10-02T07:50:26.439Z] ===========================================================
+[2026-10-02T07:50:26.454Z] START: Automated Daily Catalog Sync initiated at 2026-10-02T07:50:26.454Z
+[2026-10-02T07:50:26.467Z] Step 1: Fetching discovery feeds with concurrency limit 3...
+[2026-10-02T07:50:27.273Z]   ✓ Fetched trending_tv: 40 items.
+[2026-10-02T07:50:27.283Z]   ✓ Fetched trending_movies: 60 items.
+[2026-10-02T07:50:27.629Z]   ✓ Fetched top_rated_movies: 40 items.
+[2026-10-02T07:50:27.684Z]   ✓ Fetched upcoming: 60 items.
+[2026-10-02T07:50:28.008Z]   ✓ Fetched popular_tv: 40 items.
+[2026-10-02T07:50:28.026Z]   ✓ Fetched top_rated_tv: 40 items.
+[2026-10-02T07:50:28.156Z]   ✓ Fetched now_playing: 60 items.
+[2026-10-02T07:50:28.157Z] Step 2A: Processing Top 10 Today (New Movies)...
+[2026-10-02T07:50:28.160Z] Step 2B: Processing Featured Pool (New Movies) & fetching stylized title logos...
+[2026-10-02T07:50:28.415Z]   Featured #2 "Renegade Immortal: Battle of the Immortal Slayer" (TMDB 1599191) -> logo: none
+[2026-10-02T07:50:28.441Z]   Featured #1 "Spider-Man: Brand New Day" (TMDB 969681) -> logo: /vbZcDHC5IFylYuRnp3eyOs5rTV1.png
+[2026-10-02T07:50:28.465Z]   Featured #3 "Resident Evil" (TMDB 1423191) -> logo: /9ulobOWQViT7UQt2iYzb5tEVgm9.png
+[2026-10-02T07:50:28.685Z]   Featured #4 "The Odyssey" (TMDB 1368337) -> logo: /kX6ZX4GL7km04332caiOVapR2lb.png
+[2026-10-02T07:50:28.721Z]   Featured #5 "Runner" (TMDB 1377237) -> logo: /pAnbApoi6DHwXzoKBfQU4M5Wr8t.png
+[2026-10-02T07:50:28.722Z] Step 2C: Processing Now Playing...
+[2026-10-02T07:50:28.724Z] Step 2D: Processing Trending TV Shows...
+[2026-10-02T07:50:28.725Z] Step 2E: Processing Upcoming Movies (filtered to next 30 days)...
+[2026-10-02T07:50:28.727Z] Step 2F: Processing Top Rated Movies & Series...
+[2026-10-02T07:50:28.728Z] Step 3: Committing transactional database changes...
+[2026-10-02T07:50:28.732Z] [Dry Run] Transaction rolled back safely without writing to disk.
+[2026-10-02T07:50:28.733Z] FINISH: Sync finished with status "success" in 2.29s.
+[2026-10-02T07:50:28.734Z] SUMMARY: Added=117, Updated=98, Removed=117
+[2026-10-02T07:50:28.735Z]   - featured: Mode=rebuild, Added=5, Updated=0, Removed=5, Active=5
+[2026-10-02T07:50:28.736Z]   - top10: Mode=rebuild, Added=10, Updated=0, Removed=10, Active=10
+[2026-10-02T07:50:28.737Z]   - now_playing: Mode=rebuild, Added=60, Updated=0, Removed=60, Active=60
+[2026-10-02T07:50:28.738Z]   - trending_tv: Mode=rebuild, Added=40, Updated=0, Removed=40, Active=40
+[2026-10-02T07:50:28.739Z]   - upcoming: Mode=upsert_with_soft_delete, Added=2, Updated=18, Removed=2, Active=20
+[2026-10-02T07:50:28.741Z]   - top_rated: Mode=upsert_with_soft_delete, Added=0, Updated=80, Removed=0, Active=80
+[2026-10-02T07:50:28.741Z] ===========================================================
+
+[2026-10-02T07:58:54.283Z] ===========================================================
+[2026-10-02T07:58:54.285Z] START: Automated Daily Catalog Sync initiated at 2026-10-02T07:58:54.284Z
+[2026-10-02T07:58:54.296Z] Step 1: Fetching discovery feeds with concurrency limit 3...
+[2026-10-02T07:58:55.165Z]   ✓ Fetched now_playing: 60 items.
+[2026-10-02T07:58:55.214Z]   ✓ Fetched trending_movies: 60 items.
+[2026-10-02T07:58:55.421Z]   ✓ Fetched top_rated_movies: 40 items.
+[2026-10-02T07:58:55.461Z]   ✓ Fetched upcoming: 60 items.
+[2026-10-02T07:58:55.606Z]   ✓ Fetched top_rated_tv: 40 items.
+[2026-10-02T07:58:55.729Z]   ✓ Fetched popular_tv: 40 items.
+[2026-10-02T07:58:55.784Z]   ✓ Fetched trending_tv: 40 items.
+[2026-10-02T07:58:55.785Z] Step 2A: Processing Top 10 Today (New Movies)...
+[2026-10-02T07:58:55.787Z] Step 2B: Processing Featured Pool (New Movies) & fetching stylized title logos...
+[2026-10-02T07:58:55.975Z]   Featured #2 "Renegade Immortal: Battle of the Immortal Slayer" (TMDB 1599191) -> logo: none
+[2026-10-02T07:58:55.982Z]   Featured #1 "Spider-Man: Brand New Day" (TMDB 969681) -> logo: /vbZcDHC5IFylYuRnp3eyOs5rTV1.png
+[2026-10-02T07:58:56.071Z]   Featured #3 "Resident Evil" (TMDB 1423191) -> logo: /9ulobOWQViT7UQt2iYzb5tEVgm9.png
+[2026-10-02T07:58:56.179Z]   Featured #4 "The Odyssey" (TMDB 1368337) -> logo: /kX6ZX4GL7km04332caiOVapR2lb.png
+[2026-10-02T07:58:56.186Z]   Featured #5 "Runner" (TMDB 1377237) -> logo: /pAnbApoi6DHwXzoKBfQU4M5Wr8t.png
+[2026-10-02T07:58:56.187Z] Step 2C: Processing Now Playing...
+[2026-10-02T07:58:56.189Z] Step 2D: Processing Trending TV Shows...
+[2026-10-02T07:58:56.190Z] Step 2E: Processing Upcoming Movies (filtered to next 30 days)...
+[2026-10-02T07:58:56.192Z] Step 2F: Processing Top Rated Movies & Series...
+[2026-10-02T07:58:56.194Z] Step 3: Committing transactional database changes...
+[2026-10-02T07:58:56.205Z] ✓ Transaction committed successfully to database.
+[2026-10-02T07:58:56.206Z] FINISH: Sync finished with status "success" in 1.92s.
+[2026-10-02T07:58:56.207Z] SUMMARY: Added=117, Updated=98, Removed=117
+[2026-10-02T07:58:56.208Z]   - featured: Mode=rebuild, Added=5, Updated=0, Removed=5, Active=5
+[2026-10-02T07:58:56.209Z]   - top10: Mode=rebuild, Added=10, Updated=0, Removed=10, Active=10
+[2026-10-02T07:58:56.210Z]   - now_playing: Mode=rebuild, Added=60, Updated=0, Removed=60, Active=60
+[2026-10-02T07:58:56.211Z]   - trending_tv: Mode=rebuild, Added=40, Updated=0, Removed=40, Active=40
+[2026-10-02T07:58:56.212Z]   - upcoming: Mode=upsert_with_soft_delete, Added=2, Updated=18, Removed=2, Active=20
+[2026-10-02T07:58:56.212Z]   - top_rated: Mode=upsert_with_soft_delete, Added=0, Updated=80, Removed=0, Active=80
+[2026-10-02T07:58:56.213Z] ===========================================================
+

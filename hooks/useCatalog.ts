@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { MediaItem } from "@/types/tmdb";
 import rawSyncedCatalog from "@/data/synced-catalog.json";
+import rawSyncedMovies from "@/data/synced-movies.json";
 
 export interface SyncedCatalogState {
   featured: MediaItem[];
@@ -34,6 +35,29 @@ function parseCatalogItem(item: any): MediaItem {
     genre_ids: Array.isArray(item.genre_ids) ? item.genre_ids : [],
     genres: Array.isArray(item.genre_ids)
       ? item.genre_ids.map((id: number) => ({ id, name: "" }))
+      : [],
+    quality_badge: "4K UHD",
+    age_rating: "PG-13",
+  };
+}
+
+function parseSyncedMovie(m: any): MediaItem {
+  const id = Number(m.tmdb_id || m.id);
+  return {
+    id,
+    title: m.title || "Untitled",
+    overview: m.overview || "",
+    poster_path: m.poster_path || null,
+    backdrop_path: m.backdrop_path || m.poster_path || null,
+    logo_path: null,
+    media_type: "movie",
+    release_date: m.release_date || undefined,
+    vote_average: typeof m.vote_average === "number" ? m.vote_average : 7.5,
+    vote_count: m.vote_count || 500,
+    popularity: m.popularity || 1000,
+    genre_ids: Array.isArray(m.genre_ids) ? m.genre_ids : [],
+    genres: Array.isArray(m.genres)
+      ? m.genres.map((g: any) => (typeof g === "string" ? { id: 0, name: g } : g))
       : [],
     quality_badge: "4K UHD",
     age_rating: "PG-13",
@@ -79,6 +103,15 @@ function buildInitialCatalog(): SyncedCatalogState {
     if (!seenIds.has(m.id)) {
       seenIds.add(m.id);
       allMedia.push(m);
+    }
+  });
+
+  const rawMovies = Array.isArray(rawSyncedMovies) ? rawSyncedMovies : [];
+  rawMovies.forEach((m: any) => {
+    const id = Number(m.tmdb_id || m.id);
+    if (id && !seenIds.has(id)) {
+      seenIds.add(id);
+      allMedia.push(parseSyncedMovie(m));
     }
   });
 
@@ -129,6 +162,15 @@ export function useCatalog(): SyncedCatalogState {
               if (!seenIds.has(m.id)) {
                 seenIds.add(m.id);
                 allMedia.push(m);
+              }
+            });
+
+            const rawMovies = Array.isArray(rawSyncedMovies) ? rawSyncedMovies : [];
+            rawMovies.forEach((m: any) => {
+              const id = Number(m.tmdb_id || m.id);
+              if (id && !seenIds.has(id)) {
+                seenIds.add(id);
+                allMedia.push(parseSyncedMovie(m));
               }
             });
 

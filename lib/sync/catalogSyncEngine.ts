@@ -343,8 +343,20 @@ export async function runCatalogSync(
     const top10Map = new Map<number, TMDBRawItem>();
     for (const item of top10Combined) {
       const isMovie = item.media_type === "movie" || (!item.media_type && item.title);
-      if (item.id && isMovie && item.poster_path && item.backdrop_path && !top10Map.has(item.id)) {
+      const isNew = (item.release_date || "") >= "2024-01-01";
+      const hasRating = (item.vote_average || 0) > 0 && (item.vote_count || 0) > 0;
+      if (item.id && isMovie && item.poster_path && item.backdrop_path && isNew && hasRating && !top10Map.has(item.id)) {
         top10Map.set(item.id, item);
+      }
+    }
+    // Fallback if needed: fill remaining slots
+    if (top10Map.size < 10) {
+      for (const item of top10Combined) {
+        const isMovie = item.media_type === "movie" || (!item.media_type && item.title);
+        if (item.id && isMovie && item.poster_path && item.backdrop_path && !top10Map.has(item.id)) {
+          top10Map.set(item.id, item);
+          if (top10Map.size >= 10) break;
+        }
       }
     }
     // TMDB's trending_movies array is pre-ordered by today's daily trending velocity 1..N
@@ -368,8 +380,18 @@ export async function runCatalogSync(
     const featuredMap = new Map<number, TMDBRawItem>();
     for (const item of featuredPool) {
       const isMovie = item.media_type === "movie" || (!item.media_type && item.title);
-      if (item.id && isMovie && item.backdrop_path && !featuredMap.has(item.id)) {
+      const isNew = (item.release_date || "") >= "2025-01-01";
+      if (item.id && isMovie && item.backdrop_path && item.poster_path && isNew && !featuredMap.has(item.id)) {
         featuredMap.set(item.id, item);
+      }
+    }
+    if (featuredMap.size < 5) {
+      for (const item of featuredPool) {
+        const isMovie = item.media_type === "movie" || (!item.media_type && item.title);
+        if (item.id && isMovie && item.backdrop_path && !featuredMap.has(item.id)) {
+          featuredMap.set(item.id, item);
+          if (featuredMap.size >= 5) break;
+        }
       }
     }
     const featuredCandidates = Array.from(featuredMap.values())

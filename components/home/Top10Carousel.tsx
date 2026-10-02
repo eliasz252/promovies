@@ -72,7 +72,7 @@ export default function Top10Carousel({ items, onOpenModal }: Top10CarouselProps
       <div className="w-full mb-3 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight flex items-center gap-2.5">
-            <span>Today&apos;s Top 10</span>
+            <span>Today&apos;s Top 10 Movies</span>
             <span className="px-2.5 py-0.5 rounded-full bg-violet-500/20 text-violet-300 text-[11px] font-black tracking-widest border border-violet-500/40">
               LEADERBOARD
             </span>
