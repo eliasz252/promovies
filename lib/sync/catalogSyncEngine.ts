@@ -361,7 +361,14 @@ export async function runCatalogSync(
       }
     }
     // TMDB's trending_movies array is pre-ordered by today's daily trending velocity 1..N
-    const top10Candidates = Array.from(top10Map.values()).slice(0, 10);
+    // Prioritize premier blockbuster Spider-Man: Brand New Day (969681) at #1 since it came out!
+    const spidermanItem = Array.from(top10Map.values()).find((m) => m.id === 969681);
+    let top10Candidates = Array.from(top10Map.values()).filter((m) => m.id !== 969681);
+    if (spidermanItem) {
+      top10Candidates = [spidermanItem, ...top10Candidates].slice(0, 10);
+    } else {
+      top10Candidates = top10Candidates.slice(0, 10);
+    }
 
     const top10Items: Omit<CatalogItem, "created_at" | "updated_at">[] =
       top10Candidates.map((raw, idx) =>
@@ -369,7 +376,7 @@ export async function runCatalogSync(
       );
 
     // --- CATEGORY B: Featured Pool ---
-    // Top 5 NEW MOVIES for the hero banner: must have high-res backdrop, release date >= 2025/2026, and stylized title logo
+    // Top 6 NEW MOVIES for the hero banner: must have high-res backdrop, release date >= 2025/2026, and stylized title logo
     writeStructuredLog(
       logFileName,
       "Step 2B: Processing Featured Pool (New Movies) & fetching stylized title logos..."
@@ -396,7 +403,7 @@ export async function runCatalogSync(
         }
       }
     }
-    const featuredCandidates = Array.from(featuredMap.values())
+    let featuredCandidates = Array.from(featuredMap.values())
       .sort((a, b) => {
         // Blend popularity and rating (quality badge) to select the most impressive premier titles
         const scoreA = (a.popularity || 0) + (a.vote_average || 0) * 150;
@@ -404,6 +411,12 @@ export async function runCatalogSync(
         return scoreB - scoreA;
       })
       .slice(0, 6);
+
+    // Ensure Spider-Man (969681) leads the Featured carousel as #1
+    const spidermanFeatured = featuredCandidates.find((m) => m.id === 969681);
+    if (spidermanFeatured) {
+      featuredCandidates = [spidermanFeatured, ...featuredCandidates.filter((m) => m.id !== 969681)].slice(0, 6);
+    }
 
     // Fetch stylized PNG logos concurrently for the top featured items
     const featuredWithLogos = await mapWithConcurrencyLimit(
@@ -420,10 +433,21 @@ export async function runCatalogSync(
     );
 
     // --- CATEGORY C: Now Playing / New & Popular ---
-    // From /movie/now_playing
+    // From /movie/now_playing + newly released Spider-Man
     writeStructuredLog(logFileName, "Step 2C: Processing Now Playing...");
+    const nowPlayingPool = [
+      ...(feeds.now_playing || []),
+    ];
+    // Spider-Man came out: ensure it is in Now Playing at the top!
+    const spidermanNowPlaying = [
+      ...(feeds.trending_movies || []),
+      ...(feeds.upcoming || []),
+    ].find((m) => m.id === 969681);
+    if (spidermanNowPlaying && !nowPlayingPool.some((m) => m.id === 969681)) {
+      nowPlayingPool.unshift(spidermanNowPlaying);
+    }
     const nowPlayingItems: Omit<CatalogItem, "created_at" | "updated_at">[] = (
-      feeds.now_playing || []
+      nowPlayingPool || []
     ).map((raw) => normalizeTMDBItem(raw, "now_playing"));
 
     // --- CATEGORY D: Trending TV Shows ---

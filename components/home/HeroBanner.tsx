@@ -39,8 +39,8 @@ const DEFAULT_FEATURED_SLIDES: FeaturedMovie[] = [
     id: 969681,
     title: "Spider-Man: Brand New Day",
     description:
-      "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control.",
-    rating: "7.9",
+      "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. Out now in theaters and streaming in 4K UHD.",
+    rating: "8.4",
     year: "2026",
     quality: "4K UHD",
     ageRating: "PG-13",
