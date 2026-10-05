@@ -15,6 +15,7 @@ const VALID_CATEGORIES: CatalogCategory[] = [
   "now_playing",
   "top_rated",
   "trending_tv",
+  "trending_movies",
 ];
 
 export async function GET(request: NextRequest) {
@@ -79,6 +80,7 @@ export async function GET(request: NextRequest) {
       trending_tv: [],
       upcoming: [],
       top_rated: [],
+      trending_movies: [],
     };
 
     for (const item of all) {

@@ -20,20 +20,21 @@ export default function MoviesPage() {
 
   // Memoize filtered and sorted movies list including live synced movies
   const movies = useMemo(() => {
-    const syncedMovies = catalogData?.allMovies || [];
+    const pool = [
+      ...(catalogData?.allMovies || []),
+      ...(catalogData?.nowPlaying || []),
+      ...(catalogData?.upcoming || []),
+      ...(catalogData?.trendingMovies || []),
+      ...(catalogData?.top10 || []),
+      ...(catalogData?.featured || []),
+      ...MOCK_MEDIA_ITEMS.filter((m) => m.media_type === "movie" || !m.name),
+    ];
     const seenIds = new Set<number>();
     const combined: MediaItem[] = [];
 
     // Prioritize live synced movies
-    syncedMovies.forEach((m) => {
-      if (!seenIds.has(m.id)) {
-        seenIds.add(m.id);
-        combined.push(m);
-      }
-    });
-
-    MOCK_MEDIA_ITEMS.filter((m) => m.media_type === "movie").forEach((m) => {
-      if (!seenIds.has(m.id)) {
+    pool.forEach((m) => {
+      if ((m.media_type === "movie" || !m.name) && !seenIds.has(m.id)) {
         seenIds.add(m.id);
         combined.push(m);
       }
@@ -53,7 +54,11 @@ export default function MoviesPage() {
 
     // Filter by genre
     if (selectedGenre) {
-      list = list.filter((m) => m.genre_ids.includes(selectedGenre));
+      list = list.filter(
+        (m) =>
+          m.genre_ids?.includes(selectedGenre) ||
+          m.genres?.some((g: any) => (typeof g === "object" ? g.id === selectedGenre : false))
+      );
     }
 
     // Sort
@@ -67,7 +72,7 @@ export default function MoviesPage() {
       }
       return b.popularity - a.popularity;
     });
-  }, [activeProfile.isKids, eraFilter, selectedGenre, sortBy]);
+  }, [catalogData, activeProfile?.isKids, eraFilter, selectedGenre, sortBy]);
 
   return (
     <>

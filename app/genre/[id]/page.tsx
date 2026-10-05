@@ -6,6 +6,7 @@ import MediaPreviewModal from "@/components/media/MediaPreviewModal";
 import { MediaItem } from "@/types/tmdb";
 import { MOCK_MEDIA_ITEMS, GENRES_LIST, getKidsContent } from "@/lib/tmdb/mockData";
 import { useProfileStore } from "@/store/useProfileStore";
+import { useCatalog } from "@/hooks/useCatalog";
 import { Film, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
@@ -18,20 +19,35 @@ export default function GenrePage({
   const genreId = parseInt(id, 10);
   const genre = GENRES_LIST.find((g) => g.id === genreId) || { id: genreId, name: "Genre" };
   const { activeProfile } = useProfileStore();
+  const catalogData = useCatalog();
 
   const [selectedMedia, setSelectedMedia] = useState<MediaItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const items = useMemo(() => {
-    let list = MOCK_MEDIA_ITEMS.filter((m) => m.genre_ids.includes(genreId));
-    if (activeProfile.isKids) {
-      list = getKidsContent(list);
+    const pool = [
+      ...(catalogData?.allMedia || []),
+      ...(catalogData?.allMovies || []),
+      ...(catalogData?.allShows || []),
+      ...MOCK_MEDIA_ITEMS,
+    ];
+    const seen = new Set<number>();
+    const list: MediaItem[] = [];
+    for (const m of pool) {
+      const matchesGenre =
+        m.genre_ids?.includes(genreId) ||
+        m.genres?.some((g: any) => (typeof g === "object" ? g.id === genreId : false));
+      if (matchesGenre && !seen.has(m.id)) {
+        seen.add(m.id);
+        list.push(m);
+      }
     }
-    if (list.length === 0) {
-      list = activeProfile.isKids ? getKidsContent(MOCK_MEDIA_ITEMS) : MOCK_MEDIA_ITEMS.slice(0, 6);
+    const filtered = activeProfile.isKids ? getKidsContent(list) : list;
+    if (filtered.length === 0) {
+      return activeProfile.isKids ? getKidsContent(MOCK_MEDIA_ITEMS) : MOCK_MEDIA_ITEMS.slice(0, 6);
     }
-    return list;
-  }, [genreId, activeProfile.isKids]);
+    return filtered.sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
+  }, [genreId, catalogData, activeProfile.isKids]);
 
   return (
     <>

@@ -9,6 +9,7 @@ export interface SyncedCatalogState {
   featured: MediaItem[];
   top10: MediaItem[];
   nowPlaying: MediaItem[];
+  trendingMovies: MediaItem[];
   trendingTv: MediaItem[];
   upcoming: MediaItem[];
   topRated: MediaItem[];
@@ -72,6 +73,7 @@ function buildInitialCatalog(): SyncedCatalogState {
     trending_tv: [],
     upcoming: [],
     top_rated: [],
+    trending_movies: [],
   };
 
   const rawList = Array.isArray(rawSyncedCatalog) ? rawSyncedCatalog : [];
@@ -93,13 +95,14 @@ function buildInitialCatalog(): SyncedCatalogState {
   const featured = grouped.featured.map(parseCatalogItem);
   const top10 = grouped.top10.map(parseCatalogItem);
   const nowPlaying = grouped.now_playing.map(parseCatalogItem);
+  const trendingMovies = grouped.trending_movies.map(parseCatalogItem);
   const trendingTv = grouped.trending_tv.map(parseCatalogItem);
   const upcoming = grouped.upcoming.map(parseCatalogItem);
   const topRated = grouped.top_rated.map(parseCatalogItem);
 
   const seenIds = new Set<number>();
   const allMedia: MediaItem[] = [];
-  [...featured, ...top10, ...nowPlaying, ...trendingTv, ...upcoming, ...topRated].forEach((m) => {
+  [...featured, ...top10, ...nowPlaying, ...trendingMovies, ...trendingTv, ...upcoming, ...topRated].forEach((m) => {
     if (!seenIds.has(m.id)) {
       seenIds.add(m.id);
       allMedia.push(m);
@@ -119,6 +122,7 @@ function buildInitialCatalog(): SyncedCatalogState {
     featured,
     top10,
     nowPlaying,
+    trendingMovies,
     trendingTv,
     upcoming,
     topRated,
@@ -152,13 +156,14 @@ export function useCatalog(): SyncedCatalogState {
             const featured = mapToMedia(data.catalog.featured);
             const top10 = mapToMedia(data.catalog.top10);
             const nowPlaying = mapToMedia(data.catalog.now_playing);
+            const trendingMovies = mapToMedia(data.catalog.trending_movies);
             const trendingTv = mapToMedia(data.catalog.trending_tv);
             const upcoming = mapToMedia(data.catalog.upcoming);
             const topRated = mapToMedia(data.catalog.top_rated);
 
             const seenIds = new Set<number>();
             const allMedia: MediaItem[] = [];
-            [...featured, ...top10, ...nowPlaying, ...trendingTv, ...upcoming, ...topRated].forEach((m) => {
+            [...featured, ...top10, ...nowPlaying, ...trendingMovies, ...trendingTv, ...upcoming, ...topRated].forEach((m) => {
               if (!seenIds.has(m.id)) {
                 seenIds.add(m.id);
                 allMedia.push(m);
@@ -181,6 +186,7 @@ export function useCatalog(): SyncedCatalogState {
               featured,
               top10,
               nowPlaying,
+              trendingMovies,
               trendingTv,
               upcoming,
               topRated,

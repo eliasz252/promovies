@@ -16,7 +16,16 @@ export default function NewAndPopularPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const items = useMemo(() => {
-    const synced = catalogData?.allMedia || [];
+    const synced = [
+      ...(catalogData?.allMedia || []),
+      ...(catalogData?.allMovies || []),
+      ...(catalogData?.allShows || []),
+      ...(catalogData?.trendingMovies || []),
+      ...(catalogData?.upcoming || []),
+      ...(catalogData?.nowPlaying || []),
+      ...(catalogData?.featured || []),
+      ...(catalogData?.top10 || []),
+    ];
     const seenIds = new Set<number>();
     const combined: MediaItem[] = [];
 
@@ -45,12 +54,13 @@ export default function NewAndPopularPage() {
     return [...items]
       .filter((m) => {
         const date = m.release_date || m.first_air_date || "";
-        return date >= "2024-06-01";
+        return date >= "2025-01-01";
       })
       .sort((a, b) => {
         const dateA = a.release_date || a.first_air_date || "";
         const dateB = b.release_date || b.first_air_date || "";
-        return dateB.localeCompare(dateA);
+        if (dateB !== dateA) return dateB.localeCompare(dateA);
+        return (b.popularity || 0) - (a.popularity || 0);
       });
   }, [items]);
 

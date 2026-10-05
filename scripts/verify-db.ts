@@ -15,6 +15,7 @@ async function verifyDatabase() {
     "trending_tv",
     "upcoming",
     "top_rated",
+    "trending_movies",
   ] as const;
 
   for (const cat of categories) {

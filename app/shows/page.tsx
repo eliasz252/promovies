@@ -20,20 +20,17 @@ export default function ShowsPage() {
 
   // Memoize filtered and sorted shows list including live synced shows
   const shows = useMemo(() => {
-    const syncedShows = catalogData?.allShows || [];
+    const pool = [
+      ...(catalogData?.allShows || []),
+      ...(catalogData?.trendingTv || []),
+      ...MOCK_MEDIA_ITEMS.filter((m) => m.media_type === "tv" || !!m.name),
+    ];
     const seenIds = new Set<number>();
     const combined: MediaItem[] = [];
 
     // Prioritize live synced TV shows
-    syncedShows.forEach((m) => {
-      if (!seenIds.has(m.id)) {
-        seenIds.add(m.id);
-        combined.push(m);
-      }
-    });
-
-    MOCK_MEDIA_ITEMS.filter((m) => m.media_type === "tv").forEach((m) => {
-      if (!seenIds.has(m.id)) {
+    pool.forEach((m) => {
+      if ((m.media_type === "tv" || !!m.name) && !seenIds.has(m.id)) {
         seenIds.add(m.id);
         combined.push(m);
       }
@@ -52,7 +49,11 @@ export default function ShowsPage() {
     }
 
     if (selectedGenre) {
-      list = list.filter((m) => m.genre_ids.includes(selectedGenre));
+      list = list.filter(
+        (m) =>
+          m.genre_ids?.includes(selectedGenre) ||
+          m.genres?.some((g: any) => (typeof g === "object" ? g.id === selectedGenre : false))
+      );
     }
 
     return [...list].sort((a, b) => {
@@ -65,7 +66,7 @@ export default function ShowsPage() {
       }
       return b.popularity - a.popularity;
     });
-  }, [activeProfile.isKids, eraFilter, selectedGenre, sortBy]);
+  }, [catalogData, activeProfile?.isKids, eraFilter, selectedGenre, sortBy]);
 
   return (
     <>

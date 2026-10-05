@@ -24,7 +24,7 @@ export default function HomePage() {
     return activeProfile.isKids ? getKidsContent(MOCK_MEDIA_ITEMS) : MOCK_MEDIA_ITEMS;
   }, [activeProfile.isKids]);
 
-  // Curated hero featured items: prefer live synced featured (new movies only), with local fallback
+  // Curated hero featured items: prefer live synced featured (new 2025-2026 movies only), with robust fallback
   const featuredItems = useMemo(() => {
     if (catalogData?.featured && catalogData.featured.length > 0) {
       const movies = catalogData.featured.filter(
@@ -34,8 +34,17 @@ export default function HomePage() {
         return activeProfile.isKids ? getKidsContent(movies) : movies;
       }
     }
-    const movieFallback = [...items]
-      .filter((m) => (m.media_type === "movie" || !m.name) && m.backdrop_path)
+    const pool = [
+      ...(catalogData?.allMovies || []),
+      ...items.filter((m) => m.media_type === "movie" || !m.name),
+    ];
+    const seen = new Set<number>();
+    const movieFallback = pool
+      .filter((m) => {
+        if (!m.backdrop_path || seen.has(m.id)) return false;
+        seen.add(m.id);
+        return (m.release_date || "") >= "2025-01-01";
+      })
       .sort((a, b) => {
         const dateA = a.release_date || "";
         const dateB = b.release_date || "";
@@ -43,58 +52,185 @@ export default function HomePage() {
         return (b.popularity || 0) - (a.popularity || 0);
       })
       .slice(0, 6);
+
     return activeProfile.isKids ? getKidsContent(movieFallback) : movieFallback;
   }, [catalogData, items, activeProfile.isKids]);
 
-  // Top 10 Leaderboard: prefer live synced Top 10 Today (new movies only)
+  // Top 10 Leaderboard: live synced Top 10 Today (ranked 1-10)
   const top10Items = useMemo(() => {
-    if (catalogData?.top10 && catalogData.top10.length > 0) {
-      const movies = catalogData.top10.filter((m) => m.media_type === "movie" || !m.name);
-      if (movies.length > 0) {
-        return activeProfile.isKids ? getKidsContent(movies) : movies;
+    const list = catalogData?.top10 && catalogData.top10.length >= 10
+      ? catalogData.top10.filter((m) => m.media_type === "movie" || !m.name)
+      : [];
+
+    if (list.length >= 10) {
+      return activeProfile.isKids ? getKidsContent(list.slice(0, 10)) : list.slice(0, 10);
+    }
+
+    // Blend with trending movies to ensure exactly 10 distinct high-velocity items
+    const candidates = [
+      ...(catalogData?.top10 || []),
+      ...(catalogData?.trendingMovies || []),
+      ...(catalogData?.nowPlaying || []),
+      ...items.filter((m) => m.media_type === "movie"),
+    ];
+    const seen = new Set<number>();
+    const top10: MediaItem[] = [];
+    for (const m of candidates) {
+      if ((m.media_type === "movie" || !m.name) && m.poster_path && !seen.has(m.id)) {
+        seen.add(m.id);
+        top10.push(m);
+        if (top10.length === 10) break;
       }
     }
-    const movieFallback = [...items]
-      .filter((m) => m.media_type === "movie" || !m.name)
-      .sort((a, b) => (b.popularity || 0) - (a.popularity || 0))
-      .slice(0, 10);
-    return activeProfile.isKids ? getKidsContent(movieFallback) : movieFallback;
+    return activeProfile.isKids ? getKidsContent(top10) : top10;
   }, [catalogData, items, activeProfile.isKids]);
 
-  // Now Playing & Upcoming: prefer live synced now_playing
+  // New & Upcoming Movies (2025 - 2026): all new 2025/2026 releases from upcoming, nowPlaying, syncedMovies
   const newMovies = useMemo(() => {
-    if (catalogData?.nowPlaying && catalogData.nowPlaying.length > 0) {
-      return activeProfile.isKids ? getKidsContent(catalogData.nowPlaying) : catalogData.nowPlaying;
-    }
-    return [...items]
-      .filter((m) => m.media_type === "movie" && (m.release_date || "") >= "2024-06-01")
-      .sort((a, b) => {
-        const dateA = a.release_date || "";
-        const dateB = b.release_date || "";
-        return dateB.localeCompare(dateA);
-      });
-  }, [catalogData, items, activeProfile.isKids]);
-
-  const trendingMovies = useMemo(() => {
-    if (catalogData?.topRated && catalogData.topRated.length > 0) {
-      const filtered = catalogData.topRated.filter((m) => m.media_type === "movie");
-      if (filtered.length > 0) {
-        return activeProfile.isKids ? getKidsContent(filtered) : filtered;
+    const candidates = [
+      ...(catalogData?.upcoming || []),
+      ...(catalogData?.nowPlaying || []),
+      ...(catalogData?.allMovies || []),
+      ...items.filter((m) => m.media_type === "movie"),
+    ];
+    const seen = new Set<number>();
+    const list: MediaItem[] = [];
+    for (const m of candidates) {
+      if (
+        (m.media_type === "movie" || !m.name) &&
+        m.poster_path &&
+        (m.release_date || "") >= "2025-01-01" &&
+        !seen.has(m.id)
+      ) {
+        seen.add(m.id);
+        list.push(m);
       }
     }
-    return items.filter((m) => m.media_type === "movie");
+    list.sort((a, b) => {
+      const dateA = a.release_date || "";
+      const dateB = b.release_date || "";
+      if (dateB !== dateA) return dateB.localeCompare(dateA);
+      return (b.popularity || 0) - (a.popularity || 0);
+    });
+    return activeProfile.isKids ? getKidsContent(list) : list;
   }, [catalogData, items, activeProfile.isKids]);
 
-  const trendingShows = useMemo(() => {
-    if (catalogData?.trendingTv && catalogData.trendingTv.length > 0) {
-      return activeProfile.isKids ? getKidsContent(catalogData.trendingTv) : catalogData.trendingTv;
+  // Trending Movies: live daily trending feed from TMDB
+  const trendingMovies = useMemo(() => {
+    const candidates = [
+      ...(catalogData?.trendingMovies || []),
+      ...(catalogData?.nowPlaying || []),
+      ...(catalogData?.allMovies || []),
+      ...items.filter((m) => m.media_type === "movie"),
+    ];
+    const seen = new Set<number>();
+    const list: MediaItem[] = [];
+    for (const m of candidates) {
+      if ((m.media_type === "movie" || !m.name) && m.poster_path && !seen.has(m.id)) {
+        seen.add(m.id);
+        list.push(m);
+      }
     }
-    return items.filter((m) => m.media_type === "tv");
+    list.sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
+    return activeProfile.isKids ? getKidsContent(list) : list;
   }, [catalogData, items, activeProfile.isKids]);
 
-  const animeItems = useMemo(() => items.filter((m) => m.genre_ids?.includes(16)), [items]);
-  const scifiItems = useMemo(() => items.filter((m) => m.genre_ids?.includes(878)), [items]);
-  const actionItems = useMemo(() => items.filter((m) => m.genre_ids?.includes(28)), [items]);
+  // Binge-Worthy TV Shows: trending and popular television series
+  const trendingShows = useMemo(() => {
+    const candidates = [
+      ...(catalogData?.trendingTv || []),
+      ...(catalogData?.allShows || []),
+      ...items.filter((m) => m.media_type === "tv" || !!m.name),
+    ];
+    const seen = new Set<number>();
+    const list: MediaItem[] = [];
+    for (const m of candidates) {
+      if ((m.media_type === "tv" || !!m.name) && m.poster_path && !seen.has(m.id)) {
+        seen.add(m.id);
+        list.push(m);
+      }
+    }
+    list.sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
+    return activeProfile.isKids ? getKidsContent(list) : list;
+  }, [catalogData, items, activeProfile.isKids]);
+
+  // Anime Discovery: genre 16 across synced media and curated anime catalog
+  const animeItems = useMemo(() => {
+    const candidates = [
+      ...(catalogData?.allMedia || []),
+      ...(catalogData?.allMovies || []),
+      ...(catalogData?.allShows || []),
+      ...items,
+    ];
+    const seen = new Set<number>();
+    const list: MediaItem[] = [];
+    for (const m of candidates) {
+      const isAnime =
+        m.genre_ids?.includes(16) ||
+        m.genres?.some((g: any) => {
+          const name = (typeof g === "string" ? g : g.name || "").toLowerCase();
+          return name.includes("animation") || name.includes("anime");
+        });
+      if (isAnime && m.poster_path && !seen.has(m.id)) {
+        seen.add(m.id);
+        list.push(m);
+      }
+    }
+    list.sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
+    return activeProfile.isKids ? getKidsContent(list) : list;
+  }, [catalogData, items, activeProfile.isKids]);
+
+  // Action & Adrenaline: genre 28 and 10759
+  const actionItems = useMemo(() => {
+    const candidates = [
+      ...(catalogData?.allMedia || []),
+      ...(catalogData?.allMovies || []),
+      ...items,
+    ];
+    const seen = new Set<number>();
+    const list: MediaItem[] = [];
+    for (const m of candidates) {
+      const isAction =
+        m.genre_ids?.includes(28) ||
+        m.genre_ids?.includes(10759) ||
+        m.genres?.some((g: any) => {
+          const name = (typeof g === "string" ? g : g.name || "").toLowerCase();
+          return name.includes("action");
+        });
+      if (isAction && m.poster_path && !seen.has(m.id)) {
+        seen.add(m.id);
+        list.push(m);
+      }
+    }
+    list.sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
+    return activeProfile.isKids ? getKidsContent(list) : list;
+  }, [catalogData, items, activeProfile.isKids]);
+
+  // Sci-Fi & Cosmic Adventures: genre 878 and 10765
+  const scifiItems = useMemo(() => {
+    const candidates = [
+      ...(catalogData?.allMedia || []),
+      ...(catalogData?.allMovies || []),
+      ...items,
+    ];
+    const seen = new Set<number>();
+    const list: MediaItem[] = [];
+    for (const m of candidates) {
+      const isScifi =
+        m.genre_ids?.includes(878) ||
+        m.genre_ids?.includes(10765) ||
+        m.genres?.some((g: any) => {
+          const name = (typeof g === "string" ? g : g.name || "").toLowerCase();
+          return name.includes("sci-fi") || name.includes("science fiction");
+        });
+      if (isScifi && m.poster_path && !seen.has(m.id)) {
+        seen.add(m.id);
+        list.push(m);
+      }
+    }
+    list.sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
+    return activeProfile.isKids ? getKidsContent(list) : list;
+  }, [catalogData, items, activeProfile.isKids]);
 
   const handleOpenModal = (media: MediaItem) => {
     setSelectedMedia(media);

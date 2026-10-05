@@ -207,6 +207,7 @@ export async function runCatalogSync(
       trending_tv: initialSummary("trending_tv", "rebuild"),
       upcoming: initialSummary("upcoming", "upsert_with_soft_delete"),
       top_rated: initialSummary("top_rated", "upsert_with_soft_delete"),
+      trending_movies: initialSummary("trending_movies", "rebuild"),
     },
     error_messages: [],
     log_file: logFileName,
@@ -374,6 +375,7 @@ export async function runCatalogSync(
       "Step 2B: Processing Featured Pool (New Movies) & fetching stylized title logos..."
     );
     const featuredPool = [
+      ...(feeds.upcoming || []),
       ...(feeds.now_playing || []),
       ...(feeds.trending_movies || []),
     ];
@@ -385,12 +387,12 @@ export async function runCatalogSync(
         featuredMap.set(item.id, item);
       }
     }
-    if (featuredMap.size < 5) {
+    if (featuredMap.size < 6) {
       for (const item of featuredPool) {
         const isMovie = item.media_type === "movie" || (!item.media_type && item.title);
         if (item.id && isMovie && item.backdrop_path && !featuredMap.has(item.id)) {
           featuredMap.set(item.id, item);
-          if (featuredMap.size >= 5) break;
+          if (featuredMap.size >= 6) break;
         }
       }
     }
@@ -401,9 +403,9 @@ export async function runCatalogSync(
         const scoreB = (b.popularity || 0) + (b.vote_average || 0) * 150;
         return scoreB - scoreA;
       })
-      .slice(0, 5);
+      .slice(0, 6);
 
-    // Fetch stylized PNG logos concurrently for the top 5 featured items
+    // Fetch stylized PNG logos concurrently for the top featured items
     const featuredWithLogos = await mapWithConcurrencyLimit(
       featuredCandidates,
       async (raw, idx) => {
@@ -425,10 +427,20 @@ export async function runCatalogSync(
     ).map((raw) => normalizeTMDBItem(raw, "now_playing"));
 
     // --- CATEGORY D: Trending TV Shows ---
-    // From /tv/popular
+    // From /tv/popular and /trending/tv/day
     writeStructuredLog(logFileName, "Step 2D: Processing Trending TV Shows...");
-    const trendingTvItems: Omit<CatalogItem, "created_at" | "updated_at">[] = (
-      feeds.popular_tv || []
+    const trendingTvPool = [
+      ...(feeds.popular_tv || []),
+      ...(feeds.trending_tv || []),
+    ];
+    const tvMap = new Map<number, TMDBRawItem>();
+    for (const item of trendingTvPool) {
+      if (item.id && !tvMap.has(item.id)) {
+        tvMap.set(item.id, item);
+      }
+    }
+    const trendingTvItems: Omit<CatalogItem, "created_at" | "updated_at">[] = Array.from(
+      tvMap.values()
     ).map((raw) => normalizeTMDBItem(raw, "trending_tv"));
 
     // --- CATEGORY E: Upcoming ---
@@ -460,6 +472,20 @@ export async function runCatalogSync(
     const topRatedItems: Omit<CatalogItem, "created_at" | "updated_at">[] =
       topRatedSorted.map((raw) => normalizeTMDBItem(raw, "top_rated"));
 
+    // --- CATEGORY G: Trending Movies ---
+    // Pure Movies from TMDB's daily trending feed (/trending/movie/day), sorted by popularity
+    writeStructuredLog(logFileName, "Step 2G: Processing Trending Movies...");
+    const trendingMovieMap = new Map<number, TMDBRawItem>();
+    for (const item of feeds.trending_movies || []) {
+      const isMovie = item.media_type === "movie" || (!item.media_type && item.title);
+      if (item.id && isMovie && !trendingMovieMap.has(item.id)) {
+        trendingMovieMap.set(item.id, item);
+      }
+    }
+    const trendingMoviesItems: Omit<CatalogItem, "created_at" | "updated_at">[] = Array.from(
+      trendingMovieMap.values()
+    ).map((raw) => normalizeTMDBItem(raw, "trending_movies"));
+
     // Optional local image download
     if (options.downloadImages) {
       writeStructuredLog(logFileName, "Downloading posters locally to public/catalog/...");
@@ -470,6 +496,7 @@ export async function runCatalogSync(
         ...trendingTvItems,
         ...upcomingItems,
         ...topRatedItems,
+        ...trendingMoviesItems,
       ]);
     }
 
@@ -483,6 +510,7 @@ export async function runCatalogSync(
     stats.categories.top10 = transaction.rebuildCategory("top10", top10Items);
     stats.categories.now_playing = transaction.rebuildCategory("now_playing", nowPlayingItems);
     stats.categories.trending_tv = transaction.rebuildCategory("trending_tv", trendingTvItems);
+    stats.categories.trending_movies = transaction.rebuildCategory("trending_movies", trendingMoviesItems);
 
     // Upsert Categories with Soft-Delete (prunes dropped items)
     stats.categories.upcoming = transaction.upsertWithSoftDelete("upcoming", upcomingItems);

@@ -4,7 +4,8 @@ export type CatalogCategory =
   | "upcoming"
   | "now_playing"
   | "top_rated"
-  | "trending_tv";
+  | "trending_tv"
+  | "trending_movies";
 
 export type MediaType = "movie" | "tv";
 

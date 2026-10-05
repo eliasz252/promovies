@@ -6,20 +6,39 @@ import MediaPreviewModal from "@/components/media/MediaPreviewModal";
 import { MediaItem } from "@/types/tmdb";
 import { MOCK_MEDIA_ITEMS, getKidsContent } from "@/lib/tmdb/mockData";
 import { useProfileStore } from "@/store/useProfileStore";
+import { useCatalog } from "@/hooks/useCatalog";
 import { Sparkles, Flame, Star, Trophy } from "lucide-react";
 
 export default function AnimePage() {
   const { activeProfile } = useProfileStore();
+  const catalogData = useCatalog();
   const [selectedMedia, setSelectedMedia] = useState<MediaItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const animeList = useMemo(() => {
-    let list = MOCK_MEDIA_ITEMS.filter((m) => m.genre_ids.includes(16));
-    if (activeProfile.isKids) {
-      list = getKidsContent(list);
+    const pool = [
+      ...(catalogData?.allMedia || []),
+      ...(catalogData?.allMovies || []),
+      ...(catalogData?.allShows || []),
+      ...MOCK_MEDIA_ITEMS,
+    ];
+    const seen = new Set<number>();
+    const list: MediaItem[] = [];
+    for (const m of pool) {
+      const isAnime =
+        m.genre_ids?.includes(16) ||
+        m.genres?.some((g: any) => {
+          const name = (typeof g === "string" ? g : g.name || "").toLowerCase();
+          return name.includes("animation") || name.includes("anime");
+        });
+      if (isAnime && !seen.has(m.id)) {
+        seen.add(m.id);
+        list.push(m);
+      }
     }
-    return list;
-  }, [activeProfile.isKids]);
+    const filtered = activeProfile.isKids ? getKidsContent(list) : list;
+    return filtered.sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
+  }, [catalogData, activeProfile.isKids]);
 
   return (
     <>
