@@ -1,0 +1,72 @@
+[2026-10-10T14:00:10.578Z] ===========================================================
+[2026-10-10T14:00:10.580Z] START: Automated Daily Catalog Sync initiated at 2026-10-10T14:00:10.580Z
+[2026-10-10T14:00:10.596Z] Step 1: Fetching discovery feeds with concurrency limit 3...
+[2026-10-10T14:00:11.405Z]   ✓ Fetched trending_tv: 40 items.
+[2026-10-10T14:00:11.412Z]   ✓ Fetched trending_movies: 60 items.
+[2026-10-10T14:00:11.476Z]   ✓ Fetched now_playing: 60 items.
+[2026-10-10T14:00:11.696Z]   ✓ Fetched top_rated_movies: 40 items.
+[2026-10-10T14:00:11.704Z]   ✓ Fetched upcoming: 60 items.
+[2026-10-10T14:00:11.709Z]   ✓ Fetched top_rated_tv: 40 items.
+[2026-10-10T14:00:11.925Z]   ✓ Fetched popular_tv: 40 items.
+[2026-10-10T14:00:11.927Z] Step 2A: Processing Top 10 Today (New Movies)...
+[2026-10-10T14:00:11.929Z] Step 2B: Processing Featured Pool (New Movies) & fetching stylized title logos...
+[2026-10-10T14:00:12.172Z]   Featured #2 "Resident Evil" (TMDB 1423191) -> logo: /9ulobOWQViT7UQt2iYzb5tEVgm9.png
+[2026-10-10T14:00:12.176Z]   Featured #1 "Spider-Man: Brand New Day" (TMDB 969681) -> logo: /dGMb0iSnNp7UMAHkKX63Kh6AJvy.png
+[2026-10-10T14:00:12.185Z]   Featured #3 "The Odyssey" (TMDB 1368337) -> logo: /kX6ZX4GL7km04332caiOVapR2lb.png
+[2026-10-10T14:00:12.386Z]   Featured #6 "Runner" (TMDB 1377237) -> logo: /pAnbApoi6DHwXzoKBfQU4M5Wr8t.png
+[2026-10-10T14:00:12.391Z]   Featured #4 "Insidious: Out of the Further" (TMDB 1291595) -> logo: /f65DhAYFi98FsRi4RWHTKkFtChu.png
+[2026-10-10T14:00:12.393Z]   Featured #5 "Reporting Live" (TMDB 1389172) -> logo: /Arcieqe7zMGk07ZyauOwV00XDtO.png
+[2026-10-10T14:00:12.394Z] Step 2C: Processing Now Playing...
+[2026-10-10T14:00:12.396Z] Step 2D: Processing Trending TV Shows...
+[2026-10-10T14:00:12.398Z] Step 2E: Processing Upcoming Movies (filtered to next 30 days)...
+[2026-10-10T14:00:12.400Z] Step 2F: Processing Top Rated Movies & Series...
+[2026-10-10T14:00:12.401Z] Step 2G: Processing Trending Movies...
+[2026-10-10T14:00:12.403Z] Step 3: Committing transactional database changes...
+[2026-10-10T14:00:12.407Z] [Dry Run] Transaction rolled back safely without writing to disk.
+[2026-10-10T14:00:12.408Z] FINISH: Sync finished with status "success" in 1.83s.
+[2026-10-10T14:00:12.409Z] SUMMARY: Added=223, Updated=90, Removed=223
+[2026-10-10T14:00:12.410Z]   - featured: Mode=rebuild, Added=6, Updated=0, Removed=6, Active=6
+[2026-10-10T14:00:12.411Z]   - top10: Mode=rebuild, Added=10, Updated=0, Removed=10, Active=10
+[2026-10-10T14:00:12.412Z]   - now_playing: Mode=rebuild, Added=61, Updated=0, Removed=61, Active=61
+[2026-10-10T14:00:12.413Z]   - trending_tv: Mode=rebuild, Added=76, Updated=0, Removed=77, Active=76
+[2026-10-10T14:00:12.414Z]   - upcoming: Mode=upsert_with_soft_delete, Added=8, Updated=12, Removed=8, Active=20
+[2026-10-10T14:00:12.415Z]   - top_rated: Mode=upsert_with_soft_delete, Added=2, Updated=78, Removed=2, Active=80
+[2026-10-10T14:00:12.416Z]   - trending_movies: Mode=rebuild, Added=60, Updated=0, Removed=59, Active=60
+[2026-10-10T14:00:12.417Z] ===========================================================
+
+[2026-10-10T14:02:49.781Z] ===========================================================
+[2026-10-10T14:02:49.782Z] START: Automated Daily Catalog Sync initiated at 2026-10-10T14:02:49.782Z
+[2026-10-10T14:02:49.802Z] Step 1: Fetching discovery feeds with concurrency limit 3...
+[2026-10-10T14:02:59.220Z]   ✓ Fetched trending_tv: 40 items.
+[2026-10-10T14:02:59.335Z]   ✓ Fetched now_playing: 60 items.
+[2026-10-10T14:02:59.506Z]   ✓ Fetched top_rated_movies: 40 items.
+[2026-10-10T14:02:59.650Z]   ✓ Fetched top_rated_tv: 40 items.
+[2026-10-10T14:02:59.722Z]   ✓ Fetched trending_movies: 60 items.
+[2026-10-10T14:02:59.766Z]   ✓ Fetched popular_tv: 40 items.
+[2026-10-10T14:02:59.949Z]   ✓ Fetched upcoming: 60 items.
+[2026-10-10T14:02:59.950Z] Step 2A: Processing Top 10 Today (New Movies)...
+[2026-10-10T14:02:59.952Z] Step 2B: Processing Featured Pool (New Movies) & fetching stylized title logos...
+[2026-10-10T14:03:00.069Z]   Featured #2 "Resident Evil" (TMDB 1423191) -> logo: /9ulobOWQViT7UQt2iYzb5tEVgm9.png
+[2026-10-10T14:03:00.103Z]   Featured #1 "Spider-Man: Brand New Day" (TMDB 969681) -> logo: /dGMb0iSnNp7UMAHkKX63Kh6AJvy.png
+[2026-10-10T14:03:00.153Z]   Featured #3 "The Odyssey" (TMDB 1368337) -> logo: /kX6ZX4GL7km04332caiOVapR2lb.png
+[2026-10-10T14:03:00.213Z]   Featured #4 "Insidious: Out of the Further" (TMDB 1291595) -> logo: /f65DhAYFi98FsRi4RWHTKkFtChu.png
+[2026-10-10T14:03:00.257Z]   Featured #5 "Reporting Live" (TMDB 1389172) -> logo: /Arcieqe7zMGk07ZyauOwV00XDtO.png
+[2026-10-10T14:03:00.259Z]   Featured #6 "Runner" (TMDB 1377237) -> logo: /pAnbApoi6DHwXzoKBfQU4M5Wr8t.png
+[2026-10-10T14:03:00.261Z] Step 2C: Processing Now Playing...
+[2026-10-10T14:03:00.263Z] Step 2D: Processing Trending TV Shows...
+[2026-10-10T14:03:00.265Z] Step 2E: Processing Upcoming Movies (filtered to next 30 days)...
+[2026-10-10T14:03:00.267Z] Step 2F: Processing Top Rated Movies & Series...
+[2026-10-10T14:03:00.269Z] Step 2G: Processing Trending Movies...
+[2026-10-10T14:03:00.271Z] Step 3: Committing transactional database changes...
+[2026-10-10T14:03:00.288Z] ✓ Transaction committed successfully to database.
+[2026-10-10T14:03:00.289Z] FINISH: Sync finished with status "success" in 10.51s.
+[2026-10-10T14:03:00.291Z] SUMMARY: Added=223, Updated=90, Removed=223
+[2026-10-10T14:03:00.292Z]   - featured: Mode=rebuild, Added=6, Updated=0, Removed=6, Active=6
+[2026-10-10T14:03:00.294Z]   - top10: Mode=rebuild, Added=10, Updated=0, Removed=10, Active=10
+[2026-10-10T14:03:00.296Z]   - now_playing: Mode=rebuild, Added=61, Updated=0, Removed=61, Active=61
+[2026-10-10T14:03:00.297Z]   - trending_tv: Mode=rebuild, Added=76, Updated=0, Removed=77, Active=76
+[2026-10-10T14:03:00.298Z]   - upcoming: Mode=upsert_with_soft_delete, Added=8, Updated=12, Removed=8, Active=20
+[2026-10-10T14:03:00.299Z]   - top_rated: Mode=upsert_with_soft_delete, Added=2, Updated=78, Removed=2, Active=80
+[2026-10-10T14:03:00.300Z]   - trending_movies: Mode=rebuild, Added=60, Updated=0, Removed=59, Active=60
+[2026-10-10T14:03:00.301Z] ===========================================================
+
