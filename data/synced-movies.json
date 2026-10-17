@@ -69,7 +69,7 @@
     "title": "Avengers: Doomsday",
     "original_title": "Avengers: Doomsday",
     "overview": "Beloved heroes from three distinct universes are set on a deadly collision course and face an existential threat unlike anything they've ever encountered.",
-    "poster_path": "/sLYCyO58UvBuBtbHTQjPCCgJ4dG.jpg",
+    "poster_path": "/jzPwsojjFStf5lR5Nm07w2hH56G.jpg",
     "backdrop_path": "/g3gpP5YDbA85DsA0bt5mgGQIe5q.jpg",
     "release_date": "2026-12-16",
     "genres": [
@@ -129,7 +129,7 @@
     "slug": "avengers-doomsday-2026",
     "status": "Post Production",
     "created_at": "2026-09-24T11:19:05.004Z",
-    "updated_at": "2026-10-13T11:04:02.962Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1538497,
@@ -336,6 +336,74 @@
     "status": "Post Production",
     "created_at": "2026-10-02T08:00:29.184Z",
     "updated_at": "2026-10-02T08:00:29.184Z"
+  },
+  {
+    "id": 656908,
+    "tmdb_id": 656908,
+    "title": "Ramayana: Rise of a Legend",
+    "original_title": "रामायण",
+    "overview": "An ancient epic follows a young prince and princess whose marriage and subsequent exile mark the beginning of a legendary journey. Their story of love, duty and destiny sets the stage for greater challenges ahead.",
+    "poster_path": "/gOWnXaBxqT6k2y40hKfYU6c0Ym.jpg",
+    "backdrop_path": "/ks72NqTPhpupk207NXiqmZIQQVI.jpg",
+    "release_date": "2026-11-05",
+    "genres": [
+      "Fantasy",
+      "Action",
+      "Adventure"
+    ],
+    "genre_ids": [
+      14,
+      28,
+      12
+    ],
+    "vote_average": 0,
+    "vote_count": 0,
+    "runtime": 208,
+    "original_language": "hi",
+    "cast": [
+      {
+        "id": 85034,
+        "name": "Ranbir Kapoor",
+        "character": "Ram / Parshuram / Vishnu",
+        "profile_path": "/a5xWgKh7f4XofIl7ZwisxOi616K.jpg"
+      },
+      {
+        "id": 1293681,
+        "name": "Yash",
+        "character": "Ravana",
+        "profile_path": "/ixHvgN8hGh8YgWd3j9RqUATvBiy.jpg"
+      },
+      {
+        "id": 1473119,
+        "name": "Sai Pallavi",
+        "character": "Sita",
+        "profile_path": "/qAPdGKUIUEzLibdgVCey7oKvvME.jpg"
+      },
+      {
+        "id": 1252841,
+        "name": "Ravi Dubey",
+        "character": "Lakshman",
+        "profile_path": "/dUhZ0E8nchBkjYV0okWfj4BLxy2.jpg"
+      },
+      {
+        "id": 1228593,
+        "name": "Arun Govil",
+        "character": "Dashrath",
+        "profile_path": "/xgefRNWurCiwyLSlpnDGgfMIF7H.jpg"
+      },
+      {
+        "id": 1143308,
+        "name": "Rakul Preet Singh",
+        "character": "Shurpanakha",
+        "profile_path": "/4n4MmOFNyxKc4qMfzyapglvDDlF.jpg"
+      }
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=AYkPRN874m8",
+    "trailer_key": "AYkPRN874m8",
+    "slug": "ramayana-rise-of-a-legend-2026",
+    "status": "Post Production",
+    "created_at": "2026-10-17T11:32:13.119Z",
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 940009,
@@ -560,9 +628,9 @@
       53,
       878
     ],
-    "vote_average": 8.3,
-    "vote_count": 3,
-    "runtime": 108,
+    "vote_average": 8.2,
+    "vote_count": 8,
+    "runtime": 109,
     "original_language": "en",
     "cast": [
       {
@@ -602,12 +670,12 @@
         "profile_path": "/p2B2dYAvl0TMUtbrZxzOdNgBbSE.jpg"
       }
     ],
-    "trailer_url": "https://www.youtube.com/watch?v=KCR-rz0YfD4",
-    "trailer_key": "KCR-rz0YfD4",
+    "trailer_url": "https://www.youtube.com/watch?v=f7jlCqdtwdM",
+    "trailer_key": "f7jlCqdtwdM",
     "slug": "clayface-2026",
     "status": "Released",
     "created_at": "2026-09-25T16:08:03.608Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 791523,
@@ -692,8 +760,8 @@
     "genre_ids": [
       99
     ],
-    "vote_average": 1,
-    "vote_count": 1,
+    "vote_average": 7.6,
+    "vote_count": 8,
     "runtime": 174,
     "original_language": "en",
     "cast": [
@@ -719,19 +787,19 @@
         "id": 71070,
         "name": "Amanda Seyfried",
         "character": "Self / Elizabeth Holmes",
-        "profile_path": "/wcHYErlynY8xWe6X7RmqEqpMBGl.jpg"
+        "profile_path": "/gtBUIpZ3dvLpOMIVORxE6sHSyZj.jpg"
       },
       {
         "id": 984629,
         "name": "Christopher Abbott",
-        "character": "Self",
+        "character": "Billy Evans",
         "profile_path": "/bE7zzh60RXydH3p632ZZSmsTlcn.jpg"
       },
       {
-        "id": 6463659,
-        "name": "William Holmes Evans",
+        "id": 1405665,
+        "name": "Lance Oppenheim",
         "character": "Self",
-        "profile_path": null
+        "profile_path": "/h12zgCaZ24imkZlw0nry9T9mjGD.jpg"
       }
     ],
     "trailer_url": "https://www.youtube.com/watch?v=IEx8D1Wb__U",
@@ -739,26 +807,360 @@
     "slug": "you-can-see-everything-2026",
     "status": "Released",
     "created_at": "2026-10-15T11:25:47.059Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
+  },
+  {
+    "id": 1561726,
+    "tmdb_id": 1561726,
+    "title": "Masterplan",
+    "original_title": "Masterplan",
+    "overview": "When a legendary thief sets his sights on the Mona Lisa, he recruits two young strangers to help him before revealing they are long-lost siblings… and oh yes, by the way, he is their father. Thrown into a chaotic reunion they never asked for, this new family must learn to work together — and try not to kill each other — if they want any chance at pulling off the heist of the century.",
+    "poster_path": "/5xmXVd7nCK3tAo34XkO58SxUCip.jpg",
+    "backdrop_path": "/dgUDj84BWtW6EZzee8BkgKnjDhh.jpg",
+    "release_date": "2026-10-16",
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "genre_ids": [
+      28,
+      53
+    ],
+    "vote_average": 7.2,
+    "vote_count": 20,
+    "runtime": 110,
+    "original_language": "en",
+    "cast": [
+      {
+        "id": 2283,
+        "name": "Stanley Tucci",
+        "character": "Roger",
+        "profile_path": "/q4TanMDI5Rgsvw4SfyNbPBh4URr.jpg"
+      },
+      {
+        "id": 1355967,
+        "name": "Simona Tabasco",
+        "character": "Chiara",
+        "profile_path": "/eHH3kzBwc69E9BvDRCtOEtY1CSc.jpg"
+      },
+      {
+        "id": 1894422,
+        "name": "Victor Belmondo",
+        "character": "Jay",
+        "profile_path": "/sO3BOoXM8UseOJr7Ba0q0jgGbRV.jpg"
+      },
+      {
+        "id": 1489824,
+        "name": "Eliott Margueron",
+        "character": "Cast",
+        "profile_path": "/bXXHdRf9NBXHlA0OBlROZgolaMp.jpg"
+      },
+      {
+        "id": 27401,
+        "name": "Bruno Bilotta",
+        "character": "Scary Big Roman",
+        "profile_path": "/asuFRBT9YVLRjdRmugAHL43abl8.jpg"
+      },
+      {
+        "id": 6298806,
+        "name": "Barbara Lo Gaglio",
+        "character": "Professor",
+        "profile_path": null
+      }
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=gc0t8AfMP6k",
+    "trailer_key": "gc0t8AfMP6k",
+    "slug": "masterplan-2026",
+    "status": "Released",
+    "created_at": "2026-10-17T11:32:13.119Z",
+    "updated_at": "2026-10-17T11:32:13.119Z"
+  },
+  {
+    "id": 1773759,
+    "tmdb_id": 1773759,
+    "title": "Seriously Single Too",
+    "original_title": "Seriously Single Too",
+    "overview": "Dineo and Noni — besties meant to take on the party scene together — suddenly face their biggest fear when Noni's boyfriend spontaneously propose.",
+    "poster_path": "/hbApG0WSwgtaK7hXTZpwZDstDaR.jpg",
+    "backdrop_path": "/vVVTDymwLVogjz4JxoNv1BAfYCH.jpg",
+    "release_date": "2026-10-16",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "genre_ids": [
+      35,
+      10749
+    ],
+    "vote_average": 0,
+    "vote_count": 0,
+    "runtime": 99,
+    "original_language": "en",
+    "cast": [
+      {
+        "id": 2503140,
+        "name": "Fulu Modibedi",
+        "character": "Cast",
+        "profile_path": "/dE6rn2IH3xlVXQ8teUiCaFkm5aq.jpg"
+      },
+      {
+        "id": 2207871,
+        "name": "Tumi Morake",
+        "character": "Cast",
+        "profile_path": "/uERkSz8bhHwKFkOAeUOAnINHeqE.jpg"
+      },
+      {
+        "id": 4233013,
+        "name": "Buntu Petse",
+        "character": "Cast",
+        "profile_path": "/e45zuTSktIq7PRAoTWXt7NqRGc0.jpg"
+      },
+      {
+        "id": 3702621,
+        "name": "Keke Mphuthi",
+        "character": "Cast",
+        "profile_path": null
+      },
+      {
+        "id": 2719534,
+        "name": "Yonda Thomas",
+        "character": "Cast",
+        "profile_path": "/hndhWzmfaGofk2K4pU3ImYWrf79.jpg"
+      },
+      {
+        "id": 4528939,
+        "name": "Thabiso Isaac Rammusi",
+        "character": "Cast",
+        "profile_path": null
+      }
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=YnsY_9q7m6U",
+    "trailer_key": "YnsY_9q7m6U",
+    "slug": "seriously-single-too-2026",
+    "status": "Released",
+    "created_at": "2026-10-17T11:32:13.119Z",
+    "updated_at": "2026-10-17T11:32:13.119Z"
+  },
+  {
+    "id": 1452110,
+    "tmdb_id": 1452110,
+    "title": "Clean Hands",
+    "original_title": "Clean Hands",
+    "overview": "The true story of hero drug cop turned recovery advocate Kevin Simmers and his daughter Brooke. The film examines the American drug crisis and \"the thin blue line\" from the opposing eyes of cop and addict who were also father and daughter.",
+    "poster_path": "/szIEtkFLOMsPX6AVQSfzalNEEDd.jpg",
+    "backdrop_path": "/py3XG3mFkdVMcw7VwfZ4HaXZIIU.jpg",
+    "release_date": "2026-10-16",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "genre_ids": [
+      80,
+      18
+    ],
+    "vote_average": 10,
+    "vote_count": 2,
+    "runtime": 108,
+    "original_language": "en",
+    "cast": [
+      {
+        "id": 5367,
+        "name": "Zach Braff",
+        "character": "Kevin Simmers",
+        "profile_path": "/koIHwqE6hWIXuOIDHNADwSuGq6N.jpg"
+      },
+      {
+        "id": 3435887,
+        "name": "Esther McGregor",
+        "character": "Brooke Simmers",
+        "profile_path": "/qLzYqwmVmOJPaWSrEmVbEyPaFUG.jpg"
+      },
+      {
+        "id": 123725,
+        "name": "Abigail Spencer",
+        "character": "Dana",
+        "profile_path": "/uf96FDHVoFMwoiP5He4SPLCmwri.jpg"
+      },
+      {
+        "id": 429,
+        "name": "Lucas Till",
+        "character": "Deputy Dormer",
+        "profile_path": "/5m8xgsOgT3FgCBo2AsMn7dewe57.jpg"
+      },
+      {
+        "id": 2998834,
+        "name": "Abigail Rhyne",
+        "character": "Mandy",
+        "profile_path": "/46PC8XO46NIFz7FB9IcUdwXg04F.jpg"
+      },
+      {
+        "id": 7497,
+        "name": "Holt McCallany",
+        "character": "David Trone",
+        "profile_path": "/b1FEXFQ8ZnvXhVrMqCv5mTJ8aW3.jpg"
+      }
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=p0izMCPGdGE",
+    "trailer_key": "p0izMCPGdGE",
+    "slug": "clean-hands-2026",
+    "status": "Released",
+    "created_at": "2026-10-17T11:32:13.119Z",
+    "updated_at": "2026-10-17T11:32:13.119Z"
+  },
+  {
+    "id": 1654581,
+    "tmdb_id": 1654581,
+    "title": "Nayyi Navelli",
+    "original_title": "नय्यी नवेल्ली",
+    "overview": "A new bride's arrival turns a turbulent household in Meerut into a picture of domestic harmony, until her brother-in-law grows convinced that his seemingly perfect sister-in-law is secretly a witch.",
+    "poster_path": "/aZEKuzGt7ObqoKjTM4kcMd0klYy.jpg",
+    "backdrop_path": "/3aXMkyp0Pv2WGyvm2NUdtMXwY2P.jpg",
+    "release_date": "2026-10-16",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Comedy",
+      "Drama"
+    ],
+    "genre_ids": [
+      12,
+      14,
+      35,
+      18
+    ],
+    "vote_average": 0,
+    "vote_count": 0,
+    "runtime": 0,
+    "original_language": "hi",
+    "cast": [
+      {
+        "id": 1115720,
+        "name": "Yami Gautam Dhar",
+        "character": "Cast",
+        "profile_path": "/wQwYuofypdW7JnglmyFbeWKu33j.jpg"
+      },
+      {
+        "id": 2552374,
+        "name": "Anurag Thakur",
+        "character": "Cast",
+        "profile_path": "/3uhvhOTAVFsSVRVR41rjILq9Fcn.jpg"
+      },
+      {
+        "id": 1682080,
+        "name": "Adinath Kothare",
+        "character": "Cast",
+        "profile_path": "/mqvDNAFiy2kkFZZUJCyIgM46nm1.jpg"
+      },
+      {
+        "id": 85734,
+        "name": "Sushmita Mukherjee",
+        "character": "Cast",
+        "profile_path": "/hFgWE0QLZHvdt0gJ3kR734H0ZBR.jpg"
+      },
+      {
+        "id": 2281457,
+        "name": "Prateek Pachori",
+        "character": "Cast",
+        "profile_path": "/xGcckOmsmQ3zplHWEgp1l4gIVdT.jpg"
+      },
+      {
+        "id": 2656646,
+        "name": "Rajesh Dubeay",
+        "character": "Cast",
+        "profile_path": "/5Aae30mTpyAoddcaY9Nu2mT54LX.jpg"
+      }
+    ],
+    "trailer_url": null,
+    "trailer_key": null,
+    "slug": "nayyi-navelli-2026",
+    "status": "Released",
+    "created_at": "2026-10-17T11:32:13.119Z",
+    "updated_at": "2026-10-17T11:32:13.119Z"
+  },
+  {
+    "id": 1620918,
+    "tmdb_id": 1620918,
+    "title": "Norm: The Tale of Norm Macdonald",
+    "original_title": "Norm: The Tale of Norm Macdonald",
+    "overview": "Go down a wormhole in this documentary on master of deadpan humor Norm Macdonald, whose life and career were uncompromising yet full of contradictions.",
+    "poster_path": "/sQw3m4hl1xyoT9zr7shnNCHDKI3.jpg",
+    "backdrop_path": "/d3Uscbjxikw0Vgk9ACFUpqFXplA.jpg",
+    "release_date": "2026-10-16",
+    "genres": [
+      "Documentary"
+    ],
+    "genre_ids": [
+      99
+    ],
+    "vote_average": 0,
+    "vote_count": 0,
+    "runtime": 127,
+    "original_language": "en",
+    "cast": [
+      {
+        "id": 77075,
+        "name": "Norm Macdonald",
+        "character": "Self (archive footage)",
+        "profile_path": "/e7zNBqe1DEWVzpxxn41KuyQAKn4.jpg"
+      },
+      {
+        "id": 19292,
+        "name": "Adam Sandler",
+        "character": "Self (archive footage)",
+        "profile_path": "/iTMnXrPfC1rmom6a9q4hy6YSJWG.jpg"
+      },
+      {
+        "id": 136487,
+        "name": "David Letterman",
+        "character": "Self (archive footage)",
+        "profile_path": "/nk1rMabb84e52G2oax6yO9FBiAd.jpg"
+      },
+      {
+        "id": 206,
+        "name": "Jim Carrey",
+        "character": "Self (archive footage)",
+        "profile_path": "/y3U9QfPN6sJaGl6l68xjwWj28ig.jpg"
+      },
+      {
+        "id": 6352,
+        "name": "Jane Fonda",
+        "character": "Self (archive footage)",
+        "profile_path": "/5Yb3nmRWXXZAxNhfhEuOMdfyVNN.jpg"
+      },
+      {
+        "id": 7404,
+        "name": "Sarah Silverman",
+        "character": "Self (archive footage)",
+        "profile_path": "/g5G711XyVokJm2RoItpkaHa8mkQ.jpg"
+      }
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=dIBNCBAzBos",
+    "trailer_key": "dIBNCBAzBos",
+    "slug": "norm-the-tale-of-norm-macdonald-2026",
+    "status": "Released",
+    "created_at": "2026-10-17T11:32:13.119Z",
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1623256,
     "tmdb_id": 1623256,
     "title": "The Storm",
     "original_title": "Stormen",
-    "overview": "Filip is turning 45, and has invited his closest friends for dinner at his and his wife's lavish and newly bought farm estate up north in Sweden. What they don't know is that a ferocious storm is on its way and that they'll be trapped together. Their polished acts fall, and an unfiltered meltdown starts. When the panic starts to creep in and they all realise the seriousness of the situation, the farm starts to shrink, secrets spill out, and unexpected feelings take shape.",
+    "overview": "When a storm traps old university pals at a luxury lodge, their civilized birthday bash spirals into a cyclone of betrayals, grudges and unfiltered chaos.",
     "poster_path": "/5YNjTi5AhbSM4hDOynJcgFfvKRn.jpg",
     "backdrop_path": "/zN5mRDu6jOYt5EJGYGjhWgOGwor.jpg",
     "release_date": "2026-10-15",
     "genres": [
-      "Comedy"
+      "Comedy",
+      "Drama"
     ],
     "genre_ids": [
-      35
+      35,
+      18
     ],
-    "vote_average": 0,
-    "vote_count": 0,
-    "runtime": 0,
+    "vote_average": 7.7,
+    "vote_count": 16,
+    "runtime": 101,
     "original_language": "sv",
     "cast": [
       {
@@ -803,7 +1205,7 @@
     "slug": "the-storm-2026",
     "status": "Released",
     "created_at": "2026-10-15T11:25:47.059Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1234139,
@@ -812,29 +1214,25 @@
     "original_title": "ஜெயிலர் 2",
     "overview": "When a dangerous syndicate expands its reach to threaten his family's peace, retired jailer Tiger Muthuvel Pandian goes undercover as a driver. Operating from the shadows, he takes on ruthless new enemies to protect his home.",
     "poster_path": "/upwdEyhhYZ7pT2hD535fr2MGfpx.jpg",
-    "backdrop_path": "/m0ks2o59mOAz6WdCybJ5FAUNTOU.jpg",
+    "backdrop_path": "/zpHTOdRl7GEPqFsDGqsN6Hi9Ylt.jpg",
     "release_date": "2026-10-14",
     "genres": [
       "Action",
-      "Comedy",
-      "Crime",
-      "Drama"
+      "Comedy"
     ],
     "genre_ids": [
       28,
-      35,
-      80,
-      18
+      35
     ],
-    "vote_average": 6,
-    "vote_count": 1,
+    "vote_average": 8,
+    "vote_count": 5,
     "runtime": 163,
     "original_language": "ta",
     "cast": [
       {
         "id": 91555,
         "name": "Rajinikanth",
-        "character": "Muthuvel 'Tiger' Pandian",
+        "character": "'Tiger' Muthuvel Pandian",
         "profile_path": "/cQBcrXqcQPfXOQfNfgO3slJM2xi.jpg"
       },
       {
@@ -846,7 +1244,7 @@
       {
         "id": 85450,
         "name": "Mithun Chakraborty",
-        "character": "Champaklal Chaubey",
+        "character": "Chakri Kalpak",
         "profile_path": "/4z8c5YAe0TCkEZNHXWlKxNTD8sV.jpg"
       },
       {
@@ -873,7 +1271,7 @@
     "slug": "jailer-2-2026",
     "status": "Released",
     "created_at": "2026-10-13T11:04:02.962Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1255833,
@@ -890,8 +1288,8 @@
     "genre_ids": [
       53
     ],
-    "vote_average": 7.8,
-    "vote_count": 5,
+    "vote_average": 7.1,
+    "vote_count": 29,
     "runtime": 106,
     "original_language": "en",
     "cast": [
@@ -937,7 +1335,7 @@
     "slug": "whalefall-2026",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1153576,
@@ -956,8 +1354,8 @@
       28,
       14
     ],
-    "vote_average": 6.7,
-    "vote_count": 13,
+    "vote_average": 6.2,
+    "vote_count": 49,
     "runtime": 120,
     "original_language": "en",
     "cast": [
@@ -977,13 +1375,7 @@
         "id": 3775598,
         "name": "Callina Liang",
         "character": "Chun-Li",
-        "profile_path": "/yiajT9WAsvuxF9uNJrkSuzVv3On.jpg"
-      },
-      {
-        "id": 1170011,
-        "name": "Joe Anoa'i",
-        "character": "Akuma",
-        "profile_path": "/6BKc77eAUBQdL9MmgBorBc4SMdE.jpg"
+        "profile_path": "/blJ4iEqMs5oTiKVxUyB9Ky7kNRO.jpg"
       },
       {
         "id": 83854,
@@ -992,10 +1384,16 @@
         "profile_path": "/eLafwcpL64CqzwjjSgKpO7Rv4ae.jpg"
       },
       {
-        "id": 222912,
-        "name": "Cody Rhodes",
-        "character": "Guile",
-        "profile_path": "/m9hfLcsQuESprcb7dJUj5lQLWCv.jpg"
+        "id": 934159,
+        "name": "Eric Andre",
+        "character": "Don Sauvage",
+        "profile_path": "/e9XlcFnZQiBSQ1vISQVyTOrkIaq.jpg"
+      },
+      {
+        "id": 1880755,
+        "name": "Andrew Schulz",
+        "character": "Dan Hibiki",
+        "profile_path": "/fdeYq1EraYvlYM3VmGXjIaSGoTz.jpg"
       }
     ],
     "trailer_url": "https://www.youtube.com/watch?v=U6sbm1OaJb8",
@@ -1003,7 +1401,7 @@
     "slug": "street-fighter-2026",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1282159,
@@ -1152,8 +1550,8 @@
       53,
       18
     ],
-    "vote_average": 7.2,
-    "vote_count": 357,
+    "vote_average": 7.1,
+    "vote_count": 409,
     "runtime": 106,
     "original_language": "en",
     "cast": [
@@ -1199,7 +1597,7 @@
     "slug": "animals-2026",
     "status": "Released",
     "created_at": "2026-10-10T14:00:39.738Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1742441,
@@ -1212,14 +1610,16 @@
     "release_date": "2026-10-09",
     "genres": [
       "Horror",
-      "Music"
+      "Music",
+      "Thriller"
     ],
     "genre_ids": [
       27,
-      10402
+      10402,
+      53
     ],
-    "vote_average": 4.4,
-    "vote_count": 18,
+    "vote_average": 5,
+    "vote_count": 25,
     "runtime": 98,
     "original_language": "en",
     "cast": [
@@ -1227,31 +1627,31 @@
         "id": 929430,
         "name": "Mike Derks",
         "character": "BalSac the Jaws o' Death (segment \"Frame Narrative\")",
-        "profile_path": "/r9mRxHFlULratYXjwsG0TcLNBxF.jpg"
+        "profile_path": null
       },
       {
         "id": 2710537,
         "name": "Michael Bishop",
         "character": "Blothar the Berserker (segment \"Frame Narrative\")",
-        "profile_path": "/yZgoAxZ5skun4WrCUKSRDatuVcB.jpg"
+        "profile_path": null
       },
       {
         "id": 4629181,
         "name": "Brad Roberts",
         "character": "Jizmak Da Gusha (segment \"Frame Narrative\")",
-        "profile_path": "/1eMj8wchto0YrwZdUI1ZoZ33Lwk.jpg"
+        "profile_path": null
       },
       {
         "id": 1099382,
         "name": "Casey Orr",
         "character": "Beefcake the Mighty (segment \"Frame Narrative\")",
-        "profile_path": "/kJJFZ5zhiY3inK5TDUjlWFWTmk8.jpg"
+        "profile_path": null
       },
       {
         "id": 6474755,
         "name": "Bob Gorman",
         "character": "Bonesnapper the Cave Troll (segment \"Frame Narrative\")",
-        "profile_path": "/eqJZTWakanINqNQb94vXoMRTP2b.jpg"
+        "profile_path": null
       },
       {
         "id": 2349288,
@@ -1265,7 +1665,7 @@
     "slug": "v-h-s-mixtape-2026",
     "status": "Released",
     "created_at": "2026-10-10T14:00:39.738Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1389172,
@@ -1332,6 +1732,72 @@
     "status": "Released",
     "created_at": "2026-10-10T14:00:39.738Z",
     "updated_at": "2026-10-15T11:25:47.059Z"
+  },
+  {
+    "id": 1288069,
+    "tmdb_id": 1288069,
+    "title": "Tenzing",
+    "original_title": "Tenzing",
+    "overview": "A determined man embarks on a high-stakes quest—and defies seemingly impossible odds—to fulfill his dream of being the first to reach the summit of Mount Everest.",
+    "poster_path": "/eI0QW02PYqhnmIvLRdn9vrfVVP7.jpg",
+    "backdrop_path": "/wUe0QbbPDU2BD3L2QnsZlAr55Je.jpg",
+    "release_date": "2026-10-09",
+    "genres": [
+      "Drama",
+      "History"
+    ],
+    "genre_ids": [
+      18,
+      36
+    ],
+    "vote_average": 7.9,
+    "vote_count": 24,
+    "runtime": 126,
+    "original_language": "en",
+    "cast": [
+      {
+        "id": 2091969,
+        "name": "Genden Phuntsok",
+        "character": "Tenzing Norgay",
+        "profile_path": "/2xsreNBuPpBZYJTlpuTapi2ZvP.jpg"
+      },
+      {
+        "id": 91606,
+        "name": "Tom Hiddleston",
+        "character": "Ed Hillary",
+        "profile_path": "/mclHxMm8aPlCPKptP67257F5GPo.jpg"
+      },
+      {
+        "id": 5293,
+        "name": "Willem Dafoe",
+        "character": "John Hunt",
+        "profile_path": "/ui8e4sgZAwMPi3hzEO53jyBJF9B.jpg"
+      },
+      {
+        "id": 6553324,
+        "name": "Samdrup Dorje Lama",
+        "character": "Boy Tenzing (9 Yrs)",
+        "profile_path": null
+      },
+      {
+        "id": 6553325,
+        "name": "Bhuchung Kata",
+        "character": "Sherpa",
+        "profile_path": null
+      },
+      {
+        "id": 137108,
+        "name": "Johnny Flynn",
+        "character": "George Mallory",
+        "profile_path": "/tS3HIDFJbD8uSLAvaxZfrPc3aM0.jpg"
+      }
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=KkYCY5YR12U",
+    "trailer_key": "KkYCY5YR12U",
+    "slug": "tenzing-2026",
+    "status": "Released",
+    "created_at": "2026-10-17T11:32:13.119Z",
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1669915,
@@ -1404,6 +1870,72 @@
     "updated_at": "2026-10-13T11:08:49.176Z"
   },
   {
+    "id": 1487317,
+    "tmdb_id": 1487317,
+    "title": "Therapy Done Right",
+    "original_title": "Lo dejamos acá",
+    "overview": "A psychoanalyst who's lost faith in traditional therapy crosses every boundary to help a blocked novelist in this cutting Argentine dark comedy.",
+    "poster_path": "/2gJiHJYhPXQy4ovDD5ZvSjwYfMZ.jpg",
+    "backdrop_path": "/fv9BAXOrPJXEhycgWF3Qb8aczqe.jpg",
+    "release_date": "2026-10-08",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
+    "genre_ids": [
+      35,
+      18
+    ],
+    "vote_average": 7.5,
+    "vote_count": 5,
+    "runtime": 97,
+    "original_language": "es",
+    "cast": [
+      {
+        "id": 69310,
+        "name": "Ricardo Darín",
+        "character": "Ulises Verón",
+        "profile_path": "/2laJXyYQkL9YdLL1PRdD3hLZ6Uy.jpg"
+      },
+      {
+        "id": 96429,
+        "name": "Diego Peretti",
+        "character": "Martín Bouchard",
+        "profile_path": "/honq5g3GPjaCBoiik4uU7va0OJf.jpg"
+      },
+      {
+        "id": 27058,
+        "name": "Inés Efrón",
+        "character": "Florencia",
+        "profile_path": "/aSXV4etwXL8PGAeoFMcrmNGoSfG.jpg"
+      },
+      {
+        "id": 109360,
+        "name": "Carlos Santamaría",
+        "character": "Cast",
+        "profile_path": "/3Vlzyywvhw8jiDufLqbdzh5wC3.jpg"
+      },
+      {
+        "id": 1562670,
+        "name": "Miriam Odorico",
+        "character": "Cast",
+        "profile_path": "/3wdXhgm7DlrYA4mD7NZPwEotMbG.jpg"
+      },
+      {
+        "id": 4960246,
+        "name": "Antonia Bengochea",
+        "character": "Paula Verón",
+        "profile_path": null
+      }
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=DgZQwmjdcp8",
+    "trailer_key": "DgZQwmjdcp8",
+    "slug": "therapy-done-right-2026",
+    "status": "Released",
+    "created_at": "2026-10-17T11:32:13.119Z",
+    "updated_at": "2026-10-17T11:32:13.119Z"
+  },
+  {
     "id": 1400837,
     "tmdb_id": 1400837,
     "title": "Other Mommy",
@@ -1418,8 +1950,8 @@
     "genre_ids": [
       27
     ],
-    "vote_average": 6,
-    "vote_count": 111,
+    "vote_average": 5.9,
+    "vote_count": 127,
     "runtime": 93,
     "original_language": "en",
     "cast": [
@@ -1465,7 +1997,7 @@
     "slug": "other-mommy-2026",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1281331,
@@ -1485,7 +2017,7 @@
       53
     ],
     "vote_average": 7,
-    "vote_count": 98,
+    "vote_count": 109,
     "runtime": 113,
     "original_language": "en",
     "cast": [
@@ -1531,7 +2063,7 @@
     "slug": "the-social-reckoning-2026",
     "status": "Released",
     "created_at": "2026-10-05T09:34:53.124Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1381078,
@@ -1539,8 +2071,8 @@
     "title": "Love of Your Life",
     "original_title": "Love of Your Life",
     "overview": "After a chance encounter sparks a sweeping romance, Maya's future is suddenly upended, sending her on an unexpected journey to love and live again.",
-    "poster_path": "/gOaRyRpilYPEsVLEPHOH9eHNw5E.jpg",
-    "backdrop_path": "/uE4qESNLo6jQrKjnUiNE42hrn1Z.jpg",
+    "poster_path": "/dL3Tcv4FU2K85bgnGRBgLjFSrLr.jpg",
+    "backdrop_path": "/mqYqKvrKTgMvK50VtEDZlYFsnHz.jpg",
     "release_date": "2026-10-07",
     "genres": [
       "Romance",
@@ -1550,8 +2082,8 @@
       10749,
       18
     ],
-    "vote_average": 6.1,
-    "vote_count": 21,
+    "vote_average": 6.8,
+    "vote_count": 51,
     "runtime": 109,
     "original_language": "en",
     "cast": [
@@ -1597,7 +2129,7 @@
     "slug": "love-of-your-life-2026",
     "status": "Released",
     "created_at": "2026-10-15T11:25:47.059Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1148365,
@@ -1606,7 +2138,7 @@
     "original_title": "Matchbox the Movie",
     "overview": "When a group of former childhood friends reconnect, their reunion takes a wild turn as they stumble upon a dangerous international plot—and must save the world.",
     "poster_path": "/lFKA4GMz36dImEy3DQPdPF7G4V9.jpg",
-    "backdrop_path": "/y6RIuwuxLG3Nsb37KUj5yatnTIp.jpg",
+    "backdrop_path": "/jdJsnhHfkIi3J7jwfiCFT4gXNx5.jpg",
     "release_date": "2026-10-05",
     "genres": [
       "Action",
@@ -1619,7 +2151,7 @@
       12
     ],
     "vote_average": 7.9,
-    "vote_count": 310,
+    "vote_count": 362,
     "runtime": 127,
     "original_language": "en",
     "cast": [
@@ -1665,7 +2197,7 @@
     "slug": "matchbox-the-movie-2026",
     "status": "Released",
     "created_at": "2026-10-10T14:00:39.738Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1458857,
@@ -1748,8 +2280,8 @@
     "genre_ids": [
       27
     ],
-    "vote_average": 5.4,
-    "vote_count": 18,
+    "vote_average": 5.1,
+    "vote_count": 19,
     "runtime": 85,
     "original_language": "en",
     "cast": [
@@ -1783,7 +2315,7 @@
     "slug": "infirmary-2026",
     "status": "Released",
     "created_at": "2026-10-05T09:34:53.124Z",
-    "updated_at": "2026-10-13T11:04:02.962Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1269325,
@@ -2335,7 +2867,7 @@
       53
     ],
     "vote_average": 6.4,
-    "vote_count": 199,
+    "vote_count": 211,
     "runtime": 114,
     "original_language": "en",
     "cast": [
@@ -2343,7 +2875,7 @@
         "id": 1813,
         "name": "Anne Hathaway",
         "character": "Verity Crawford",
-        "profile_path": "/tSWLbkhGrHJVoGopoOHkL1mM2Az.jpg"
+        "profile_path": "/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg"
       },
       {
         "id": 118545,
@@ -2381,7 +2913,7 @@
     "slug": "verity-2026",
     "status": "Released",
     "created_at": "2026-09-25T16:08:03.137Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1437195,
@@ -2692,7 +3224,7 @@
       18
     ],
     "vote_average": 7.5,
-    "vote_count": 362,
+    "vote_count": 390,
     "runtime": 129,
     "original_language": "en",
     "cast": [
@@ -2738,7 +3270,7 @@
     "slug": "digger-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:19:03.377Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1529372,
@@ -2826,7 +3358,7 @@
       80
     ],
     "vote_average": 6.6,
-    "vote_count": 457,
+    "vote_count": 467,
     "runtime": 101,
     "original_language": "en",
     "cast": [
@@ -2872,7 +3404,7 @@
     "slug": "unabomber-2026",
     "status": "Released",
     "created_at": "2026-09-25T16:08:01.432Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1538457,
@@ -3028,7 +3560,7 @@
       10752
     ],
     "vote_average": 8.4,
-    "vote_count": 68,
+    "vote_count": 74,
     "runtime": 155,
     "original_language": "es",
     "cast": [
@@ -3074,7 +3606,7 @@
     "slug": "la-bola-negra-2026",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1229906,
@@ -3093,8 +3625,8 @@
       18,
       27
     ],
-    "vote_average": 6.3,
-    "vote_count": 10,
+    "vote_average": 6.4,
+    "vote_count": 11,
     "runtime": 95,
     "original_language": "en",
     "cast": [
@@ -3140,7 +3672,7 @@
     "slug": "family-2026",
     "status": "Released",
     "created_at": "2026-10-05T09:34:53.124Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1280300,
@@ -3162,7 +3694,7 @@
       53
     ],
     "vote_average": 5,
-    "vote_count": 3,
+    "vote_count": 4,
     "runtime": 97,
     "original_language": "en",
     "cast": [
@@ -3208,7 +3740,7 @@
     "slug": "the-whistler-2026",
     "status": "Released",
     "created_at": "2026-10-10T14:00:39.738Z",
-    "updated_at": "2026-10-12T10:08:04.964Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1476746,
@@ -3227,8 +3759,8 @@
       28,
       53
     ],
-    "vote_average": 6.7,
-    "vote_count": 18,
+    "vote_average": 6.4,
+    "vote_count": 21,
     "runtime": 99,
     "original_language": "en",
     "cast": [
@@ -3274,7 +3806,73 @@
     "slug": "the-florist-2026",
     "status": "Released",
     "created_at": "2026-10-10T14:00:39.738Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
+  },
+  {
+    "id": 1376400,
+    "tmdb_id": 1376400,
+    "title": "Crawlers",
+    "original_title": "Crawlers",
+    "overview": "Tenants at Paradiso Palms apartments fight a deadly spider invasion while the cunning building manager might be their only hope for survival.",
+    "poster_path": "/lNXeEpg4yLSRwXwOeR5lbPgwbqL.jpg",
+    "backdrop_path": "/wqEFo8ZPOO0zefg08XWQbyRoBgO.jpg",
+    "release_date": "2026-09-24",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "genre_ids": [
+      27,
+      53
+    ],
+    "vote_average": 5.9,
+    "vote_count": 8,
+    "runtime": 80,
+    "original_language": "en",
+    "cast": [
+      {
+        "id": 1464589,
+        "name": "Matilda Lutz",
+        "character": "Serena",
+        "profile_path": "/yqeYvGgDvrhvn5lP6fuRE1ImQXv.jpg"
+      },
+      {
+        "id": 212686,
+        "name": "Gregg Sulkin",
+        "character": "Cast",
+        "profile_path": "/cF0w2ZQTE3ZTEFFeYZRbRJVmLCm.jpg"
+      },
+      {
+        "id": 1289925,
+        "name": "Melina Matthews",
+        "character": "Lady Lash",
+        "profile_path": "/bPwRAyD6DrAEj3DIzTibVDdJ51M.jpg"
+      },
+      {
+        "id": 1302981,
+        "name": "Paul S. Tracey",
+        "character": "Paul",
+        "profile_path": "/dzIAX2FLFKLZvFqf6DgFbH2T1aT.jpg"
+      },
+      {
+        "id": 5209690,
+        "name": "Andrea Scott Méndez",
+        "character": "Molly",
+        "profile_path": "/64YAJim4COEi49PkKpk4iULzOPg.jpg"
+      },
+      {
+        "id": 72672,
+        "name": "William Miller",
+        "character": "Cast",
+        "profile_path": "/5Uk1mxLqU3zVMHx5wHvUsKKiYvf.jpg"
+      }
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=fGi9K7YTxGQ",
+    "trailer_key": "fGi9K7YTxGQ",
+    "slug": "crawlers-2026",
+    "status": "Released",
+    "created_at": "2026-10-17T11:32:13.119Z",
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1375441,
@@ -3294,7 +3892,7 @@
       53
     ],
     "vote_average": 6.9,
-    "vote_count": 122,
+    "vote_count": 137,
     "runtime": 110,
     "original_language": "en",
     "cast": [
@@ -3340,7 +3938,7 @@
     "slug": "primetime-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:19:05.568Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1032863,
@@ -3360,7 +3958,7 @@
       35
     ],
     "vote_average": 8,
-    "vote_count": 601,
+    "vote_count": 616,
     "runtime": 112,
     "original_language": "en",
     "cast": [
@@ -3406,7 +4004,7 @@
     "slug": "the-love-hypothesis-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:49.090Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1580190,
@@ -3556,7 +4154,7 @@
       10749
     ],
     "vote_average": 7.4,
-    "vote_count": 36,
+    "vote_count": 37,
     "runtime": 132,
     "original_language": "en",
     "cast": [
@@ -3573,22 +4171,22 @@
         "profile_path": "/hmGkEC4OWsyDe7ZGVkZ7e1RjViD.jpg"
       },
       {
-        "id": 147056,
-        "name": "Caitríona Balfe",
-        "character": "Mrs. Dashwood",
-        "profile_path": "/lerCNTjO6FQIam2lF5SXHA4dY7H.jpg"
-      },
-      {
         "id": 4088089,
         "name": "Bodhi Rae Breathnach",
         "character": "Margaret Dashwood",
         "profile_path": "/v4PXpYOKUQtcUCp85KAW2bIiS51.jpg"
       },
       {
-        "id": 964834,
-        "name": "Frank Dillane",
-        "character": "John Willoughby",
-        "profile_path": "/eitUc8e045y8dDfBSm681hU471g.jpg"
+        "id": 147056,
+        "name": "Caitríona Balfe",
+        "character": "Mrs. Dashwood",
+        "profile_path": "/lerCNTjO6FQIam2lF5SXHA4dY7H.jpg"
+      },
+      {
+        "id": 10981,
+        "name": "Fiona Shaw",
+        "character": "Mrs. Jennings",
+        "profile_path": "/8X7fZybxtwh2nTvYk6kjRYo9RIY.jpg"
       },
       {
         "id": 146750,
@@ -3602,7 +4200,7 @@
     "slug": "sense-and-sensibility-2026",
     "status": "Released",
     "created_at": "2026-10-15T11:25:47.059Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1607127,
@@ -3611,7 +4209,7 @@
     "original_title": "One Last Shot",
     "overview": "Navy Seal Jake Harris must stop a team of mercenaries, led by his disillusioned former comrade, from disabling the US missile defense network.",
     "poster_path": "/niQ4NBh2jqAf1hDZP5m6ReWFAb7.jpg",
-    "backdrop_path": "/8giIQcHpxgsPVP6c7aQtHl3txuh.jpg",
+    "backdrop_path": "/7AArZYRp6zGtbvSbbqoHn9xFp0L.jpg",
     "release_date": "2026-09-22",
     "genres": [
       "Action",
@@ -3622,7 +4220,7 @@
       53
     ],
     "vote_average": 7.4,
-    "vote_count": 124,
+    "vote_count": 129,
     "runtime": 98,
     "original_language": "en",
     "cast": [
@@ -3668,7 +4266,7 @@
     "slug": "one-last-shot-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:50.308Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1620080,
@@ -3754,7 +4352,7 @@
       53
     ],
     "vote_average": 7.4,
-    "vote_count": 293,
+    "vote_count": 302,
     "runtime": 101,
     "original_language": "en",
     "cast": [
@@ -3800,7 +4398,7 @@
     "slug": "heart-of-the-beast-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:55.354Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1641629,
@@ -3888,7 +4486,7 @@
       12
     ],
     "vote_average": 7.3,
-    "vote_count": 936,
+    "vote_count": 967,
     "runtime": 95,
     "original_language": "en",
     "cast": [
@@ -3934,7 +4532,7 @@
     "slug": "resident-evil-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:47.253Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1433583,
@@ -4007,8 +4605,8 @@
   {
     "id": 1751701,
     "tmdb_id": 1751701,
-    "title": "After Impact",
-    "original_title": "After Impact",
+    "title": "אחרי הפגיעה",
+    "original_title": "אחרי הפגיעה",
     "overview": "After losing his father, Ethan Nichols inherits one of the largest greenhouses in the country, just as the world faces a devastating threat from an approaching asteroid. As society begins to unravel, Ethan grapples with personal betrayal, overwhelming loneliness, and the growing fear that survival may come at the cost of his humanity. Seeking refuge in his family’s bunker, Ethan endures the harsh aftermath of the impact, wrestling with physical injury and emotional despair. When a faint voice crackles over his radio, Ethan discovers he's not as alone as he believed.",
     "poster_path": "/yzDuAQCY2n6zzOlBkn6JzhLhY3k.jpg",
     "backdrop_path": "/k22XyPbce7zvzzf5OnT4uaY8ZD1.jpg",
@@ -4067,10 +4665,10 @@
     ],
     "trailer_url": "https://www.youtube.com/watch?v=Af8D6sRDyxo",
     "trailer_key": "Af8D6sRDyxo",
-    "slug": "after-impact-2026",
+    "slug": "-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:52.572Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1591675,
@@ -4153,8 +4751,8 @@
       27,
       53
     ],
-    "vote_average": 5.7,
-    "vote_count": 11,
+    "vote_average": 5.1,
+    "vote_count": 17,
     "runtime": 94,
     "original_language": "en",
     "cast": [
@@ -4200,7 +4798,73 @@
     "slug": "don-t-move-2026",
     "status": "Released",
     "created_at": "2026-10-15T11:25:47.059Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
+  },
+  {
+    "id": 1513475,
+    "tmdb_id": 1513475,
+    "title": "Aasha",
+    "original_title": "ആശ",
+    "overview": "Follows a stubborn, short-tempered widow named Aasha who gets into a tense altercation with a volatile man named Jeemon following a minor road accident.",
+    "poster_path": "/dZyMVwRhI0Y1ANDRM4sAk7P4hYC.jpg",
+    "backdrop_path": "/tkRcmn2ZpXq3k6JEeilgVXGAVJ0.jpg",
+    "release_date": "2026-09-11",
+    "genres": [
+      "Thriller",
+      "Drama"
+    ],
+    "genre_ids": [
+      53,
+      18
+    ],
+    "vote_average": 5,
+    "vote_count": 1,
+    "runtime": 127,
+    "original_language": "ml",
+    "cast": [
+      {
+        "id": 141702,
+        "name": "Urvashi",
+        "character": "Aasha",
+        "profile_path": "/A6kHkXIhzL2LHIi78kNROdud7Mw.jpg"
+      },
+      {
+        "id": 1357376,
+        "name": "Joju George",
+        "character": "Jeemon",
+        "profile_path": "/jCObRH5idadzrTvyC9XnlnR8rXH.jpg"
+      },
+      {
+        "id": 1861484,
+        "name": "Aishwarya Lekshmi",
+        "character": "Anagha",
+        "profile_path": "/b3yxjhc62X0JZghaRTYNMVrI78a.jpg"
+      },
+      {
+        "id": 584765,
+        "name": "Vijayaraghavan",
+        "character": "Santhosh",
+        "profile_path": "/3AE7r02YPbSrEUIfP7gUN7lLNfI.jpg"
+      },
+      {
+        "id": 3108597,
+        "name": "Ramesh Girija",
+        "character": "Asif",
+        "profile_path": null
+      },
+      {
+        "id": 4165196,
+        "name": "Amrutha Krishnakumar",
+        "character": "Dr. Dhanya",
+        "profile_path": null
+      }
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=EYSBA1cwBes",
+    "trailer_key": "EYSBA1cwBes",
+    "slug": "aasha-2026",
+    "status": "Released",
+    "created_at": "2026-10-17T11:32:13.119Z",
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1465063,
@@ -4225,8 +4889,8 @@
       35,
       10751
     ],
-    "vote_average": 8.1,
-    "vote_count": 71,
+    "vote_average": 8,
+    "vote_count": 75,
     "runtime": 109,
     "original_language": "en",
     "cast": [
@@ -4272,7 +4936,7 @@
     "slug": "forgotten-island-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:19:01.521Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1228834,
@@ -4281,7 +4945,7 @@
     "original_title": "The Fix",
     "overview": "Disillusioned by the end of the war in Afghanistan, a group of disgraced, war-torn ex-CIA operatives set out to Tehran to take down a life-changing score.",
     "poster_path": "/jlP8XDjZN89GrpM3je5Uf8Grqx8.jpg",
-    "backdrop_path": "/yT8EkAvEkJDFeAxK7s7HlIPELRT.jpg",
+    "backdrop_path": "/dJTWIecL2vxsCRl5G0lRhPsfrhc.jpg",
     "release_date": "2026-09-10",
     "genres": [
       "Action",
@@ -4291,8 +4955,8 @@
       28,
       53
     ],
-    "vote_average": 6.8,
-    "vote_count": 62,
+    "vote_average": 6.7,
+    "vote_count": 66,
     "runtime": 142,
     "original_language": "en",
     "cast": [
@@ -4338,7 +5002,7 @@
     "slug": "the-fix-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:50.621Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 977942,
@@ -4359,8 +5023,8 @@
       18,
       36
     ],
-    "vote_average": 7.9,
-    "vote_count": 320,
+    "vote_average": 8,
+    "vote_count": 328,
     "runtime": 128,
     "original_language": "en",
     "cast": [
@@ -4406,7 +5070,7 @@
     "slug": "the-uprising-2026",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1340102,
@@ -4423,8 +5087,8 @@
     "genre_ids": [
       28
     ],
-    "vote_average": 7.6,
-    "vote_count": 43,
+    "vote_average": 7.5,
+    "vote_count": 44,
     "runtime": 91,
     "original_language": "en",
     "cast": [
@@ -4470,7 +5134,7 @@
     "slug": "lion-fist-2026",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1317872,
@@ -4556,7 +5220,7 @@
       53
     ],
     "vote_average": 6.9,
-    "vote_count": 205,
+    "vote_count": 206,
     "runtime": 104,
     "original_language": "es",
     "cast": [
@@ -4602,7 +5266,7 @@
     "slug": "drawn-together-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:50.025Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1302904,
@@ -4623,8 +5287,8 @@
       14,
       35
     ],
-    "vote_average": 6.3,
-    "vote_count": 156,
+    "vote_average": 6.8,
+    "vote_count": 200,
     "runtime": 130,
     "original_language": "en",
     "cast": [
@@ -4670,7 +5334,7 @@
     "slug": "practical-magic-2-2026",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1447853,
@@ -4756,7 +5420,7 @@
       35
     ],
     "vote_average": 8.3,
-    "vote_count": 556,
+    "vote_count": 588,
     "runtime": 97,
     "original_language": "en",
     "cast": [
@@ -4802,7 +5466,7 @@
     "slug": "runner-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:19:00.243Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1712451,
@@ -4885,8 +5549,8 @@
       35,
       18
     ],
-    "vote_average": 7.6,
-    "vote_count": 13,
+    "vote_average": 7.1,
+    "vote_count": 17,
     "runtime": 102,
     "original_language": "en",
     "cast": [
@@ -4932,7 +5596,7 @@
     "slug": "the-incomer-2026",
     "status": "Released",
     "created_at": "2026-10-13T11:04:02.962Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1506560,
@@ -5087,8 +5751,8 @@
       53,
       28
     ],
-    "vote_average": 6.8,
-    "vote_count": 665,
+    "vote_average": 6.7,
+    "vote_count": 670,
     "runtime": 86,
     "original_language": "en",
     "cast": [
@@ -5134,7 +5798,7 @@
     "slug": "the-runner-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:51.544Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1572116,
@@ -5292,7 +5956,7 @@
       53
     ],
     "vote_average": 5.7,
-    "vote_count": 108,
+    "vote_count": 111,
     "runtime": 92,
     "original_language": "en",
     "cast": [
@@ -5338,7 +6002,7 @@
     "slug": "onslaught-2026",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1101412,
@@ -5347,7 +6011,7 @@
     "original_title": "Fall 2: Deadpoint",
     "overview": "On a perilous climb across Thailand's Mount Kwan, two climbers become trapped thousands of feet above the ground, where vertigo-inducing heights, sheer exposure, and impossible odds turn every moment into a fight for survival.",
     "poster_path": "/fgSm5ylwiXbIHn8UbUXDjk9RRu4.jpg",
-    "backdrop_path": "/yBDxqDB29kpH9VojTytjGWBgmdJ.jpg",
+    "backdrop_path": "/nGau0KBOaRILSK5MqFcuTfv7GMl.jpg",
     "release_date": "2026-09-01",
     "genres": [
       "Thriller"
@@ -5356,7 +6020,7 @@
       53
     ],
     "vote_average": 7.3,
-    "vote_count": 537,
+    "vote_count": 559,
     "runtime": 98,
     "original_language": "en",
     "cast": [
@@ -5364,7 +6028,7 @@
         "id": 2480853,
         "name": "Harriet Slater",
         "character": "Jax Hunter",
-        "profile_path": "/mR9ewUjIKoP6Z4DjokAD83tpZ6q.jpg"
+        "profile_path": "/9BJxdhi4tuiQdgT8bfDuiPipnsx.jpg"
       },
       {
         "id": 3486664,
@@ -5402,7 +6066,7 @@
     "slug": "fall-2-deadpoint-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:58.099Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1482547,
@@ -5470,7 +6134,7 @@
     "title": "Legend of the White Dragon",
     "original_title": "Legend of the White Dragon",
     "overview": "Forced to hide in the shadows, fugitive hero Erik Reed must clear his name to reunite with his family. Standing in his way is a mysterious villain obsessed with destroying the White Dragon for good.",
-    "poster_path": "/yygzww0GACtCMmwhtPG1P01qSx5.jpg",
+    "poster_path": "/k0L5ZQP4PjdNziVGvcOeaihXyCc.jpg",
     "backdrop_path": "/iBfpVJCn2nKSkuWjv1Wp4GTiqoG.jpg",
     "release_date": "2026-08-28",
     "genres": [
@@ -5481,8 +6145,8 @@
       28,
       14
     ],
-    "vote_average": 6.7,
-    "vote_count": 63,
+    "vote_average": 6.8,
+    "vote_count": 69,
     "runtime": 97,
     "original_language": "en",
     "cast": [
@@ -5528,7 +6192,7 @@
     "slug": "legend-of-the-white-dragon-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:19:03.657Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 822653,
@@ -5811,7 +6475,7 @@
     "original_title": "Buddy",
     "overview": "A magical, singing orange unicorn holds his cast hostage in a surreal TV-show dimension, as he becomes more and more demented.",
     "poster_path": "/1BdZbNvl1SfrrX8J9X5tQzN6Ivu.jpg",
-    "backdrop_path": "/kghxBvN7f3vUt377yjO4ygbefYN.jpg",
+    "backdrop_path": "/ytoLEl5yDaxB8AtZ52uKWjaQ9ql.jpg",
     "release_date": "2026-08-27",
     "genres": [
       "Horror",
@@ -5823,9 +6487,9 @@
       35,
       14
     ],
-    "vote_average": 7.4,
-    "vote_count": 104,
-    "runtime": 95,
+    "vote_average": 7.2,
+    "vote_count": 124,
+    "runtime": 96,
     "original_language": "en",
     "cast": [
       {
@@ -5870,7 +6534,7 @@
     "slug": "buddy-2026",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1433568,
@@ -6093,8 +6757,8 @@
       35,
       10751
     ],
-    "vote_average": 7.1,
-    "vote_count": 28,
+    "vote_average": 7.5,
+    "vote_count": 41,
     "runtime": 94,
     "original_language": "es",
     "cast": [
@@ -6134,7 +6798,7 @@
     "slug": "tad-and-the-magic-lamp-2026",
     "status": "Released",
     "created_at": "2026-10-13T11:04:02.962Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1685882,
@@ -6360,7 +7024,7 @@
       9648
     ],
     "vote_average": 5.6,
-    "vote_count": 73,
+    "vote_count": 74,
     "runtime": 89,
     "original_language": "en",
     "cast": [
@@ -6406,7 +7070,7 @@
     "slug": "it-ends-2026",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1508168,
@@ -6692,7 +7356,7 @@
       10751
     ],
     "vote_average": 7.5,
-    "vote_count": 741,
+    "vote_count": 750,
     "runtime": 103,
     "original_language": "en",
     "cast": [
@@ -6738,7 +7402,7 @@
     "slug": "coyote-vs-acme-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:47.897Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1288445,
@@ -6758,7 +7422,7 @@
       53
     ],
     "vote_average": 7.6,
-    "vote_count": 886,
+    "vote_count": 898,
     "runtime": 96,
     "original_language": "en",
     "cast": [
@@ -6804,7 +7468,7 @@
     "slug": "mutiny-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:48.827Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1291595,
@@ -6824,7 +7488,7 @@
       53
     ],
     "vote_average": 7.7,
-    "vote_count": 729,
+    "vote_count": 765,
     "runtime": 106,
     "original_language": "en",
     "cast": [
@@ -6870,7 +7534,7 @@
     "slug": "insidious-out-of-the-further-2026",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1482938,
@@ -7022,7 +7686,7 @@
       53
     ],
     "vote_average": 7.1,
-    "vote_count": 2051,
+    "vote_count": 2080,
     "runtime": 100,
     "original_language": "en",
     "cast": [
@@ -7030,7 +7694,7 @@
         "id": 1813,
         "name": "Anne Hathaway",
         "character": "Denise Platt",
-        "profile_path": "/tSWLbkhGrHJVoGopoOHkL1mM2Az.jpg"
+        "profile_path": "/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg"
       },
       {
         "id": 3061,
@@ -7068,7 +7732,7 @@
     "slug": "the-end-of-oak-street-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:47.574Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 675871,
@@ -7158,7 +7822,7 @@
       10749
     ],
     "vote_average": 6.2,
-    "vote_count": 300,
+    "vote_count": 310,
     "runtime": 112,
     "original_language": "en",
     "cast": [
@@ -7204,7 +7868,7 @@
     "slug": "teenage-sex-and-death-at-camp-miasma-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:51.273Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1433367,
@@ -7292,7 +7956,7 @@
       53
     ],
     "vote_average": 4.9,
-    "vote_count": 125,
+    "vote_count": 128,
     "runtime": 86,
     "original_language": "en",
     "cast": [
@@ -7338,7 +8002,7 @@
     "slug": "ice-cream-man-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:52.877Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1598766,
@@ -7484,7 +8148,7 @@
       12
     ],
     "vote_average": 8.5,
-    "vote_count": 5457,
+    "vote_count": 5594,
     "runtime": 145,
     "original_language": "en",
     "cast": [
@@ -7530,7 +8194,7 @@
     "slug": "spider-man-brand-new-day-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:19:04.397Z",
-    "updated_at": "2026-10-15T11:25:47.059Z",
+    "updated_at": "2026-10-17T11:32:13.119Z",
     "popularity": 9999
   },
   {
@@ -7549,7 +8213,7 @@
       35
     ],
     "vote_average": 6,
-    "vote_count": 102,
+    "vote_count": 104,
     "runtime": 90,
     "original_language": "en",
     "cast": [
@@ -7595,7 +8259,7 @@
     "slug": "i-want-your-sex-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:19:01.226Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1514682,
@@ -7756,8 +8420,8 @@
       14,
       35
     ],
-    "vote_average": 8.3,
-    "vote_count": 181,
+    "vote_average": 8.2,
+    "vote_count": 184,
     "runtime": 88,
     "original_language": "en",
     "cast": [
@@ -7803,7 +8467,7 @@
     "slug": "paw-patrol-the-dino-movie-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:55.057Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1232569,
@@ -7825,7 +8489,7 @@
       9648
     ],
     "vote_average": 6.5,
-    "vote_count": 132,
+    "vote_count": 136,
     "runtime": 82,
     "original_language": "en",
     "cast": [
@@ -7871,7 +8535,7 @@
     "slug": "pinocchio-unstrung-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:50.965Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1058424,
@@ -7879,8 +8543,8 @@
     "title": "Hope",
     "original_title": "호프",
     "overview": "In the remote South Korean village of Hope Harbor, police chief Bum-seok and officer Sung-ae are called to investigate a mysterious creature wreaking havoc on the community. But all is not as it seems, and perceptions can be misleading. What begins as ignorance plants the seed of disaster, escalating through human conflict into a tragedy of cosmic proportions.",
-    "poster_path": "/bcK5naYzzfY0JBCgrPrsrbV6NO1.jpg",
-    "backdrop_path": "/xBcKnWJHodUpvzUVIWTuNMnvEwl.jpg",
+    "poster_path": "/qW1m7bcsRb2lo8xG2v0p4mARyH8.jpg",
+    "backdrop_path": "/ujUwzNV8ZkOzZonvhhHsc9KOKDf.jpg",
     "release_date": "2026-07-15",
     "genres": [
       "Science Fiction",
@@ -7892,8 +8556,8 @@
       9648,
       28
     ],
-    "vote_average": 7.1,
-    "vote_count": 163,
+    "vote_average": 6.9,
+    "vote_count": 215,
     "runtime": 157,
     "original_language": "ko",
     "cast": [
@@ -7939,7 +8603,7 @@
     "slug": "hope-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:59.609Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1368337,
@@ -7948,7 +8612,7 @@
     "original_title": "The Odyssey",
     "overview": "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity to the breaking point.",
     "poster_path": "/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
-    "backdrop_path": "/twiVn9oFXOVR0uoYgawyEBlnFu8.jpg",
+    "backdrop_path": "/nVBzWBqHTB3XD0iqWiJLfKLo5fq.jpg",
     "release_date": "2026-07-15",
     "genres": [
       "Adventure",
@@ -7961,7 +8625,7 @@
       14
     ],
     "vote_average": 8,
-    "vote_count": 4131,
+    "vote_count": 4151,
     "runtime": 173,
     "original_language": "en",
     "cast": [
@@ -7981,7 +8645,7 @@
         "id": 1813,
         "name": "Anne Hathaway",
         "character": "Penelope",
-        "profile_path": "/h1hgb3GaRi7ClMJWP2QYzyn2euE.jpg"
+        "profile_path": "/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg"
       },
       {
         "id": 11288,
@@ -8007,7 +8671,7 @@
     "slug": "the-odyssey-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:48.244Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1491920,
@@ -8026,8 +8690,8 @@
       28,
       35
     ],
-    "vote_average": 5.9,
-    "vote_count": 45,
+    "vote_average": 5.8,
+    "vote_count": 46,
     "runtime": 106,
     "original_language": "zh",
     "cast": [
@@ -8073,7 +8737,7 @@
     "slug": "kung-fu-soccer-2026",
     "status": "Released",
     "created_at": "2026-10-05T09:34:53.124Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1108427,
@@ -8097,7 +8761,7 @@
       12
     ],
     "vote_average": 7.5,
-    "vote_count": 908,
+    "vote_count": 912,
     "runtime": 115,
     "original_language": "en",
     "cast": [
@@ -8143,7 +8807,7 @@
     "slug": "moana-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:49.667Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1212763,
@@ -8161,7 +8825,7 @@
       27
     ],
     "vote_average": 7.6,
-    "vote_count": 1728,
+    "vote_count": 1740,
     "runtime": 110,
     "original_language": "en",
     "cast": [
@@ -8207,7 +8871,7 @@
     "slug": "evil-dead-burn-2026",
     "status": "Released",
     "created_at": "2026-10-05T09:34:53.124Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1594914,
@@ -8295,7 +8959,7 @@
       10749
     ],
     "vote_average": 7.2,
-    "vote_count": 793,
+    "vote_count": 806,
     "runtime": 107,
     "original_language": "en",
     "cast": [
@@ -8329,7 +8993,7 @@
     "slug": "the-invite-2026",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1315772,
@@ -8355,7 +9019,7 @@
       14
     ],
     "vote_average": 7.6,
-    "vote_count": 1269,
+    "vote_count": 1277,
     "runtime": 90,
     "original_language": "en",
     "cast": [
@@ -8401,7 +9065,7 @@
     "slug": "minions-monsters-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:52.261Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1284465,
@@ -8493,7 +9157,7 @@
       12
     ],
     "vote_average": 8.3,
-    "vote_count": 2606,
+    "vote_count": 2632,
     "runtime": 102,
     "original_language": "en",
     "cast": [
@@ -8539,7 +9203,7 @@
     "slug": "toy-story-5-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:19:02.704Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1564614,
@@ -8559,7 +9223,7 @@
       10749
     ],
     "vote_average": 6.8,
-    "vote_count": 597,
+    "vote_count": 603,
     "runtime": 88,
     "original_language": "en",
     "cast": [
@@ -8605,7 +9269,7 @@
     "slug": "leviticus-2026",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1280738,
@@ -8627,7 +9291,7 @@
       53
     ],
     "vote_average": 8.2,
-    "vote_count": 832,
+    "vote_count": 839,
     "runtime": 113,
     "original_language": "zh",
     "cast": [
@@ -8673,7 +9337,7 @@
     "slug": "the-furious-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:19:00.593Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1275779,
@@ -8693,7 +9357,7 @@
       53
     ],
     "vote_average": 7.4,
-    "vote_count": 3669,
+    "vote_count": 3685,
     "runtime": 146,
     "original_language": "en",
     "cast": [
@@ -8739,7 +9403,73 @@
     "slug": "disclosure-day-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:59.978Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
+  },
+  {
+    "id": 1393929,
+    "tmdb_id": 1393929,
+    "title": "Hallowarrior",
+    "original_title": "Hallowarrior",
+    "overview": "Pumpkin, the last girl on earth and sole survivor of a humanity-ending plague, scavenging the wasteland for supplies on the eve of Halloween. Pumpkin’s lonely holiday ritual is interrupted by the arrival of a savage gang of raiders at her doorstep, led by the fearsome Thalia. Outnumbered and armed with candy, wit and weapons, Pumpkin must ferociously fight back to survive the night.",
+    "poster_path": "/kwbCAGU3yV06GLq9FZd6MVltWGo.jpg",
+    "backdrop_path": "/m2rfjZx3jzkJ1DVDIZ1n6dRRMQc.jpg",
+    "release_date": "2026-06-10",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "genre_ids": [
+      27,
+      53
+    ],
+    "vote_average": 7,
+    "vote_count": 2,
+    "runtime": 80,
+    "original_language": "en",
+    "cast": [
+      {
+        "id": 1945702,
+        "name": "Milly Shapiro",
+        "character": "Pumpkin",
+        "profile_path": "/5QVwZttyqVDl0M3AKwe0SDU8S5R.jpg"
+      },
+      {
+        "id": 27855,
+        "name": "Shannyn Sossamon",
+        "character": "Thalia",
+        "profile_path": "/h7oiKMaoq0J5DM3PBZxffF9uJo4.jpg"
+      },
+      {
+        "id": 2027170,
+        "name": "Ajani Russell",
+        "character": "Wendy",
+        "profile_path": "/8AsPogz7iLDmKIQqeRf24UAQsEs.jpg"
+      },
+      {
+        "id": 74133,
+        "name": "AJ Bowen",
+        "character": "Royce",
+        "profile_path": "/fGSSDkxLOkaUNj1VLHEg6ZPi3Jw.jpg"
+      },
+      {
+        "id": 1826460,
+        "name": "Victor Plajas",
+        "character": "Cast",
+        "profile_path": "/mWnrtjy3TEmlMzGEILCuXIOjrWs.jpg"
+      },
+      {
+        "id": 3979287,
+        "name": "Taylor Valentine Lupini",
+        "character": "Cast",
+        "profile_path": "/pyBl3OUxzMrggYyPm0sEUgHwGiq.jpg"
+      }
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=peeB2FxGgIY",
+    "trailer_key": "peeB2FxGgIY",
+    "slug": "hallowarrior-2026",
+    "status": "Released",
+    "created_at": "2026-10-17T11:32:13.119Z",
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1283636,
@@ -8823,7 +9553,7 @@
       35
     ],
     "vote_average": 6.3,
-    "vote_count": 2025,
+    "vote_count": 2034,
     "runtime": 96,
     "original_language": "en",
     "cast": [
@@ -8869,7 +9599,7 @@
     "slug": "scary-movie-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:59.229Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1165366,
@@ -9159,7 +9889,7 @@
       878
     ],
     "vote_average": 7,
-    "vote_count": 3737,
+    "vote_count": 3750,
     "runtime": 111,
     "original_language": "en",
     "cast": [
@@ -9205,7 +9935,7 @@
     "slug": "backrooms-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:54.758Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1375646,
@@ -9213,7 +9943,7 @@
     "title": "Colony",
     "original_title": "군체",
     "overview": "Professor Se-jeong is thrust into a bloody nightmare when a rapidly mutating virus is released during a biotech conference causing authorities to seal the facility. Trapped inside with no escape, Se-jeong along with a small group of survivors must fight to stay alive while the infected undergo horrific transformations.",
-    "poster_path": "/1I0E3f44UEsBmYpK6qkNLzvDQoN.jpg",
+    "poster_path": "/tN799oUR0f1gUKDYdMNrDaY7I51.jpg",
     "backdrop_path": "/pGxUbJ1vKuMYeEjKDokFI7DNbSG.jpg",
     "release_date": "2026-05-21",
     "genres": [
@@ -9227,7 +9957,7 @@
       878
     ],
     "vote_average": 8.1,
-    "vote_count": 1154,
+    "vote_count": 1162,
     "runtime": 123,
     "original_language": "ko",
     "cast": [
@@ -9273,7 +10003,7 @@
     "slug": "colony-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:48.532Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1340206,
@@ -9295,7 +10025,7 @@
       53
     ],
     "vote_average": 7.6,
-    "vote_count": 554,
+    "vote_count": 556,
     "runtime": 108,
     "original_language": "en",
     "cast": [
@@ -9341,7 +10071,75 @@
     "slug": "tuner-2026",
     "status": "Released",
     "created_at": "2026-10-13T11:08:49.176Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
+  },
+  {
+    "id": 1228710,
+    "tmdb_id": 1228710,
+    "title": "The Mandalorian and Grogu",
+    "original_title": "The Mandalorian and Grogu",
+    "overview": "The evil Empire has fallen, and Imperial warlords remain scattered throughout the galaxy. As the fledgling New Republic works to protect everything the Rebellion fought for, they have enlisted the help of legendary Mandalorian bounty hunter Din Djarin and his young apprentice Grogu.",
+    "poster_path": "/uwMKWjcNID0D9jjplsjkQS2OrB4.jpg",
+    "backdrop_path": "/ysLlsAxwgNSxBWHCgTKJrmjxpRQ.jpg",
+    "release_date": "2026-05-20",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Science Fiction"
+    ],
+    "genre_ids": [
+      28,
+      12,
+      878
+    ],
+    "vote_average": 7.5,
+    "vote_count": 1864,
+    "runtime": 132,
+    "original_language": "en",
+    "cast": [
+      {
+        "id": 1253360,
+        "name": "Pedro Pascal",
+        "character": "The Mandalorian",
+        "profile_path": "/oKcMbVn0NJTNzQt0ClKKvVXkm60.jpg"
+      },
+      {
+        "id": 206905,
+        "name": "Jeremy Allen White",
+        "character": "Rotta (voice)",
+        "profile_path": "/pXRADDRhprgaQ4Bri44NH3bYeu6.jpg"
+      },
+      {
+        "id": 10205,
+        "name": "Sigourney Weaver",
+        "character": "Colonel Ward",
+        "profile_path": "/wTSnfktNBLd6kwQxgvkqYw6vEon.jpg"
+      },
+      {
+        "id": 946854,
+        "name": "Brendan Wayne",
+        "character": "The Mandalorian Suit Performer",
+        "profile_path": "/klsNR0ld4NjURhhn3PYZetFkaCK.jpg"
+      },
+      {
+        "id": 123812,
+        "name": "Lateef Crowder",
+        "character": "The Mandalorian Stunt Performer",
+        "profile_path": "/mhGArPyh3N97t3PU4YnvLZTzHjl.jpg"
+      },
+      {
+        "id": 571562,
+        "name": "Steve Blum",
+        "character": "Zeb Orrelios (voice)",
+        "profile_path": "/cpO0muunoigq1WHegeOEI1AIQAo.jpg"
+      }
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=uwild1rw7Aw",
+    "trailer_key": "uwild1rw7Aw",
+    "slug": "the-mandalorian-and-grogu-2026",
+    "status": "Released",
+    "created_at": "2026-10-17T11:32:13.119Z",
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1339274,
@@ -9363,7 +10161,7 @@
       53
     ],
     "vote_average": 6.8,
-    "vote_count": 128,
+    "vote_count": 136,
     "runtime": 97,
     "original_language": "es",
     "cast": [
@@ -9409,7 +10207,7 @@
     "slug": "don-t-leave-the-kids-alone-2026",
     "status": "Released",
     "created_at": "2026-10-10T14:00:39.738Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1122573,
@@ -9495,7 +10293,7 @@
       53
     ],
     "vote_average": 8.2,
-    "vote_count": 6116,
+    "vote_count": 6152,
     "runtime": 109,
     "original_language": "en",
     "cast": [
@@ -9541,7 +10339,7 @@
     "slug": "obsession-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:51.874Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1127384,
@@ -9829,7 +10627,7 @@
       18
     ],
     "vote_average": 7,
-    "vote_count": 2444,
+    "vote_count": 2448,
     "runtime": 119,
     "original_language": "en",
     "cast": [
@@ -9837,7 +10635,7 @@
         "id": 1813,
         "name": "Anne Hathaway",
         "character": "Andy",
-        "profile_path": "/h1hgb3GaRi7ClMJWP2QYzyn2euE.jpg"
+        "profile_path": "/s6tflSD20MGz04ZR2R1lZvhmC4Y.jpg"
       },
       {
         "id": 5064,
@@ -9867,7 +10665,7 @@
         "id": 15009,
         "name": "Justin Theroux",
         "character": "Benji",
-        "profile_path": "/vnI9L0rXBAw1HeC0Q8hJGeJMGAW.jpg"
+        "profile_path": "/6YuPMsLDMoD5BRkzWIjllwFFt5Y.jpg"
       }
     ],
     "trailer_url": "https://www.youtube.com/watch?v=PMd1at7OwiE",
@@ -9875,7 +10673,7 @@
     "slug": "the-devil-wears-prada-2-2026",
     "status": "Released",
     "created_at": "2026-10-10T14:00:39.738Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1130948,
@@ -9896,8 +10694,8 @@
       18,
       53
     ],
-    "vote_average": 5.9,
-    "vote_count": 64,
+    "vote_average": 5.8,
+    "vote_count": 65,
     "runtime": 95,
     "original_language": "en",
     "cast": [
@@ -9943,7 +10741,7 @@
     "slug": "rosebush-pruning-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:55.981Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 936075,
@@ -9963,7 +10761,7 @@
       18
     ],
     "vote_average": 8.6,
-    "vote_count": 4565,
+    "vote_count": 4571,
     "runtime": 128,
     "original_language": "en",
     "cast": [
@@ -10009,7 +10807,7 @@
     "slug": "michael-2026",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1393326,
@@ -10031,7 +10829,7 @@
       53
     ],
     "vote_average": 7,
-    "vote_count": 91,
+    "vote_count": 92,
     "runtime": 106,
     "original_language": "id",
     "cast": [
@@ -10077,7 +10875,7 @@
     "slug": "ghost-in-the-cell-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:18:55.673Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1242332,
@@ -10221,8 +11019,8 @@
     "title": "Sacrifice",
     "original_title": "Sacrifice",
     "overview": "During a star-studded charity gala brimming with celebrities, billionaires and empty speeches, a movie star in the midst of an existential crisis is taken hostage by a radical warrior and her devoted followers. As the night descends into chaos, both an inward journey and an outward adventure ensue, where the line between performance and belief, salvation and sacrifice, begins to blur.",
-    "poster_path": "/SGH7mlgfDyGgRCi2At62Ljg3zV.jpg",
-    "backdrop_path": "/oAUf1pvGlafCZVlEuPt1JyONHR1.jpg",
+    "poster_path": "/nLKejp8AUnvcxDPPuWxecvEqeZJ.jpg",
+    "backdrop_path": "/dkQ95ve1iEyt738io4AJOmQgijJ.jpg",
     "release_date": "2026-04-09",
     "genres": [
       "Adventure",
@@ -10234,8 +11032,8 @@
       35,
       28
     ],
-    "vote_average": 5.5,
-    "vote_count": 30,
+    "vote_average": 5.8,
+    "vote_count": 36,
     "runtime": 103,
     "original_language": "en",
     "cast": [
@@ -10249,7 +11047,7 @@
         "id": 1397778,
         "name": "Anya Taylor-Joy",
         "character": "Joan",
-        "profile_path": "/yZpghhtKM2VZHDx6JGAZqAVU4PL.jpg"
+        "profile_path": "/qYNofOjlRke2MlJVihmJmEdQI4v.jpg"
       },
       {
         "id": 1925,
@@ -10267,7 +11065,7 @@
         "id": 6949,
         "name": "John Malkovich",
         "character": "Gunnar",
-        "profile_path": "/7GoOdGNc4ra1L0F5nJTkmIB37iu.jpg"
+        "profile_path": "/pJNzqDetlA9yxsYLg8uzqlhk6t8.jpg"
       },
       {
         "id": 1529997,
@@ -10276,12 +11074,12 @@
         "profile_path": "/xnYIKjdP2anSMmDlFbJN3zZQMkC.jpg"
       }
     ],
-    "trailer_url": "https://www.youtube.com/watch?v=u5qW1gMMSVI",
-    "trailer_key": "u5qW1gMMSVI",
+    "trailer_url": "https://www.youtube.com/watch?v=g33q_d4_iIU",
+    "trailer_key": "g33q_d4_iIU",
     "slug": "sacrifice-2026",
     "status": "Released",
     "created_at": "2026-09-24T11:19:01.836Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1226863,
@@ -10307,7 +11105,7 @@
       16
     ],
     "vote_average": 8.2,
-    "vote_count": 3819,
+    "vote_count": 3834,
     "runtime": 98,
     "original_language": "en",
     "cast": [
@@ -10327,7 +11125,7 @@
         "id": 1397778,
         "name": "Anya Taylor-Joy",
         "character": "Princess Peach (voice)",
-        "profile_path": "/yZpghhtKM2VZHDx6JGAZqAVU4PL.jpg"
+        "profile_path": "/qYNofOjlRke2MlJVihmJmEdQI4v.jpg"
       },
       {
         "id": 70851,
@@ -10353,7 +11151,7 @@
     "slug": "the-super-mario-galaxy-movie-2026",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1325734,
@@ -10375,7 +11173,7 @@
       18
     ],
     "vote_average": 6.9,
-    "vote_count": 1949,
+    "vote_count": 1958,
     "runtime": 105,
     "original_language": "en",
     "cast": [
@@ -10421,7 +11219,7 @@
     "slug": "the-drama-2026",
     "status": "Released",
     "created_at": "2026-10-13T11:08:49.176Z",
-    "updated_at": "2026-10-13T11:08:49.176Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 687163,
@@ -10441,7 +11239,7 @@
       12
     ],
     "vote_average": 8.6,
-    "vote_count": 8301,
+    "vote_count": 8326,
     "runtime": 157,
     "original_language": "en",
     "cast": [
@@ -10487,7 +11285,7 @@
     "slug": "project-hail-mary-2026",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1381027,
@@ -10510,8 +11308,8 @@
       9648,
       27
     ],
-    "vote_average": 7.2,
-    "vote_count": 348,
+    "vote_average": 7.3,
+    "vote_count": 349,
     "runtime": 110,
     "original_language": "en",
     "cast": [
@@ -10557,7 +11355,7 @@
     "slug": "good-boy-2026",
     "status": "Released",
     "created_at": "2026-10-13T11:08:49.176Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1327819,
@@ -10583,7 +11381,7 @@
       878
     ],
     "vote_average": 8.1,
-    "vote_count": 2434,
+    "vote_count": 2440,
     "runtime": 104,
     "original_language": "en",
     "cast": [
@@ -10629,7 +11427,7 @@
     "slug": "hoppers-2026",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1542261,
@@ -10721,7 +11519,7 @@
       80
     ],
     "vote_average": 6.2,
-    "vote_count": 1350,
+    "vote_count": 1355,
     "runtime": 114,
     "original_language": "en",
     "cast": [
@@ -10767,7 +11565,7 @@
     "slug": "scream-7-2026",
     "status": "Released",
     "created_at": "2026-10-15T11:25:47.059Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1110034,
@@ -10789,7 +11587,7 @@
       53
     ],
     "vote_average": 6.2,
-    "vote_count": 354,
+    "vote_count": 357,
     "runtime": 94,
     "original_language": "no",
     "cast": [
@@ -10835,7 +11633,7 @@
     "slug": "kraken-2026",
     "status": "Released",
     "created_at": "2026-10-10T14:00:39.738Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1599993,
@@ -10972,6 +11770,72 @@
     "updated_at": "2026-10-02T08:00:29.184Z"
   },
   {
+    "id": 1317288,
+    "tmdb_id": 1317288,
+    "title": "Marty Supreme",
+    "original_title": "Marty Supreme",
+    "overview": "Marty Mauser, a young man with a dream no one respects, goes to hell and back in pursuit of greatness.",
+    "poster_path": "/lYWEXbQgRTR4ZQleSXAgRbxAjvq.jpg",
+    "backdrop_path": "/6h7w8R4BA7vubEmEEW5vYEjuoz6.jpg",
+    "release_date": "2025-12-19",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "genre_ids": [
+      18,
+      53
+    ],
+    "vote_average": 7.4,
+    "vote_count": 2289,
+    "runtime": 150,
+    "original_language": "en",
+    "cast": [
+      {
+        "id": 1190668,
+        "name": "Timothée Chalamet",
+        "character": "Marty Mauser",
+        "profile_path": "/dFxpwRpmzpVfP1zjluH68DeQhyj.jpg"
+      },
+      {
+        "id": 12052,
+        "name": "Gwyneth Paltrow",
+        "character": "Kay Stone",
+        "profile_path": "/ylN4A7fnnNXvHURENl5sQI8Jbib.jpg"
+      },
+      {
+        "id": 1972166,
+        "name": "Odessa A'zion",
+        "character": "Rachel Mizler",
+        "profile_path": "/5Q0Z5O3nkZH5JvueTyc2q0anw2B.jpg"
+      },
+      {
+        "id": 1240877,
+        "name": "Kevin O'Leary",
+        "character": "Milton Rockwell",
+        "profile_path": "/eUDfTddvXHOAZR5Sh1hs3IVF5mb.jpg"
+      },
+      {
+        "id": 1133834,
+        "name": "Tyler, The Creator",
+        "character": "Wally",
+        "profile_path": "/1jr8XMXd9C6yRk2VitXIum0FGSy.jpg"
+      },
+      {
+        "id": 53122,
+        "name": "Fran Drescher",
+        "character": "Rebecca Mauser",
+        "profile_path": "/6IQlygYDyxuIRD5j9lPluknYoJp.jpg"
+      }
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=s9gSuKaKcqM",
+    "trailer_key": "s9gSuKaKcqM",
+    "slug": "marty-supreme-2025",
+    "status": "Released",
+    "created_at": "2026-10-17T11:32:13.119Z",
+    "updated_at": "2026-10-17T11:32:13.119Z"
+  },
+  {
     "id": 1368166,
     "tmdb_id": 1368166,
     "title": "The Housemaid",
@@ -11056,8 +11920,8 @@
       12,
       14
     ],
-    "vote_average": 7.6,
-    "vote_count": 4506,
+    "vote_average": 7.7,
+    "vote_count": 4522,
     "runtime": 198,
     "original_language": "en",
     "cast": [
@@ -11103,7 +11967,7 @@
     "slug": "avatar-fire-and-ash-2025",
     "status": "Released",
     "created_at": "2026-10-13T11:08:49.176Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 991494,
@@ -11201,7 +12065,7 @@
       10751
     ],
     "vote_average": 7.7,
-    "vote_count": 3555,
+    "vote_count": 3562,
     "runtime": 108,
     "original_language": "en",
     "cast": [
@@ -11247,7 +12111,7 @@
     "slug": "zootopia-2-2025",
     "status": "Released",
     "created_at": "2026-10-10T14:00:39.738Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 967941,
@@ -11269,7 +12133,7 @@
       10749
     ],
     "vote_average": 6.6,
-    "vote_count": 1184,
+    "vote_count": 1186,
     "runtime": 137,
     "original_language": "en",
     "cast": [
@@ -11301,7 +12165,7 @@
         "id": 80860,
         "name": "Jonathan Bailey",
         "character": "Fiyero / The Scarecrow",
-        "profile_path": "/i9m6JsYKQot3kbMMFsvbEuFarvq.jpg"
+        "profile_path": "/kMtZtavkXIXYA0CnhaWqbNo6uFV.jpg"
       },
       {
         "id": 2271410,
@@ -11315,7 +12179,7 @@
     "slug": "wicked-for-good-2025",
     "status": "Released",
     "created_at": "2026-10-13T11:08:49.176Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 798645,
@@ -11337,7 +12201,7 @@
       878
     ],
     "vote_average": 6.7,
-    "vote_count": 2052,
+    "vote_count": 2055,
     "runtime": 133,
     "original_language": "en",
     "cast": [
@@ -11383,7 +12247,7 @@
     "slug": "the-running-man-2025",
     "status": "Released",
     "created_at": "2026-10-13T11:08:49.176Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1470424,
@@ -11405,7 +12269,7 @@
       27
     ],
     "vote_average": 7.1,
-    "vote_count": 58,
+    "vote_count": 60,
     "runtime": 104,
     "original_language": "ru",
     "cast": [
@@ -11451,7 +12315,7 @@
     "slug": "virtual-assistant-2025",
     "status": "Released",
     "created_at": "2026-10-13T11:08:49.176Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1242898,
@@ -11473,7 +12337,7 @@
       12
     ],
     "vote_average": 7.8,
-    "vote_count": 3777,
+    "vote_count": 3795,
     "runtime": 107,
     "original_language": "en",
     "cast": [
@@ -11519,7 +12383,7 @@
     "slug": "predator-badlands-2025",
     "status": "Released",
     "created_at": "2026-10-13T11:08:49.176Z",
-    "updated_at": "2026-10-13T11:08:49.176Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1489187,
@@ -11588,6 +12452,74 @@
     "status": "Released",
     "created_at": "2026-10-13T11:08:49.176Z",
     "updated_at": "2026-10-15T11:25:47.059Z"
+  },
+  {
+    "id": 787747,
+    "tmdb_id": 787747,
+    "title": "Shell",
+    "original_title": "Shell",
+    "overview": "Desperate to reclaim her career, once-beloved actress Samantha Lake is drawn into the glamorous world of wellness mogul Zoe Shannon - only to uncover a monstrous truth beneath its flawless surface.",
+    "poster_path": "/2XBNS8DxMFP7qOoTOY7cc8OYFwI.jpg",
+    "backdrop_path": "/yGH7ke2rbeSI4IZx90UzIrMlWLq.jpg",
+    "release_date": "2025-10-01",
+    "genres": [
+      "Horror",
+      "Drama",
+      "Thriller"
+    ],
+    "genre_ids": [
+      27,
+      18,
+      53
+    ],
+    "vote_average": 5,
+    "vote_count": 86,
+    "runtime": 102,
+    "original_language": "en",
+    "cast": [
+      {
+        "id": 32798,
+        "name": "Elisabeth Moss",
+        "character": "Samantha Lake",
+        "profile_path": "/vZDe22EtLtcHvPr28l4ZM0b7qjG.jpg"
+      },
+      {
+        "id": 11661,
+        "name": "Kate Hudson",
+        "character": "Zoe Shannon",
+        "profile_path": "/s79lH1QzEg2fkXULKBxRmU9aNr8.jpg"
+      },
+      {
+        "id": 1957145,
+        "name": "Kaia Gerber",
+        "character": "Chloe Benson",
+        "profile_path": "/mUM9LGM3mtf6TEJXDpPou3KJhNR.jpg"
+      },
+      {
+        "id": 457386,
+        "name": "Arian Moayed",
+        "character": "Dr. Hubert",
+        "profile_path": "/hYBqwt0HelUqgKSd1VDUAyvfDME.jpg"
+      },
+      {
+        "id": 1741366,
+        "name": "Este Haim",
+        "character": "Lydia",
+        "profile_path": "/aUVgUkRK980y030GMCNFsvRP9Vh.jpg"
+      },
+      {
+        "id": 19189,
+        "name": "Elizabeth Berkley",
+        "character": "Jenna Janero",
+        "profile_path": "/ibYmq9qTMV3haM9ITDmUpbl45Qu.jpg"
+      }
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=R6W6YzhRuTA",
+    "trailer_key": "R6W6YzhRuTA",
+    "slug": "shell-2025",
+    "status": "Released",
+    "created_at": "2026-10-17T11:32:13.119Z",
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1317149,
@@ -11670,8 +12602,8 @@
     "genre_ids": [
       27
     ],
-    "vote_average": 3.5,
-    "vote_count": 31,
+    "vote_average": 3.7,
+    "vote_count": 32,
     "runtime": 0,
     "original_language": "es",
     "cast": [
@@ -11717,7 +12649,7 @@
     "slug": "the-treehouse-2025",
     "status": "Released",
     "created_at": "2026-10-10T14:00:39.738Z",
-    "updated_at": "2026-10-13T11:04:02.962Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 604079,
@@ -11875,7 +12807,7 @@
       53
     ],
     "vote_average": 8.3,
-    "vote_count": 1532,
+    "vote_count": 1535,
     "runtime": 142,
     "original_language": "zh",
     "cast": [
@@ -11921,7 +12853,7 @@
     "slug": "the-shadow-s-edge-2025",
     "status": "Released",
     "created_at": "2026-09-24T11:18:56.819Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1400499,
@@ -12007,7 +12939,7 @@
       53
     ],
     "vote_average": 4,
-    "vote_count": 1169,
+    "vote_count": 1171,
     "runtime": 91,
     "original_language": "en",
     "cast": [
@@ -12053,7 +12985,7 @@
     "slug": "war-of-the-worlds-2025",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 617126,
@@ -12075,7 +13007,7 @@
       28
     ],
     "vote_average": 6.9,
-    "vote_count": 4001,
+    "vote_count": 4004,
     "runtime": 115,
     "original_language": "en",
     "cast": [
@@ -12121,7 +13053,7 @@
     "slug": "the-fantastic-4-first-steps-2025",
     "status": "Released",
     "created_at": "2026-10-15T11:25:47.059Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1311031,
@@ -12143,7 +13075,7 @@
       14
     ],
     "vote_average": 8.8,
-    "vote_count": 2289,
+    "vote_count": 2298,
     "runtime": 156,
     "original_language": "ja",
     "cast": [
@@ -12189,7 +13121,7 @@
     "slug": "demon-slayer-kimetsu-no-yaiba-infinity-castle-2025",
     "status": "Released",
     "created_at": "2026-10-13T11:08:49.176Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1061474,
@@ -12277,7 +13209,7 @@
       18
     ],
     "vote_average": 7.8,
-    "vote_count": 4814,
+    "vote_count": 4825,
     "runtime": 156,
     "original_language": "en",
     "cast": [
@@ -12323,7 +13255,7 @@
     "slug": "f1-2025",
     "status": "Released",
     "created_at": "2026-10-15T11:25:47.059Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1234821,
@@ -12345,7 +13277,7 @@
       28
     ],
     "vote_average": 6.2,
-    "vote_count": 3847,
+    "vote_count": 3848,
     "runtime": 134,
     "original_language": "en",
     "cast": [
@@ -12365,7 +13297,7 @@
         "id": 80860,
         "name": "Jonathan Bailey",
         "character": "Dr. Henry Loomis",
-        "profile_path": "/i9m6JsYKQot3kbMMFsvbEuFarvq.jpg"
+        "profile_path": "/kMtZtavkXIXYA0CnhaWqbNo6uFV.jpg"
       },
       {
         "id": 36669,
@@ -12391,7 +13323,7 @@
     "slug": "jurassic-world-rebirth-2025",
     "status": "Released",
     "created_at": "2026-10-13T11:08:49.176Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 803796,
@@ -12415,7 +13347,7 @@
       16
     ],
     "vote_average": 8,
-    "vote_count": 3275,
+    "vote_count": 3285,
     "runtime": 96,
     "original_language": "en",
     "cast": [
@@ -12461,7 +13393,7 @@
     "slug": "kpop-demon-hunters-2025",
     "status": "Released",
     "created_at": "2026-10-13T11:08:49.176Z",
-    "updated_at": "2026-10-13T11:08:49.176Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1100988,
@@ -12483,7 +13415,7 @@
       878
     ],
     "vote_average": 6.6,
-    "vote_count": 3062,
+    "vote_count": 3065,
     "runtime": 115,
     "original_language": "en",
     "cast": [
@@ -12529,7 +13461,7 @@
     "slug": "28-years-later-2025",
     "status": "Released",
     "created_at": "2026-10-15T11:25:47.059Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 541671,
@@ -12551,7 +13483,7 @@
       80
     ],
     "vote_average": 7.3,
-    "vote_count": 3043,
+    "vote_count": 3049,
     "runtime": 125,
     "original_language": "en",
     "cast": [
@@ -12597,7 +13529,7 @@
     "slug": "ballerina-2025",
     "status": "Released",
     "created_at": "2026-10-15T11:25:47.059Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 552524,
@@ -12687,7 +13619,7 @@
       53
     ],
     "vote_average": 7.5,
-    "vote_count": 5326,
+    "vote_count": 5352,
     "runtime": 138,
     "original_language": "en",
     "cast": [
@@ -12713,7 +13645,7 @@
         "id": 85065,
         "name": "Jack O'Connell",
         "character": "Remmick",
-        "profile_path": "/8jiqppSqdmHZ0smiAyd6Iu3P3ZQ.jpg"
+        "profile_path": "/tCzR4clrIkbkijuJBYsNoEuwRDa.jpg"
       },
       {
         "id": 134774,
@@ -12733,7 +13665,77 @@
     "slug": "sinners-2025",
     "status": "Released",
     "created_at": "2026-10-13T11:08:49.176Z",
-    "updated_at": "2026-10-13T11:08:49.176Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
+  },
+  {
+    "id": 950387,
+    "tmdb_id": 950387,
+    "title": "A Minecraft Movie",
+    "original_title": "A Minecraft Movie",
+    "overview": "Four misfits find themselves struggling with ordinary problems when they are suddenly pulled through a mysterious portal into the Overworld: a bizarre, cubic wonderland that thrives on imagination. To get back home, they'll have to master this world while embarking on a magical quest with an unexpected, expert crafter, Steve.",
+    "poster_path": "/yFHHfHcUgGAxziP1C3lLt0q2T4s.jpg",
+    "backdrop_path": "/2Nti3gYAX513wvhp8IiLL6ZDyOm.jpg",
+    "release_date": "2025-03-31",
+    "genres": [
+      "Family",
+      "Fantasy",
+      "Comedy",
+      "Adventure"
+    ],
+    "genre_ids": [
+      10751,
+      14,
+      35,
+      12
+    ],
+    "vote_average": 6.2,
+    "vote_count": 3362,
+    "runtime": 101,
+    "original_language": "en",
+    "cast": [
+      {
+        "id": 117642,
+        "name": "Jason Momoa",
+        "character": "Garrett",
+        "profile_path": "/3troAR6QbSb6nUFMDu61YCCWLKa.jpg"
+      },
+      {
+        "id": 70851,
+        "name": "Jack Black",
+        "character": "Steve",
+        "profile_path": "/59IhgCtiWI5yTfzPhsjzg7GjCjm.jpg"
+      },
+      {
+        "id": 2680307,
+        "name": "Sebastian Eugene Hansen",
+        "character": "Henry",
+        "profile_path": "/40HNkoB3RKPMPgLhTyKQU6kG0sc.jpg"
+      },
+      {
+        "id": 2604515,
+        "name": "Emma Myers",
+        "character": "Natalie",
+        "profile_path": "/v1Y8RP39135ZOary9M4MbkrCAdn.jpg"
+      },
+      {
+        "id": 1075037,
+        "name": "Danielle Brooks",
+        "character": "Dawn",
+        "profile_path": "/hwrMFbcALcqrV7S2pRP9C5BXrU0.jpg"
+      },
+      {
+        "id": 38334,
+        "name": "Jennifer Coolidge",
+        "character": "Vice Principal Marlene",
+        "profile_path": "/hcpbV0dY4ZJxmZi1WcAWe8euqV2.jpg"
+      }
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=aSh_L6bvaCQ",
+    "trailer_key": "aSh_L6bvaCQ",
+    "slug": "a-minecraft-movie-2025",
+    "status": "Released",
+    "created_at": "2026-10-17T11:32:13.119Z",
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 974573,
@@ -13021,7 +14023,7 @@
       18
     ],
     "vote_average": 8.2,
-    "vote_count": 693,
+    "vote_count": 695,
     "runtime": 58,
     "original_language": "ja",
     "cast": [
@@ -13067,7 +14069,77 @@
     "slug": "look-back-2024",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
+  },
+  {
+    "id": 1022789,
+    "tmdb_id": 1022789,
+    "title": "Inside Out 2",
+    "original_title": "Inside Out 2",
+    "overview": "Teenager Riley's mind headquarters is undergoing a sudden demolition to make room for something entirely unexpected: new Emotions! Joy, Sadness, Anger, Fear and Disgust, who’ve long been running a successful operation by all accounts, aren’t sure how to feel when Anxiety shows up. And it looks like she’s not alone.",
+    "poster_path": "/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg",
+    "backdrop_path": "/p5ozvmdgsmbWe0H8Xk7Rc8SCwAB.jpg",
+    "release_date": "2024-06-11",
+    "genres": [
+      "Animation",
+      "Adventure",
+      "Comedy",
+      "Family"
+    ],
+    "genre_ids": [
+      16,
+      12,
+      35,
+      10751
+    ],
+    "vote_average": 7.5,
+    "vote_count": 7070,
+    "runtime": 97,
+    "original_language": "en",
+    "cast": [
+      {
+        "id": 56322,
+        "name": "Amy Poehler",
+        "character": "Joy (voice)",
+        "profile_path": "/rwmvRonpluV6dCPiQissYrchvSD.jpg"
+      },
+      {
+        "id": 1903874,
+        "name": "Maya Hawke",
+        "character": "Anxiety (voice)",
+        "profile_path": "/7oihORN6wlSC9qKULcpVq7Kqv1l.jpg"
+      },
+      {
+        "id": 3020876,
+        "name": "Kensington Tallman",
+        "character": "Riley (voice)",
+        "profile_path": "/aS3xM79dmg6bxw9uNqTxRdoze5H.jpg"
+      },
+      {
+        "id": 51998,
+        "name": "Liza Lapira",
+        "character": "Disgust (voice)",
+        "profile_path": "/o3jvQAGWtxi5rEycslhC6CY8BWX.jpg"
+      },
+      {
+        "id": 25147,
+        "name": "Tony Hale",
+        "character": "Fear (voice)",
+        "profile_path": "/3dEyZgTye0Ec17VGKp0mJ3aU6ty.jpg"
+      },
+      {
+        "id": 59258,
+        "name": "Lewis Black",
+        "character": "Anger (voice)",
+        "profile_path": "/f6660RU8eG10Rrk0Fnfih90b0ME.jpg"
+      }
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=u69y5Ie519M",
+    "trailer_key": "u69y5Ie519M",
+    "slug": "inside-out-2-2024",
+    "status": "Released",
+    "created_at": "2026-10-17T11:32:13.119Z",
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 695721,
@@ -13087,7 +14159,7 @@
       28
     ],
     "vote_average": 7,
-    "vote_count": 3718,
+    "vote_count": 3722,
     "runtime": 157,
     "original_language": "en",
     "cast": [
@@ -13101,7 +14173,7 @@
         "id": 2217977,
         "name": "Rachel Zegler",
         "character": "Lucy Gray Baird",
-        "profile_path": "/a1RxUQd3HExVgt8laH4VaUytdz.jpg"
+        "profile_path": "/2zR0rz3yluyWoFgCL3lGAPoRWlz.jpg"
       },
       {
         "id": 22970,
@@ -13119,7 +14191,7 @@
         "id": 2340180,
         "name": "Hunter Schafer",
         "character": "Tigris",
-        "profile_path": "/bYLRZOkrOvFBu2G6OTNNWRU4rfF.jpg"
+        "profile_path": "/AilBKow2NuvPBQbvGRx69RxKUBi.jpg"
       },
       {
         "id": 2269067,
@@ -13133,7 +14205,7 @@
     "slug": "the-hunger-games-the-ballad-of-songbirds-snakes-2023",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-13T11:08:49.176Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 940721,
@@ -13155,7 +14227,7 @@
       28
     ],
     "vote_average": 7.6,
-    "vote_count": 3498,
+    "vote_count": 3510,
     "runtime": 125,
     "original_language": "ja",
     "cast": [
@@ -13201,7 +14273,7 @@
     "slug": "godzilla-minus-one-2023",
     "status": "Released",
     "created_at": "2026-10-13T11:04:02.962Z",
-    "updated_at": "2026-10-13T11:04:02.962Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 985939,
@@ -13219,7 +14291,7 @@
       53
     ],
     "vote_average": 7.2,
-    "vote_count": 4980,
+    "vote_count": 4987,
     "runtime": 107,
     "original_language": "en",
     "cast": [
@@ -13265,7 +14337,7 @@
     "slug": "fall-2022",
     "status": "Released",
     "created_at": "2026-10-10T14:00:39.738Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 460458,
@@ -13287,7 +14359,7 @@
       878
     ],
     "vote_average": 5.9,
-    "vote_count": 2880,
+    "vote_count": 2888,
     "runtime": 107,
     "original_language": "en",
     "cast": [
@@ -13333,7 +14405,7 @@
     "slug": "resident-evil-welcome-to-raccoon-city-2021",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 466272,
@@ -13355,7 +14427,7 @@
       53
     ],
     "vote_average": 7.4,
-    "vote_count": 15400,
+    "vote_count": 15406,
     "runtime": 162,
     "original_language": "en",
     "cast": [
@@ -13401,7 +14473,7 @@
     "slug": "once-upon-a-time-in-hollywood-2019",
     "status": "Released",
     "created_at": "2026-10-15T11:25:47.059Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 299534,
@@ -13423,7 +14495,7 @@
       28
     ],
     "vote_average": 8.2,
-    "vote_count": 29005,
+    "vote_count": 29017,
     "runtime": 181,
     "original_language": "en",
     "cast": [
@@ -13469,7 +14541,7 @@
     "slug": "avengers-endgame-2019",
     "status": "Released",
     "created_at": "2026-09-24T11:18:53.906Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 299536,
@@ -13491,7 +14563,7 @@
       878
     ],
     "vote_average": 8.2,
-    "vote_count": 33148,
+    "vote_count": 33163,
     "runtime": 149,
     "original_language": "en",
     "cast": [
@@ -13537,7 +14609,7 @@
     "slug": "avengers-infinity-war-2018",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 335984,
@@ -13625,7 +14697,7 @@
       10749
     ],
     "vote_average": 7.9,
-    "vote_count": 18606,
+    "vote_count": 18613,
     "runtime": 129,
     "original_language": "en",
     "cast": [
@@ -13666,12 +14738,12 @@
         "profile_path": "/doMXlhTAYCy8gH43yYA6m9ymxhd.jpg"
       }
     ],
-    "trailer_url": "https://www.youtube.com/watch?v=_oBwwSXdO_E",
-    "trailer_key": "_oBwwSXdO_E",
+    "trailer_url": "https://www.youtube.com/watch?v=Zfy4rGzZDes",
+    "trailer_key": "Zfy4rGzZDes",
     "slug": "la-la-land-2016",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 396535,
@@ -13695,7 +14767,7 @@
       12
     ],
     "vote_average": 7.8,
-    "vote_count": 8837,
+    "vote_count": 8843,
     "runtime": 118,
     "original_language": "ko",
     "cast": [
@@ -13741,7 +14813,7 @@
     "slug": "train-to-busan-2016",
     "status": "Released",
     "created_at": "2026-10-13T11:08:49.176Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 372058,
@@ -13763,7 +14835,7 @@
       18
     ],
     "vote_average": 8.5,
-    "vote_count": 13091,
+    "vote_count": 13101,
     "runtime": 106,
     "original_language": "ja",
     "cast": [
@@ -13809,7 +14881,7 @@
     "slug": "your-name-2016",
     "status": "Released",
     "created_at": "2026-10-13T11:08:49.176Z",
-    "updated_at": "2026-10-13T11:08:49.176Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 310131,
@@ -13831,7 +14903,7 @@
       9648
     ],
     "vote_average": 7,
-    "vote_count": 7946,
+    "vote_count": 7948,
     "runtime": 92,
     "original_language": "en",
     "cast": [
@@ -13839,7 +14911,7 @@
         "id": 1397778,
         "name": "Anya Taylor-Joy",
         "character": "Thomasin",
-        "profile_path": "/yZpghhtKM2VZHDx6JGAZqAVU4PL.jpg"
+        "profile_path": "/qYNofOjlRke2MlJVihmJmEdQI4v.jpg"
       },
       {
         "id": 202032,
@@ -13877,7 +14949,7 @@
     "slug": "the-witch-2016",
     "status": "Released",
     "created_at": "2026-10-15T11:25:47.059Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 131634,
@@ -13967,7 +15039,7 @@
       53
     ],
     "vote_average": 6.8,
-    "vote_count": 17095,
+    "vote_count": 17103,
     "runtime": 123,
     "original_language": "en",
     "cast": [
@@ -14013,7 +15085,7 @@
     "slug": "the-hunger-games-mockingjay-part-1-2014",
     "status": "Released",
     "created_at": "2026-09-24T11:19:02.412Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 245891,
@@ -14033,7 +15105,7 @@
       53
     ],
     "vote_average": 7.5,
-    "vote_count": 21468,
+    "vote_count": 21476,
     "runtime": 101,
     "original_language": "en",
     "cast": [
@@ -14079,7 +15151,7 @@
     "slug": "john-wick-2014",
     "status": "Released",
     "created_at": "2026-10-13T11:08:49.176Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 244786,
@@ -14101,7 +15173,7 @@
       53
     ],
     "vote_average": 8.4,
-    "vote_count": 17234,
+    "vote_count": 17240,
     "runtime": 107,
     "original_language": "en",
     "cast": [
@@ -14147,7 +15219,7 @@
     "slug": "whiplash-2014",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 204922,
@@ -14443,7 +15515,7 @@
       27
     ],
     "vote_average": 7.9,
-    "vote_count": 9563,
+    "vote_count": 9574,
     "runtime": 100,
     "original_language": "en",
     "cast": [
@@ -14489,7 +15561,7 @@
     "slug": "coraline-2009",
     "status": "Released",
     "created_at": "2026-10-05T09:34:53.124Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 8966,
@@ -14777,7 +15849,7 @@
       878
     ],
     "vote_average": 7.9,
-    "vote_count": 16056,
+    "vote_count": 16062,
     "runtime": 132,
     "original_language": "en",
     "cast": [
@@ -14823,7 +15895,7 @@
     "slug": "v-for-vendetta-2006",
     "status": "Released",
     "created_at": "2026-10-13T11:08:49.176Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 674,
@@ -14911,7 +15983,7 @@
       16
     ],
     "vote_average": 7.6,
-    "vote_count": 10499,
+    "vote_count": 10505,
     "runtime": 77,
     "original_language": "en",
     "cast": [
@@ -14957,7 +16029,7 @@
     "slug": "corpse-bride-2005",
     "status": "Released",
     "created_at": "2026-10-10T14:00:39.738Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 673,
@@ -15024,6 +16096,76 @@
     "status": "Released",
     "created_at": "2026-10-02T08:00:29.184Z",
     "updated_at": "2026-10-05T09:34:53.124Z"
+  },
+  {
+    "id": 9470,
+    "tmdb_id": 9470,
+    "title": "Kung Fu Hustle",
+    "original_title": "功夫",
+    "overview": "It's the 1940s, and the notorious Axe Gang terrorizes Shanghai. Small-time criminals Sing and Bone hope to join, but they only manage to make lots of very dangerous enemies. Fortunately for them, kung fu masters and hidden strength can be found in unlikely places. Now they just have to take on the entire Axe Gang.",
+    "poster_path": "/exbyTbrvRUDKN2mcNEuVor4VFQW.jpg",
+    "backdrop_path": "/9XhZhoSnFJ3AjpfzdIiZVHLQIS4.jpg",
+    "release_date": "2004-02-10",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Crime",
+      "Fantasy"
+    ],
+    "genre_ids": [
+      28,
+      35,
+      80,
+      14
+    ],
+    "vote_average": 7.5,
+    "vote_count": 3376,
+    "runtime": 99,
+    "original_language": "cn",
+    "cast": [
+      {
+        "id": 57607,
+        "name": "Stephen Chow",
+        "character": "Sing",
+        "profile_path": "/j5DWs54BGZfp92G43c9OyHPvkNG.jpg"
+      },
+      {
+        "id": 119426,
+        "name": "Yuen Qiu",
+        "character": "Landlady",
+        "profile_path": "/5S70RuTmpHXCcyZNzx1sTjamOKw.jpg"
+      },
+      {
+        "id": 57609,
+        "name": "Yuen Wah",
+        "character": "Landlord",
+        "profile_path": "/yMkMgs0tWlJXdTjYkiMcjvhYnRw.jpg"
+      },
+      {
+        "id": 545277,
+        "name": "Lam Tze-Chung",
+        "character": "Sing's Sidekick",
+        "profile_path": "/4lA8TnRYSZBysNvZLMdNe1UoIK9.jpg"
+      },
+      {
+        "id": 83491,
+        "name": "Bruce Leung Siu-Lung",
+        "character": "The Beast",
+        "profile_path": null
+      },
+      {
+        "id": 83635,
+        "name": "Huang Shengyi",
+        "character": "Fong",
+        "profile_path": "/lxVYMxTcFbyySIL5Zm37Gsjvpuy.jpg"
+      }
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=-m3IB7N_PRk",
+    "trailer_key": "-m3IB7N_PRk",
+    "slug": "kung-fu-hustle-2004",
+    "status": "Released",
+    "created_at": "2026-10-17T11:32:13.119Z",
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 672,
@@ -15109,7 +16251,7 @@
       14
     ],
     "vote_average": 7.9,
-    "vote_count": 30411,
+    "vote_count": 30427,
     "runtime": 152,
     "original_language": "en",
     "cast": [
@@ -15155,7 +16297,7 @@
     "slug": "harry-potter-and-the-philosopher-s-stone-2001",
     "status": "Released",
     "created_at": "2026-09-30T11:03:19.293Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 2034,
@@ -15249,7 +16391,7 @@
       10751
     ],
     "vote_average": 7.8,
-    "vote_count": 19440,
+    "vote_count": 19449,
     "runtime": 90,
     "original_language": "en",
     "cast": [
@@ -15295,7 +16437,7 @@
     "slug": "shrek-2001",
     "status": "Released",
     "created_at": "2026-10-10T14:00:39.738Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 1359,
@@ -15364,6 +16506,72 @@
     "status": "Released",
     "created_at": "2026-10-02T08:00:29.184Z",
     "updated_at": "2026-10-13T11:04:02.962Z"
+  },
+  {
+    "id": 603,
+    "tmdb_id": 603,
+    "title": "The Matrix",
+    "original_title": "The Matrix",
+    "overview": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.",
+    "poster_path": "/dXNAPwY7VrqMAo51EKhhCJfaGb5.jpg",
+    "backdrop_path": "/tlm8UkiQsitc8rSuIAscQDCnP8d.jpg",
+    "release_date": "1999-03-31",
+    "genres": [
+      "Action",
+      "Science Fiction"
+    ],
+    "genre_ids": [
+      28,
+      878
+    ],
+    "vote_average": 8.3,
+    "vote_count": 28976,
+    "runtime": 136,
+    "original_language": "en",
+    "cast": [
+      {
+        "id": 6384,
+        "name": "Keanu Reeves",
+        "character": "Neo",
+        "profile_path": "/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg"
+      },
+      {
+        "id": 2975,
+        "name": "Laurence Fishburne",
+        "character": "Morpheus",
+        "profile_path": "/2GbXERENPpl5MmlqOLlPVaVtifD.jpg"
+      },
+      {
+        "id": 530,
+        "name": "Carrie-Anne Moss",
+        "character": "Trinity",
+        "profile_path": "/9zya72vRZYBQILfetACsnmCBgdj.jpg"
+      },
+      {
+        "id": 1331,
+        "name": "Hugo Weaving",
+        "character": "Agent Smith",
+        "profile_path": "/lSC8Et0PYi5zeQb3IpPkFje7hgR.jpg"
+      },
+      {
+        "id": 9364,
+        "name": "Gloria Foster",
+        "character": "Oracle",
+        "profile_path": "/AriGXtC9fjBOia9Zr8CZjn4o3rx.jpg"
+      },
+      {
+        "id": 532,
+        "name": "Joe Pantoliano",
+        "character": "Cypher",
+        "profile_path": "/3OHUI3nX4SYGGItDk3xqeIvWtIf.jpg"
+      }
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=FVI84Dfx2-I",
+    "trailer_key": "FVI84Dfx2-I",
+    "slug": "the-matrix-1999",
+    "status": "Released",
+    "created_at": "2026-10-17T11:32:13.119Z",
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 278,
@@ -15493,7 +16701,7 @@
       10751
     ],
     "vote_average": 7.8,
-    "vote_count": 10728,
+    "vote_count": 10733,
     "runtime": 76,
     "original_language": "en",
     "cast": [
@@ -15539,7 +16747,7 @@
     "slug": "the-nightmare-before-christmas-1993",
     "status": "Released",
     "created_at": "2026-10-05T09:34:53.124Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 280,
@@ -15608,6 +16816,74 @@
     "status": "Released",
     "created_at": "2026-10-05T09:34:53.124Z",
     "updated_at": "2026-10-13T11:08:49.176Z"
+  },
+  {
+    "id": 581,
+    "tmdb_id": 581,
+    "title": "Dances with Wolves",
+    "original_title": "Dances with Wolves",
+    "overview": "Wounded Civil War soldier John Dunbar tries to commit suicide—and becomes a hero instead. As a reward, he's assigned to his dream post, a remote junction on the Western frontier, and soon makes unlikely friends with the local Sioux tribe.",
+    "poster_path": "/hw0ZEHAaTqTxSXGVwUFX7uvanSA.jpg",
+    "backdrop_path": "/ywWva4trKw7f3wtbz81Fe3FnrtC.jpg",
+    "release_date": "1990-11-09",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Western"
+    ],
+    "genre_ids": [
+      12,
+      18,
+      37
+    ],
+    "vote_average": 7.8,
+    "vote_count": 4866,
+    "runtime": 181,
+    "original_language": "en",
+    "cast": [
+      {
+        "id": 1269,
+        "name": "Kevin Costner",
+        "character": "Lieutenant Dunbar",
+        "profile_path": "/608blZipRDZkDpzp8VItB64qMaT.jpg"
+      },
+      {
+        "id": 1581,
+        "name": "Mary McDonnell",
+        "character": "Stands With A Fist",
+        "profile_path": "/qqdaaFLEPXbB8thVJJkYJ4WoAuj.jpg"
+      },
+      {
+        "id": 6804,
+        "name": "Graham Greene",
+        "character": "Kicking Bird",
+        "profile_path": "/ui1x4vGTiI9eANYM9BZ6R4oushJ.jpg"
+      },
+      {
+        "id": 7853,
+        "name": "Rodney A. Grant",
+        "character": "Wind In His Hair",
+        "profile_path": "/44J0nk3dWoGbCXIgHi9lftmiUHR.jpg"
+      },
+      {
+        "id": 7862,
+        "name": "Floyd 'Red Crow' Westerman",
+        "character": "Ten Bears",
+        "profile_path": "/mtlDkkqentn5wyJcVOOEq8UXKk9.jpg"
+      },
+      {
+        "id": 7863,
+        "name": "Tantoo Cardinal",
+        "character": "Black Shawl",
+        "profile_path": "/rxhjfygJlPwztf36iRI7UDn5dr7.jpg"
+      }
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=N4gr-uXUg1M",
+    "trailer_key": "N4gr-uXUg1M",
+    "slug": "dances-with-wolves-1990",
+    "status": "Released",
+    "created_at": "2026-10-17T11:32:13.119Z",
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 165,
@@ -15697,7 +16973,7 @@
       878
     ],
     "vote_average": 8.3,
-    "vote_count": 22572,
+    "vote_count": 22584,
     "runtime": 116,
     "original_language": "en",
     "cast": [
@@ -15743,7 +17019,7 @@
     "slug": "back-to-the-future-1985",
     "status": "Released",
     "created_at": "2026-10-12T10:08:04.964Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 30723,
@@ -15829,16 +17105,10 @@
       27
     ],
     "vote_average": 6.4,
-    "vote_count": 3501,
+    "vote_count": 3508,
     "runtime": 95,
     "original_language": "en",
     "cast": [
-      {
-        "id": 37469,
-        "name": "Betsy Palmer",
-        "character": "Mrs. Voorhees",
-        "profile_path": "/isZD80T79h8xptSI91sQM69lZVi.jpg"
-      },
       {
         "id": 37470,
         "name": "Adrienne King",
@@ -15864,6 +17134,12 @@
         "profile_path": "/rjX2Oz3tCZMfSwOoIAyEhdtXnTE.jpg"
       },
       {
+        "id": 37469,
+        "name": "Betsy Palmer",
+        "character": "Mrs. Voorhees",
+        "profile_path": "/isZD80T79h8xptSI91sQM69lZVi.jpg"
+      },
+      {
         "id": 37471,
         "name": "Harry Crosby",
         "character": "Bill",
@@ -15875,7 +17151,7 @@
     "slug": "friday-the-13th-1980",
     "status": "Released",
     "created_at": "2026-10-15T11:25:47.059Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 948,
@@ -15895,7 +17171,7 @@
       53
     ],
     "vote_average": 7.6,
-    "vote_count": 6419,
+    "vote_count": 6427,
     "runtime": 91,
     "original_language": "en",
     "cast": [
@@ -15941,7 +17217,71 @@
     "slug": "halloween-1978",
     "status": "Released",
     "created_at": "2026-10-15T11:25:47.059Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
+  },
+  {
+    "id": 1366,
+    "tmdb_id": 1366,
+    "title": "Rocky",
+    "original_title": "Rocky",
+    "overview": "Rocky Balboa is a Philadelphia club fighter who seems to be going nowhere. But when a stroke of fate puts him in the ring with a world heavyweight champion, Rocky knows that it's his one shot at the big time — a once-in-a-lifetime opportunity to go the distance and come out a winner!",
+    "poster_path": "/raayaQ9WTUGolsYHPWc2bGonu58.jpg",
+    "backdrop_path": "/bacOuUnRBoAO1NjMfsAGX2EKRrS.jpg",
+    "release_date": "1976-12-03",
+    "genres": [
+      "Drama"
+    ],
+    "genre_ids": [
+      18
+    ],
+    "vote_average": 7.8,
+    "vote_count": 8988,
+    "runtime": 120,
+    "original_language": "en",
+    "cast": [
+      {
+        "id": 16483,
+        "name": "Sylvester Stallone",
+        "character": "Robert 'Rocky' Balboa",
+        "profile_path": "/gn3pDWthJqR0VDYGViGD3048og7.jpg"
+      },
+      {
+        "id": 3094,
+        "name": "Talia Shire",
+        "character": "Adrianna 'Adrian' Pennino",
+        "profile_path": "/oktJmlLeyYKBCWPNjHskDwAfjct.jpg"
+      },
+      {
+        "id": 4521,
+        "name": "Burt Young",
+        "character": "Paulie Pennino",
+        "profile_path": "/6QWnsSbjYog0D6hkPhg7Frty54D.jpg"
+      },
+      {
+        "id": 1101,
+        "name": "Carl Weathers",
+        "character": "Apollo Creed",
+        "profile_path": "/oUwtC5hEbcIZv53WPerZ9HhlSJR.jpg"
+      },
+      {
+        "id": 16523,
+        "name": "Burgess Meredith",
+        "character": "Mickey Goldmill",
+        "profile_path": "/2ozNyIbHChcqIBANwvCDpUZGA9b.jpg"
+      },
+      {
+        "id": 16524,
+        "name": "Thayer David",
+        "character": "George 'Miles' Jergens",
+        "profile_path": "/gAkmthly4dMu2Az8SNVWNSeRsYy.jpg"
+      }
+    ],
+    "trailer_url": "https://www.youtube.com/watch?v=dmd9tEt9F30",
+    "trailer_key": "dmd9tEt9F30",
+    "slug": "rocky-1976",
+    "status": "Released",
+    "created_at": "2026-10-17T11:32:13.119Z",
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 7340,
@@ -15961,7 +17301,7 @@
       53
     ],
     "vote_average": 7.3,
-    "vote_count": 4506,
+    "vote_count": 4518,
     "runtime": 98,
     "original_language": "en",
     "cast": [
@@ -16007,7 +17347,7 @@
     "slug": "carrie-1976",
     "status": "Released",
     "created_at": "2026-10-13T11:08:49.176Z",
-    "updated_at": "2026-10-15T11:25:47.059Z"
+    "updated_at": "2026-10-17T11:32:13.119Z"
   },
   {
     "id": 30497,

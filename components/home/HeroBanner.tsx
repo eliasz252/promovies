@@ -50,20 +50,6 @@ const DEFAULT_FEATURED_SLIDES: FeaturedMovie[] = [
     mediaType: "movie",
   },
   {
-    id: 1291595,
-    title: "Insidious: Out of the Further",
-    description:
-      "Gemma, a young mother raising her daughter in the house she grew up in, discovers she can travel into The Further, where she possesses an ability to bring what lives there back to the real world.",
-    rating: "7.7",
-    year: "2026",
-    quality: "4K UHD",
-    ageRating: "PG-13",
-    backdrop: "https://image.tmdb.org/t/p/original/p40lmrdI4blcAPZQMTPaiy5v5Ym.jpg",
-    thumbnail: "https://image.tmdb.org/t/p/w300/p40lmrdI4blcAPZQMTPaiy5v5Ym.jpg",
-    logo_path: "/f65DhAYFi98FsRi4RWHTKkFtChu.png",
-    mediaType: "movie",
-  },
-  {
     id: 1148365,
     title: "Matchbox the Movie",
     description:
@@ -92,6 +78,34 @@ const DEFAULT_FEATURED_SLIDES: FeaturedMovie[] = [
     mediaType: "movie",
   },
   {
+    id: 1291595,
+    title: "Insidious: Out of the Further",
+    description:
+      "Gemma, a young mother raising her daughter in the house she grew up in, discovers she can travel into The Further, where she possesses an ability to bring what lives there back to the real world.",
+    rating: "7.7",
+    year: "2026",
+    quality: "4K UHD",
+    ageRating: "PG-13",
+    backdrop: "https://image.tmdb.org/t/p/original/p40lmrdI4blcAPZQMTPaiy5v5Ym.jpg",
+    thumbnail: "https://image.tmdb.org/t/p/w300/p40lmrdI4blcAPZQMTPaiy5v5Ym.jpg",
+    logo_path: "/f65DhAYFi98FsRi4RWHTKkFtChu.png",
+    mediaType: "movie",
+  },
+  {
+    id: 1452110,
+    title: "Clean Hands",
+    description:
+      "The true story of hero drug cop turned recovery advocate Kevin Simmers and his daughter Brooke. The film examines the American drug crisis and \"the thin blue line\" from the opposing eyes of cop and addict who were also father and daughter.",
+    rating: "10.0",
+    year: "2026",
+    quality: "4K UHD",
+    ageRating: "PG-13",
+    backdrop: "https://image.tmdb.org/t/p/original/py3XG3mFkdVMcw7VwfZ4HaXZIIU.jpg",
+    thumbnail: "https://image.tmdb.org/t/p/w300/py3XG3mFkdVMcw7VwfZ4HaXZIIU.jpg",
+    logo_path: "/z8mXgFsayz2D1jIEHkbkoSaltoE.png",
+    mediaType: "movie",
+  },
+  {
     id: 1377237,
     title: "Runner",
     description:
@@ -103,20 +117,6 @@ const DEFAULT_FEATURED_SLIDES: FeaturedMovie[] = [
     backdrop: "https://image.tmdb.org/t/p/original/npXZNWjOEYrqdMDPQ11SGBrXqAG.jpg",
     thumbnail: "https://image.tmdb.org/t/p/w300/npXZNWjOEYrqdMDPQ11SGBrXqAG.jpg",
     logo_path: "/pAnbApoi6DHwXzoKBfQU4M5Wr8t.png",
-    mediaType: "movie",
-  },
-  {
-    id: 1423191,
-    title: "Resident Evil",
-    description:
-      "Medical courier Bryan unwittingly finds himself fighting for survival as one fateful, horrifying night collapses around him in chaos.",
-    rating: "7.3",
-    year: "2026",
-    quality: "4K UHD",
-    ageRating: "R",
-    backdrop: "https://image.tmdb.org/t/p/original/3icyRAqgakNcQn6aDVz9libFmBA.jpg",
-    thumbnail: "https://image.tmdb.org/t/p/w300/3icyRAqgakNcQn6aDVz9libFmBA.jpg",
-    logo_path: "/9ulobOWQViT7UQt2iYzb5tEVgm9.png",
     mediaType: "movie",
   },
 ];
