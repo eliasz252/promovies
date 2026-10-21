@@ -22,6 +22,7 @@ import {
   Sparkles,
   Tv,
   Film,
+  Zap,
 } from "lucide-react";
 
 function EpisodeItemThumbnail({
@@ -115,20 +116,52 @@ export interface StreamServer {
   name: string;
   badge?: string;
   isVip?: boolean;
-  getUrl: (tmdbId: number, mediaType: "movie" | "tv", season: number, episode: number, startTime?: number) => string;
+  isFast?: boolean;
+  getUrl: (
+    tmdbId: number,
+    mediaType: "movie" | "tv",
+    season: number,
+    episode: number,
+    startTime?: number,
+    title?: string
+  ) => string;
 }
 
 export const STREAM_SERVERS: StreamServer[] = [
   {
-    id: "vidlink",
-    name: "VidLink Pro",
+    id: "multiembed",
+    name: "MultiEmbed",
     badge: "RECOMMENDED",
-    isVip: true,
+    isFast: true,
     getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `&start=${Math.floor(t)}` : "";
+      const tParam = t && t > 5 ? `&t=${Math.floor(t)}` : "";
       return type === "tv"
-        ? `https://vidlink.pro/tv/${id}/${s}/${e}?primaryColor=e50914&secondaryColor=ffffff&iconColor=e50914&autoplay=false${tParam}`
-        : `https://vidlink.pro/movie/${id}?primaryColor=e50914&secondaryColor=ffffff&iconColor=e50914&autoplay=false${tParam}`;
+        ? `https://multiembed.mov/?video_id=${id}&tmdb=1&s=${s}&e=${e}${tParam}`
+        : `https://multiembed.mov/?video_id=${id}&tmdb=1${tParam}`;
+    },
+  },
+  {
+    id: "autoembed",
+    name: "AutoEmbed",
+    badge: "FAST",
+    isFast: true,
+    getUrl: (id, type, s, e, t) => {
+      const tParam = t && t > 5 ? `?start=${Math.floor(t)}` : "";
+      return type === "tv"
+        ? `https://autoembed.co/tv/tmdb/${id}-${s}-${e}${tParam}`
+        : `https://autoembed.co/movie/tmdb/${id}${tParam}`;
+    },
+  },
+  {
+    id: "2embed",
+    name: "2Embed",
+    badge: "NORMAL NET",
+    isFast: true,
+    getUrl: (id, type, s, e, t) => {
+      const tParam = t && t > 5 ? `?t=${Math.floor(t)}` : "";
+      return type === "tv"
+        ? `https://www.2embed.cc/embedtv/${id}&s=${s}&e=${e}${tParam}`
+        : `https://www.2embed.cc/embed/${id}${tParam}`;
     },
   },
   {
@@ -144,54 +177,20 @@ export const STREAM_SERVERS: StreamServer[] = [
     },
   },
   {
-    id: "videasy",
-    name: "Videasy VIP",
-    badge: "VIP",
-    isVip: true,
+    id: "vidsrc",
+    name: "VidSrc Me",
+    badge: "STABLE",
     getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `?t=${Math.floor(t)}` : "";
+      const tParam = t && t > 5 ? `&t=${Math.floor(t)}` : "";
       return type === "tv"
-        ? `https://player.videasy.net/tv/${id}/${s}/${e}${tParam}`
-        : `https://player.videasy.net/movie/${id}${tParam}`;
-    },
-  },
-  {
-    id: "autoembed",
-    name: "AutoEmbed",
-    badge: "FAST",
-    getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `?start=${Math.floor(t)}` : "";
-      return type === "tv"
-        ? `https://player.autoembed.cc/embed/tv/${id}/${s}/${e}${tParam}`
-        : `https://player.autoembed.cc/embed/movie/${id}${tParam}`;
-    },
-  },
-  {
-    id: "vidsrc-cc",
-    name: "VidSrc CC",
-    badge: "HD",
-    getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `?t=${Math.floor(t)}` : "";
-      return type === "tv"
-        ? `https://vidsrc.cc/v2/embed/tv/${id}/${s}/${e}${tParam}`
-        : `https://vidsrc.cc/v2/embed/movie/${id}${tParam}`;
-    },
-  },
-  {
-    id: "embed-su",
-    name: "Embed SU",
-    badge: "MULTI",
-    getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `?t=${Math.floor(t)}` : "";
-      return type === "tv"
-        ? `https://embed.su/embed/tv/${id}/${s}/${e}${tParam}`
-        : `https://embed.su/embed/movie/${id}${tParam}`;
+        ? `https://vidsrc.me/embed/tv?tmdb=${id}&season=${s}&episode=${e}${tParam}`
+        : `https://vidsrc.me/embed/movie?tmdb=${id}${tParam}`;
     },
   },
   {
     id: "vip4k",
     name: "VidSrc TO",
-    badge: "4K VIP",
+    badge: "VIP 4K",
     isVip: true,
     getUrl: (id, type, s, e, t) => {
       const tParam = t && t > 5 ? `?t=${Math.floor(t)}` : "";
@@ -201,69 +200,24 @@ export const STREAM_SERVERS: StreamServer[] = [
     },
   },
   {
-    id: "vidsrc",
-    name: "VidSrc Me",
-    badge: "MIRROR",
+    id: "vidlink",
+    name: "VidLink Pro",
+    badge: "FIBER 4K",
     getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `&t=${Math.floor(t)}` : "";
+      const tParam = t && t > 5 ? `&start=${Math.floor(t)}` : "";
       return type === "tv"
-        ? `https://vidsrc.me/embed/tv?tmdb=${id}&season=${s}&episode=${e}${tParam}`
-        : `https://vidsrc.me/embed/movie?tmdb=${id}${tParam}`;
+        ? `https://vidlink.pro/tv/${id}/${s}/${e}?primaryColor=e50914&secondaryColor=ffffff&iconColor=e50914&autoplay=false${tParam}`
+        : `https://vidlink.pro/movie/${id}?primaryColor=e50914&secondaryColor=ffffff&iconColor=e50914&autoplay=false${tParam}`;
     },
   },
   {
-    id: "rivestream",
-    name: "RiveStream",
-    badge: "FAST",
-    getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `&t=${Math.floor(t)}` : "";
-      return type === "tv"
-        ? `https://rivestream.live/embed?type=tv&id=${id}&season=${s}&episode=${e}${tParam}`
-        : `https://rivestream.live/embed?type=movie&id=${id}${tParam}`;
-    },
-  },
-  {
-    id: "multiembed",
-    name: "MultiEmbed",
-    badge: "MIRROR",
-    getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `&t=${Math.floor(t)}` : "";
-      return type === "tv"
-        ? `https://multiembed.mov/?video_id=${id}&tmdb=1&s=${s}&e=${e}${tParam}`
-        : `https://multiembed.mov/?video_id=${id}&tmdb=1${tParam}`;
-    },
-  },
-  {
-    id: "premium",
-    name: "SmashyStream",
-    badge: "HD",
-    getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `?start=${Math.floor(t)}` : "";
-      return type === "tv"
-        ? `https://player.smashystream.com/tv/${id}/${s}/${e}${tParam}`
-        : `https://player.smashystream.com/movie/${id}${tParam}`;
-    },
-  },
-  {
-    id: "vidfast",
-    name: "2Embed",
-    badge: "BACKUP",
-    getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `?t=${Math.floor(t)}` : "";
-      return type === "tv"
-        ? `https://www.2embed.cc/embedtv/${id}&s=${s}&e=${e}${tParam}`
-        : `https://www.2embed.cc/embed/${id}${tParam}`;
-    },
-  },
-  {
-    id: "netout-fast",
-    name: "NetOut Vidy",
-    badge: "BACKUP",
-    getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `&time=${Math.floor(t)}&t=${Math.floor(t)}` : "";
-      return type === "tv"
-        ? `https://vidy.st/tv/${id}/${s}/${e}?color=7c3aed&autoplay=true${tParam}`
-        : `https://vidy.st/movie/${id}?color=7c3aed&autoplay=true${tParam}`;
+    id: "trailer",
+    name: "Official 4K Trailer",
+    badge: "INSTANT",
+    isFast: true,
+    getUrl: (id, type, s, e, t, title) => {
+      const q = encodeURIComponent(`${title || "Movie"} official trailer`);
+      return `https://www.youtube-nocookie.com/embed?listType=search&list=${q}&autoplay=1`;
     },
   },
 ];
@@ -315,10 +269,10 @@ export default function StreamingPlayer({
     if (typeof window !== "undefined") {
       try {
         const saved = localStorage.getItem("promovies_preferred_server");
-        if (saved && STREAM_SERVERS.some((s) => s.id === saved)) return saved;
+        if (saved && saved !== "vidlink" && STREAM_SERVERS.some((s) => s.id === saved)) return saved;
       } catch {}
     }
-    return "vidlink";
+    return "multiembed";
   });
   const [currentSeason, setCurrentSeason] = useState<number>(resolvedInitialSeason);
   const [currentEpisode, setCurrentEpisode] = useState<number>(resolvedInitialEpisode);
@@ -368,7 +322,7 @@ export default function StreamingPlayer({
   const durationRef = useRef<number>(effectiveDuration);
 
   const activeServer = STREAM_SERVERS.find((s) => s.id === activeServerId) || STREAM_SERVERS[0];
-  const streamUrl = activeServer.getUrl(tmdbId, mediaType, currentSeason, currentEpisode, startTime);
+  const streamUrl = activeServer.getUrl(tmdbId, mediaType, currentSeason, currentEpisode, startTime, title);
 
   const { activeProfile } = useProfileStore();
   const { updateContinueWatching } = useWatchlistStore();
@@ -931,20 +885,28 @@ export default function StreamingPlayer({
                   className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-all shrink-0 cursor-pointer ${
                     isActive
                       ? "bg-red-600 text-white shadow-lg shadow-red-600/40 scale-105"
+                      : server.isFast
+                      ? "bg-emerald-500/10 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/20"
                       : server.isVip
                       ? "bg-amber-500/10 text-amber-300 border border-amber-500/30 hover:bg-amber-500/20"
                       : "bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white border border-white/5"
                   }`}
                 >
-                  {server.isVip && (
+                  {server.id === "trailer" ? (
+                    <Film className="w-3.5 h-3.5 text-rose-400 shrink-0" />
+                  ) : server.isFast ? (
+                    <Zap className="w-3.5 h-3.5 text-emerald-400 fill-emerald-400 shrink-0" />
+                  ) : server.isVip ? (
                     <Award className="w-3.5 h-3.5 text-amber-400 fill-amber-400 shrink-0" />
-                  )}
+                  ) : null}
                   <span>{server.name}</span>
                   {server.badge && (
                     <span
                       className={`text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded-md ${
                         isActive
                           ? "bg-black/40 text-white border border-white/20"
+                          : server.isFast
+                          ? "bg-emerald-400/20 text-emerald-300"
                           : server.isVip
                           ? "bg-amber-400/20 text-amber-300"
                           : "bg-white/10 text-slate-400"
@@ -988,11 +950,16 @@ export default function StreamingPlayer({
         </div>
 
         {/* Quick Switch Hint */}
-        <div className="flex items-center justify-between px-2 pt-1 text-[11px] text-slate-400">
-          <span className="flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.8)]" />
-            <span>Fast Server Active · If buffering, switch to <strong>VidLink</strong>, <strong>VidSrc SU</strong>, <strong>Videasy</strong>, or <strong>AutoEmbed</strong> for alternate streams.</span>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between px-2 pt-1 text-[11px] text-slate-400 gap-2">
+          <span className="flex items-center gap-1.5 flex-wrap">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.8)] shrink-0" />
+            <span>Fast Normal Connection Active · If buffering or unreleased, switch to <strong>AutoEmbed</strong>, <strong>2Embed</strong>, or <strong>Official 4K Trailer</strong>.</span>
           </span>
+          <div className="flex items-center gap-2 text-[10px] text-slate-400 font-mono shrink-0">
+            <span className="px-1.5 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-bold">⚡ Adaptive CDN</span>
+            <span>·</span>
+            <span>Zero Buffer Mode</span>
+          </div>
         </div>
       </div>
 
