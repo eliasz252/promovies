@@ -280,9 +280,14 @@ export default function HeroBanner({
           >
             {/* Metadata pill */}
             <div className="flex items-center gap-2.5 text-xs">
-              <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-600 text-white font-black tracking-wider uppercase text-[10px] shadow-lg shadow-red-600/40">
-                TRENDING THIS WEEK
-              </span>
+              {(() => {
+                const isSlideUnreleased = /Spider-Man: Brand New Day|Avengers: Doomsday|Project Hail Mary|The Odyssey|Wildwood|Klara and the Sun/i.test(currentSlide.title);
+                return (
+                  <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-600 text-white font-black tracking-wider uppercase text-[10px] shadow-lg shadow-red-600/40">
+                    {isSlideUnreleased ? "IN THEATERS SOON" : "TRENDING THIS WEEK"}
+                  </span>
+                );
+              })()}
               <span className="flex items-center gap-1 text-amber-300 font-bold">
                 <Star className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
                 {currentSlide.rating}
@@ -325,31 +330,36 @@ export default function HeroBanner({
 
             {/* Action CTAs */}
             <div className="flex flex-wrap items-center gap-3 pt-3">
-              <Link
-                href={`/title/${currentSlide.mediaType || "movie"}/${currentSlide.id}`}
-                onClick={(e) => {
-                  recordMovieStarted({
-                    id: currentSlide.id,
-                    type: currentSlide.mediaType || "movie",
-                    title: currentSlide.title,
-                    backdrop_path: currentSlide.backdrop,
-                    poster_path: currentSlide.thumbnail,
-                  });
-                  if (onOpenModal) {
-                    e.preventDefault();
-                    onOpenModal(activeRawMedia);
-                  }
-                }}
-              >
-                <Button
-                  variant="primary"
-                  size="lg"
-                  className="bg-red-600 hover:bg-red-500 text-white shadow-xl shadow-red-600/40 border-0 rounded-xl font-bold px-7"
-                >
-                  <Play className="w-5 h-5 fill-white mr-1.5" />
-                  Watch Now
-                </Button>
-              </Link>
+              {(() => {
+                const isSlideUnreleased = /Spider-Man: Brand New Day|Avengers: Doomsday|Project Hail Mary|The Odyssey|Wildwood|Klara and the Sun/i.test(currentSlide.title);
+                return (
+                  <Link
+                    href={`/title/${currentSlide.mediaType || "movie"}/${currentSlide.id}`}
+                    onClick={(e) => {
+                      recordMovieStarted({
+                        id: currentSlide.id,
+                        type: currentSlide.mediaType || "movie",
+                        title: currentSlide.title,
+                        backdrop_path: currentSlide.backdrop,
+                        poster_path: currentSlide.thumbnail,
+                      });
+                      if (onOpenModal) {
+                        e.preventDefault();
+                        onOpenModal(activeRawMedia);
+                      }
+                    }}
+                  >
+                    <Button
+                      variant="primary"
+                      size="lg"
+                      className="bg-red-600 hover:bg-red-500 text-white shadow-xl shadow-red-600/40 border-0 rounded-xl font-bold px-7"
+                    >
+                      <Play className="w-5 h-5 fill-white mr-1.5" />
+                      {isSlideUnreleased ? "Watch 4K Trailer" : "Watch Now"}
+                    </Button>
+                  </Link>
+                );
+              })()}
 
               <AddToListButton media={activeRawMedia} variant="full" className="h-12 rounded-xl" />
 

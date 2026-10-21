@@ -212,6 +212,14 @@ export default function MediaPreviewModal({
     ? getContinueWatchingItem(currentItem.id, currentItem.media_type)
     : undefined;
 
+  const isUnreleased = Boolean(
+    currentItem && (
+      ((currentItem as any).status && ["Planned", "In Production", "Post Production", "Upcoming"].includes((currentItem as any).status)) ||
+      (currentItem.release_date && !isNaN(new Date(currentItem.release_date).getTime()) && new Date(currentItem.release_date).getTime() > Date.now()) ||
+      (title && /Spider-Man: Brand New Day|Avengers: Doomsday|Project Hail Mary|The Odyssey|Wildwood|Klara and the Sun/i.test(title))
+    )
+  );
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -261,7 +269,7 @@ export default function MediaPreviewModal({
                   </button>
                   <span className="text-xs font-bold text-red-500 uppercase tracking-widest flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.8)]" />
-                    {isTv ? `Streaming S${selectedSeason}E${selectedEpisode}` : "Streaming in 4K UHD"}
+                    {isTv ? `Streaming S${selectedSeason}E${selectedEpisode}` : isUnreleased ? "Theatrical 4K Preview" : "Streaming in 4K UHD"}
                   </span>
                 </div>
 
@@ -276,6 +284,8 @@ export default function MediaPreviewModal({
                   initialEpisode={selectedEpisode}
                   initialStartTime={(media as any)?.initialStartTime || savedRecord?.currentTime}
                   runtime={currentItem.runtime}
+                  releaseDate={currentItem.release_date || (currentItem as any).first_air_date}
+                  status={(currentItem as any).status}
                   autoPlay={true}
                 />
               </div>
@@ -352,7 +362,7 @@ export default function MediaPreviewModal({
 
                     {/* Action Buttons Row */}
                     <div className="flex items-center gap-3 pt-1">
-                      {/* White Play Button matching screenshot: Play S1E1 */}
+                      {/* Play Button */}
                       <button
                         onClick={() => {
                           recordMovieStarted({
@@ -367,14 +377,25 @@ export default function MediaPreviewModal({
                           });
                           setIsStreaming(true);
                         }}
-                        className="flex items-center gap-2.5 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg bg-white hover:bg-slate-200 text-black font-extrabold text-sm sm:text-base transition-all duration-200 cursor-pointer shadow-2xl hover:scale-105 active:scale-95"
+                        className={`flex items-center gap-2.5 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-extrabold text-sm sm:text-base transition-all duration-200 cursor-pointer shadow-2xl hover:scale-105 active:scale-95 ${
+                          isUnreleased
+                            ? "bg-red-600 hover:bg-red-500 text-white shadow-red-600/40"
+                            : "bg-white hover:bg-slate-200 text-black"
+                        }`}
                       >
-                        <Play className="w-5 h-5 fill-black text-black" />
+                        <Play className={`w-5 h-5 ${isUnreleased ? "fill-white text-white" : "fill-black text-black"}`} />
                         <span>
                           {isTv
                             ? `Watch S${selectedSeason}E${selectedEpisode}`
+                            : isUnreleased
+                            ? "Watch 4K Trailer"
                             : "Watch Now"}
                         </span>
+                        {isUnreleased && (
+                          <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-black/40 border border-white/20 tracking-wider uppercase font-bold">
+                            In Theaters
+                          </span>
+                        )}
                       </button>
 
                       {/* Add to My List (+) */}

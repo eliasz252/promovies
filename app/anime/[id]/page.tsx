@@ -197,6 +197,8 @@ export default async function AnimeDetailPage({
             seasons={anime.seasons}
             initialSeason={seasonParam}
             initialEpisode={1}
+            releaseDate={anime.release_date || (anime as any).first_air_date}
+            status={anime.status}
             autoPlay={false}
           />
         </section>

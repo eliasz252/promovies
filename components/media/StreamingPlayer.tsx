@@ -129,39 +129,15 @@ export interface StreamServer {
 
 export const STREAM_SERVERS: StreamServer[] = [
   {
-    id: "multiembed",
-    name: "MultiEmbed",
-    badge: "RECOMMENDED",
-    isFast: true,
-    getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `&t=${Math.floor(t)}` : "";
-      return type === "tv"
-        ? `https://multiembed.mov/?video_id=${id}&tmdb=1&s=${s}&e=${e}${tParam}`
-        : `https://multiembed.mov/?video_id=${id}&tmdb=1${tParam}`;
-    },
-  },
-  {
     id: "autoembed",
     name: "AutoEmbed",
-    badge: "FAST",
+    badge: "FASTEST - NO ADS",
     isFast: true,
     getUrl: (id, type, s, e, t) => {
       const tParam = t && t > 5 ? `?start=${Math.floor(t)}` : "";
       return type === "tv"
         ? `https://autoembed.co/tv/tmdb/${id}-${s}-${e}${tParam}`
         : `https://autoembed.co/movie/tmdb/${id}${tParam}`;
-    },
-  },
-  {
-    id: "2embed",
-    name: "2Embed",
-    badge: "NORMAL NET",
-    isFast: true,
-    getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `?t=${Math.floor(t)}` : "";
-      return type === "tv"
-        ? `https://www.2embed.cc/embedtv/${id}&s=${s}&e=${e}${tParam}`
-        : `https://www.2embed.cc/embed/${id}${tParam}`;
     },
   },
   {
@@ -174,6 +150,30 @@ export const STREAM_SERVERS: StreamServer[] = [
       return type === "tv"
         ? `https://vidsrc.su/embed/tv/${id}/${s}/${e}${tParam}`
         : `https://vidsrc.su/embed/movie/${id}${tParam}`;
+    },
+  },
+  {
+    id: "multiembed",
+    name: "MultiEmbed",
+    badge: "MULTI-CDN",
+    isFast: true,
+    getUrl: (id, type, s, e, t) => {
+      const tParam = t && t > 5 ? `&t=${Math.floor(t)}` : "";
+      return type === "tv"
+        ? `https://multiembed.mov/?video_id=${id}&tmdb=1&s=${s}&e=${e}${tParam}`
+        : `https://multiembed.mov/?video_id=${id}&tmdb=1${tParam}`;
+    },
+  },
+  {
+    id: "2embed",
+    name: "2Embed",
+    badge: "NORMAL NET",
+    isFast: true,
+    getUrl: (id, type, s, e, t) => {
+      const tParam = t && t > 5 ? `?t=${Math.floor(t)}` : "";
+      return type === "tv"
+        ? `https://www.2embed.cc/embedtv/${id}&s=${s}&e=${e}${tParam}`
+        : `https://www.2embed.cc/embed/${id}${tParam}`;
     },
   },
   {
@@ -200,6 +200,16 @@ export const STREAM_SERVERS: StreamServer[] = [
     },
   },
   {
+    id: "trailer",
+    name: "Official 4K Trailer",
+    badge: "INSTANT",
+    isFast: true,
+    getUrl: (id, type, s, e, t, title) => {
+      const q = encodeURIComponent(`${title || "Movie"} official trailer`);
+      return `https://www.youtube-nocookie.com/embed?listType=search&list=${q}&autoplay=1`;
+    },
+  },
+  {
     id: "vidlink",
     name: "VidLink Pro",
     badge: "FIBER 4K",
@@ -208,16 +218,6 @@ export const STREAM_SERVERS: StreamServer[] = [
       return type === "tv"
         ? `https://vidlink.pro/tv/${id}/${s}/${e}?primaryColor=e50914&secondaryColor=ffffff&iconColor=e50914&autoplay=false${tParam}`
         : `https://vidlink.pro/movie/${id}?primaryColor=e50914&secondaryColor=ffffff&iconColor=e50914&autoplay=false${tParam}`;
-    },
-  },
-  {
-    id: "trailer",
-    name: "Official 4K Trailer",
-    badge: "INSTANT",
-    isFast: true,
-    getUrl: (id, type, s, e, t, title) => {
-      const q = encodeURIComponent(`${title || "Movie"} official trailer`);
-      return `https://www.youtube-nocookie.com/embed?listType=search&list=${q}&autoplay=1`;
     },
   },
 ];
@@ -235,6 +235,9 @@ interface StreamingPlayerProps {
   runtime?: number;
   className?: string;
   autoPlay?: boolean;
+  releaseDate?: string | null;
+  status?: string | null;
+  isUpcoming?: boolean;
 }
 
 export default function StreamingPlayer({
@@ -250,6 +253,9 @@ export default function StreamingPlayer({
   runtime,
   className = "",
   autoPlay = false,
+  releaseDate,
+  status,
+  isUpcoming,
 }: StreamingPlayerProps) {
   // Check for saved progress if not explicitly passed
   const savedRecord = typeof window !== "undefined"
@@ -265,14 +271,26 @@ export default function StreamingPlayer({
     ? initialEpisode
     : (savedRecord?.episode && savedRecord.episode > 0 ? savedRecord.episode : 1);
 
+  // Unreleased / Theatrical detection to prevent infinite loading loops on servers without stream files
+  const isUnreleased = Boolean(
+    isUpcoming ||
+    (status && ["Planned", "In Production", "Post Production", "Upcoming"].includes(status)) ||
+    (releaseDate && !isNaN(new Date(releaseDate).getTime()) && new Date(releaseDate).getTime() > Date.now()) ||
+    (title && /Spider-Man: Brand New Day|Avengers: Doomsday|Project Hail Mary|The Odyssey|Wildwood|Klara and the Sun/i.test(title))
+  );
+
   const [activeServerId, setActiveServerId] = useState<string>(() => {
+    // If the title is unreleased, ALWAYS default immediately to Official 4K Trailer
+    if (isUnreleased) {
+      return "trailer";
+    }
     if (typeof window !== "undefined") {
       try {
         const saved = localStorage.getItem("promovies_preferred_server");
-        if (saved && saved !== "vidlink" && STREAM_SERVERS.some((s) => s.id === saved)) return saved;
+        if (saved && saved !== "vidlink" && saved !== "trailer" && STREAM_SERVERS.some((s) => s.id === saved)) return saved;
       } catch {}
     }
-    return "multiembed";
+    return "autoembed";
   });
   const [currentSeason, setCurrentSeason] = useState<number>(resolvedInitialSeason);
   const [currentEpisode, setCurrentEpisode] = useState<number>(resolvedInitialEpisode);
@@ -704,6 +722,39 @@ export default function StreamingPlayer({
 
   return (
     <div className={`flex flex-col gap-4 w-full select-none ${className}`}>
+      {/* Theatrical / Unreleased Explainer Banner */}
+      {isUnreleased && (
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-4 py-3 rounded-2xl bg-gradient-to-r from-red-950/70 via-[#161622] to-black border border-red-500/40 text-xs shadow-xl animate-in fade-in duration-300">
+          <div className="flex items-center gap-3">
+            <div className="p-2.5 rounded-xl bg-red-600/20 text-red-400 border border-red-500/30 shrink-0">
+              <Film className="w-4 h-4 text-red-500" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="font-black text-white text-xs tracking-wider uppercase">
+                  THEATRICAL / UPCOMING RELEASE
+                </span>
+                <span className="px-1.5 py-0.5 rounded-md bg-red-600/30 text-red-300 text-[10px] font-bold border border-red-500/30">
+                  4K PREVIEW ACTIVE
+                </span>
+              </div>
+              <p className="text-[11px] text-slate-300 mt-0.5">
+                Full digital movie is not yet released on VOD. Playing official 4K trailer without buffering.
+              </p>
+            </div>
+          </div>
+          {activeServerId !== "trailer" && (
+            <button
+              onClick={() => handleServerChange("trailer")}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-red-600 hover:bg-red-500 text-white text-xs font-bold transition-all shadow-md shrink-0 cursor-pointer"
+            >
+              <Play className="w-3.5 h-3.5 fill-white" />
+              <span>Back to 4K Trailer</span>
+            </button>
+          )}
+        </div>
+      )}
+
       {/* Player Screen Frame */}
       <div
         ref={playerContainerRef}
@@ -838,7 +889,7 @@ export default function StreamingPlayer({
                 )}
                 <span className="inline-flex items-center gap-1 mt-2 px-3 py-1 rounded-full bg-red-600/20 text-red-400 border border-red-500/30 text-[11px] font-bold">
                   <Sparkles className="w-3 h-3" />
-                  Ready to Stream in 4K UHD
+                  {isUnreleased ? "🎬 Playing Official 4K Trailer" : "Ready to Stream in 4K UHD"}
                 </span>
               </div>
             </div>
@@ -861,6 +912,11 @@ export default function StreamingPlayer({
               {mediaType === "tv" ? (
                 <p className="text-[11px] text-slate-400 truncate">
                   S{currentSeason} · E{currentEpisode} &mdash; {currentEpisodeTitle}
+                </p>
+              ) : isUnreleased ? (
+                <p className="text-[11px] text-amber-400 font-medium truncate flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
+                  Theatrical 4K Preview · Instant Playback
                 </p>
               ) : (
                 <p className="text-[11px] text-emerald-400 font-medium truncate">
@@ -953,12 +1009,16 @@ export default function StreamingPlayer({
         <div className="flex flex-col sm:flex-row sm:items-center justify-between px-2 pt-1 text-[11px] text-slate-400 gap-2">
           <span className="flex items-center gap-1.5 flex-wrap">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.8)] shrink-0" />
-            <span>Fast Normal Connection Active · If buffering or unreleased, switch to <strong>AutoEmbed</strong>, <strong>2Embed</strong>, or <strong>Official 4K Trailer</strong>.</span>
+            {isUnreleased ? (
+              <span>Unreleased Theatrical Title: Playing official 4K trailer. Third-party streaming servers may be empty until digital premiere.</span>
+            ) : (
+              <span>Fast Normal Connection Active · If buffering, switch to <strong>AutoEmbed</strong>, <strong>VidSrc SU</strong>, or <strong>2Embed</strong>.</span>
+            )}
           </span>
           <div className="flex items-center gap-2 text-[10px] text-slate-400 font-mono shrink-0">
-            <span className="px-1.5 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-bold">⚡ Adaptive CDN</span>
+            <span className="px-1.5 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-bold">⚡ Zero Buffer Mode</span>
             <span>·</span>
-            <span>Zero Buffer Mode</span>
+            <span>{isUnreleased ? "Theatrical Mode" : "Adaptive CDN"}</span>
           </div>
         </div>
       </div>

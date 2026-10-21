@@ -344,6 +344,8 @@ export default async function TitleDetailPage({ params, searchParams }: TitlePag
             initialEpisode={initialEpisode}
             initialStartTime={startSeconds}
             runtime={media.runtime}
+            releaseDate={media.release_date || (media as any).first_air_date}
+            status={media.status}
             autoPlay={Boolean(startSeconds && startSeconds > 0)}
           />
         </div>

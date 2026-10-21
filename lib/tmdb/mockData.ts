@@ -56,7 +56,7 @@ const RAW_MOCK_MEDIA_ITEMS: MediaItem[] = [
     id: 969681,
     title: "Spider-Man: Brand New Day",
     overview:
-      "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. Out now in theaters and streaming in 4K UHD.",
+      "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. In theaters soon. Watch the official 4K trailer and exclusive previews on ProMovies.",
     poster_path: "/bjiS5ipwxb9JFy3XRRN4OAilSeX.jpg",
     backdrop_path: "/qeQJx07rK2xm8SD2sJxFKhE7gs0.jpg",
     logo_path: "/vbZcDHC5IFylYuRnp3eyOs5rTV1.png",
