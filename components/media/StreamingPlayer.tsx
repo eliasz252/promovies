@@ -120,54 +120,78 @@ export interface StreamServer {
 
 export const STREAM_SERVERS: StreamServer[] = [
   {
-    id: "netout-fast",
-    name: "NetOut Fast (Vidy)",
+    id: "vidlink",
+    name: "VidLink Pro",
     badge: "RECOMMENDED",
     isVip: true,
     getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `&time=${Math.floor(t)}&t=${Math.floor(t)}` : "";
+      const tParam = t && t > 5 ? `&start=${Math.floor(t)}` : "";
       return type === "tv"
-        ? `https://vidy.st/tv/${id}/${s}/${e}?color=7c3aed&autoplay=true${tParam}`
-        : `https://vidy.st/movie/${id}?color=7c3aed&autoplay=true${tParam}`;
+        ? `https://vidlink.pro/tv/${id}/${s}/${e}?primaryColor=e50914&secondaryColor=ffffff&iconColor=e50914&autoplay=false${tParam}`
+        : `https://vidlink.pro/movie/${id}?primaryColor=e50914&secondaryColor=ffffff&iconColor=e50914&autoplay=false${tParam}`;
     },
   },
   {
-    id: "netout-vidout",
-    name: "NetOut VIP (VidOut)",
+    id: "vidsrc-su",
+    name: "VidSrc SU",
+    badge: "4K UHD",
+    isVip: true,
+    getUrl: (id, type, s, e, t) => {
+      const tParam = t && t > 5 ? `?t=${Math.floor(t)}` : "";
+      return type === "tv"
+        ? `https://vidsrc.su/embed/tv/${id}/${s}/${e}${tParam}`
+        : `https://vidsrc.su/embed/movie/${id}${tParam}`;
+    },
+  },
+  {
+    id: "videasy",
+    name: "Videasy VIP",
     badge: "VIP",
     isVip: true,
     getUrl: (id, type, s, e, t) => {
       const tParam = t && t > 5 ? `?t=${Math.floor(t)}` : "";
       return type === "tv"
-        ? `https://vidout.pages.dev/tv/${id}/S${s}/E${e}${tParam}`
-        : `https://vidout.pages.dev/movie/${id}${tParam}`;
+        ? `https://player.videasy.net/tv/${id}/${s}/${e}${tParam}`
+        : `https://player.videasy.net/movie/${id}${tParam}`;
     },
   },
   {
     id: "autoembed",
-    name: "AutoEmbed (Ultra HD)",
-    badge: "HD",
+    name: "AutoEmbed",
+    badge: "FAST",
     getUrl: (id, type, s, e, t) => {
       const tParam = t && t > 5 ? `?start=${Math.floor(t)}` : "";
       return type === "tv"
-        ? `https://autoembed.co/tv/tmdb/${id}/${s}/${e}${tParam}`
-        : `https://autoembed.co/movie/tmdb/${id}${tParam}`;
+        ? `https://player.autoembed.cc/embed/tv/${id}/${s}/${e}${tParam}`
+        : `https://player.autoembed.cc/embed/movie/${id}${tParam}`;
     },
   },
   {
-    id: "multiembed",
-    name: "MultiEmbed (VIP Mirror)",
-    badge: "MIRROR",
+    id: "vidsrc-cc",
+    name: "VidSrc CC",
+    badge: "HD",
     getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `&t=${Math.floor(t)}` : "";
+      const tParam = t && t > 5 ? `?t=${Math.floor(t)}` : "";
       return type === "tv"
-        ? `https://multiembed.mov/?video_id=${id}&tmdb=1&s=${s}&e=${e}${tParam}`
-        : `https://multiembed.mov/?video_id=${id}&tmdb=1${tParam}`;
+        ? `https://vidsrc.cc/v2/embed/tv/${id}/${s}/${e}${tParam}`
+        : `https://vidsrc.cc/v2/embed/movie/${id}${tParam}`;
+    },
+  },
+  {
+    id: "embed-su",
+    name: "Embed SU",
+    badge: "MULTI",
+    getUrl: (id, type, s, e, t) => {
+      const tParam = t && t > 5 ? `?t=${Math.floor(t)}` : "";
+      return type === "tv"
+        ? `https://embed.su/embed/tv/${id}/${s}/${e}${tParam}`
+        : `https://embed.su/embed/movie/${id}${tParam}`;
     },
   },
   {
     id: "vip4k",
-    name: "VidSrc 4K",
+    name: "VidSrc TO",
+    badge: "4K VIP",
     isVip: true,
     getUrl: (id, type, s, e, t) => {
       const tParam = t && t > 5 ? `?t=${Math.floor(t)}` : "";
@@ -179,6 +203,7 @@ export const STREAM_SERVERS: StreamServer[] = [
   {
     id: "vidsrc",
     name: "VidSrc Me",
+    badge: "MIRROR",
     getUrl: (id, type, s, e, t) => {
       const tParam = t && t > 5 ? `&t=${Math.floor(t)}` : "";
       return type === "tv"
@@ -187,8 +212,31 @@ export const STREAM_SERVERS: StreamServer[] = [
     },
   },
   {
+    id: "rivestream",
+    name: "RiveStream",
+    badge: "FAST",
+    getUrl: (id, type, s, e, t) => {
+      const tParam = t && t > 5 ? `&t=${Math.floor(t)}` : "";
+      return type === "tv"
+        ? `https://rivestream.live/embed?type=tv&id=${id}&season=${s}&episode=${e}${tParam}`
+        : `https://rivestream.live/embed?type=movie&id=${id}${tParam}`;
+    },
+  },
+  {
+    id: "multiembed",
+    name: "MultiEmbed",
+    badge: "MIRROR",
+    getUrl: (id, type, s, e, t) => {
+      const tParam = t && t > 5 ? `&t=${Math.floor(t)}` : "";
+      return type === "tv"
+        ? `https://multiembed.mov/?video_id=${id}&tmdb=1&s=${s}&e=${e}${tParam}`
+        : `https://multiembed.mov/?video_id=${id}&tmdb=1${tParam}`;
+    },
+  },
+  {
     id: "premium",
     name: "SmashyStream",
+    badge: "HD",
     getUrl: (id, type, s, e, t) => {
       const tParam = t && t > 5 ? `?start=${Math.floor(t)}` : "";
       return type === "tv"
@@ -199,11 +247,23 @@ export const STREAM_SERVERS: StreamServer[] = [
   {
     id: "vidfast",
     name: "2Embed",
+    badge: "BACKUP",
     getUrl: (id, type, s, e, t) => {
       const tParam = t && t > 5 ? `?t=${Math.floor(t)}` : "";
       return type === "tv"
         ? `https://www.2embed.cc/embedtv/${id}&s=${s}&e=${e}${tParam}`
         : `https://www.2embed.cc/embed/${id}${tParam}`;
+    },
+  },
+  {
+    id: "netout-fast",
+    name: "NetOut Vidy",
+    badge: "BACKUP",
+    getUrl: (id, type, s, e, t) => {
+      const tParam = t && t > 5 ? `&time=${Math.floor(t)}&t=${Math.floor(t)}` : "";
+      return type === "tv"
+        ? `https://vidy.st/tv/${id}/${s}/${e}?color=7c3aed&autoplay=true${tParam}`
+        : `https://vidy.st/movie/${id}?color=7c3aed&autoplay=true${tParam}`;
     },
   },
 ];
@@ -251,7 +311,15 @@ export default function StreamingPlayer({
     ? initialEpisode
     : (savedRecord?.episode && savedRecord.episode > 0 ? savedRecord.episode : 1);
 
-  const [activeServerId, setActiveServerId] = useState<string>("netout-fast");
+  const [activeServerId, setActiveServerId] = useState<string>(() => {
+    if (typeof window !== "undefined") {
+      try {
+        const saved = localStorage.getItem("promovies_preferred_server");
+        if (saved && STREAM_SERVERS.some((s) => s.id === saved)) return saved;
+      } catch {}
+    }
+    return "vidlink";
+  });
   const [currentSeason, setCurrentSeason] = useState<number>(resolvedInitialSeason);
   const [currentEpisode, setCurrentEpisode] = useState<number>(resolvedInitialEpisode);
 
@@ -299,7 +367,7 @@ export default function StreamingPlayer({
   const currentTimeRef = useRef<number>(startTime);
   const durationRef = useRef<number>(effectiveDuration);
 
-  const activeServer = STREAM_SERVERS.find((s) => s.id === activeServerId) || STREAM_SERVERS[2];
+  const activeServer = STREAM_SERVERS.find((s) => s.id === activeServerId) || STREAM_SERVERS[0];
   const streamUrl = activeServer.getUrl(tmdbId, mediaType, currentSeason, currentEpisode, startTime);
 
   const { activeProfile } = useProfileStore();
@@ -651,6 +719,11 @@ export default function StreamingPlayer({
     if (serverId === activeServerId) return;
     setIsLoading(true);
     setActiveServerId(serverId);
+    if (typeof window !== "undefined") {
+      try {
+        localStorage.setItem("promovies_preferred_server", serverId);
+      } catch {}
+    }
     setIsPlaying(true);
   };
 
@@ -867,6 +940,19 @@ export default function StreamingPlayer({
                     <Award className="w-3.5 h-3.5 text-amber-400 fill-amber-400 shrink-0" />
                   )}
                   <span>{server.name}</span>
+                  {server.badge && (
+                    <span
+                      className={`text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded-md ${
+                        isActive
+                          ? "bg-black/40 text-white border border-white/20"
+                          : server.isVip
+                          ? "bg-amber-400/20 text-amber-300"
+                          : "bg-white/10 text-slate-400"
+                      }`}
+                    >
+                      {server.badge}
+                    </span>
+                  )}
                 </button>
               );
             })}
@@ -905,7 +991,7 @@ export default function StreamingPlayer({
         <div className="flex items-center justify-between px-2 pt-1 text-[11px] text-slate-400">
           <span className="flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.8)]" />
-            <span>Fast Server Active · If buffering, click <strong>VidSrc</strong>, <strong>Vidbing</strong>, or <strong>Vidcore</strong> for alternate streams.</span>
+            <span>Fast Server Active · If buffering, switch to <strong>VidLink</strong>, <strong>VidSrc SU</strong>, <strong>Videasy</strong>, or <strong>AutoEmbed</strong> for alternate streams.</span>
           </span>
         </div>
       </div>

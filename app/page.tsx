@@ -51,7 +51,7 @@ export default function HomePage() {
         if (dateB !== dateA) return dateB.localeCompare(dateA);
         return (b.popularity || 0) - (a.popularity || 0);
       })
-      .slice(0, 6);
+      .slice(0, 8);
 
     return activeProfile.isKids ? getKidsContent(movieFallback) : movieFallback;
   }, [catalogData, items, activeProfile.isKids]);
@@ -251,7 +251,7 @@ export default function HomePage() {
       >
         {/* Cinematic Hero Experience */}
         <HeroBanner
-          featuredItems={featuredItems.length > 0 ? featuredItems : items.filter((m) => m.media_type === "movie").slice(0, 5)}
+          featuredItems={featuredItems.length > 0 ? featuredItems : items.filter((m) => m.media_type === "movie").slice(0, 8)}
           onOpenModal={handleOpenModal}
         />
 

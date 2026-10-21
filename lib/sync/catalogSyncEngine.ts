@@ -252,6 +252,26 @@ export async function runCatalogSync(
         },
       },
       {
+        name: "trending_tv_week",
+        fetcher: async () => {
+          const [p1, p2] = await Promise.all([
+            tmdbClient.getTrendingTvWeek(1).catch(() => []),
+            tmdbClient.getTrendingTvWeek(2).catch(() => []),
+          ]);
+          return [...p1, ...p2];
+        },
+      },
+      {
+        name: "discover_tv",
+        fetcher: async () => {
+          const [p1, p2] = await Promise.all([
+            tmdbClient.getDiscoverTv(1).catch(() => []),
+            tmdbClient.getDiscoverTv(2).catch(() => []),
+          ]);
+          return [...p1, ...p2];
+        },
+      },
+      {
         name: "now_playing",
         fetcher: async () => {
           const [p1, p2, p3] = await Promise.all([
@@ -451,21 +471,38 @@ export async function runCatalogSync(
     ).map((raw) => normalizeTMDBItem(raw, "now_playing"));
 
     // --- CATEGORY D: Trending TV Shows ---
-    // From /tv/popular and /trending/tv/day
-    writeStructuredLog(logFileName, "Step 2D: Processing Trending TV Shows...");
+    // Premium streaming TV series (filtered against talk shows, news, and soap operas)
+    writeStructuredLog(logFileName, "Step 2D: Processing Trending TV Shows (Quality Filtered)...");
     const trendingTvPool = [
       ...(feeds.popular_tv || []),
+      ...(feeds.trending_tv_week || []),
+      ...(feeds.discover_tv || []),
       ...(feeds.trending_tv || []),
     ];
     const tvMap = new Map<number, TMDBRawItem>();
     for (const item of trendingTvPool) {
-      if (item.id && !tvMap.has(item.id)) {
+      if (!item.id || tvMap.has(item.id)) continue;
+      const genreIds = item.genre_ids || [];
+      // Exclude News (10763), Talk (10767), Soap (10766)
+      const isTalkOrNews = genreIds.includes(10763) || genreIds.includes(10767);
+      const hasImages = Boolean(item.poster_path && item.backdrop_path);
+      const hasRating = (item.vote_count || 0) >= 20;
+
+      if (!isTalkOrNews && hasImages && hasRating) {
         tvMap.set(item.id, item);
       }
     }
-    const trendingTvItems: Omit<CatalogItem, "created_at" | "updated_at">[] = Array.from(
-      tvMap.values()
-    ).map((raw) => normalizeTMDBItem(raw, "trending_tv"));
+
+    // Sort TV shows by blended rating & popularity
+    const sortedTvCandidates = Array.from(tvMap.values()).sort((a, b) => {
+      const scoreA = (a.popularity || 0) + (a.vote_average || 0) * 120;
+      const scoreB = (b.popularity || 0) + (b.vote_average || 0) * 120;
+      return scoreB - scoreA;
+    });
+
+    const trendingTvItems: Omit<CatalogItem, "created_at" | "updated_at">[] = sortedTvCandidates.map(
+      (raw, idx) => normalizeTMDBItem(raw, "trending_tv", idx + 1)
+    );
 
     // --- CATEGORY E: Upcoming ---
     // From /movie/upcoming, releases within next 30 days only

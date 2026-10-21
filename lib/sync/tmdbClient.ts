@@ -252,6 +252,39 @@ export const tmdbClient = {
   },
 
   /**
+   * 8. /trending/tv/week
+   */
+  async getTrendingTvWeek(page = 1): Promise<TMDBRawItem[]> {
+    const data = await tmdbFetchWithRetry<{ results: TMDBRawItem[] }>(
+      "/trending/tv/week",
+      { page }
+    );
+    return (data.results || []).map((t) => ({ ...t, media_type: "tv" }));
+  },
+
+  /**
+   * 9. /tv/on_the_air
+   */
+  async getOnTheAirTv(page = 1): Promise<TMDBRawItem[]> {
+    const data = await tmdbFetchWithRetry<{ results: TMDBRawItem[] }>(
+      "/tv/on_the_air",
+      { page }
+    );
+    return (data.results || []).map((t) => ({ ...t, media_type: "tv" }));
+  },
+
+  /**
+   * 10. /discover/tv
+   */
+  async getDiscoverTv(page = 1): Promise<TMDBRawItem[]> {
+    const data = await tmdbFetchWithRetry<{ results: TMDBRawItem[] }>(
+      "/discover/tv",
+      { page, sort_by: "popularity.desc", "vote_count.gte": 100 }
+    );
+    return (data.results || []).map((t) => ({ ...t, media_type: "tv" }));
+  },
+
+  /**
    * 8. /movie/{id}/images or /tv/{id}/images
    * Fetches high-resolution stylized PNG logos for Featured items
    */

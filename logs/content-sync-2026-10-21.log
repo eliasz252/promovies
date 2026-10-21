@@ -1,0 +1,74 @@
+[2026-10-21T10:10:43.442Z] ===========================================================
+[2026-10-21T10:10:43.444Z] START: Automated Daily Catalog Sync initiated at 2026-10-21T10:10:43.444Z
+[2026-10-21T10:10:43.503Z] Step 1: Fetching discovery feeds with concurrency limit 3...
+[2026-10-21T10:10:44.814Z]   ✓ Fetched trending_movies: 60 items.
+[2026-10-21T10:10:44.938Z]   ✓ Fetched now_playing: 60 items.
+[2026-10-21T10:10:44.949Z]   ✓ Fetched trending_tv: 40 items.
+[2026-10-21T10:10:45.142Z]   ✓ Fetched upcoming: 60 items.
+[2026-10-21T10:10:45.188Z]   ✓ Fetched top_rated_tv: 40 items.
+[2026-10-21T10:10:45.225Z]   ✓ Fetched top_rated_movies: 40 items.
+[2026-10-21T10:10:45.385Z]   ✓ Fetched popular_tv: 40 items.
+[2026-10-21T10:10:45.387Z] Step 2A: Processing Top 10 Today (New Movies)...
+[2026-10-21T10:10:45.390Z] Step 2B: Processing Featured Pool (New Movies) & fetching stylized title logos...
+[2026-10-21T10:10:45.613Z]   Featured #2 "Project Hail Mary" (TMDB 687163) -> logo: /jvqIELbZctv3Jqtcc7Ic5of8vY7.png
+[2026-10-21T10:10:45.618Z]   Featured #1 "Spider-Man: Brand New Day" (TMDB 969681) -> logo: /dGMb0iSnNp7UMAHkKX63Kh6AJvy.png
+[2026-10-21T10:10:45.632Z]   Featured #3 "The Odyssey" (TMDB 1368337) -> logo: /kX6ZX4GL7km04332caiOVapR2lb.png
+[2026-10-21T10:10:45.825Z]   Featured #5 "You Can See Everything" (TMDB 1765072) -> logo: /kjRBwERiGZ4u5ytEatuPY4i8MCB.png
+[2026-10-21T10:10:45.857Z]   Featured #4 "Klara and the Sun" (TMDB 858035) -> logo: /sgfZX9QDrLlS3DLSMVgki9s60CN.png
+[2026-10-21T10:10:45.864Z]   Featured #6 "Wildwood" (TMDB 791523) -> logo: /g9MoyXHtNgaR1UC2MoztL80iZl3.png
+[2026-10-21T10:10:45.866Z] Step 2C: Processing Now Playing...
+[2026-10-21T10:10:45.867Z] Step 2D: Processing Trending TV Shows...
+[2026-10-21T10:10:45.869Z] Step 2E: Processing Upcoming Movies (filtered to next 30 days)...
+[2026-10-21T10:10:45.871Z] Step 2F: Processing Top Rated Movies & Series...
+[2026-10-21T10:10:45.873Z] Step 2G: Processing Trending Movies...
+[2026-10-21T10:10:45.875Z] Step 3: Committing transactional database changes...
+[2026-10-21T10:10:45.894Z] ✓ Transaction committed successfully to database.
+[2026-10-21T10:10:45.896Z] FINISH: Sync finished with status "success" in 2.46s.
+[2026-10-21T10:10:45.897Z] SUMMARY: Added=217, Updated=94, Removed=215
+[2026-10-21T10:10:45.898Z]   - featured: Mode=rebuild, Added=6, Updated=0, Removed=6, Active=6
+[2026-10-21T10:10:45.898Z]   - top10: Mode=rebuild, Added=10, Updated=0, Removed=10, Active=10
+[2026-10-21T10:10:45.899Z]   - now_playing: Mode=rebuild, Added=61, Updated=0, Removed=61, Active=61
+[2026-10-21T10:10:45.900Z]   - trending_tv: Mode=rebuild, Added=75, Updated=0, Removed=73, Active=75
+[2026-10-21T10:10:45.901Z]   - upcoming: Mode=upsert_with_soft_delete, Added=5, Updated=15, Removed=5, Active=20
+[2026-10-21T10:10:45.901Z]   - top_rated: Mode=upsert_with_soft_delete, Added=1, Updated=79, Removed=1, Active=80
+[2026-10-21T10:10:45.902Z]   - trending_movies: Mode=rebuild, Added=59, Updated=0, Removed=59, Active=59
+[2026-10-21T10:10:45.903Z] ===========================================================
+
+[2026-10-21T10:40:21.861Z] ===========================================================
+[2026-10-21T10:40:21.863Z] START: Automated Daily Catalog Sync initiated at 2026-10-21T10:40:21.862Z
+[2026-10-21T10:40:21.879Z] Step 1: Fetching discovery feeds with concurrency limit 3...
+[2026-10-21T10:40:22.619Z]   ✓ Fetched trending_movies: 60 items.
+[2026-10-21T10:40:22.625Z]   ✓ Fetched trending_tv_week: 40 items.
+[2026-10-21T10:40:22.662Z]   ✓ Fetched trending_tv: 40 items.
+[2026-10-21T10:40:22.743Z]   ✓ Fetched now_playing: 60 items.
+[2026-10-21T10:40:22.850Z]   ✓ Fetched top_rated_movies: 40 items.
+[2026-10-21T10:40:22.928Z]   ✓ Fetched discover_tv: 40 items.
+[2026-10-21T10:40:22.946Z]   ✓ Fetched top_rated_tv: 40 items.
+[2026-10-21T10:40:22.963Z]   ✓ Fetched upcoming: 60 items.
+[2026-10-21T10:40:23.141Z]   ✓ Fetched popular_tv: 40 items.
+[2026-10-21T10:40:23.142Z] Step 2A: Processing Top 10 Today (New Movies)...
+[2026-10-21T10:40:23.145Z] Step 2B: Processing Featured Pool (New Movies) & fetching stylized title logos...
+[2026-10-21T10:40:23.241Z]   Featured #1 "Spider-Man: Brand New Day" (TMDB 969681) -> logo: /dGMb0iSnNp7UMAHkKX63Kh6AJvy.png
+[2026-10-21T10:40:23.257Z]   Featured #2 "Project Hail Mary" (TMDB 687163) -> logo: /jvqIELbZctv3Jqtcc7Ic5of8vY7.png
+[2026-10-21T10:40:23.343Z]   Featured #3 "The Odyssey" (TMDB 1368337) -> logo: /kX6ZX4GL7km04332caiOVapR2lb.png
+[2026-10-21T10:40:23.358Z]   Featured #4 "Klara and the Sun" (TMDB 858035) -> logo: /sgfZX9QDrLlS3DLSMVgki9s60CN.png
+[2026-10-21T10:40:23.379Z]   Featured #5 "You Can See Everything" (TMDB 1765072) -> logo: /kjRBwERiGZ4u5ytEatuPY4i8MCB.png
+[2026-10-21T10:40:23.458Z]   Featured #6 "Wildwood" (TMDB 791523) -> logo: /g9MoyXHtNgaR1UC2MoztL80iZl3.png
+[2026-10-21T10:40:23.459Z] Step 2C: Processing Now Playing...
+[2026-10-21T10:40:23.461Z] Step 2D: Processing Trending TV Shows (Quality Filtered)...
+[2026-10-21T10:40:23.463Z] Step 2E: Processing Upcoming Movies (filtered to next 30 days)...
+[2026-10-21T10:40:23.465Z] Step 2F: Processing Top Rated Movies & Series...
+[2026-10-21T10:40:23.466Z] Step 2G: Processing Trending Movies...
+[2026-10-21T10:40:23.468Z] Step 3: Committing transactional database changes...
+[2026-10-21T10:40:23.482Z] ✓ Transaction committed successfully to database.
+[2026-10-21T10:40:23.483Z] FINISH: Sync finished with status "success" in 1.62s.
+[2026-10-21T10:40:23.484Z] SUMMARY: Added=199, Updated=100, Removed=211
+[2026-10-21T10:40:23.484Z]   - featured: Mode=rebuild, Added=6, Updated=0, Removed=6, Active=6
+[2026-10-21T10:40:23.485Z]   - top10: Mode=rebuild, Added=10, Updated=0, Removed=10, Active=10
+[2026-10-21T10:40:23.486Z]   - now_playing: Mode=rebuild, Added=61, Updated=0, Removed=61, Active=61
+[2026-10-21T10:40:23.487Z]   - trending_tv: Mode=rebuild, Added=63, Updated=0, Removed=75, Active=63
+[2026-10-21T10:40:23.488Z]   - upcoming: Mode=upsert_with_soft_delete, Added=0, Updated=20, Removed=0, Active=20
+[2026-10-21T10:40:23.489Z]   - top_rated: Mode=upsert_with_soft_delete, Added=0, Updated=80, Removed=0, Active=80
+[2026-10-21T10:40:23.490Z]   - trending_movies: Mode=rebuild, Added=59, Updated=0, Removed=59, Active=59
+[2026-10-21T10:40:23.491Z] ===========================================================
+

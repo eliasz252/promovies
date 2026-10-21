@@ -226,6 +226,31 @@ export async function runMovieSync(options: { downloadImages?: boolean } = {}): 
       }
     }
 
+    // Ensure 2026 marquee premier titles are always in candidate pool
+    const PRIORITY_2026_IDS = [
+      969681, // Spider-Man: Brand New Day
+      687163, // Project Hail Mary
+      1368337, // The Odyssey
+      858035, // Klara and the Sun
+      1765072, // You Can See Everything
+      791523, // Wildwood
+      1014590, // Avatar Aang: The Last Airbender
+      1153576, // Street Fighter
+      1400940, // Clayface
+      1433583, // The Weight
+      1198654, // Bad Apples
+      1380417, // By Any Means
+      1288069, // Tenzing
+      1058424, // Hope
+      1561726, // Masterplan
+      1423191, // Resident Evil
+    ];
+    for (const pid of PRIORITY_2026_IDS) {
+      if (!movieMap.has(pid)) {
+        movieMap.set(pid, { id: pid });
+      }
+    }
+
     const candidateIds = Array.from(movieMap.keys());
     stats.total_discovered = candidateIds.length;
     writeLog(logFileName, `Discovered ${candidateIds.length} candidate movie IDs.`);
