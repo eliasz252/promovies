@@ -115,8 +115,8 @@ export interface StreamServer {
   id: string;
   name: string;
   badge?: string;
-  isVip?: boolean;
   isFast?: boolean;
+  isVip?: boolean;
   getUrl: (
     tmdbId: number,
     mediaType: "movie" | "tv",
@@ -129,15 +129,28 @@ export interface StreamServer {
 
 export const STREAM_SERVERS: StreamServer[] = [
   {
-    id: "autoembed",
-    name: "AutoEmbed",
-    badge: "FASTEST - NO ADS",
+    id: "netout-ultra",
+    name: "NetOut Ultra",
+    badge: "BEST · NO ADS",
     isFast: true,
+    isVip: true,
     getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `?start=${Math.floor(t)}` : "";
+      const tParam = t && t > 5 ? `&time=${Math.floor(t)}` : "";
       return type === "tv"
-        ? `https://autoembed.co/tv/tmdb/${id}-${s}-${e}${tParam}`
-        : `https://autoembed.co/movie/tmdb/${id}${tParam}`;
+        ? `https://vidy.st/tv/${id}/${s}/${e}?color=e50914&autoplay=true${tParam}`
+        : `https://vidy.st/movie/${id}?color=e50914&autoplay=true${tParam}`;
+    },
+  },
+  {
+    id: "netout-vidout",
+    name: "NetOut VIP (VidOut)",
+    badge: "VIP 4K",
+    isVip: true,
+    getUrl: (id, type, s, e, t) => {
+      const tParam = t && t > 5 ? `?t=${Math.floor(t)}` : "";
+      return type === "tv"
+        ? `https://vidout.pages.dev/tv/${id}/S${s}/E${e}${tParam}`
+        : `https://vidout.pages.dev/movie/${id}${tParam}`;
     },
   },
   {
@@ -165,6 +178,17 @@ export const STREAM_SERVERS: StreamServer[] = [
     },
   },
   {
+    id: "vidsrc-me",
+    name: "VidSrc Me",
+    badge: "STABLE",
+    getUrl: (id, type, s, e, t) => {
+      const tParam = t && t > 5 ? `&t=${Math.floor(t)}` : "";
+      return type === "tv"
+        ? `https://vidsrc.me/embed/tv?tmdb=${id}&season=${s}&episode=${e}${tParam}`
+        : `https://vidsrc.me/embed/movie?tmdb=${id}${tParam}`;
+    },
+  },
+  {
     id: "2embed",
     name: "2Embed",
     badge: "NORMAL NET",
@@ -177,47 +201,12 @@ export const STREAM_SERVERS: StreamServer[] = [
     },
   },
   {
-    id: "vidsrc",
-    name: "VidSrc Me",
-    badge: "STABLE",
-    getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `&t=${Math.floor(t)}` : "";
-      return type === "tv"
-        ? `https://vidsrc.me/embed/tv?tmdb=${id}&season=${s}&episode=${e}${tParam}`
-        : `https://vidsrc.me/embed/movie?tmdb=${id}${tParam}`;
-    },
-  },
-  {
-    id: "vip4k",
-    name: "VidSrc TO",
-    badge: "VIP 4K",
-    isVip: true,
-    getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `?t=${Math.floor(t)}` : "";
-      return type === "tv"
-        ? `https://vidsrc.to/embed/tv/${id}/${s}/${e}${tParam}`
-        : `https://vidsrc.to/embed/movie/${id}${tParam}`;
-    },
-  },
-  {
     id: "trailer",
     name: "Official 4K Trailer",
     badge: "INSTANT",
-    isFast: true,
     getUrl: (id, type, s, e, t, title) => {
-      const q = encodeURIComponent(`${title || "Movie"} official trailer`);
+      const q = encodeURIComponent((title || "movie") + " official 4k trailer");
       return `https://www.youtube-nocookie.com/embed?listType=search&list=${q}&autoplay=1`;
-    },
-  },
-  {
-    id: "vidlink",
-    name: "VidLink Pro",
-    badge: "FIBER 4K",
-    getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `&start=${Math.floor(t)}` : "";
-      return type === "tv"
-        ? `https://vidlink.pro/tv/${id}/${s}/${e}?primaryColor=e50914&secondaryColor=ffffff&iconColor=e50914&autoplay=false${tParam}`
-        : `https://vidlink.pro/movie/${id}?primaryColor=e50914&secondaryColor=ffffff&iconColor=e50914&autoplay=false${tParam}`;
     },
   },
 ];
@@ -235,9 +224,8 @@ interface StreamingPlayerProps {
   runtime?: number;
   className?: string;
   autoPlay?: boolean;
-  releaseDate?: string | null;
-  status?: string | null;
-  isUpcoming?: boolean;
+  releaseDate?: string;
+  status?: string;
 }
 
 export default function StreamingPlayer({
@@ -255,8 +243,13 @@ export default function StreamingPlayer({
   autoPlay = false,
   releaseDate,
   status,
-  isUpcoming,
 }: StreamingPlayerProps) {
+  const isUnreleased = Boolean(
+    (status && ["Planned", "In Production", "Post Production", "Upcoming"].includes(status)) ||
+    (releaseDate && !isNaN(new Date(releaseDate).getTime()) && new Date(releaseDate).getTime() > Date.now()) ||
+    (title && /Spider-Man: Brand New Day|Avengers: Doomsday|Project Hail Mary|The Odyssey|Wildwood|Klara and the Sun|Clayface|The Weight|Bad Apples/i.test(title))
+  );
+
   // Check for saved progress if not explicitly passed
   const savedRecord = typeof window !== "undefined"
     ? (getContinueWatchingItem(tmdbId, mediaType, initialSeason, initialEpisode) ||
@@ -271,26 +264,17 @@ export default function StreamingPlayer({
     ? initialEpisode
     : (savedRecord?.episode && savedRecord.episode > 0 ? savedRecord.episode : 1);
 
-  // Unreleased / Theatrical detection to prevent infinite loading loops on servers without stream files
-  const isUnreleased = Boolean(
-    isUpcoming ||
-    (status && ["Planned", "In Production", "Post Production", "Upcoming"].includes(status)) ||
-    (releaseDate && !isNaN(new Date(releaseDate).getTime()) && new Date(releaseDate).getTime() > Date.now()) ||
-    (title && /Spider-Man: Brand New Day|Avengers: Doomsday|Project Hail Mary|The Odyssey|Wildwood|Klara and the Sun/i.test(title))
-  );
-
   const [activeServerId, setActiveServerId] = useState<string>(() => {
-    // If the title is unreleased, ALWAYS default immediately to Official 4K Trailer
-    if (isUnreleased) {
-      return "trailer";
-    }
+    if (isUnreleased) return "trailer";
     if (typeof window !== "undefined") {
       try {
-        const saved = localStorage.getItem("promovies_preferred_server");
-        if (saved && saved !== "vidlink" && saved !== "trailer" && STREAM_SERVERS.some((s) => s.id === saved)) return saved;
+        const preferred = localStorage.getItem("promovies_preferred_server");
+        if (preferred && preferred !== "autoembed" && STREAM_SERVERS.some((s) => s.id === preferred)) {
+          return preferred;
+        }
       } catch {}
     }
-    return "autoembed";
+    return "netout-ultra";
   });
   const [currentSeason, setCurrentSeason] = useState<number>(resolvedInitialSeason);
   const [currentEpisode, setCurrentEpisode] = useState<number>(resolvedInitialEpisode);
@@ -889,7 +873,7 @@ export default function StreamingPlayer({
                 )}
                 <span className="inline-flex items-center gap-1 mt-2 px-3 py-1 rounded-full bg-red-600/20 text-red-400 border border-red-500/30 text-[11px] font-bold">
                   <Sparkles className="w-3 h-3" />
-                  {isUnreleased ? "🎬 Playing Official 4K Trailer" : "Ready to Stream in 4K UHD"}
+                  Ready to Stream in 4K UHD
                 </span>
               </div>
             </div>
@@ -1010,9 +994,9 @@ export default function StreamingPlayer({
           <span className="flex items-center gap-1.5 flex-wrap">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.8)] shrink-0" />
             {isUnreleased ? (
-              <span>Unreleased Theatrical Title: Playing official 4K trailer. Third-party streaming servers may be empty until digital premiere.</span>
+              <span>Unreleased Theatrical Title: Playing official 4K trailer. If testing early leaks, click <strong>NetOut Ultra</strong>, <strong>NetOut VIP</strong>, or <strong>VidSrc SU</strong>.</span>
             ) : (
-              <span>Fast Normal Connection Active · If buffering, switch to <strong>AutoEmbed</strong>, <strong>VidSrc SU</strong>, or <strong>2Embed</strong>.</span>
+              <span>⚡ NetOut Ultra Engine Active · If buffering or unavailable, switch to <strong>NetOut VIP (VidOut)</strong>, <strong>VidSrc SU</strong>, or <strong>MultiEmbed</strong>.</span>
             )}
           </span>
           <div className="flex items-center gap-2 text-[10px] text-slate-400 font-mono shrink-0">

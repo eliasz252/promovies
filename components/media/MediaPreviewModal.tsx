@@ -216,7 +216,7 @@ export default function MediaPreviewModal({
     currentItem && (
       ((currentItem as any).status && ["Planned", "In Production", "Post Production", "Upcoming"].includes((currentItem as any).status)) ||
       (currentItem.release_date && !isNaN(new Date(currentItem.release_date).getTime()) && new Date(currentItem.release_date).getTime() > Date.now()) ||
-      (title && /Spider-Man: Brand New Day|Avengers: Doomsday|Project Hail Mary|The Odyssey|Wildwood|Klara and the Sun/i.test(title))
+      (title && /Spider-Man: Brand New Day|Avengers: Doomsday|Project Hail Mary|The Odyssey|Wildwood|Klara and the Sun|Clayface|The Weight|Bad Apples/i.test(title))
     )
   );
 
@@ -362,7 +362,7 @@ export default function MediaPreviewModal({
 
                     {/* Action Buttons Row */}
                     <div className="flex items-center gap-3 pt-1">
-                      {/* Play Button */}
+                      {/* White Play Button matching screenshot: Play S1E1 */}
                       <button
                         onClick={() => {
                           recordMovieStarted({

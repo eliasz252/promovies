@@ -40,83 +40,83 @@ const DEFAULT_FEATURED_SLIDES: FeaturedMovie[] = [
     title: "Spider-Man: Brand New Day",
     description:
       "Fighting crime full-time as Spider-Man in a world that doesn't remember him—and the pressure of seeing his old friends move on without him—sparks a change in Peter Parker he may not have the power to control. Out now in theaters and streaming in 4K UHD.",
-    rating: "8.5",
+    rating: "8.4",
     year: "2026",
     quality: "4K UHD",
     ageRating: "PG-13",
-    backdrop: "https://image.tmdb.org/t/p/original/r08LxMJCbf1SiJIWeyH9aJmdqwC.jpg",
-    thumbnail: "https://image.tmdb.org/t/p/w300/bjiS5ipwxb9JFy3XRRN4OAilSeX.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/4tjxYg2AbOzzG9G1YuiT2NzYhlH.jpg",
+    thumbnail: "https://image.tmdb.org/t/p/w300/4tjxYg2AbOzzG9G1YuiT2NzYhlH.jpg",
     logo_path: "/dGMb0iSnNp7UMAHkKX63Kh6AJvy.png",
     mediaType: "movie",
   },
   {
-    id: 687163,
-    title: "Project Hail Mary",
+    id: 1148365,
+    title: "Matchbox the Movie",
     description:
-      "Science teacher Ryland Grace wakes up on a spaceship light years from home with no recollection of who he is or how he got there. As his memory returns, he begins to uncover his mission: solve the riddle of the mysterious substance causing the sun to die out and save Earth from extinction.",
-    rating: "8.6",
+      "When a group of former childhood friends reconnect, their reunion takes a wild turn as they stumble upon a dangerous international plot—and must save the world.",
+    rating: "7.9",
     year: "2026",
     quality: "4K UHD",
     ageRating: "PG-13",
-    backdrop: "https://image.tmdb.org/t/p/original/8Tfys3mDZVp4tNoH2ktm06a0Tau.jpg",
-    thumbnail: "https://image.tmdb.org/t/p/w300/iOb2fjXLbpJgyQXe46n1WtGCnaa.jpg",
-    logo_path: "/jvqIELbZctv3Jqtcc7Ic5of8vY7.png",
+    backdrop: "https://image.tmdb.org/t/p/original/y6RIuwuxLG3Nsb37KUj5yatnTIp.jpg",
+    thumbnail: "https://image.tmdb.org/t/p/w300/y6RIuwuxLG3Nsb37KUj5yatnTIp.jpg",
+    logo_path: "/m68Dkn7fNnhgsvV9VhzxfLFbQMe.png",
     mediaType: "movie",
   },
   {
     id: 1368337,
     title: "The Odyssey",
     description:
-      "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War. Throughout his voyage, he is forced to confront the whims of gods, mythological monsters, and trials that stretch both his cunning and his humanity.",
+      "Odysseus, the legendary King of Ithaca, embarks on a long and perilous journey home following the Trojan War, facing mythical beasts and the wrath of gods.",
     rating: "8.0",
     year: "2026",
     quality: "4K UHD",
     ageRating: "PG-13",
-    backdrop: "https://image.tmdb.org/t/p/original/nVBzWBqHTB3XD0iqWiJLfKLo5fq.jpg",
-    thumbnail: "https://image.tmdb.org/t/p/w300/5rhTDKUhPYvpdQIijFIs5VoWsON.jpg",
+    backdrop: "https://image.tmdb.org/t/p/original/twiVn9oFXOVR0uoYgawyEBlnFu8.jpg",
+    thumbnail: "https://image.tmdb.org/t/p/w300/twiVn9oFXOVR0uoYgawyEBlnFu8.jpg",
     logo_path: "/kX6ZX4GL7km04332caiOVapR2lb.png",
     mediaType: "movie",
   },
   {
-    id: 858035,
-    title: "Klara and the Sun",
+    id: 1291595,
+    title: "Insidious: Out of the Further",
     description:
-      "An Artificial Friend named Klara finds a deep bond with a troubled young girl, bringing light and hope to a grieving family through her unwavering devotion and innocent wonder in this breathtaking visionary tale.",
+      "Gemma, a young mother raising her daughter in the house she grew up in, discovers she can travel into The Further, where she possesses an ability to bring what lives there back to the real world.",
+    rating: "7.7",
+    year: "2026",
+    quality: "4K UHD",
+    ageRating: "PG-13",
+    backdrop: "https://image.tmdb.org/t/p/original/p40lmrdI4blcAPZQMTPaiy5v5Ym.jpg",
+    thumbnail: "https://image.tmdb.org/t/p/w300/p40lmrdI4blcAPZQMTPaiy5v5Ym.jpg",
+    logo_path: "/f65DhAYFi98FsRi4RWHTKkFtChu.png",
+    mediaType: "movie",
+  },
+  {
+    id: 1452110,
+    title: "Clean Hands",
+    description:
+      "The true story of hero drug cop turned recovery advocate Kevin Simmers and his daughter Brooke. The film examines the American drug crisis and \"the thin blue line\" from the opposing eyes of cop and addict who were also father and daughter.",
     rating: "10.0",
     year: "2026",
     quality: "4K UHD",
     ageRating: "PG-13",
-    backdrop: "https://image.tmdb.org/t/p/original/s4E7NDJCOG3wqc5psv2RLr9QfUm.jpg",
-    thumbnail: "https://image.tmdb.org/t/p/w300/xqovj2p6HRsgHxN81qYAYF4StgM.jpg",
-    logo_path: "/sgfZX9QDrLlS3DLSMVgki9s60CN.png",
+    backdrop: "https://image.tmdb.org/t/p/original/py3XG3mFkdVMcw7VwfZ4HaXZIIU.jpg",
+    thumbnail: "https://image.tmdb.org/t/p/w300/py3XG3mFkdVMcw7VwfZ4HaXZIIU.jpg",
+    logo_path: "/z8mXgFsayz2D1jIEHkbkoSaltoE.png",
     mediaType: "movie",
   },
   {
-    id: 1765072,
-    title: "You Can See Everything",
+    id: 1377237,
+    title: "Runner",
     description:
-      "Thirty-four days before she's sent to prison, notorious Silicon Valley founder Elizabeth Holmes invites a skeptical film crew to document her every move. What begins as an intimate portrait of an enigmatic felon becomes a mind-bending three-year journey into the abyss.",
-    rating: "9.0",
+      "A former soldier is thrown into a brutal race against time when a critical medical delivery makes him and his unlikely partner the targets of a ruthless cartel.",
+    rating: "8.3",
     year: "2026",
     quality: "4K UHD",
     ageRating: "PG-13",
-    backdrop: "https://image.tmdb.org/t/p/original/nhIL3O4W9h5V5JbNQm7yjoDk3So.jpg",
-    thumbnail: "https://image.tmdb.org/t/p/w300/Ap8QwmKfSjYbWC4XIP8w9pdn72O.jpg",
-    logo_path: "/kjRBwERiGZ4u5ytEatuPY4i8MCB.png",
-    mediaType: "movie",
-  },
-  {
-    id: 791523,
-    title: "Wildwood",
-    description:
-      "Prue and her classmate Curtis are drawn into a magical forest filled with enchanted creatures, loyal allies, and formidable adversaries as they embark on a desperate quest to rescue Prue's abducted baby brother from a murder of crows.",
-    rating: "9.6",
-    year: "2026",
-    quality: "4K UHD",
-    ageRating: "PG-13",
-    backdrop: "https://image.tmdb.org/t/p/original/sl5NJ1vtyhP9Vr88bB4blULsJYp.jpg",
-    thumbnail: "https://image.tmdb.org/t/p/w300/snFM00mpNAfUzUtkdEW0uDEvXA0.jpg",
-    logo_path: "/g9MoyXHtNgaR1UC2MoztL80iZl3.png",
+    backdrop: "https://image.tmdb.org/t/p/original/npXZNWjOEYrqdMDPQ11SGBrXqAG.jpg",
+    thumbnail: "https://image.tmdb.org/t/p/w300/npXZNWjOEYrqdMDPQ11SGBrXqAG.jpg",
+    logo_path: "/pAnbApoi6DHwXzoKBfQU4M5Wr8t.png",
     mediaType: "movie",
   },
 ];
@@ -141,7 +141,7 @@ export default function HeroBanner({
   // Map incoming featuredItems into standard FeaturedMovie object shape, or fallback to default slides
   const slides: FeaturedMovie[] = useMemo(() => {
     if (featuredItems && featuredItems.length > 0) {
-      return featuredItems.slice(0, 8).map((item) => ({
+      return featuredItems.slice(0, 5).map((item) => ({
         id: item.id,
         title: item.title || item.name || "Featured Title",
         description: item.overview || "",
@@ -281,7 +281,7 @@ export default function HeroBanner({
             {/* Metadata pill */}
             <div className="flex items-center gap-2.5 text-xs">
               {(() => {
-                const isSlideUnreleased = /Spider-Man: Brand New Day|Avengers: Doomsday|Project Hail Mary|The Odyssey|Wildwood|Klara and the Sun/i.test(currentSlide.title);
+                const isSlideUnreleased = /Spider-Man: Brand New Day|Avengers: Doomsday|Project Hail Mary|The Odyssey|Wildwood|Klara and the Sun|Clayface/i.test(currentSlide.title);
                 return (
                   <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-600 text-white font-black tracking-wider uppercase text-[10px] shadow-lg shadow-red-600/40">
                     {isSlideUnreleased ? "IN THEATERS SOON" : "TRENDING THIS WEEK"}
@@ -331,7 +331,7 @@ export default function HeroBanner({
             {/* Action CTAs */}
             <div className="flex flex-wrap items-center gap-3 pt-3">
               {(() => {
-                const isSlideUnreleased = /Spider-Man: Brand New Day|Avengers: Doomsday|Project Hail Mary|The Odyssey|Wildwood|Klara and the Sun/i.test(currentSlide.title);
+                const isSlideUnreleased = /Spider-Man: Brand New Day|Avengers: Doomsday|Project Hail Mary|The Odyssey|Wildwood|Klara and the Sun|Clayface/i.test(currentSlide.title);
                 return (
                   <Link
                     href={`/title/${currentSlide.mediaType || "movie"}/${currentSlide.id}`}
