@@ -78,24 +78,66 @@ const DEFAULT_FEATURED_SLIDES: FeaturedMovie[] = [
     mediaType: "movie",
   },
   {
-    id: 1291595,
-    title: "Insidious: Out of the Further",
+    id: 1765072,
+    title: "You Can See Everything",
     description:
-      "Gemma, a young mother raising her daughter in the house she grew up in, discovers she can travel into The Further, where she possesses an ability to bring what lives there back to the real world.",
-    rating: "7.7",
+      "Thirty-four days before she's sent to prison, notorious Silicon Valley founder Elizabeth Holmes invites a skeptical film crew to document her every move. An intimate and mind-bending journey into the abyss.",
+    rating: "9.0",
     year: "2026",
     quality: "4K UHD",
     ageRating: "PG-13",
-    backdrop: "https://image.tmdb.org/t/p/original/p40lmrdI4blcAPZQMTPaiy5v5Ym.jpg",
-    thumbnail: "https://image.tmdb.org/t/p/w300/p40lmrdI4blcAPZQMTPaiy5v5Ym.jpg",
-    logo_path: "/f65DhAYFi98FsRi4RWHTKkFtChu.png",
+    backdrop: "https://image.tmdb.org/t/p/original/nhIL3O4W9h5V5JbNQm7yjoDk3So.jpg",
+    thumbnail: "https://image.tmdb.org/t/p/w300/nhIL3O4W9h5V5JbNQm7yjoDk3So.jpg",
+    logo_path: "/kjRBwERiGZ4u5ytEatuPY4i8MCB.png",
+    mediaType: "movie",
+  },
+  {
+    id: 1371730,
+    title: "Love Language",
+    description:
+      "After a chance encounter sparks a sweeping romance across international borders, two strangers discover that vulnerability speaks louder than words.",
+    rating: "8.8",
+    year: "2026",
+    quality: "4K UHD",
+    ageRating: "PG-13",
+    backdrop: "https://image.tmdb.org/t/p/original/2reWDfgqvrUmA05y6UCKb2UXNvP.jpg",
+    thumbnail: "https://image.tmdb.org/t/p/w300/2reWDfgqvrUmA05y6UCKb2UXNvP.jpg",
+    logo_path: "/8yDmzavVmUZTBEcYMs0Xj0u6vFZ.png",
+    mediaType: "movie",
+  },
+  {
+    id: 791523,
+    title: "Wildwood",
+    description:
+      "Prue and her classmate Curtis are drawn into a magical forest filled with enchanted creatures and formidable adversaries as they embark on a quest to rescue Prue's abducted brother.",
+    rating: "9.6",
+    year: "2026",
+    quality: "4K UHD",
+    ageRating: "PG-13",
+    backdrop: "https://image.tmdb.org/t/p/original/sl5NJ1vtyhP9Vr88bB4blULsJYp.jpg",
+    thumbnail: "https://image.tmdb.org/t/p/w300/sl5NJ1vtyhP9Vr88bB4blULsJYp.jpg",
+    logo_path: "/g9MoyXHtNgaR1UC2MoztL80iZl3.png",
+    mediaType: "movie",
+  },
+  {
+    id: 1400940,
+    title: "Clayface",
+    description:
+      "When a struggling Hollywood actor is disfigured in a horrific assault, he turns to a mysterious restorative chemical that transforms his flesh into living, malleable clay—unleashing a vengeful creature.",
+    rating: "8.5",
+    year: "2026",
+    quality: "4K UHD",
+    ageRating: "PG-13",
+    backdrop: "https://image.tmdb.org/t/p/original/9l1NuFjel2j89hiuiJbsxfblqjy.jpg",
+    thumbnail: "https://image.tmdb.org/t/p/w300/9l1NuFjel2j89hiuiJbsxfblqjy.jpg",
+    logo_path: null,
     mediaType: "movie",
   },
   {
     id: 1452110,
     title: "Clean Hands",
     description:
-      "The true story of hero drug cop turned recovery advocate Kevin Simmers and his daughter Brooke. The film examines the American drug crisis and \"the thin blue line\" from the opposing eyes of cop and addict who were also father and daughter.",
+      "The true story of hero drug cop turned recovery advocate Kevin Simmers and his daughter Brooke. The film examines the American crisis and the thin blue line from the opposing eyes of cop and addict.",
     rating: "10.0",
     year: "2026",
     quality: "4K UHD",
@@ -141,7 +183,7 @@ export default function HeroBanner({
   // Map incoming featuredItems into standard FeaturedMovie object shape, or fallback to default slides
   const slides: FeaturedMovie[] = useMemo(() => {
     if (featuredItems && featuredItems.length > 0) {
-      return featuredItems.slice(0, 5).map((item) => ({
+      return featuredItems.slice(0, 8).map((item) => ({
         id: item.id,
         title: item.title || item.name || "Featured Title",
         description: item.overview || "",

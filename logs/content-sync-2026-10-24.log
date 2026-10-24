@@ -1,0 +1,38 @@
+[2026-10-24T12:37:39.936Z] ===========================================================
+[2026-10-24T12:37:40.016Z] START: Automated Daily Catalog Sync initiated at 2026-10-24T12:37:40.015Z
+[2026-10-24T12:37:40.028Z] Step 1: Fetching discovery feeds with concurrency limit 3...
+[2026-10-24T12:37:40.775Z]   ✓ Fetched trending_movies: 60 items.
+[2026-10-24T12:37:40.788Z]   ✓ Fetched trending_tv: 40 items.
+[2026-10-24T12:37:40.806Z]   ✓ Fetched trending_tv_week: 40 items.
+[2026-10-24T12:37:41.025Z]   ✓ Fetched now_playing: 60 items.
+[2026-10-24T12:37:41.032Z]   ✓ Fetched discover_tv: 40 items.
+[2026-10-24T12:37:41.169Z]   ✓ Fetched top_rated_movies: 40 items.
+[2026-10-24T12:37:41.174Z]   ✓ Fetched top_rated_tv: 40 items.
+[2026-10-24T12:37:41.278Z]   ✓ Fetched upcoming: 60 items.
+[2026-10-24T12:37:41.399Z]   ✓ Fetched popular_tv: 40 items.
+[2026-10-24T12:37:41.401Z] Step 2A: Processing Top 10 Today (New Movies)...
+[2026-10-24T12:37:41.404Z] Step 2B: Processing Featured Pool (New Movies) & fetching stylized title logos...
+[2026-10-24T12:37:41.642Z]   Featured #1 "Spider-Man: Brand New Day" (TMDB 969681) -> logo: /dGMb0iSnNp7UMAHkKX63Kh6AJvy.png
+[2026-10-24T12:37:41.655Z]   Featured #3 "You Can See Everything" (TMDB 1765072) -> logo: /kjRBwERiGZ4u5ytEatuPY4i8MCB.png
+[2026-10-24T12:37:41.662Z]   Featured #2 "The Odyssey" (TMDB 1368337) -> logo: /kX6ZX4GL7km04332caiOVapR2lb.png
+[2026-10-24T12:37:41.864Z]   Featured #4 "Love Language" (TMDB 1371730) -> logo: /8yDmzavVmUZTBEcYMs0Xj0u6vFZ.png
+[2026-10-24T12:37:41.867Z]   Featured #5 "Hope" (TMDB 1058424) -> logo: /hJG3cSi9z40smOi4Fac07xIlAqZ.png
+[2026-10-24T12:37:41.877Z]   Featured #6 "Runner" (TMDB 1377237) -> logo: /pAnbApoi6DHwXzoKBfQU4M5Wr8t.png
+[2026-10-24T12:37:41.878Z] Step 2C: Processing Now Playing...
+[2026-10-24T12:37:41.879Z] Step 2D: Processing Trending TV Shows (Quality Filtered)...
+[2026-10-24T12:37:41.881Z] Step 2E: Processing Upcoming Movies (filtered to next 30 days)...
+[2026-10-24T12:37:41.883Z] Step 2F: Processing Top Rated Movies & Series...
+[2026-10-24T12:37:41.885Z] Step 2G: Processing Trending Movies...
+[2026-10-24T12:37:41.887Z] Step 3: Committing transactional database changes...
+[2026-10-24T12:37:41.899Z] ✓ Transaction committed successfully to database.
+[2026-10-24T12:37:41.900Z] FINISH: Sync finished with status "success" in 1.97s.
+[2026-10-24T12:37:41.901Z] SUMMARY: Added=194, Updated=99, Removed=201
+[2026-10-24T12:37:41.902Z]   - featured: Mode=rebuild, Added=6, Updated=0, Removed=6, Active=6
+[2026-10-24T12:37:41.903Z]   - top10: Mode=rebuild, Added=10, Updated=0, Removed=10, Active=10
+[2026-10-24T12:37:41.904Z]   - now_playing: Mode=rebuild, Added=61, Updated=0, Removed=61, Active=61
+[2026-10-24T12:37:41.904Z]   - trending_tv: Mode=rebuild, Added=64, Updated=0, Removed=63, Active=64
+[2026-10-24T12:37:41.905Z]   - upcoming: Mode=upsert_with_soft_delete, Added=1, Updated=19, Removed=2, Active=20
+[2026-10-24T12:37:41.906Z]   - top_rated: Mode=upsert_with_soft_delete, Added=0, Updated=80, Removed=0, Active=80
+[2026-10-24T12:37:41.907Z]   - trending_movies: Mode=rebuild, Added=52, Updated=0, Removed=59, Active=52
+[2026-10-24T12:37:41.908Z] ===========================================================
+

@@ -1,5 +1,74 @@
 [
   {
+    "started_at": "2026-10-24T12:37:40.017Z",
+    "completed_at": "2026-10-24T12:37:41.900Z",
+    "duration_ms": 1966,
+    "status": "success",
+    "total_added": 194,
+    "total_updated": 99,
+    "total_removed": 201,
+    "categories": {
+      "featured": {
+        "category": "featured",
+        "mode": "rebuild",
+        "added": 6,
+        "updated": 0,
+        "removed": 6,
+        "total_active": 6
+      },
+      "top10": {
+        "category": "top10",
+        "mode": "rebuild",
+        "added": 10,
+        "updated": 0,
+        "removed": 10,
+        "total_active": 10
+      },
+      "now_playing": {
+        "category": "now_playing",
+        "mode": "rebuild",
+        "added": 61,
+        "updated": 0,
+        "removed": 61,
+        "total_active": 61
+      },
+      "trending_tv": {
+        "category": "trending_tv",
+        "mode": "rebuild",
+        "added": 64,
+        "updated": 0,
+        "removed": 63,
+        "total_active": 64
+      },
+      "upcoming": {
+        "category": "upcoming",
+        "mode": "upsert_with_soft_delete",
+        "added": 1,
+        "updated": 19,
+        "removed": 2,
+        "total_active": 20
+      },
+      "top_rated": {
+        "category": "top_rated",
+        "mode": "upsert_with_soft_delete",
+        "added": 0,
+        "updated": 80,
+        "removed": 0,
+        "total_active": 80
+      },
+      "trending_movies": {
+        "category": "trending_movies",
+        "mode": "rebuild",
+        "added": 52,
+        "updated": 0,
+        "removed": 59,
+        "total_active": 52
+      }
+    },
+    "error_messages": [],
+    "log_file": "content-sync-2026-10-24.log"
+  },
+  {
     "started_at": "2026-10-21T10:40:21.864Z",
     "completed_at": "2026-10-21T10:40:23.482Z",
     "duration_ms": 1623,
