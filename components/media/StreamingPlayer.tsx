@@ -143,7 +143,8 @@ export const STREAM_SERVERS: StreamServer[] = [
   {
     id: "netout-vidout",
     name: "NetOut VIP (VidOut)",
-    badge: "VIP",
+    badge: "VIP 4K",
+    isFast: true,
     isVip: true,
     getUrl: (id, type, s, e, t) => {
       const tParam = t && t > 5 ? `?t=${Math.floor(t)}` : "";
@@ -153,9 +154,34 @@ export const STREAM_SERVERS: StreamServer[] = [
     },
   },
   {
+    id: "vidlink",
+    name: "VidLink Pro",
+    badge: "FIBER 4K",
+    isFast: true,
+    isVip: true,
+    getUrl: (id, type, s, e, t) => {
+      const tParam = t && t > 5 ? `&start=${Math.floor(t)}` : "";
+      return type === "tv"
+        ? `https://vidlink.pro/tv/${id}/${s}/${e}?primaryColor=e50914&secondaryColor=ffffff&iconColor=e50914&autoplay=false${tParam}`
+        : `https://vidlink.pro/movie/${id}?primaryColor=e50914&secondaryColor=ffffff&iconColor=e50914&autoplay=false${tParam}`;
+    },
+  },
+  {
+    id: "videasy",
+    name: "Videasy VIP",
+    badge: "ULTRA",
+    isVip: true,
+    getUrl: (id, type, s, e, t) => {
+      const tParam = t && t > 5 ? `?t=${Math.floor(t)}` : "";
+      return type === "tv"
+        ? `https://player.videasy.net/tv/${id}/${s}/${e}${tParam}`
+        : `https://player.videasy.net/movie/${id}${tParam}`;
+    },
+  },
+  {
     id: "multiembed",
     name: "MultiEmbed (VIP Mirror)",
-    badge: "MIRROR",
+    badge: "MULTI-CDN",
     isFast: true,
     getUrl: (id, type, s, e, t) => {
       const tParam = t && t > 5 ? `&t=${Math.floor(t)}` : "";
@@ -177,15 +203,14 @@ export const STREAM_SERVERS: StreamServer[] = [
     },
   },
   {
-    id: "vidlink",
-    name: "VidLink Pro",
-    badge: "FIBER 4K",
-    isVip: true,
+    id: "vidsrc-pm",
+    name: "VidSrc PM",
+    badge: "FAST",
     getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `&start=${Math.floor(t)}` : "";
+      const tParam = t && t > 5 ? `?t=${Math.floor(t)}` : "";
       return type === "tv"
-        ? `https://vidlink.pro/tv/${id}/${s}/${e}?primaryColor=e50914&secondaryColor=ffffff&iconColor=e50914&autoplay=false${tParam}`
-        : `https://vidlink.pro/movie/${id}?primaryColor=e50914&secondaryColor=ffffff&iconColor=e50914&autoplay=false${tParam}`;
+        ? `https://vidsrc.pm/embed/tv/${id}/${s}/${e}${tParam}`
+        : `https://vidsrc.pm/embed/movie/${id}${tParam}`;
     },
   },
   {
@@ -200,37 +225,25 @@ export const STREAM_SERVERS: StreamServer[] = [
     },
   },
   {
+    id: "smashystream",
+    name: "SmashyStream",
+    badge: "HD",
+    getUrl: (id, type, s, e, t) => {
+      const tParam = t && t > 5 ? `?start=${Math.floor(t)}` : "";
+      return type === "tv"
+        ? `https://player.smashystream.com/tv/${id}/${s}/${e}${tParam}`
+        : `https://player.smashystream.com/movie/${id}${tParam}`;
+    },
+  },
+  {
     id: "vidfast",
     name: "2Embed",
-    badge: "NORMAL NET",
-    isFast: true,
+    badge: "BACKUP",
     getUrl: (id, type, s, e, t) => {
       const tParam = t && t > 5 ? `?t=${Math.floor(t)}` : "";
       return type === "tv"
         ? `https://www.2embed.cc/embedtv/${id}&s=${s}&e=${e}${tParam}`
         : `https://www.2embed.cc/embed/${id}${tParam}`;
-    },
-  },
-  {
-    id: "vip4k",
-    name: "VidSrc 4K",
-    isVip: true,
-    getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `?t=${Math.floor(t)}` : "";
-      return type === "tv"
-        ? `https://vidsrc.to/embed/tv/${id}/${s}/${e}${tParam}`
-        : `https://vidsrc.to/embed/movie/${id}${tParam}`;
-    },
-  },
-  {
-    id: "autoembed",
-    name: "AutoEmbed (Ultra HD)",
-    badge: "HD",
-    getUrl: (id, type, s, e, t) => {
-      const tParam = t && t > 5 ? `?start=${Math.floor(t)}` : "";
-      return type === "tv"
-        ? `https://autoembed.co/tv/tmdb/${id}/${s}/${e}${tParam}`
-        : `https://autoembed.co/movie/tmdb/${id}${tParam}`;
     },
   },
 ];
@@ -282,7 +295,10 @@ export default function StreamingPlayer({
     if (typeof window !== "undefined") {
       try {
         const preferred = localStorage.getItem("promovies_preferred_server");
-        if (preferred && STREAM_SERVERS.some((s) => s.id === preferred)) {
+        // Clear broken / deprecated server keys (like autoembed or trailer)
+        if (preferred === "autoembed" || preferred === "trailer" || preferred === "vip4k") {
+          localStorage.removeItem("promovies_preferred_server");
+        } else if (preferred && STREAM_SERVERS.some((s) => s.id === preferred)) {
           return preferred;
         }
       } catch {}
@@ -316,6 +332,14 @@ export default function StreamingPlayer({
   const episodeScrollRef = useRef<HTMLDivElement>(null);
 
   const [resumedBadge, setResumedBadge] = useState<string | null>(null);
+
+  // Auto-dismiss loading spinner after 5 seconds to prevent frozen overlays
+  useEffect(() => {
+    if (isLoading) {
+      const timer = setTimeout(() => setIsLoading(false), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [isLoading]);
 
   useEffect(() => {
     if (startTime > 5) {
@@ -966,7 +990,7 @@ export default function StreamingPlayer({
         <div className="flex flex-col sm:flex-row sm:items-center justify-between px-2 pt-1 text-[11px] text-slate-400 gap-2">
           <span className="flex items-center gap-1.5 flex-wrap">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.8)] shrink-0" />
-            <span>⚡ NetOut Fast Active · If buffering or stream unavailable, switch to <strong>NetOut VIP (VidOut)</strong>, <strong>MultiEmbed</strong>, or <strong>VidSrc SU</strong>.</span>
+            <span>⚡ NetOut Fast Active · If buffering or stream unavailable, switch to <strong>NetOut VIP (VidOut)</strong>, <strong>VidLink Pro</strong>, or <strong>MultiEmbed</strong>.</span>
           </span>
           <div className="flex items-center gap-2 text-[10px] text-slate-400 font-mono shrink-0">
             <span className="px-1.5 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-bold">⚡ Zero Buffer Mode</span>
